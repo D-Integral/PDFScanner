@@ -8,5 +8,5 @@
 import Foundation
 
 protocol PresenterProtocol {
-    
+    var title: String { get }
 }

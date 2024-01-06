@@ -20,6 +20,23 @@
 		0F4130CB2B41BE0900981698 /* DocumentPickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4130CA2B41BE0900981698 /* DocumentPickerManager.swift */; };
 		0F4130CD2B4587E100981698 /* MyFilesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4130CC2B4587E100981698 /* MyFilesCollectionViewCell.swift */; };
 		0F4130D02B458B6800981698 /* PDFDocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4130CF2B458B6800981698 /* PDFDocumentViewController.swift */; };
+		0F60796E2B497A01008DD313 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 0F60796D2B497A01008DD313 /* FirebaseAuth */; };
+		0F6079712B497C95008DD313 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6079702B497C95008DD313 /* SignUpViewController.swift */; };
+		0F6079732B497D87008DD313 /* SignUpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6079722B497D87008DD313 /* SignUpRouter.swift */; };
+		0F6079752B4981FD008DD313 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0F6079742B4981FD008DD313 /* GoogleService-Info.plist */; };
+		0F6079782B498892008DD313 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6079772B498892008DD313 /* LogInViewController.swift */; };
+		0F60797A2B49A100008DD313 /* AccountPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6079792B49A100008DD313 /* AccountPresenter.swift */; };
+		0F60797C2B49A111008DD313 /* AccountInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F60797B2B49A111008DD313 /* AccountInteractor.swift */; };
+		0F60797E2B49A124008DD313 /* AccountRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F60797D2B49A124008DD313 /* AccountRouter.swift */; };
+		0F6079812B49A1CB008DD313 /* AccountManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6079802B49A1CB008DD313 /* AccountManagerProtocol.swift */; };
+		0F6079832B49A1EE008DD313 /* FirebaseAccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6079822B49A1EE008DD313 /* FirebaseAccountManager.swift */; };
+		0F6079852B49A5AB008DD313 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6079842B49A5AB008DD313 /* User.swift */; };
+		0F6079872B49A5DC008DD313 /* UserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6079862B49A5DC008DD313 /* UserProtocol.swift */; };
+		0F6079892B49A786008DD313 /* SignUpInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6079882B49A786008DD313 /* SignUpInteractor.swift */; };
+		0F60798B2B49A796008DD313 /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F60798A2B49A796008DD313 /* SignUpPresenter.swift */; };
+		0F60798D2B49B31E008DD313 /* ToolsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F60798C2B49B31E008DD313 /* ToolsRouter.swift */; };
+		0F60798F2B49B32D008DD313 /* ToolsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F60798E2B49B32D008DD313 /* ToolsPresenter.swift */; };
+		0F6079912B49B33A008DD313 /* ToolsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6079902B49B33A008DD313 /* ToolsInteractor.swift */; };
 		0FAA0DF52B45C0D5002FC0F9 /* Weak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAA0DF42B45C0D5002FC0F9 /* Weak.swift */; };
 		0FAA0DFD2B45CB9D002FC0F9 /* DynamicUIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAA0DFC2B45CB9D002FC0F9 /* DynamicUIProtocol.swift */; };
 		0FAA0DFF2B45CBD5002FC0F9 /* UIViewController+DynamicUIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAA0DFE2B45CBD5002FC0F9 /* UIViewController+DynamicUIProtocol.swift */; };
@@ -73,6 +90,22 @@
 		0F4130CA2B41BE0900981698 /* DocumentPickerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPickerManager.swift; sourceTree = "<group>"; };
 		0F4130CC2B4587E100981698 /* MyFilesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFilesCollectionViewCell.swift; sourceTree = "<group>"; };
 		0F4130CF2B458B6800981698 /* PDFDocumentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFDocumentViewController.swift; sourceTree = "<group>"; };
+		0F6079702B497C95008DD313 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		0F6079722B497D87008DD313 /* SignUpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRouter.swift; sourceTree = "<group>"; };
+		0F6079742B4981FD008DD313 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0F6079772B498892008DD313 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		0F6079792B49A100008DD313 /* AccountPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountPresenter.swift; sourceTree = "<group>"; };
+		0F60797B2B49A111008DD313 /* AccountInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInteractor.swift; sourceTree = "<group>"; };
+		0F60797D2B49A124008DD313 /* AccountRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRouter.swift; sourceTree = "<group>"; };
+		0F6079802B49A1CB008DD313 /* AccountManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountManagerProtocol.swift; sourceTree = "<group>"; };
+		0F6079822B49A1EE008DD313 /* FirebaseAccountManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAccountManager.swift; sourceTree = "<group>"; };
+		0F6079842B49A5AB008DD313 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		0F6079862B49A5DC008DD313 /* UserProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProtocol.swift; sourceTree = "<group>"; };
+		0F6079882B49A786008DD313 /* SignUpInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpInteractor.swift; sourceTree = "<group>"; };
+		0F60798A2B49A796008DD313 /* SignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
+		0F60798C2B49B31E008DD313 /* ToolsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsRouter.swift; sourceTree = "<group>"; };
+		0F60798E2B49B32D008DD313 /* ToolsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsPresenter.swift; sourceTree = "<group>"; };
+		0F6079902B49B33A008DD313 /* ToolsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsInteractor.swift; sourceTree = "<group>"; };
 		0FAA0DF42B45C0D5002FC0F9 /* Weak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weak.swift; sourceTree = "<group>"; };
 		0FAA0DFC2B45CB9D002FC0F9 /* DynamicUIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicUIProtocol.swift; sourceTree = "<group>"; };
 		0FAA0DFE2B45CBD5002FC0F9 /* UIViewController+DynamicUIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+DynamicUIProtocol.swift"; sourceTree = "<group>"; };
@@ -109,6 +142,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F60796E2B497A01008DD313 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +177,36 @@
 			path = PDFDocumentView;
 			sourceTree = "<group>";
 		};
+		0F60796F2B497C6E008DD313 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				0F6079702B497C95008DD313 /* SignUpViewController.swift */,
+				0F60798A2B49A796008DD313 /* SignUpPresenter.swift */,
+				0F6079882B49A786008DD313 /* SignUpInteractor.swift */,
+				0F6079722B497D87008DD313 /* SignUpRouter.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		0F6079762B49886C008DD313 /* LogIn */ = {
+			isa = PBXGroup;
+			children = (
+				0F6079772B498892008DD313 /* LogInViewController.swift */,
+			);
+			path = LogIn;
+			sourceTree = "<group>";
+		};
+		0F60797F2B49A19A008DD313 /* AccountManagement */ = {
+			isa = PBXGroup;
+			children = (
+				0F6079802B49A1CB008DD313 /* AccountManagerProtocol.swift */,
+				0F6079822B49A1EE008DD313 /* FirebaseAccountManager.swift */,
+				0F6079842B49A5AB008DD313 /* User.swift */,
+				0F6079862B49A5DC008DD313 /* UserProtocol.swift */,
+			);
+			path = AccountManagement;
+			sourceTree = "<group>";
+		};
 		0FAA0DF32B45C0C1002FC0F9 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +238,9 @@
 			isa = PBXGroup;
 			children = (
 				0FB7DAE92B3DF54100985825 /* AccountViewController.swift */,
+				0F6079792B49A100008DD313 /* AccountPresenter.swift */,
+				0F60797B2B49A111008DD313 /* AccountInteractor.swift */,
+				0F60797D2B49A124008DD313 /* AccountRouter.swift */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -182,6 +249,9 @@
 			isa = PBXGroup;
 			children = (
 				0FB7DAE72B3DF51B00985825 /* ToolsViewController.swift */,
+				0F60798E2B49B32D008DD313 /* ToolsPresenter.swift */,
+				0F6079902B49B33A008DD313 /* ToolsInteractor.swift */,
+				0F60798C2B49B31E008DD313 /* ToolsRouter.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -246,6 +316,9 @@
 				0F4130C12B40E30C00981698 /* FileImport */,
 				0FB7DAF02B3F12A600985825 /* FileStorage */,
 				0FB7DAEE2B3F126300985825 /* Account */,
+				0F60797F2B49A19A008DD313 /* AccountManagement */,
+				0F60796F2B497C6E008DD313 /* SignUp */,
+				0F6079762B49886C008DD313 /* LogIn */,
 				0FB7DAED2B3F124D00985825 /* Files */,
 				0FB7DAEF2B3F127800985825 /* Tools */,
 				0F4130CE2B458B3800981698 /* PDFDocumentView */,
@@ -254,6 +327,7 @@
 				0FBCA9A22B3DA7A200149F38 /* Assets.xcassets */,
 				0FBCA9A42B3DA7A200149F38 /* LaunchScreen.storyboard */,
 				0FBCA9A72B3DA7A200149F38 /* Info.plist */,
+				0F6079742B4981FD008DD313 /* GoogleService-Info.plist */,
 			);
 			path = PDFReaderApp;
 			sourceTree = "<group>";
@@ -291,6 +365,9 @@
 			dependencies = (
 			);
 			name = PDFReaderApp;
+			packageProductDependencies = (
+				0F60796D2B497A01008DD313 /* FirebaseAuth */,
+			);
 			productName = PDFReaderApp;
 			productReference = 0FBCA9962B3DA7A000149F38 /* PDFReaderApp.app */;
 			productType = "com.apple.product-type.application";
@@ -345,6 +422,9 @@
 				cs,
 			);
 			mainGroup = 0FBCA98D2B3DA7A000149F38;
+			packageReferences = (
+				0F60796C2B497A01008DD313 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 0FBCA9972B3DA7A000149F38 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -360,6 +440,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F6079752B4981FD008DD313 /* GoogleService-Info.plist in Resources */,
 				0FE1596E2B407EC1000F5EDD /* CV Dmytro Skorokhod 12:26:2023.pdf in Resources */,
 				0FBCA9A62B3DA7A200149F38 /* LaunchScreen.storyboard in Resources */,
 				0FBCA9A32B3DA7A200149F38 /* Assets.xcassets in Resources */,
@@ -381,13 +462,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F6079732B497D87008DD313 /* SignUpRouter.swift in Sources */,
 				0FB7DAF22B3F150E00985825 /* FileStorageProtocol.swift in Sources */,
+				0F6079832B49A1EE008DD313 /* FirebaseAccountManager.swift in Sources */,
 				0FB7DAE82B3DF51B00985825 /* ToolsViewController.swift in Sources */,
 				0FB7DAFF2B3F1C8900985825 /* AppCoordinator.swift in Sources */,
+				0F60797E2B49A124008DD313 /* AccountRouter.swift in Sources */,
 				0FB7DAEA2B3DF54100985825 /* AccountViewController.swift in Sources */,
 				0F4130C52B41B99A00981698 /* PDFDocumentImportManager.swift in Sources */,
 				0F4130BC2B40CD2400981698 /* MyFilesRouter.swift in Sources */,
+				0F60798D2B49B31E008DD313 /* ToolsRouter.swift in Sources */,
 				0F4130C32B41B96D00981698 /* DocumentImportManagerProtocol.swift in Sources */,
+				0F6079912B49B33A008DD313 /* ToolsInteractor.swift in Sources */,
 				0FAA0DFD2B45CB9D002FC0F9 /* DynamicUIProtocol.swift in Sources */,
 				0F4130C72B41B9F100981698 /* DocumentImportManager.swift in Sources */,
 				0F4130B62B40C86C00981698 /* MyFilesInteractor.swift in Sources */,
@@ -397,8 +483,13 @@
 				0F4130B82B40C9F800981698 /* PresenterProtocol.swift in Sources */,
 				0FB7DAEC2B3E0A1600985825 /* HomeTabBarController.swift in Sources */,
 				0F4130C92B41BB5A00981698 /* DocumentImportError.swift in Sources */,
+				0F6079782B498892008DD313 /* LogInViewController.swift in Sources */,
+				0F60797A2B49A100008DD313 /* AccountPresenter.swift in Sources */,
 				0FAA0DF52B45C0D5002FC0F9 /* Weak.swift in Sources */,
+				0F6079872B49A5DC008DD313 /* UserProtocol.swift in Sources */,
+				0F60798F2B49B32D008DD313 /* ToolsPresenter.swift in Sources */,
 				0FB7DAF92B3F16B400985825 /* DiskFileStorage.swift in Sources */,
+				0F60798B2B49A796008DD313 /* SignUpPresenter.swift in Sources */,
 				0F4130BE2B40CD3400981698 /* RouterProtocol.swift in Sources */,
 				0FBCA99E2B3DA7A000149F38 /* MyFilesViewController.swift in Sources */,
 				0FAA0E012B45DE3D002FC0F9 /* MyFilesViewController+UISearchResultsUpdating.swift in Sources */,
@@ -407,14 +498,19 @@
 				0F4130D02B458B6800981698 /* PDFDocumentViewController.swift in Sources */,
 				0FAA0E052B46FFF6002FC0F9 /* MyFilesViewController+UICollectionViewDelegate.swift in Sources */,
 				0FB7DB012B3F1F2000985825 /* FileType.swift in Sources */,
+				0F60797C2B49A111008DD313 /* AccountInteractor.swift in Sources */,
 				0FB7DAF52B3F159900985825 /* FileProtocol.swift in Sources */,
 				0F4130B42B40C85900981698 /* MyFilesPresenter.swift in Sources */,
 				0FBCA99A2B3DA7A000149F38 /* AppDelegate.swift in Sources */,
+				0F6079812B49A1CB008DD313 /* AccountManagerProtocol.swift in Sources */,
+				0F6079712B497C95008DD313 /* SignUpViewController.swift in Sources */,
 				0F4130BA2B40CA0600981698 /* InteractorProtocol.swift in Sources */,
 				0FB7DAFB2B3F1A6F00985825 /* FilesListProtocol.swift in Sources */,
 				0FBCA99C2B3DA7A000149F38 /* SceneDelegate.swift in Sources */,
 				0FB7DB0B2B3F30F600985825 /* DiskFileStorageError.swift in Sources */,
 				0F4130CD2B4587E100981698 /* MyFilesCollectionViewCell.swift in Sources */,
+				0F6079892B49A786008DD313 /* SignUpInteractor.swift in Sources */,
+				0F6079852B49A5AB008DD313 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -694,6 +790,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0F60796C2B497A01008DD313 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.19.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0F60796D2B497A01008DD313 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0F60796C2B497A01008DD313 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0FBCA98E2B3DA7A000149F38 /* Project object */;
 }

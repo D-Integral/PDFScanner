@@ -219,14 +219,16 @@ class MyFilesViewController: UIViewController {
     private func presentActionSheet(forFileId fileId: UUID) {
         let alertController = UIAlertController(title: "", message: "", preferredStyle: .actionSheet)
         
-        let deleteAction = UIAlertAction(title: String(localized: "Delete"),
+        let deleteAction = UIAlertAction(title: String(localized: "delete"),
                                          style: .destructive,
                                          handler: { [weak self] (action: UIAlertAction) -> Void in
             self?.presenter?.deleteFile(withId: fileId)
             self?.updateDynamicUI()
         })
         
-        let cancelAction = UIAlertAction(title: NSLocalizedString("Cancel", comment: "cancel action"), style: .default, handler: {(action: UIAlertAction) -> Void in
+        let cancelAction = UIAlertAction(title: String(localized:"cancel"),
+                                         style: .default,
+                                         handler: {(action: UIAlertAction) -> Void in
             self.dismiss(animated: true)
         })
         

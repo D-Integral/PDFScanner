@@ -13,10 +13,12 @@ class AppCoordinator {
     
     let homeTabBarController: HomeTabBarController
     let fileStorage: FileStorageProtocol
+    let accountManager: AccountManagerProtocol
     
     private init() {
         homeTabBarController = HomeTabBarController()
         fileStorage = DiskFileStorage()
+        accountManager = FirebaseAccountManager()
         
         homeTabBarController.viewControllers = [filesNavigationController(),
                                                 toolsNavigationController(),
@@ -41,12 +43,12 @@ class AppCoordinator {
     }
     
     func toolsNavigationController() -> UINavigationController {
-        return navigationController(with: toolsViewController(),
+        return navigationController(with: ToolsRouter().make(),
                                     tabBarItem: toolsTabBarItem())
     }
     
     func accountNavigationController() -> UINavigationController {
-        return navigationController(with: accountViewController(),
+        return navigationController(with: AccountRouter().make(accountManager: accountManager),
                                     tabBarItem: accountTabBarItem())
     }
     
@@ -59,7 +61,7 @@ class AppCoordinator {
     }
     
     func toolsTabBarItem() -> UITabBarItem {
-        return tabBarItem(withTitle: toolsTitle(),
+        return tabBarItem(withTitle: String(localized: "toolsTitle"),
                           image: UIImage.iconTools,
                           selectedImage: UIImage.iconTools.withTintColor(.iconPurple))
     }
@@ -76,27 +78,5 @@ class AppCoordinator {
         return UITabBarItem(title: title,
                             image: image,
                             selectedImage: selectedImage)
-    }
-    
-    // MARK: View controllers
-    
-    func toolsViewController() -> UIViewController {
-        let toolsViewController = AccountViewController()
-        toolsViewController.title = toolsTitle()
-        
-        return toolsViewController
-    }
-    
-    func accountViewController() -> UIViewController {
-        let accountViewController = AccountViewController()
-        accountViewController.title = String(localized: "accountViewControllerTitle")
-        
-        return accountViewController
-    }
-    
-    // MARK: Reusable strings
-    
-    func toolsTitle() -> String {
-        return String(localized: "toolsTitle")
     }
 }
