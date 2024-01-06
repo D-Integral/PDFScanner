@@ -10,4 +10,6 @@ import UIKit
 
 extension UIViewController: DynamicUIProtocol {
     func updateDynamicUI() { }
+    func timeConsumingOperationStarted() { }
+    func timeConsumingOperationCompleted() { }
 }

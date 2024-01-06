@@ -8,6 +8,7 @@
 import Foundation
 
 class DocumentImportManager: NSObject, DocumentImportManagerProtocol {
+    
     // MARK: DocumentImportManagerProtocol
     
     var fileStorage: FileStorageProtocol

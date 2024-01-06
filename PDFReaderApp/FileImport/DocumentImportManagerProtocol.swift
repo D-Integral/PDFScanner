@@ -20,4 +20,5 @@ protocol DocumentImportManagerProtocol {
                                                     DocumentImportError?) -> ())
     func importDocuments(at urls: [URL],
                          completionHandler: @escaping () -> ())
+
 }

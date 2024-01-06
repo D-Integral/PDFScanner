@@ -39,6 +39,7 @@
 		0F6079932B49CA35008DD313 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0F6079922B49CA34008DD313 /* GoogleService-Info.plist */; };
 		0F84D8F62B49D11400CD3E3F /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 0F84D8F52B49D11400CD3E3F /* GoogleSignIn */; };
 		0F84D8F82B49D11400CD3E3F /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0F84D8F72B49D11400CD3E3F /* GoogleSignInSwift */; };
+		0F84D8FA2B49EB9B00CD3E3F /* MyFilesViewController+DynamicUIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F84D8F92B49EB9B00CD3E3F /* MyFilesViewController+DynamicUIProtocol.swift */; };
 		0FAA0DF52B45C0D5002FC0F9 /* Weak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAA0DF42B45C0D5002FC0F9 /* Weak.swift */; };
 		0FAA0DFD2B45CB9D002FC0F9 /* DynamicUIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAA0DFC2B45CB9D002FC0F9 /* DynamicUIProtocol.swift */; };
 		0FAA0DFF2B45CBD5002FC0F9 /* UIViewController+DynamicUIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAA0DFE2B45CBD5002FC0F9 /* UIViewController+DynamicUIProtocol.swift */; };
@@ -108,6 +109,7 @@
 		0F60798E2B49B32D008DD313 /* ToolsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsPresenter.swift; sourceTree = "<group>"; };
 		0F6079902B49B33A008DD313 /* ToolsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsInteractor.swift; sourceTree = "<group>"; };
 		0F6079922B49CA34008DD313 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0F84D8F92B49EB9B00CD3E3F /* MyFilesViewController+DynamicUIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyFilesViewController+DynamicUIProtocol.swift"; sourceTree = "<group>"; };
 		0FAA0DF42B45C0D5002FC0F9 /* Weak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weak.swift; sourceTree = "<group>"; };
 		0FAA0DFC2B45CB9D002FC0F9 /* DynamicUIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicUIProtocol.swift; sourceTree = "<group>"; };
 		0FAA0DFE2B45CBD5002FC0F9 /* UIViewController+DynamicUIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+DynamicUIProtocol.swift"; sourceTree = "<group>"; };
@@ -230,6 +232,7 @@
 				0FBCA99D2B3DA7A000149F38 /* MyFilesViewController.swift */,
 				0FAA0E002B45DE3D002FC0F9 /* MyFilesViewController+UISearchResultsUpdating.swift */,
 				0FAA0E042B46FFF6002FC0F9 /* MyFilesViewController+UICollectionViewDelegate.swift */,
+				0F84D8F92B49EB9B00CD3E3F /* MyFilesViewController+DynamicUIProtocol.swift */,
 				0F4130B32B40C85900981698 /* MyFilesPresenter.swift */,
 				0F4130B52B40C86C00981698 /* MyFilesInteractor.swift */,
 				0F4130BB2B40CD2400981698 /* MyFilesRouter.swift */,
@@ -503,6 +506,7 @@
 				0FAA0DFF2B45CBD5002FC0F9 /* UIViewController+DynamicUIProtocol.swift in Sources */,
 				0FB7DB092B3F2B9D00985825 /* DiskFilesList.swift in Sources */,
 				0F4130D02B458B6800981698 /* PDFDocumentViewController.swift in Sources */,
+				0F84D8FA2B49EB9B00CD3E3F /* MyFilesViewController+DynamicUIProtocol.swift in Sources */,
 				0FAA0E052B46FFF6002FC0F9 /* MyFilesViewController+UICollectionViewDelegate.swift in Sources */,
 				0FB7DB012B3F1F2000985825 /* FileType.swift in Sources */,
 				0F60797C2B49A111008DD313 /* AccountInteractor.swift in Sources */,

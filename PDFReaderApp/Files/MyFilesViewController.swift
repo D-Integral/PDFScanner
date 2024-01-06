@@ -52,6 +52,8 @@ class MyFilesViewController: UIViewController {
                                                   collectionViewLayout: UICollectionViewFlowLayout())
     private var searchController = UISearchController(searchResultsController: nil)
     
+    let activityView = UIActivityIndicatorView(style: .large)
+    
     // MARK: - Life Cycle
     
     init(presenter: MyFilesPresenter) {
@@ -79,6 +81,7 @@ class MyFilesViewController: UIViewController {
         setupSearchController()
         setupCollectionView()
         setupImportButton()
+        setupActivityView()
         setupConstraints()
         
         updateDynamicUI()
@@ -116,12 +119,6 @@ class MyFilesViewController: UIViewController {
         return viewWidth > 500.0 ? wideScreenColumnsCount : narrowScreenColumnsCount
     }
     
-    // MARK: - DynamicUIProtocol
-    
-    override func updateDynamicUI() {
-        applySnapshot()
-    }
-    
     // MARK: - Setup
     
     private func setupSearchController() {
@@ -149,6 +146,12 @@ class MyFilesViewController: UIViewController {
                                action: #selector(importAction),
                                for: .touchUpInside)
         view.addSubview(importButton)
+    }
+    
+    private func setupActivityView() {
+        activityView.center = view.center
+        
+        view.addSubview(activityView)
     }
     
     private func setupConstraints() {
@@ -198,7 +201,7 @@ class MyFilesViewController: UIViewController {
       return dataSource
     }
     
-    private func applySnapshot() {
+    func applySnapshot() {
         var snapshot = Snapshot()
         snapshot.appendSections([.main])
         let files = presenter?.sortedAndFilteredFiles(for: searchController.searchBar.text) as? [DiskFile] ?? []

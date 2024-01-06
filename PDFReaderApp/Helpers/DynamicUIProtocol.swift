@@ -9,4 +9,6 @@ import Foundation
 
 @objc protocol DynamicUIProtocol {
     func updateDynamicUI()
+    func timeConsumingOperationStarted()
+    func timeConsumingOperationCompleted()
 }

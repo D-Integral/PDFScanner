@@ -80,7 +80,10 @@ final class DocumentPickerManager: NSObject, UIDocumentPickerDelegate {
     
     func documentPicker(_ controller: UIDocumentPickerViewController,
                         didPickDocumentsAt urls: [URL]) {
+        timeConsumingOperationStarted()
+        
         documentImportManager.importDocuments(at: urls) { [weak self] in
+            self?.timeConsumingOperationCompleted()
             self?.updateUI()
         }
     }
@@ -89,5 +92,25 @@ final class DocumentPickerManager: NSObject, UIDocumentPickerDelegate {
     
     private func tempUrl(for fileName: String) -> URL {
         return URL(fileURLWithPath: NSTemporaryDirectory().appending(fileName))
+    }
+    
+    private func timeConsumingOperationStarted() {
+        for weakDynamicUI in Array(dynamicUserInterfaces) {
+            guard let viewController = weakDynamicUI.value else {
+                continue
+            }
+            
+            viewController.timeConsumingOperationStarted()
+        }
+    }
+    
+    private func timeConsumingOperationCompleted() {
+        for weakDynamicUI in Array(dynamicUserInterfaces) {
+            guard let viewController = weakDynamicUI.value else {
+                continue
+            }
+            
+            viewController.timeConsumingOperationCompleted()
+        }
     }
 }
