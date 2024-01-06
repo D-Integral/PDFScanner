@@ -98,7 +98,6 @@ class MyFilesViewController: UIViewController {
             let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0/CGFloat(columnsCount)),
                                                   heightDimension: heightDimension)
             let documentItem = NSCollectionLayoutItem(layoutSize: itemSize)
-            let inset = Constants.FilesList.Layout.cellContentInset
             
             let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
                                                    heightDimension: heightDimension)

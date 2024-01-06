@@ -16,12 +16,10 @@ class SignUpInteractor: InteractorProtocol {
     
     func signUp(withEmail email: String,
                 password: String,
-                completionHandler: @escaping (Error?,
-                                              User) -> ()) {
+                completionHandler: @escaping (User, Error?) -> ()) {
         accountManager.signUp(withEmail: email,
-                              password: password) { error, user in
-            completionHandler(error,
-                              user)
+                              password: password) { user, error in
+            completionHandler(user, error)
         }
     }
 }

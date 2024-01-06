@@ -6,7 +6,9 @@
 //
 
 import Foundation
+import FirebaseCore
 import FirebaseAuth
+import GoogleSignIn
 
 class FirebaseAccountManager: AccountManagerProtocol {
     var userLogged: Bool {
@@ -39,8 +41,7 @@ class FirebaseAccountManager: AccountManagerProtocol {
     
     func logIn(withEmail email: String,
                password: String,
-               completionHandler: @escaping (Error?,
-                                             User) -> ()) {
+               completionHandler: @escaping (User, Error?) -> ()) {
         Auth.auth().signIn(withEmail: email,
                            password: password) { [weak self] authResult, error in
             let user = User(name: authResult?.user.displayName ?? "",
@@ -48,22 +49,31 @@ class FirebaseAccountManager: AccountManagerProtocol {
             
             self?.user = user
             
-            completionHandler(error,
-                              user)
+            completionHandler(user, error)
+        }
+    }
+    
+    func logIn(withCredential credential: AuthCredential,
+               completionHandler: @escaping (User, Error?) -> ()) {
+        Auth.auth().signIn(with: credential) { [weak self] authResult, error in
+            let user = User(name: authResult?.user.displayName ?? "",
+                            email: authResult?.user.email ?? "")
+            
+            self?.user = user
+            
+            completionHandler(user, error)
         }
     }
     
     func signUp(withEmail email: String,
                 password: String,
-                completionHandler: @escaping (Error?,
-                                              User) -> ()) {
+                completionHandler: @escaping (User, Error?) -> ()) {
         Auth.auth().createUser(withEmail: email,
                                password: password) { authResult, error in
             let user = User(name: authResult?.user.displayName ?? "",
                             email: authResult?.user.email ?? "")
             
-            completionHandler(error,
-                              user)
+            completionHandler(user, error)
         }
     }
     

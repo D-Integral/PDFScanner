@@ -130,7 +130,7 @@ class SignUpViewController: UIViewController {
         
         presenter?.signUp(withEmail: email,
                           password: password,
-                          completionHandler: { [weak self] error, user in
+                          completionHandler: { [weak self] user, error in
             guard let self = self else { return }
             
             self.activityView.stopAnimating()
@@ -139,6 +139,7 @@ class SignUpViewController: UIViewController {
                 self.present(self.errorAlert(withMessage: error.localizedDescription),
                              animated: true,
                              completion: nil)
+                return
             }
             
             self.dismiss(animated: true)

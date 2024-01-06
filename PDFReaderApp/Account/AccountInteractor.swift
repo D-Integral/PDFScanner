@@ -6,6 +6,9 @@
 //
 
 import Foundation
+import FirebaseCore
+import FirebaseAuth
+import GoogleSignIn
 
 class AccountInteractor: InteractorProtocol {
     private let accountManager: AccountManagerProtocol
@@ -28,12 +31,17 @@ class AccountInteractor: InteractorProtocol {
     
     func logIn(withEmail email: String,
                password: String,
-               completionHandler: @escaping (Error?,
-                                             User) -> ()) {
+               completionHandler: @escaping (User, Error?) -> ()) {
         accountManager.logIn(withEmail: email,
-                             password: password) { error, user in
-            completionHandler(error,
-                              user)
+                             password: password) { user, error in
+            completionHandler(user, error)
+        }
+    }
+    
+    func logIn(withCredential credential: AuthCredential,
+               completionHandler: @escaping (User, Error?) -> ()) {
+        accountManager.logIn(withCredential: credential) { user, error in
+            completionHandler(user, error)
         }
     }
     

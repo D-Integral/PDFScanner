@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import FirebaseCore
+import FirebaseAuth
+import GoogleSignIn
 
 class AccountViewController: UIViewController {
     
@@ -28,9 +31,12 @@ class AccountViewController: UIViewController {
     private let emailTextField = UITextField(frame: .zero)
     private let passwordTextField = UITextField(frame: .zero)
     private let logInButton = UIButton(type: .system)
+    private let googleSignInButton: GIDSignInButton = GIDSignInButton(frame: .zero)
     private let signUpButton = UIButton(type: .system)
     
     private let activityView = UIActivityIndicatorView(style: .large)
+    
+    var googleSignInCredential: AuthCredential?
     
     // MARK: - Life Cycle
 
@@ -63,6 +69,7 @@ class AccountViewController: UIViewController {
         setupEmailTextField()
         setupPasswordTextField()
         setupLogInButton()
+        setupGoogleSignInButton()
         setupSignUpButton()
         
         setupActivityView()
@@ -76,6 +83,10 @@ class AccountViewController: UIViewController {
         super.viewWillAppear(animated)
         
         presenter?.onAppear()
+        
+        if !(presenter?.userLogged ?? false) {
+            requestCredentialAndSignInViaGoogleAccount()
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -126,6 +137,14 @@ class AccountViewController: UIViewController {
                               for: .touchUpInside)
         
         view.addSubview(logInButton)
+    }
+    
+    private func setupGoogleSignInButton() {
+        googleSignInButton.addTarget(self,
+                                     action: #selector(signInViaGoogleAccountAction),
+                                     for: .touchUpInside)
+        
+        view.addSubview(googleSignInButton)
     }
     
     private func setupSignUpButton() {
@@ -202,11 +221,21 @@ class AccountViewController: UIViewController {
                                                for: .vertical)
         signUpButton.setContentHuggingPriority(.defaultHigh,
                                                for: .horizontal)
+        
+        googleSignInButton.translatesAutoresizingMaskIntoConstraints = false
+        googleSignInButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor,
+                                                constant: -Constants.Layout.inset).isActive = true
+        googleSignInButton.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor).isActive = true
+        googleSignInButton.setContentHuggingPriority(.defaultHigh,
+                                                     for: .vertical)
+        googleSignInButton.setContentHuggingPriority(.defaultHigh,
+                                                     for: .horizontal)
     }
     
     private func setupDismissKeyboardGestureRecognizer() {
         let tapGestureRecognizer = UITapGestureRecognizer(target: self,
                                                           action: #selector(dismissKeyboardAction))
+        tapGestureRecognizer.cancelsTouchesInView = false
         view.addGestureRecognizer(tapGestureRecognizer)
     }
     
@@ -227,6 +256,7 @@ class AccountViewController: UIViewController {
         for loggedOutView in [emailTextField,
                               passwordTextField,
                               logInButton,
+                              googleSignInButton,
                               signUpButton] {
             loggedOutView.isHidden = userLogged
         }
@@ -260,6 +290,7 @@ class AccountViewController: UIViewController {
     private func dismissKeyboard() {
         emailTextField.endEditing(true)
         passwordTextField.endEditing(true)
+        view.endEditing(true)
     }
     
     // MARK: - Actions
@@ -276,7 +307,7 @@ class AccountViewController: UIViewController {
         
         presenter?.logIn(withEmail: email,
                          password: password,
-                         completionHandler: { [weak self] error, user in
+                         completionHandler: { [weak self] user, error in
             guard let self = self else {
                 return
             }
@@ -287,6 +318,7 @@ class AccountViewController: UIViewController {
                 self.present(self.errorAlert(withMessage: error.localizedDescription),
                              animated: true,
                              completion: nil)
+                return
             }
             
             self.cleanTextFields()
@@ -319,5 +351,69 @@ class AccountViewController: UIViewController {
     
     @objc private func dismissKeyboardAction() {
         dismissKeyboard()
+    }
+    
+    @objc private func signInViaGoogleAccountAction() {
+        requestCredentialAndSignInViaGoogleAccount()
+    }
+    
+    // MARK: - Sign In via Google Account
+    
+    @objc private func requestCredentialAndSignInViaGoogleAccount() {
+        guard let clientID = FirebaseApp.app()?.options.clientID else { return }
+        
+        // Create Google Sign In configuration object.
+        let config = GIDConfiguration(clientID: clientID)
+        GIDSignIn.sharedInstance.configuration = config
+        
+        // Start the sign in flow!
+        GIDSignIn.sharedInstance.signIn(withPresenting: AppCoordinator.shared.homeTabBarController) { [weak self] result, error in
+            guard let self = self else { return }
+            
+            if let error = error {
+                self.present(self.errorAlert(withMessage: error.localizedDescription),
+                             animated: true,
+                             completion: nil)
+                return
+            }
+            
+            guard let user = result?.user,
+                  let idToken = user.idToken?.tokenString
+            else {
+                self.present(self.errorAlert(withMessage: "The attempt to log in via a Google account has been unsuccessful. The auth result properties user or id token are nil."),
+                             animated: true,
+                             completion: nil)
+                return
+            }
+            
+            googleSignInCredential = GoogleAuthProvider.credential(withIDToken: idToken,
+                                                                   accessToken: user.accessToken.tokenString)
+            signInViaGoogleAccount()
+        }
+    }
+    
+    private func signInViaGoogleAccount() {
+        guard let googleSignInCredential = googleSignInCredential else {
+            debugPrint("No Google sign in credential.")
+            return
+        }
+        
+        activityView.startAnimating()
+        
+        presenter?.logIn(withCredential: googleSignInCredential,
+                         completionHandler: { [weak self] user, error in
+            guard let self = self else { return }
+            
+            self.activityView.stopAnimating()
+            
+            if let error = error {
+                self.present(self.errorAlert(withMessage: error.localizedDescription),
+                             animated: true,
+                             completion: nil)
+            }
+            
+            self.cleanTextFields()
+            self.updateUI(withUser: user)
+        })
     }
 }

@@ -20,12 +20,10 @@ class SignUpPresenter: PresenterProtocol {
     
     func signUp(withEmail email: String,
                 password: String,
-                completionHandler: @escaping (Error?,
-                                              User) -> ()) {
+                completionHandler: @escaping (User, Error?) -> ()) {
         interactor.signUp(withEmail: email,
-                          password: password) { error, user in
-            completionHandler(error,
-                              user)
+                          password: password) { user, error in
+            completionHandler(user, error)
         }
     }
 }

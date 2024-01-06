@@ -6,6 +6,9 @@
 //
 
 import Foundation
+import FirebaseCore
+import FirebaseAuth
+import GoogleSignIn
 
 class AccountPresenter: PresenterProtocol {
     private let interactor: AccountInteractor
@@ -32,11 +35,17 @@ class AccountPresenter: PresenterProtocol {
     
     func logIn(withEmail email: String,
                password: String,
-               completionHandler: @escaping (Error?, User) -> ()) {
+               completionHandler: @escaping (User, Error?) -> ()) {
         interactor.logIn(withEmail: email,
-                         password: password) { error, user in
-            completionHandler(error,
-                              user)
+                         password: password) { user, error in
+            completionHandler(user, error)
+        }
+    }
+    
+    func logIn(withCredential credential: AuthCredential,
+               completionHandler: @escaping (User, Error?) -> ()) {
+        interactor.logIn(withCredential: credential) { user, error in
+            completionHandler(user, error)
         }
     }
     
