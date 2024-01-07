@@ -46,8 +46,8 @@ class MyFilesInteractor: InteractorProtocol {
     
     func signIn(withServiceProvider signInServiceProvider: SignInServiceProvider,
                 completionHandler: @escaping (User?, Error?) -> ()) {
-        
-        accountManager.signIn(withServiceProvider: signInServiceProvider) { user, error in
+        accountManager.signIn(withServiceProvider: signInServiceProvider) { [weak self] user, error in
+            self?.fileStorage.updateFilesList()
             completionHandler(user, error)
         }
     }

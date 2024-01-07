@@ -11,28 +11,30 @@ import FirebaseAuth
 import GoogleSignIn
 
 class FirebaseAccountManager: AccountManagerProtocol {
+    
+    var userKeeper: UserKeeperProtocol
+    
+    init(userKeeper: UserKeeperProtocol) {
+        self.userKeeper = userKeeper
+    }
+    
     var userLogged: Bool {
-        return (nil != user)
+        return (nil != currentUser)
     }
     
     var currentUser: UserProtocol? {
-        return user
+        return userKeeper.currentUser
     }
-    
-    private var user: UserProtocol? = nil
     
     var authHandle: AuthStateDidChangeListenerHandle? = nil
     
     func startListen() {
         authHandle = Auth.auth().addStateDidChangeListener { [weak self] auth, user in
-            if let updatedUserName = user?.displayName,
-               updatedUserName != self?.user?.name {
-                self?.user?.name = updatedUserName
-            }
+            guard self?.currentUser?.email == user?.email else { return }
             
-            if let updatedUserEmail = user?.email,
-               updatedUserEmail != self?.user?.email {
-                self?.user?.email = updatedUserEmail
+            if let updatedUserName = user?.displayName,
+               updatedUserName != self?.currentUser?.name {
+                self?.userKeeper.updateCurrentUserName(withName: updatedUserName)
             }
         }
     }
@@ -61,7 +63,7 @@ class FirebaseAccountManager: AccountManagerProtocol {
             let user = User(name: authResult.user.displayName ?? "",
                             email: authResult.user.email ?? "")
             
-            self?.user = user
+            self?.userKeeper.updateCurrentUser(withUser: user)
             
             completionHandler(user, error)
         }
@@ -116,7 +118,7 @@ class FirebaseAccountManager: AccountManagerProtocol {
             return
         }
         
-        user = nil
+        userKeeper.updateCurrentUser(withUser: nil)
         completionHandler(nil)
     }
     
@@ -130,9 +132,7 @@ class FirebaseAccountManager: AccountManagerProtocol {
         GIDSignIn.sharedInstance.configuration = config
         
         // Start the sign in flow!
-        GIDSignIn.sharedInstance.signIn(withPresenting: AppCoordinator.shared.homeTabBarController) { [weak self] result, error in
-            guard let self = self else { return }
-            
+        GIDSignIn.sharedInstance.signIn(withPresenting: AppCoordinator.shared.homeTabBarController) { result, error in
             if let error = error {
                 completionHandler(nil, error)
                 return
@@ -172,7 +172,7 @@ class FirebaseAccountManager: AccountManagerProtocol {
             let user = User(name: authResult.user.displayName ?? "",
                             email: authResult.user.email ?? "")
             
-            self?.user = user
+            self?.userKeeper.updateCurrentUser(withUser: user)
             
             completionHandler(user, error)
         }

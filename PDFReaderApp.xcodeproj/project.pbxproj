@@ -42,6 +42,9 @@
 		0F84D8FC2B4ABF4B00CD3E3F /* SignInServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F84D8FB2B4ABF4B00CD3E3F /* SignInServiceProvider.swift */; };
 		0F84D8FE2B4AC10800CD3E3F /* AccountManagementError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F84D8FD2B4AC10800CD3E3F /* AccountManagementError.swift */; };
 		0F84D9002B4AC24600CD3E3F /* AccountManagementError+LocalizedError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F84D8FF2B4AC24600CD3E3F /* AccountManagementError+LocalizedError.swift */; };
+		0F84D9022B4AD45000CD3E3F /* UserKeeperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F84D9012B4AD45000CD3E3F /* UserKeeperProtocol.swift */; };
+		0F84D9042B4AD49900CD3E3F /* UserKeeper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F84D9032B4AD49900CD3E3F /* UserKeeper.swift */; };
+		0F84D9072B4AD82000CD3E3F /* UserError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F84D9062B4AD82000CD3E3F /* UserError.swift */; };
 		0FAA0DF52B45C0D5002FC0F9 /* Weak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAA0DF42B45C0D5002FC0F9 /* Weak.swift */; };
 		0FAA0DFD2B45CB9D002FC0F9 /* DynamicUIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAA0DFC2B45CB9D002FC0F9 /* DynamicUIProtocol.swift */; };
 		0FAA0DFF2B45CBD5002FC0F9 /* UIViewController+DynamicUIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAA0DFE2B45CBD5002FC0F9 /* UIViewController+DynamicUIProtocol.swift */; };
@@ -114,6 +117,9 @@
 		0F84D8FB2B4ABF4B00CD3E3F /* SignInServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInServiceProvider.swift; sourceTree = "<group>"; };
 		0F84D8FD2B4AC10800CD3E3F /* AccountManagementError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountManagementError.swift; sourceTree = "<group>"; };
 		0F84D8FF2B4AC24600CD3E3F /* AccountManagementError+LocalizedError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountManagementError+LocalizedError.swift"; sourceTree = "<group>"; };
+		0F84D9012B4AD45000CD3E3F /* UserKeeperProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserKeeperProtocol.swift; sourceTree = "<group>"; };
+		0F84D9032B4AD49900CD3E3F /* UserKeeper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserKeeper.swift; sourceTree = "<group>"; };
+		0F84D9062B4AD82000CD3E3F /* UserError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserError.swift; sourceTree = "<group>"; };
 		0FAA0DF42B45C0D5002FC0F9 /* Weak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weak.swift; sourceTree = "<group>"; };
 		0FAA0DFC2B45CB9D002FC0F9 /* DynamicUIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicUIProtocol.swift; sourceTree = "<group>"; };
 		0FAA0DFE2B45CBD5002FC0F9 /* UIViewController+DynamicUIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+DynamicUIProtocol.swift"; sourceTree = "<group>"; };
@@ -203,13 +209,23 @@
 			children = (
 				0F6079802B49A1CB008DD313 /* AccountManagerProtocol.swift */,
 				0F6079822B49A1EE008DD313 /* FirebaseAccountManager.swift */,
-				0F6079842B49A5AB008DD313 /* User.swift */,
-				0F6079862B49A5DC008DD313 /* UserProtocol.swift */,
 				0F84D8FB2B4ABF4B00CD3E3F /* SignInServiceProvider.swift */,
 				0F84D8FD2B4AC10800CD3E3F /* AccountManagementError.swift */,
 				0F84D8FF2B4AC24600CD3E3F /* AccountManagementError+LocalizedError.swift */,
 			);
 			path = AccountManagement;
+			sourceTree = "<group>";
+		};
+		0F84D9052B4AD4A800CD3E3F /* User */ = {
+			isa = PBXGroup;
+			children = (
+				0F6079862B49A5DC008DD313 /* UserProtocol.swift */,
+				0F6079842B49A5AB008DD313 /* User.swift */,
+				0F84D9012B4AD45000CD3E3F /* UserKeeperProtocol.swift */,
+				0F84D9032B4AD49900CD3E3F /* UserKeeper.swift */,
+				0F84D9062B4AD82000CD3E3F /* UserError.swift */,
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 		0FAA0DF32B45C0C1002FC0F9 /* Helpers */ = {
@@ -323,6 +339,7 @@
 				0FB7DAF02B3F12A600985825 /* FileStorage */,
 				0FB7DAEE2B3F126300985825 /* Account */,
 				0F60797F2B49A19A008DD313 /* AccountManagement */,
+				0F84D9052B4AD4A800CD3E3F /* User */,
 				0F60796F2B497C6E008DD313 /* SignUp */,
 				0FB7DAED2B3F124D00985825 /* Files */,
 				0FB7DAEF2B3F127800985825 /* Tools */,
@@ -470,6 +487,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F84D9022B4AD45000CD3E3F /* UserKeeperProtocol.swift in Sources */,
 				0F84D8FC2B4ABF4B00CD3E3F /* SignInServiceProvider.swift in Sources */,
 				0F6079732B497D87008DD313 /* SignUpRouter.swift in Sources */,
 				0FB7DAF22B3F150E00985825 /* FileStorageProtocol.swift in Sources */,
@@ -489,6 +507,7 @@
 				0F4130B62B40C86C00981698 /* MyFilesInteractor.swift in Sources */,
 				0FAA0E032B462895002FC0F9 /* PDFDocumentRouter.swift in Sources */,
 				0F4130CB2B41BE0900981698 /* DocumentPickerManager.swift in Sources */,
+				0F84D9042B4AD49900CD3E3F /* UserKeeper.swift in Sources */,
 				0FB7DB072B3F2A2F00985825 /* DiskFile.swift in Sources */,
 				0F4130B82B40C9F800981698 /* PresenterProtocol.swift in Sources */,
 				0FB7DAEC2B3E0A1600985825 /* HomeTabBarController.swift in Sources */,
@@ -506,6 +525,7 @@
 				0FB7DB092B3F2B9D00985825 /* DiskFilesList.swift in Sources */,
 				0F4130D02B458B6800981698 /* PDFDocumentViewController.swift in Sources */,
 				0F84D8FA2B49EB9B00CD3E3F /* MyFilesViewController+DynamicUIProtocol.swift in Sources */,
+				0F84D9072B4AD82000CD3E3F /* UserError.swift in Sources */,
 				0FAA0E052B46FFF6002FC0F9 /* MyFilesViewController+UICollectionViewDelegate.swift in Sources */,
 				0FB7DB012B3F1F2000985825 /* FileType.swift in Sources */,
 				0F60797C2B49A111008DD313 /* AccountInteractor.swift in Sources */,

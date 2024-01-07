@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct User: UserProtocol {
+struct User: UserProtocol, Codable {
     var name: String
     var email: String
 }

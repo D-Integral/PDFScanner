@@ -8,20 +8,31 @@
 import Foundation
 
 final class DiskFileStorage: FileStorageProtocol {
+    var userKeeper: UserKeeperProtocol
     
-    init() {
-        do {
-            self.filesList = try retrieveFilesList()
-        } catch {
-            print(error)
-        }
+    init(userKeeper: UserKeeperProtocol) {
+        self.userKeeper = userKeeper
         
-        if nil == self.filesList {
-            self.filesList = DiskFilesList(diskFiles: [UUID : DiskFile]())
-        }
+        self.updateFilesList()
     }
     
     // MARK: FileStorageProtocol
+    
+    func updateFilesList() {
+        if userKeeper.currentUser == nil {
+            self.filesList = nil
+        } else {
+            do {
+                self.filesList = try retrieveFilesList()
+            } catch {
+                print(error)
+            }
+            
+            if nil == self.filesList {
+                self.filesList = DiskFilesList(diskFiles: [UUID : DiskFile]())
+            }
+        }
+    }
     
     var fileNames: [String] {
         return Array(arrayLiteral: filesList?.files.keys) as? [String] ?? []
@@ -68,16 +79,16 @@ final class DiskFileStorage: FileStorageProtocol {
     }
     
     func saveFilesList() throws {
-        guard let url = filesListURL else {
+        guard let url = filesListUrl else {
             throw DiskFileStorageError.filesListUrlIsBroken
         }
         
-        let jsonData = try JSONEncoder().encode(self.filesList)
+        let jsonData = try JSONEncoder().encode(filesList)
         try jsonData.write(to: url)
     }
     
     func retrieveFilesList() throws -> DiskFilesList? {
-        guard let url = filesListURL else {
+        guard let url = filesListUrl else {
             throw DiskFileStorageError.filesListUrlIsBroken
         }
         
@@ -87,11 +98,15 @@ final class DiskFileStorage: FileStorageProtocol {
                                         from: jsonData)
     }
     
-    private var filesListURL: URL? {
+    private var filesListUrl: URL? {
+        guard let currentUserEmail = userKeeper.currentUser?.email else {
+            return nil
+        }
+        
         let fileManager = FileManager.default
         let documentDirectoryURL = (fileManager.urls(for: .documentDirectory,
                                                      in: .userDomainMask)).last as? NSURL
         
-        return documentDirectoryURL?.appendingPathComponent("filesList") as? URL
+        return documentDirectoryURL?.appendingPathComponent(currentUserEmail) as? URL
     }
 }

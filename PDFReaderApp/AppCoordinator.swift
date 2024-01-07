@@ -12,13 +12,17 @@ class AppCoordinator {
     static let shared = AppCoordinator()
     
     let homeTabBarController: HomeTabBarController
+    
+    let userKeeper: UserKeeperProtocol
     let fileStorage: FileStorageProtocol
     let accountManager: AccountManagerProtocol
     
     private init() {
         homeTabBarController = HomeTabBarController()
-        fileStorage = DiskFileStorage()
-        accountManager = FirebaseAccountManager()
+        
+        userKeeper = UserKeeper()
+        fileStorage = DiskFileStorage(userKeeper: userKeeper)
+        accountManager = FirebaseAccountManager(userKeeper: userKeeper)
         
         homeTabBarController.viewControllers = [filesNavigationController(),
                                                 toolsNavigationController(),
@@ -49,7 +53,8 @@ class AppCoordinator {
     }
     
     func accountNavigationController() -> UINavigationController {
-        return navigationController(with: AccountRouter().make(accountManager: accountManager),
+        return navigationController(with: AccountRouter().make(accountManager: accountManager,
+                                                               fileStorage: fileStorage),
                                     tabBarItem: accountTabBarItem())
     }
     

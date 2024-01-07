@@ -11,6 +11,7 @@ import FirebaseAuth
 import GoogleSignIn
 
 protocol AccountManagerProtocol {
+    var userKeeper: UserKeeperProtocol { get set }
     var currentUser: UserProtocol? { get }
     var userLogged: Bool { get }
     

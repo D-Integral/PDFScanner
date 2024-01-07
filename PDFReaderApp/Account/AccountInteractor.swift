@@ -12,9 +12,12 @@ import GoogleSignIn
 
 class AccountInteractor: InteractorProtocol {
     private let accountManager: AccountManagerProtocol
+    private let fileStorage: FileStorageProtocol
     
-    init(accountManager: AccountManagerProtocol) {
+    init(accountManager: AccountManagerProtocol,
+         fileStorage: FileStorageProtocol) {
         self.accountManager = accountManager
+        self.fileStorage = fileStorage
     }
     
     var userLogged: Bool {
@@ -37,7 +40,8 @@ class AccountInteractor: InteractorProtocol {
                password: String,
                completionHandler: @escaping (User?, Error?) -> ()) {
         accountManager.logIn(withEmail: email,
-                             password: password) { user, error in
+                             password: password) { [weak self] user, error in
+            self?.fileStorage.updateFilesList()
             completionHandler(user, error)
         }
     }
@@ -45,13 +49,15 @@ class AccountInteractor: InteractorProtocol {
     func signIn(withServiceProvider signInServiceProvider: SignInServiceProvider,
                 completionHandler: @escaping (User?, Error?) -> ()) {
         
-        accountManager.signIn(withServiceProvider: signInServiceProvider) { user, error in
+        accountManager.signIn(withServiceProvider: signInServiceProvider) { [weak self] user, error in
+            self?.fileStorage.updateFilesList()
             completionHandler(user, error)
         }
     }
     
     func logOut(_ completionHandler: (Error?) -> ()) {
-        accountManager.logOut { error in
+        accountManager.logOut { [weak self] error in
+            self?.fileStorage.updateFilesList()
             completionHandler(error)
         }
     }

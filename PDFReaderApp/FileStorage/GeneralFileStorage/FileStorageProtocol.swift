@@ -8,8 +8,12 @@
 import Foundation
 
 protocol FileStorageProtocol {
+    var userKeeper: UserKeeperProtocol { get set }
+    
     var fileNames: [String] { get }
     var filesCount: Int { get }
+    
+    func updateFilesList()
     
     func file(withId fileId: UUID) -> (any FileProtocol)?
     func files() -> [any FileProtocol]
