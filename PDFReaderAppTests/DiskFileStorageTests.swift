@@ -14,9 +14,14 @@ final class DiskFileStorageTests: XCTestCase {
     let testFileName = "CV Dmytro Skorokhod 12:26:2023"
     var testFileId: UUID? = nil
     var initialFileCount = 0
-    let diskFileStorage = DiskFileStorage()
+    var diskFileStorage: DiskFileStorage?
 
     override func setUpWithError() throws {
+        let userKeeper = UserKeeper()
+        let user = User(name: "Test User Name",
+                        email: "Test User Email")
+        userKeeper.updateCurrentUser(withUser: user)
+        diskFileStorage = DiskFileStorage(userKeeper: userKeeper)
     }
 
     override func tearDownWithError() throws {
@@ -25,10 +30,10 @@ final class DiskFileStorageTests: XCTestCase {
     func testFileSavingAndDeleting() throws {
         defer {
             if let testFileId = testFileId {
-                diskFileStorage.delete(testFileId)
+                diskFileStorage?.delete(testFileId)
             }
             
-            XCTAssertTrue(diskFileStorage.filesCount == initialFileCount)
+            XCTAssertTrue(diskFileStorage?.filesCount == initialFileCount)
         }
         
         guard let fileUrl = Bundle.main.url(forResource: testFileName, withExtension: "pdf") else {
@@ -62,18 +67,18 @@ final class DiskFileStorageTests: XCTestCase {
         
         testFileId = diskFile.id
         
-        initialFileCount = diskFileStorage.filesCount
+        initialFileCount = diskFileStorage?.filesCount ?? -1
         
         do {
-            try diskFileStorage.save(diskFile)
+            try diskFileStorage?.save(diskFile)
         } catch {
             XCTFail("An attempt to save the PDF file to the storage has failed with error: \(error.localizedDescription)")
             return
         }
         
-        XCTAssertTrue(diskFileStorage.filesCount == initialFileCount + 1)
+        XCTAssertTrue(diskFileStorage?.filesCount == initialFileCount + 1)
         
-        let retrievedFile = diskFileStorage.file(withId: diskFile.id)
+        let retrievedFile = diskFileStorage?.file(withId: diskFile.id)
         XCTAssertNotNil(retrievedFile)
         XCTAssertTrue(retrievedFile?.name == testFileName)
         XCTAssertNotNil(retrievedFile?.data)
