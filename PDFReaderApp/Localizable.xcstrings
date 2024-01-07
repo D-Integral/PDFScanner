@@ -380,6 +380,12 @@
         }
       }
     },
+    "No auth result retrieved from the sign in provider server." : {
+
+    },
+    "No sign in credential retrieved from the sign in provider server." : {
+
+    },
     "password" : {
       "comment" : "The password text field placeholder.",
       "localizations" : {
@@ -414,6 +420,9 @@
           }
         }
       }
+    },
+    "Please Sign In" : {
+
     },
     "searchPdfDocuments" : {
       "extractionState" : "manual",
@@ -484,6 +493,12 @@
           }
         }
       }
+    },
+    "The attempt to sign in has been unsuccessful: no id token retrieved from the sign in provider server." : {
+
+    },
+    "The attempt to sign in has been unsuccessful: no user retrieved from the sign in provider server." : {
+
     },
     "toolsTitle" : {
       "extractionState" : "manual",

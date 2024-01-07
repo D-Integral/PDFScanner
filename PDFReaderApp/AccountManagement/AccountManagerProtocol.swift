@@ -18,11 +18,11 @@ protocol AccountManagerProtocol {
     
     func logIn(withEmail email: String,
                password: String,
-               completionHandler: @escaping (User, Error?) -> ())
-    func logIn(withCredential credential: AuthCredential,
-               completionHandler: @escaping (User, Error?) -> ())
+               completionHandler: @escaping (User?, Error?) -> ())
+    func signIn(withServiceProvider signInServiceProvider: SignInServiceProvider,
+                completionHandler: @escaping (User?, Error?) -> ())
     func signUp(withEmail email: String,
                 password: String,
-                completionHandler: @escaping (User, Error?) -> ())
+                completionHandler: @escaping (User?, Error?) -> ())
     func logOut(_ completionHandler: (Error?) -> ())
 }

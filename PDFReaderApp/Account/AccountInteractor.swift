@@ -31,16 +31,17 @@ class AccountInteractor: InteractorProtocol {
     
     func logIn(withEmail email: String,
                password: String,
-               completionHandler: @escaping (User, Error?) -> ()) {
+               completionHandler: @escaping (User?, Error?) -> ()) {
         accountManager.logIn(withEmail: email,
                              password: password) { user, error in
             completionHandler(user, error)
         }
     }
     
-    func logIn(withCredential credential: AuthCredential,
-               completionHandler: @escaping (User, Error?) -> ()) {
-        accountManager.logIn(withCredential: credential) { user, error in
+    func signIn(withServiceProvider signInServiceProvider: SignInServiceProvider,
+                completionHandler: @escaping (User?, Error?) -> ()) {
+        
+        accountManager.signIn(withServiceProvider: signInServiceProvider) { user, error in
             completionHandler(user, error)
         }
     }

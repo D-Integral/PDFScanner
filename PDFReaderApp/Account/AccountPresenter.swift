@@ -35,16 +35,16 @@ class AccountPresenter: PresenterProtocol {
     
     func logIn(withEmail email: String,
                password: String,
-               completionHandler: @escaping (User, Error?) -> ()) {
+               completionHandler: @escaping (User?, Error?) -> ()) {
         interactor.logIn(withEmail: email,
                          password: password) { user, error in
             completionHandler(user, error)
         }
     }
     
-    func logIn(withCredential credential: AuthCredential,
-               completionHandler: @escaping (User, Error?) -> ()) {
-        interactor.logIn(withCredential: credential) { user, error in
+    func signIn(withServiceProvider signInServiceProvider: SignInServiceProvider,
+                completionHandler: @escaping (User?, Error?) -> ()) {
+        interactor.signIn(withServiceProvider: signInServiceProvider) { user, error in
             completionHandler(user, error)
         }
     }

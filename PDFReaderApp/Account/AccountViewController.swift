@@ -36,8 +36,6 @@ class AccountViewController: UIViewController {
     
     private let activityView = UIActivityIndicatorView(style: .large)
     
-    var googleSignInCredential: AuthCredential?
-    
     // MARK: - Life Cycle
 
     init(presenter: AccountPresenter,
@@ -83,10 +81,6 @@ class AccountViewController: UIViewController {
         super.viewWillAppear(animated)
         
         presenter?.onAppear()
-        
-        if !(presenter?.userLogged ?? false) {
-            requestCredentialAndSignInViaGoogleAccount()
-        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -354,53 +348,15 @@ class AccountViewController: UIViewController {
     }
     
     @objc private func signInViaGoogleAccountAction() {
-        requestCredentialAndSignInViaGoogleAccount()
+        signInViaGoogleAccount()
     }
     
     // MARK: - Sign In via Google Account
     
-    @objc private func requestCredentialAndSignInViaGoogleAccount() {
-        guard let clientID = FirebaseApp.app()?.options.clientID else { return }
-        
-        // Create Google Sign In configuration object.
-        let config = GIDConfiguration(clientID: clientID)
-        GIDSignIn.sharedInstance.configuration = config
-        
-        // Start the sign in flow!
-        GIDSignIn.sharedInstance.signIn(withPresenting: AppCoordinator.shared.homeTabBarController) { [weak self] result, error in
-            guard let self = self else { return }
-            
-            if let error = error {
-                self.present(self.errorAlert(withMessage: error.localizedDescription),
-                             animated: true,
-                             completion: nil)
-                return
-            }
-            
-            guard let user = result?.user,
-                  let idToken = user.idToken?.tokenString
-            else {
-                self.present(self.errorAlert(withMessage: "The attempt to log in via a Google account has been unsuccessful. The auth result properties user or id token are nil."),
-                             animated: true,
-                             completion: nil)
-                return
-            }
-            
-            googleSignInCredential = GoogleAuthProvider.credential(withIDToken: idToken,
-                                                                   accessToken: user.accessToken.tokenString)
-            signInViaGoogleAccount()
-        }
-    }
-    
     private func signInViaGoogleAccount() {
-        guard let googleSignInCredential = googleSignInCredential else {
-            debugPrint("No Google sign in credential.")
-            return
-        }
-        
         activityView.startAnimating()
         
-        presenter?.logIn(withCredential: googleSignInCredential,
+        presenter?.signIn(withServiceProvider: .Google,
                          completionHandler: { [weak self] user, error in
             guard let self = self else { return }
             

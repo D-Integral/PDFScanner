@@ -41,11 +41,21 @@ class FirebaseAccountManager: AccountManagerProtocol {
     
     func logIn(withEmail email: String,
                password: String,
-               completionHandler: @escaping (User, Error?) -> ()) {
+               completionHandler: @escaping (User?, Error?) -> ()) {
         Auth.auth().signIn(withEmail: email,
                            password: password) { [weak self] authResult, error in
-            let user = User(name: authResult?.user.displayName ?? "",
-                            email: authResult?.user.email ?? "")
+            if let error = error {
+                completionHandler(nil, error)
+                return
+            }
+            
+            guard let authResult = authResult else {
+                completionHandler(nil, AccountManagementError.noAuthResultRetrievedFromServer)
+                return
+            }
+            
+            let user = User(name: authResult.user.displayName ?? "",
+                            email: authResult.user.email ?? "")
             
             self?.user = user
             
@@ -53,27 +63,44 @@ class FirebaseAccountManager: AccountManagerProtocol {
         }
     }
     
-    func logIn(withCredential credential: AuthCredential,
-               completionHandler: @escaping (User, Error?) -> ()) {
-        Auth.auth().signIn(with: credential) { [weak self] authResult, error in
-            let user = User(name: authResult?.user.displayName ?? "",
-                            email: authResult?.user.email ?? "")
+    func signIn(withServiceProvider signInServiceProvider: SignInServiceProvider,
+                completionHandler: @escaping (User?, Error?) -> ()) {
+        requestCredential { [weak self] authCredential, error in
+            if let error = error {
+                completionHandler(nil, error)
+                return
+            }
             
-            self?.user = user
+            guard let authCredential = authCredential else {
+                completionHandler(nil, AccountManagementError.noCredentialRetrievedFromServer)
+                return
+            }
             
-            completionHandler(user, error)
+            self?.signIn(withCredential: authCredential, completionHandler: { user, error in
+                completionHandler(user, error)
+            })
         }
     }
     
     func signUp(withEmail email: String,
                 password: String,
-                completionHandler: @escaping (User, Error?) -> ()) {
+                completionHandler: @escaping (User?, Error?) -> ()) {
         Auth.auth().createUser(withEmail: email,
                                password: password) { authResult, error in
-            let user = User(name: authResult?.user.displayName ?? "",
-                            email: authResult?.user.email ?? "")
+            if let error = error {
+                completionHandler(nil, error)
+                return
+            }
             
-            completionHandler(user, error)
+            guard let authResult = authResult else {
+                completionHandler(nil, AccountManagementError.noAuthResultRetrievedFromServer)
+                return
+            }
+            
+            let user = User(name: authResult.user.displayName ?? "",
+                            email: authResult.user.email ?? "")
+            
+            completionHandler(user, nil)
         }
     }
     
@@ -87,5 +114,63 @@ class FirebaseAccountManager: AccountManagerProtocol {
         
         user = nil
         completionHandler(nil)
+    }
+    
+    // MARK: - Private Functions
+    
+    private func requestCredential(_ completionHandler: @escaping (AuthCredential?, Error?) -> ()) {
+        guard let clientID = FirebaseApp.app()?.options.clientID else { return }
+        
+        // Create Google Sign In configuration object.
+        let config = GIDConfiguration(clientID: clientID)
+        GIDSignIn.sharedInstance.configuration = config
+        
+        // Start the sign in flow!
+        GIDSignIn.sharedInstance.signIn(withPresenting: AppCoordinator.shared.homeTabBarController) { [weak self] result, error in
+            guard let self = self else { return }
+            
+            if let error = error {
+                completionHandler(nil, error)
+                return
+            }
+            
+            guard let user = result?.user
+            else {
+                completionHandler(nil, AccountManagementError.noUserRetrievedFromServer)
+                return
+            }
+            
+            guard let idToken = user.idToken?.tokenString
+            else {
+                completionHandler(nil, AccountManagementError.noUserIdTokenRetrievedFromServer)
+                return
+            }
+            
+            let googleSignInCredential = GoogleAuthProvider.credential(withIDToken: idToken,
+                                                                   accessToken: user.accessToken.tokenString)
+            completionHandler(googleSignInCredential, nil)
+        }
+    }
+    
+    func signIn(withCredential credential: AuthCredential,
+                completionHandler: @escaping (User?, Error?) -> ()) {
+        Auth.auth().signIn(with: credential) { [weak self] authResult, error in
+            if let error = error {
+                completionHandler(nil, error)
+                return
+            }
+            
+            guard let authResult = authResult else {
+                completionHandler(nil, AccountManagementError.noAuthResultRetrievedFromServer)
+                return
+            }
+            
+            let user = User(name: authResult.user.displayName ?? "",
+                            email: authResult.user.email ?? "")
+            
+            self?.user = user
+            
+            completionHandler(user, error)
+        }
     }
 }

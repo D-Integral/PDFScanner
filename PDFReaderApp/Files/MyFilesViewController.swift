@@ -51,6 +51,17 @@ class MyFilesViewController: UIViewController {
     private let collectionView = UICollectionView(frame: .zero,
                                                   collectionViewLayout: UICollectionViewFlowLayout())
     private var searchController = UISearchController(searchResultsController: nil)
+    private var pleaseSignInLabel = UILabel(frame: .zero)
+    
+    private var signInAutomaticallyRequested = false
+    
+    private var userLogged: Bool {
+        return presenter?.userLogged ?? false
+    }
+    
+    private var automaticSignInRequestNeeded: Bool {
+        return !signInAutomaticallyRequested && !userLogged
+    }
     
     let activityView = UIActivityIndicatorView(style: .large)
     
@@ -78,13 +89,24 @@ class MyFilesViewController: UIViewController {
         
         view.backgroundColor = .white
         
+        setupPleaseSignInLabel()
         setupSearchController()
         setupCollectionView()
         setupImportButton()
         setupActivityView()
         setupConstraints()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
-        updateDynamicUI()
+        updateUIAccordingToUserLogInStatus()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        automaticallyRequestSignInIfNeeded()
     }
     
     // MARK: - Collection View
@@ -121,6 +143,13 @@ class MyFilesViewController: UIViewController {
     
     // MARK: - Setup
     
+    private func setupPleaseSignInLabel() {
+        pleaseSignInLabel.text = String(localized: "Please Sign In")
+        pleaseSignInLabel.textAlignment = .center
+        
+        view.addSubview(pleaseSignInLabel)
+    }
+    
     private func setupSearchController() {
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
@@ -155,6 +184,14 @@ class MyFilesViewController: UIViewController {
     }
     
     private func setupConstraints() {
+        pleaseSignInLabel.translatesAutoresizingMaskIntoConstraints = false
+        pleaseSignInLabel.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor).isActive = true
+        pleaseSignInLabel.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor).isActive = true
+        pleaseSignInLabel.setContentHuggingPriority(.defaultHigh,
+                                                    for: .vertical)
+        pleaseSignInLabel.setContentHuggingPriority(.defaultHigh,
+                                                    for: .horizontal)
+        
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor,
                                             constant: Constants.FilesList.Layout.contentInset).isActive = true
@@ -172,6 +209,16 @@ class MyFilesViewController: UIViewController {
                                              constant: Constants.ImportButtonLayout.bottomOffset).isActive = true
         importButton.widthAnchor.constraint(equalToConstant: Constants.ImportButtonLayout.side).isActive = true
         importButton.heightAnchor.constraint(equalToConstant: Constants.ImportButtonLayout.side).isActive = true
+    }
+    
+    // MARK: - Actions
+    
+    @objc private func importAction() {
+        guard let documentPicker = presenter?.documentPickerViewController else { return }
+        
+        self.present(documentPicker,
+                     animated: true,
+                     completion: nil)
     }
     
     // MARK: - Private Functions
@@ -210,12 +257,14 @@ class MyFilesViewController: UIViewController {
                          animatingDifferences: true)
     }
     
-    @objc private func importAction() {
-        guard let documentPicker = presenter?.documentPickerViewController else { return }
+    func updateVisibility() {
+        let loggedIn = userLogged
         
-        self.present(documentPicker,
-                     animated: true,
-                     completion: nil)
+        pleaseSignInLabel.isHidden = loggedIn
+        
+        for loggedInView in [searchController.searchBar, collectionView, importButton] {
+            loggedInView.isHidden = !userLogged
+        }
     }
     
     private func presentActionSheet(forFileId fileId: UUID) {
@@ -240,5 +289,49 @@ class MyFilesViewController: UIViewController {
         self.present(alertController,
                      animated: true,
                      completion: nil)
+    }
+    
+    private func errorAlert(withMessage message: String) -> UIAlertController {
+        let alert = UIAlertController(title: String(localized: "error"),
+                                      message: message,
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK",
+                                      style: .default,
+                                      handler: nil))
+        
+        return alert
+    }
+    
+    private func automaticallyRequestSignInIfNeeded() {
+        if automaticSignInRequestNeeded {
+            signInAutomaticallyRequested = true
+            signInViaGoogleAccount()
+        }
+    }
+    
+    // MARK: - Sign In via Google Account
+    
+    private func signInViaGoogleAccount() {
+        activityView.startAnimating()
+        
+        presenter?.signIn(withServiceProvider: .Google,
+                         completionHandler: { [weak self] user, error in
+            guard let self = self else { return }
+            
+            self.activityView.stopAnimating()
+            
+            if let error = error {
+                self.present(self.errorAlert(withMessage: error.localizedDescription),
+                             animated: true,
+                             completion: nil)
+            }
+            
+            self.updateUIAccordingToUserLogInStatus()
+        })
+    }
+    
+    private func updateUIAccordingToUserLogInStatus() {
+        self.updateVisibility()
+        self.updateDynamicUI()
     }
 }

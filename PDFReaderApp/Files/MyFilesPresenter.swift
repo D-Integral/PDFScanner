@@ -16,16 +16,20 @@ class MyFilesPresenter: PresenterProtocol {
     
     let title: String
     
+    var userLogged: Bool {
+        return interactor.userLogged
+    }
+    
+    var documentPickerViewController: UIDocumentPickerViewController? {
+        return documentPickerManager.documentPickerViewController
+    }
+    
     init(interactor: MyFilesInteractor,
          documentImportManager: DocumentImportManagerProtocol,
          title: String) {
         self.interactor = interactor
         self.documentPickerManager = DocumentPickerManager(documentImportManager: documentImportManager)
         self.title = title
-    }
-    
-    var documentPickerViewController: UIDocumentPickerViewController? {
-        return documentPickerManager.documentPickerViewController
     }
     
     func add(dynamicUI: DynamicUIProtocol) {
@@ -55,6 +59,13 @@ class MyFilesPresenter: PresenterProtocol {
                 completionHandler(pdfDocumentPage?.thumbnail(of: thumbnailSize,
                                                              for: PDFDisplayBox.trimBox))
             }
+        }
+    }
+    
+    func signIn(withServiceProvider signInServiceProvider: SignInServiceProvider,
+                completionHandler: @escaping (User?, Error?) -> ()) {
+        interactor.signIn(withServiceProvider: signInServiceProvider) { user, error in
+            completionHandler(user, error)
         }
     }
 }
