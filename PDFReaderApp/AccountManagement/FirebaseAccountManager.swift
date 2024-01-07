@@ -15,7 +15,11 @@ class FirebaseAccountManager: AccountManagerProtocol {
         return (nil != user)
     }
     
-    var user: UserProtocol? = nil
+    var currentUser: UserProtocol? {
+        return user
+    }
+    
+    private var user: UserProtocol? = nil
     
     var authHandle: AuthStateDidChangeListenerHandle? = nil
     

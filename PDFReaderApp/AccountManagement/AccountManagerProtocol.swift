@@ -11,6 +11,7 @@ import FirebaseAuth
 import GoogleSignIn
 
 protocol AccountManagerProtocol {
+    var currentUser: UserProtocol? { get }
     var userLogged: Bool { get }
     
     func startListen()

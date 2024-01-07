@@ -81,6 +81,7 @@ class AccountViewController: UIViewController {
         super.viewWillAppear(animated)
         
         presenter?.onAppear()
+        updateUI(withUser: presenter?.currentUser)
     }
     
     override func viewWillDisappear(_ animated: Bool) {

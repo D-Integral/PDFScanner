@@ -25,6 +25,10 @@ class AccountPresenter: PresenterProtocol {
         return interactor.userLogged
     }
     
+    var currentUser: User? {
+        return interactor.currentUser
+    }
+    
     func onAppear() {
         interactor.startListen()
     }

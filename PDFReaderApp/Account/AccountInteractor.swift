@@ -21,6 +21,10 @@ class AccountInteractor: InteractorProtocol {
         return accountManager.userLogged
     }
     
+    var currentUser: User? {
+        return accountManager.currentUser as? User
+    }
+    
     func startListen() {
         accountManager.startListen()
     }

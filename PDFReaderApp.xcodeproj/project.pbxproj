@@ -23,7 +23,6 @@
 		0F60796E2B497A01008DD313 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 0F60796D2B497A01008DD313 /* FirebaseAuth */; };
 		0F6079712B497C95008DD313 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6079702B497C95008DD313 /* SignUpViewController.swift */; };
 		0F6079732B497D87008DD313 /* SignUpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6079722B497D87008DD313 /* SignUpRouter.swift */; };
-		0F6079782B498892008DD313 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6079772B498892008DD313 /* LogInViewController.swift */; };
 		0F60797A2B49A100008DD313 /* AccountPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6079792B49A100008DD313 /* AccountPresenter.swift */; };
 		0F60797C2B49A111008DD313 /* AccountInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F60797B2B49A111008DD313 /* AccountInteractor.swift */; };
 		0F60797E2B49A124008DD313 /* AccountRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F60797D2B49A124008DD313 /* AccountRouter.swift */; };
@@ -98,7 +97,6 @@
 		0F4130CF2B458B6800981698 /* PDFDocumentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFDocumentViewController.swift; sourceTree = "<group>"; };
 		0F6079702B497C95008DD313 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		0F6079722B497D87008DD313 /* SignUpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRouter.swift; sourceTree = "<group>"; };
-		0F6079772B498892008DD313 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		0F6079792B49A100008DD313 /* AccountPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountPresenter.swift; sourceTree = "<group>"; };
 		0F60797B2B49A111008DD313 /* AccountInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInteractor.swift; sourceTree = "<group>"; };
 		0F60797D2B49A124008DD313 /* AccountRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRouter.swift; sourceTree = "<group>"; };
@@ -198,14 +196,6 @@
 				0F6079722B497D87008DD313 /* SignUpRouter.swift */,
 			);
 			path = SignUp;
-			sourceTree = "<group>";
-		};
-		0F6079762B49886C008DD313 /* LogIn */ = {
-			isa = PBXGroup;
-			children = (
-				0F6079772B498892008DD313 /* LogInViewController.swift */,
-			);
-			path = LogIn;
 			sourceTree = "<group>";
 		};
 		0F60797F2B49A19A008DD313 /* AccountManagement */ = {
@@ -334,7 +324,6 @@
 				0FB7DAEE2B3F126300985825 /* Account */,
 				0F60797F2B49A19A008DD313 /* AccountManagement */,
 				0F60796F2B497C6E008DD313 /* SignUp */,
-				0F6079762B49886C008DD313 /* LogIn */,
 				0FB7DAED2B3F124D00985825 /* Files */,
 				0FB7DAEF2B3F127800985825 /* Tools */,
 				0F4130CE2B458B3800981698 /* PDFDocumentView */,
@@ -504,7 +493,6 @@
 				0F4130B82B40C9F800981698 /* PresenterProtocol.swift in Sources */,
 				0FB7DAEC2B3E0A1600985825 /* HomeTabBarController.swift in Sources */,
 				0F4130C92B41BB5A00981698 /* DocumentImportError.swift in Sources */,
-				0F6079782B498892008DD313 /* LogInViewController.swift in Sources */,
 				0F60797A2B49A100008DD313 /* AccountPresenter.swift in Sources */,
 				0FAA0DF52B45C0D5002FC0F9 /* Weak.swift in Sources */,
 				0F6079872B49A5DC008DD313 /* UserProtocol.swift in Sources */,
