@@ -14,4 +14,6 @@ protocol FileProtocol: Codable, Hashable {
     var createdDate: Date { get set }
     var modifiedDate: Date { get set }
     var fileType: FileType { get set }
+    
+    func info() -> String?
 }

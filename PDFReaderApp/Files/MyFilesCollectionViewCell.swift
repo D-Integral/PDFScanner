@@ -17,12 +17,12 @@ class MyFilesCollectionViewCell: UICollectionViewCell {
             static let inset = -5.0
         }
         
-        struct InfoLabel {
-            static let fontSize = 11.0
-        }
-        
         struct TitleLabel {
             static let fontSize = 14.0
+        }
+        
+        struct InfoLabel {
+            static let fontSize = 11.0
         }
         
         struct MoreButton {
@@ -54,16 +54,7 @@ class MyFilesCollectionViewCell: UICollectionViewCell {
             guard let diskFile = diskFile else { return }
             
             documentTitleLabel.text = diskFile.name
-            
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "dd.MM.yyyy"
-            let modifiedDateString = dateFormatter.string(from: diskFile.modifiedDate)
-            
-            let byteCountFormatter = ByteCountFormatter()
-            byteCountFormatter.countStyle = .file
-            let dataSizeString = byteCountFormatter.string(fromByteCount: Int64(diskFile.data.count))
-            
-            documentInfoLabel.text = "\(modifiedDateString) • \(dataSizeString)"
+            documentInfoLabel.text = diskFile.info()
         }
     }
     

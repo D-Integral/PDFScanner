@@ -45,6 +45,7 @@
 		0F84D9022B4AD45000CD3E3F /* UserKeeperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F84D9012B4AD45000CD3E3F /* UserKeeperProtocol.swift */; };
 		0F84D9042B4AD49900CD3E3F /* UserKeeper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F84D9032B4AD49900CD3E3F /* UserKeeper.swift */; };
 		0F84D9072B4AD82000CD3E3F /* UserError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F84D9062B4AD82000CD3E3F /* UserError.swift */; };
+		0F84D9092B4AEE5400CD3E3F /* FileInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F84D9082B4AEE5400CD3E3F /* FileInfoView.swift */; };
 		0FAA0DF52B45C0D5002FC0F9 /* Weak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAA0DF42B45C0D5002FC0F9 /* Weak.swift */; };
 		0FAA0DFD2B45CB9D002FC0F9 /* DynamicUIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAA0DFC2B45CB9D002FC0F9 /* DynamicUIProtocol.swift */; };
 		0FAA0DFF2B45CBD5002FC0F9 /* UIViewController+DynamicUIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAA0DFE2B45CBD5002FC0F9 /* UIViewController+DynamicUIProtocol.swift */; };
@@ -120,6 +121,7 @@
 		0F84D9012B4AD45000CD3E3F /* UserKeeperProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserKeeperProtocol.swift; sourceTree = "<group>"; };
 		0F84D9032B4AD49900CD3E3F /* UserKeeper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserKeeper.swift; sourceTree = "<group>"; };
 		0F84D9062B4AD82000CD3E3F /* UserError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserError.swift; sourceTree = "<group>"; };
+		0F84D9082B4AEE5400CD3E3F /* FileInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileInfoView.swift; sourceTree = "<group>"; };
 		0FAA0DF42B45C0D5002FC0F9 /* Weak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weak.swift; sourceTree = "<group>"; };
 		0FAA0DFC2B45CB9D002FC0F9 /* DynamicUIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicUIProtocol.swift; sourceTree = "<group>"; };
 		0FAA0DFE2B45CBD5002FC0F9 /* UIViewController+DynamicUIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+DynamicUIProtocol.swift"; sourceTree = "<group>"; };
@@ -252,6 +254,7 @@
 				0F4130B52B40C86C00981698 /* MyFilesInteractor.swift */,
 				0F4130BB2B40CD2400981698 /* MyFilesRouter.swift */,
 				0F4130CC2B4587E100981698 /* MyFilesCollectionViewCell.swift */,
+				0F84D9082B4AEE5400CD3E3F /* FileInfoView.swift */,
 			);
 			path = Files;
 			sourceTree = "<group>";
@@ -523,6 +526,7 @@
 				0FAA0E012B45DE3D002FC0F9 /* MyFilesViewController+UISearchResultsUpdating.swift in Sources */,
 				0FAA0DFF2B45CBD5002FC0F9 /* UIViewController+DynamicUIProtocol.swift in Sources */,
 				0FB7DB092B3F2B9D00985825 /* DiskFilesList.swift in Sources */,
+				0F84D9092B4AEE5400CD3E3F /* FileInfoView.swift in Sources */,
 				0F4130D02B458B6800981698 /* PDFDocumentViewController.swift in Sources */,
 				0F84D8FA2B49EB9B00CD3E3F /* MyFilesViewController+DynamicUIProtocol.swift in Sources */,
 				0F84D9072B4AD82000CD3E3F /* UserError.swift in Sources */,

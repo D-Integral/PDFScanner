@@ -22,4 +22,16 @@ struct DiskFile: FileProtocol {
     static func == (lhs: DiskFile, rhs: DiskFile) -> Bool {
       lhs.id == rhs.id
     }
+    
+    func info() -> String? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd.MM.yyyy"
+        let modifiedDateString = dateFormatter.string(from: modifiedDate)
+        
+        let byteCountFormatter = ByteCountFormatter()
+        byteCountFormatter.countStyle = .file
+        let dataSizeString = byteCountFormatter.string(fromByteCount: Int64(data.count))
+        
+        return "\(modifiedDateString) • \(dataSizeString)"
+    }
 }

@@ -26,11 +26,19 @@ class MyFilesViewController: UIViewController {
                 static let narrowScreenColumnsCount = 3
                 static let wideScreenColumnsCount = 4
                 static let cellHeight = 182.0
+                static let fileActionsInfoViewOffset = 15.0
+                static let fileActionsInfoViewHeight = 56.0
             }
             
             struct Reuse {
                 static let cellIdentifier = "MyFilesCollectionViewCell"
             }
+        }
+        
+        struct FileActions {
+            static let infoViewOffset = 15.0
+            static let infoViewHeight = 56.0
+            static let menuHeight = 200.0
         }
     }
     
@@ -230,9 +238,9 @@ class MyFilesViewController: UIViewController {
                                                         for: indexPath) as? MyFilesCollectionViewCell
           cell?.diskFile = diskFile
           cell?.moreActionBlock = { [weak self] diskFile in
-              guard let id = diskFile?.id else { return }
+              guard let file = diskFile else { return }
               
-              self?.presentActionSheet(forFileId: id)
+              self?.presentActionSheet(forFile: file)
           }
           
           let thumbnailSize = MyFilesCollectionViewCell.Constants.Thumbnail.size
@@ -267,13 +275,13 @@ class MyFilesViewController: UIViewController {
         }
     }
     
-    private func presentActionSheet(forFileId fileId: UUID) {
+    private func presentActionSheet(forFile file: DiskFile) {
         let alertController = UIAlertController(title: "", message: "", preferredStyle: .actionSheet)
         
         let deleteAction = UIAlertAction(title: String(localized: "delete"),
                                          style: .destructive,
                                          handler: { [weak self] (action: UIAlertAction) -> Void in
-            self?.presenter?.deleteFile(withId: fileId)
+            self?.presenter?.deleteFile(withId: file.id)
             self?.updateDynamicUI()
         })
         
@@ -283,12 +291,45 @@ class MyFilesViewController: UIViewController {
             self.dismiss(animated: true)
         })
         
+        let filesActionsInfoView = filesActionsInfoView(forFile: file)
+        
+        alertController.view.addSubview(filesActionsInfoView)
+        
+        filesActionsInfoView.translatesAutoresizingMaskIntoConstraints = false
+        
+        filesActionsInfoView.topAnchor.constraint(equalTo: alertController.view.topAnchor,
+                                                  constant: Constants.FileActions.infoViewOffset).isActive = true
+        filesActionsInfoView.trailingAnchor.constraint(equalTo: alertController.view.trailingAnchor,
+                                                       constant: -Constants.FileActions.infoViewOffset).isActive = true
+        filesActionsInfoView.leadingAnchor.constraint(equalTo: alertController.view.leadingAnchor,
+                                                      constant: Constants.FileActions.infoViewOffset).isActive = true
+        filesActionsInfoView.heightAnchor.constraint(equalToConstant: Constants.FileActions.infoViewHeight).isActive = true
+        
+        alertController.view.translatesAutoresizingMaskIntoConstraints = false
+        alertController.view.heightAnchor.constraint(equalToConstant: Constants.FileActions.menuHeight).isActive = true
+        
         alertController.addAction(deleteAction)
         alertController.addAction(cancelAction)
         
         self.present(alertController,
                      animated: true,
                      completion: nil)
+    }
+    
+    private func filesActionsInfoView(forFile file: DiskFile) -> FileInfoView {
+        let view = FileInfoView()
+        
+        view.update(withFile: file)
+        
+        let thumbnailSize = FileInfoView.Constants.Thumbnail.size
+        
+        self.presenter?.pdfDocumentThumbnail(ofSize: thumbnailSize,
+                                              forFile: file,
+                                              completionHandler: { thumbnailImage in
+            view.thumbnail = thumbnailImage
+        })
+        
+        return view
     }
     
     private func errorAlert(withMessage message: String) -> UIAlertController {
