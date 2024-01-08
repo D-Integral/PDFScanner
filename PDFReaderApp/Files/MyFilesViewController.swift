@@ -75,13 +75,13 @@ class MyFilesViewController: UIViewController {
     
     // MARK: - Life Cycle
     
-    init(presenter: MyFilesPresenter) {
+    init(presenter: MyFilesPresenter?) {
         self.presenter = presenter
         
         super.init(nibName: nil,
                    bundle: nil)
         
-        self.title = presenter.title
+        self.title = self.presenter?.title ?? ""
         
         self.presenter?.add(dynamicUI: self)
     }
@@ -101,7 +101,9 @@ class MyFilesViewController: UIViewController {
         setupSearchController()
         setupCollectionView()
         setupImportButton()
+        
         setupActivityView()
+        
         setupConstraints()
     }
     

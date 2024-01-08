@@ -12,20 +12,26 @@ class PDFDocumentViewController: DocumentViewController {
     
     // MARK: - Properties
     
-    let diskFile: DiskFile?
+    let presenter: PDFDocumentPresenter?
     
     let pdfView = PDFView()
     
+    let activityView = UIActivityIndicatorView(style: .large)
+    
     // MARK: - Life Cycle
     
-    init(diskFile: DiskFile) {
-        self.diskFile = diskFile
+    init(presenter: PDFDocumentPresenter?) {
+        self.presenter = presenter
         
         super.init(nibName: nil, bundle: nil)
+        
+        self.title = self.presenter?.title ?? ""
+        
+        presenter?.add(dynamicUI: self)
     }
     
     required init?(coder: NSCoder) {
-        self.diskFile = nil
+        self.presenter = nil
         
         super.init(coder: coder)
     }
@@ -35,17 +41,23 @@ class PDFDocumentViewController: DocumentViewController {
         
         setupPdfView()
         
+        setupActivityView()
+        
         setupConstraints()
+    }
+    
+    // MARK: - Search
+    
+    
+    override func updateSearchResults() {
+        presenter?.resetSearchResults()
+        presenter?.search(withQuery: searchController.searchBar.text)
     }
     
     // MARK: - Setup
     
     private func setupPdfView() {
-        if diskFile?.fileType == .pdfDocument,
-           let pdfDocumentData = diskFile?.data {
-            pdfView.document = PDFDocument(data: pdfDocumentData)
-        }
-        
+        pdfView.document = presenter?.pdfDocument
         pdfView.autoresizesSubviews = true
         pdfView.displayDirection = .vertical
         pdfView.autoScales = true
@@ -54,6 +66,12 @@ class PDFDocumentViewController: DocumentViewController {
         pdfView.displaysAsBook = true
         
         view.addSubview(pdfView)
+    }
+    
+    private func setupActivityView() {
+        activityView.center = view.center
+        
+        view.addSubview(activityView)
     }
     
     private func setupConstraints() {

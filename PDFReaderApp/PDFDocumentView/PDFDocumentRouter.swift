@@ -10,9 +10,10 @@ import UIKit
 
 class PDFDocumentRouter: DocumentRouter {
     func make(diskFile: DiskFile) -> UIViewController {
-        let pdfDocumentViewController = PDFDocumentViewController(diskFile: diskFile)
-        pdfDocumentViewController.title = diskFile.name
+        let interactor = PDFDocumentInteractor(diskFile: diskFile)
+        let presenter = PDFDocumentPresenter(interactor: interactor)
+        let viewController = PDFDocumentViewController(presenter: presenter)
         
-        return navigationController(with: pdfDocumentViewController)
+        return navigationController(with: viewController)
     }
 }

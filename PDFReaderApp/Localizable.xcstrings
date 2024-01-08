@@ -517,6 +517,9 @@
         }
       }
     },
+    "search" : {
+
+    },
     "searchPdfDocuments" : {
       "extractionState" : "manual",
       "localizations" : {

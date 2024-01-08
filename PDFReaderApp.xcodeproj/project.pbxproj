@@ -54,6 +54,14 @@
 		0FAA0E052B46FFF6002FC0F9 /* MyFilesViewController+UICollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAA0E042B46FFF6002FC0F9 /* MyFilesViewController+UICollectionViewDelegate.swift */; };
 		0FAA6E7E2B4C64F70009D0A3 /* DocumentRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAA6E7D2B4C64F70009D0A3 /* DocumentRouter.swift */; };
 		0FAA6E802B4C65470009D0A3 /* DocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAA6E7F2B4C65470009D0A3 /* DocumentViewController.swift */; };
+		0FAA6E842B4C69260009D0A3 /* DocumentViewController+UISearchResultsUpdating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAA6E832B4C69260009D0A3 /* DocumentViewController+UISearchResultsUpdating.swift */; };
+		0FAA6E862B4C6EDB0009D0A3 /* PDFDocumentPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAA6E852B4C6EDB0009D0A3 /* PDFDocumentPresenter.swift */; };
+		0FAA6E882B4C6F050009D0A3 /* PDFDocumentInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAA6E872B4C6F050009D0A3 /* PDFDocumentInteractor.swift */; };
+		0FAA6E8A2B4C71730009D0A3 /* PDFDocumentKeeper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAA6E892B4C71730009D0A3 /* PDFDocumentKeeper.swift */; };
+		0FAA6E8C2B4C7F9B0009D0A3 /* PDFDocumentKeeper+PDFDocumentDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAA6E8B2B4C7F9B0009D0A3 /* PDFDocumentKeeper+PDFDocumentDelegate.swift */; };
+		0FAA6E8F2B4C80BE0009D0A3 /* PDFSelection+Comparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAA6E8E2B4C80BE0009D0A3 /* PDFSelection+Comparable.swift */; };
+		0FAA6E912B4C82170009D0A3 /* DynamicUINotifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAA6E902B4C82170009D0A3 /* DynamicUINotifier.swift */; };
+		0FAA6E942B4C855C0009D0A3 /* PDFDocumentViewController+DynamicUIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAA6E932B4C855C0009D0A3 /* PDFDocumentViewController+DynamicUIProtocol.swift */; };
 		0FB7DAE62B3DF08000985825 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 0FB7DAE52B3DF08000985825 /* Localizable.xcstrings */; };
 		0FB7DAE82B3DF51B00985825 /* ToolsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB7DAE72B3DF51B00985825 /* ToolsViewController.swift */; };
 		0FB7DAEA2B3DF54100985825 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB7DAE92B3DF54100985825 /* AccountViewController.swift */; };
@@ -132,6 +140,14 @@
 		0FAA0E042B46FFF6002FC0F9 /* MyFilesViewController+UICollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyFilesViewController+UICollectionViewDelegate.swift"; sourceTree = "<group>"; };
 		0FAA6E7D2B4C64F70009D0A3 /* DocumentRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentRouter.swift; sourceTree = "<group>"; };
 		0FAA6E7F2B4C65470009D0A3 /* DocumentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentViewController.swift; sourceTree = "<group>"; };
+		0FAA6E832B4C69260009D0A3 /* DocumentViewController+UISearchResultsUpdating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DocumentViewController+UISearchResultsUpdating.swift"; sourceTree = "<group>"; };
+		0FAA6E852B4C6EDB0009D0A3 /* PDFDocumentPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFDocumentPresenter.swift; sourceTree = "<group>"; };
+		0FAA6E872B4C6F050009D0A3 /* PDFDocumentInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFDocumentInteractor.swift; sourceTree = "<group>"; };
+		0FAA6E892B4C71730009D0A3 /* PDFDocumentKeeper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFDocumentKeeper.swift; sourceTree = "<group>"; };
+		0FAA6E8B2B4C7F9B0009D0A3 /* PDFDocumentKeeper+PDFDocumentDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PDFDocumentKeeper+PDFDocumentDelegate.swift"; sourceTree = "<group>"; };
+		0FAA6E8E2B4C80BE0009D0A3 /* PDFSelection+Comparable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PDFSelection+Comparable.swift"; sourceTree = "<group>"; };
+		0FAA6E902B4C82170009D0A3 /* DynamicUINotifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicUINotifier.swift; sourceTree = "<group>"; };
+		0FAA6E932B4C855C0009D0A3 /* PDFDocumentViewController+DynamicUIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PDFDocumentViewController+DynamicUIProtocol.swift"; sourceTree = "<group>"; };
 		0FB7DAE52B3DF08000985825 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		0FB7DAE72B3DF51B00985825 /* ToolsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsViewController.swift; sourceTree = "<group>"; };
 		0FB7DAE92B3DF54100985825 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
@@ -194,6 +210,11 @@
 			isa = PBXGroup;
 			children = (
 				0F4130CF2B458B6800981698 /* PDFDocumentViewController.swift */,
+				0FAA6E932B4C855C0009D0A3 /* PDFDocumentViewController+DynamicUIProtocol.swift */,
+				0FAA6E852B4C6EDB0009D0A3 /* PDFDocumentPresenter.swift */,
+				0FAA6E872B4C6F050009D0A3 /* PDFDocumentInteractor.swift */,
+				0FAA6E892B4C71730009D0A3 /* PDFDocumentKeeper.swift */,
+				0FAA6E8B2B4C7F9B0009D0A3 /* PDFDocumentKeeper+PDFDocumentDelegate.swift */,
 				0FAA0E022B462895002FC0F9 /* PDFDocumentRouter.swift */,
 			);
 			path = PDFDocumentView;
@@ -237,12 +258,9 @@
 		0FAA0DF32B45C0C1002FC0F9 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				0FAA0DF42B45C0D5002FC0F9 /* Weak.swift */,
 				0F4130B72B40C9F800981698 /* PresenterProtocol.swift */,
 				0F4130B92B40CA0600981698 /* InteractorProtocol.swift */,
 				0F4130BD2B40CD3400981698 /* RouterProtocol.swift */,
-				0FAA0DFC2B45CB9D002FC0F9 /* DynamicUIProtocol.swift */,
-				0FAA0DFE2B45CBD5002FC0F9 /* UIViewController+DynamicUIProtocol.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -252,6 +270,7 @@
 			children = (
 				0FAA6E7D2B4C64F70009D0A3 /* DocumentRouter.swift */,
 				0FAA6E7F2B4C65470009D0A3 /* DocumentViewController.swift */,
+				0FAA6E832B4C69260009D0A3 /* DocumentViewController+UISearchResultsUpdating.swift */,
 			);
 			path = DocumentView;
 			sourceTree = "<group>";
@@ -265,6 +284,25 @@
 				0FB7DAFE2B3F1C8900985825 /* AppCoordinator.swift */,
 			);
 			path = AppCoordination;
+			sourceTree = "<group>";
+		};
+		0FAA6E8D2B4C80A80009D0A3 /* PDF */ = {
+			isa = PBXGroup;
+			children = (
+				0FAA6E8E2B4C80BE0009D0A3 /* PDFSelection+Comparable.swift */,
+			);
+			path = PDF;
+			sourceTree = "<group>";
+		};
+		0FAA6E922B4C84520009D0A3 /* DynamicUI */ = {
+			isa = PBXGroup;
+			children = (
+				0FAA0DF42B45C0D5002FC0F9 /* Weak.swift */,
+				0FAA0DFC2B45CB9D002FC0F9 /* DynamicUIProtocol.swift */,
+				0FAA6E902B4C82170009D0A3 /* DynamicUINotifier.swift */,
+				0FAA0DFE2B45CBD5002FC0F9 /* UIViewController+DynamicUIProtocol.swift */,
+			);
+			path = DynamicUI;
 			sourceTree = "<group>";
 		};
 		0FB7DAED2B3F124D00985825 /* Files */ = {
@@ -369,6 +407,8 @@
 				0FB7DAEF2B3F127800985825 /* Tools */,
 				0FAA6E812B4C66200009D0A3 /* DocumentView */,
 				0F4130CE2B458B3800981698 /* PDFDocumentView */,
+				0FAA6E8D2B4C80A80009D0A3 /* PDF */,
+				0FAA6E922B4C84520009D0A3 /* DynamicUI */,
 				0FAA0DF32B45C0C1002FC0F9 /* Helpers */,
 				0FB7DAE52B3DF08000985825 /* Localizable.xcstrings */,
 				0FBCA9A22B3DA7A200149F38 /* Assets.xcassets */,
@@ -515,11 +555,13 @@
 				0F84D9022B4AD45000CD3E3F /* UserKeeperProtocol.swift in Sources */,
 				0F84D8FC2B4ABF4B00CD3E3F /* SignInServiceProvider.swift in Sources */,
 				0F6079732B497D87008DD313 /* SignUpRouter.swift in Sources */,
+				0FAA6E8C2B4C7F9B0009D0A3 /* PDFDocumentKeeper+PDFDocumentDelegate.swift in Sources */,
 				0FB7DAF22B3F150E00985825 /* FileStorageProtocol.swift in Sources */,
 				0F6079832B49A1EE008DD313 /* FirebaseAccountManager.swift in Sources */,
 				0FB7DAE82B3DF51B00985825 /* ToolsViewController.swift in Sources */,
 				0FB7DAFF2B3F1C8900985825 /* AppCoordinator.swift in Sources */,
 				0F60797E2B49A124008DD313 /* AccountRouter.swift in Sources */,
+				0FAA6E882B4C6F050009D0A3 /* PDFDocumentInteractor.swift in Sources */,
 				0FB7DAEA2B3DF54100985825 /* AccountViewController.swift in Sources */,
 				0F4130C52B41B99A00981698 /* PDFDocumentImportManager.swift in Sources */,
 				0F4130BC2B40CD2400981698 /* MyFilesRouter.swift in Sources */,
@@ -529,15 +571,18 @@
 				0F6079912B49B33A008DD313 /* ToolsInteractor.swift in Sources */,
 				0FAA0DFD2B45CB9D002FC0F9 /* DynamicUIProtocol.swift in Sources */,
 				0F4130C72B41B9F100981698 /* DocumentImportManager.swift in Sources */,
+				0FAA6E912B4C82170009D0A3 /* DynamicUINotifier.swift in Sources */,
 				0F84D8FE2B4AC10800CD3E3F /* AccountManagementError.swift in Sources */,
 				0F4130B62B40C86C00981698 /* MyFilesInteractor.swift in Sources */,
 				0FAA0E032B462895002FC0F9 /* PDFDocumentRouter.swift in Sources */,
 				0F4130CB2B41BE0900981698 /* DocumentPickerManager.swift in Sources */,
 				0F84D9042B4AD49900CD3E3F /* UserKeeper.swift in Sources */,
 				0FB7DB072B3F2A2F00985825 /* DiskFile.swift in Sources */,
+				0FAA6E8F2B4C80BE0009D0A3 /* PDFSelection+Comparable.swift in Sources */,
 				0F4130B82B40C9F800981698 /* PresenterProtocol.swift in Sources */,
 				0FB7DAEC2B3E0A1600985825 /* HomeTabBarController.swift in Sources */,
 				0F4130C92B41BB5A00981698 /* DocumentImportError.swift in Sources */,
+				0FAA6E8A2B4C71730009D0A3 /* PDFDocumentKeeper.swift in Sources */,
 				0F60797A2B49A100008DD313 /* AccountPresenter.swift in Sources */,
 				0FAA0DF52B45C0D5002FC0F9 /* Weak.swift in Sources */,
 				0F6079872B49A5DC008DD313 /* UserProtocol.swift in Sources */,
@@ -546,6 +591,9 @@
 				0FB7DAF92B3F16B400985825 /* DiskFileStorage.swift in Sources */,
 				0F60798B2B49A796008DD313 /* SignUpPresenter.swift in Sources */,
 				0F4130BE2B40CD3400981698 /* RouterProtocol.swift in Sources */,
+				0FAA6E862B4C6EDB0009D0A3 /* PDFDocumentPresenter.swift in Sources */,
+				0FAA6E942B4C855C0009D0A3 /* PDFDocumentViewController+DynamicUIProtocol.swift in Sources */,
+				0FAA6E842B4C69260009D0A3 /* DocumentViewController+UISearchResultsUpdating.swift in Sources */,
 				0FBCA99E2B3DA7A000149F38 /* MyFilesViewController.swift in Sources */,
 				0FAA0E012B45DE3D002FC0F9 /* MyFilesViewController+UISearchResultsUpdating.swift in Sources */,
 				0FAA0DFF2B45CBD5002FC0F9 /* UIViewController+DynamicUIProtocol.swift in Sources */,
