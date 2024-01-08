@@ -8,16 +8,11 @@
 import Foundation
 import UIKit
 
-class PDFDocumentRouter: RouterProtocol {
+class PDFDocumentRouter: DocumentRouter {
     func make(diskFile: DiskFile) -> UIViewController {
         let pdfDocumentViewController = PDFDocumentViewController(diskFile: diskFile)
         pdfDocumentViewController.title = diskFile.name
         
-        let nav = UINavigationController(rootViewController: pdfDocumentViewController)
-        nav.modalPresentationStyle = .fullScreen
-        nav.isModalInPresentation = false
-        nav.modalTransitionStyle = .crossDissolve
-        
-        return nav
+        return navigationController(with: pdfDocumentViewController)
     }
 }

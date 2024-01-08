@@ -8,7 +8,7 @@
 import UIKit
 import PDFKit
 
-class PDFDocumentViewController: UIViewController {
+class PDFDocumentViewController: DocumentViewController {
     
     // MARK: - Properties
     
@@ -33,10 +33,7 @@ class PDFDocumentViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .systemBackground
-        
         setupPdfView()
-        setupNavigationBar()
         
         setupConstraints()
     }
@@ -59,24 +56,11 @@ class PDFDocumentViewController: UIViewController {
         view.addSubview(pdfView)
     }
     
-    private func setupNavigationBar() {
-        let closeBarButtonItem = UIBarButtonItem(image: .init(systemName: "xmark"),
-                                                 style: .plain,
-                                                 target: self,
-                                                 action: #selector(closeAction))
-
-        navigationItem.rightBarButtonItem = closeBarButtonItem
-    }
-    
     private func setupConstraints() {
         pdfView.translatesAutoresizingMaskIntoConstraints = false
         pdfView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
         pdfView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
         pdfView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
         pdfView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
-    }
-    
-    @objc private func closeAction() {
-        navigationController?.dismiss(animated: true)
     }
 }
