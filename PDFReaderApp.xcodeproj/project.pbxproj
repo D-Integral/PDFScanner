@@ -62,6 +62,7 @@
 		0FAA6E8F2B4C80BE0009D0A3 /* PDFSelection+Comparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAA6E8E2B4C80BE0009D0A3 /* PDFSelection+Comparable.swift */; };
 		0FAA6E912B4C82170009D0A3 /* DynamicUINotifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAA6E902B4C82170009D0A3 /* DynamicUINotifier.swift */; };
 		0FAA6E942B4C855C0009D0A3 /* PDFDocumentViewController+DynamicUIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAA6E932B4C855C0009D0A3 /* PDFDocumentViewController+DynamicUIProtocol.swift */; };
+		0FAA6E962B4C8DD30009D0A3 /* CV Dmytro Skorokhod 2024 PDF.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 0FAA6E952B4C8DD20009D0A3 /* CV Dmytro Skorokhod 2024 PDF.pdf */; };
 		0FB7DAE62B3DF08000985825 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 0FB7DAE52B3DF08000985825 /* Localizable.xcstrings */; };
 		0FB7DAE82B3DF51B00985825 /* ToolsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB7DAE72B3DF51B00985825 /* ToolsViewController.swift */; };
 		0FB7DAEA2B3DF54100985825 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB7DAE92B3DF54100985825 /* AccountViewController.swift */; };
@@ -80,7 +81,6 @@
 		0FBCA99E2B3DA7A000149F38 /* MyFilesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBCA99D2B3DA7A000149F38 /* MyFilesViewController.swift */; };
 		0FBCA9A32B3DA7A200149F38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FBCA9A22B3DA7A200149F38 /* Assets.xcassets */; };
 		0FBCA9A62B3DA7A200149F38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FBCA9A42B3DA7A200149F38 /* LaunchScreen.storyboard */; };
-		0FE1596E2B407EC1000F5EDD /* CV Dmytro Skorokhod 12:26:2023.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 0FE1596D2B407EC1000F5EDD /* CV Dmytro Skorokhod 12:26:2023.pdf */; };
 		0FE159712B407F1E000F5EDD /* DiskFileStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE159702B407F1E000F5EDD /* DiskFileStorageTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -148,6 +148,7 @@
 		0FAA6E8E2B4C80BE0009D0A3 /* PDFSelection+Comparable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PDFSelection+Comparable.swift"; sourceTree = "<group>"; };
 		0FAA6E902B4C82170009D0A3 /* DynamicUINotifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicUINotifier.swift; sourceTree = "<group>"; };
 		0FAA6E932B4C855C0009D0A3 /* PDFDocumentViewController+DynamicUIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PDFDocumentViewController+DynamicUIProtocol.swift"; sourceTree = "<group>"; };
+		0FAA6E952B4C8DD20009D0A3 /* CV Dmytro Skorokhod 2024 PDF.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "CV Dmytro Skorokhod 2024 PDF.pdf"; sourceTree = "<group>"; };
 		0FB7DAE52B3DF08000985825 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		0FB7DAE72B3DF51B00985825 /* ToolsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsViewController.swift; sourceTree = "<group>"; };
 		0FB7DAE92B3DF54100985825 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
@@ -169,7 +170,6 @@
 		0FBCA9A52B3DA7A200149F38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0FBCA9A72B3DA7A200149F38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0FBCA9AC2B3DA7A300149F38 /* PDFReaderAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PDFReaderAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0FE1596D2B407EC1000F5EDD /* CV Dmytro Skorokhod 12:26:2023.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "CV Dmytro Skorokhod 12:26:2023.pdf"; sourceTree = "<group>"; };
 		0FE159702B407F1E000F5EDD /* DiskFileStorageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskFileStorageTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -431,7 +431,7 @@
 		0FE1596F2B407ECA000F5EDD /* TestResources */ = {
 			isa = PBXGroup;
 			children = (
-				0FE1596D2B407EC1000F5EDD /* CV Dmytro Skorokhod 12:26:2023.pdf */,
+				0FAA6E952B4C8DD20009D0A3 /* CV Dmytro Skorokhod 2024 PDF.pdf */,
 			);
 			path = TestResources;
 			sourceTree = "<group>";
@@ -530,7 +530,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0FE1596E2B407EC1000F5EDD /* CV Dmytro Skorokhod 12:26:2023.pdf in Resources */,
 				0FBCA9A62B3DA7A200149F38 /* LaunchScreen.storyboard in Resources */,
 				0FBCA9A32B3DA7A200149F38 /* Assets.xcassets in Resources */,
 				0FB7DAE62B3DF08000985825 /* Localizable.xcstrings in Resources */,
@@ -542,6 +541,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FAA6E962B4C8DD30009D0A3 /* CV Dmytro Skorokhod 2024 PDF.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,7 +11,7 @@ import PDFKit
 
 final class DiskFileStorageTests: XCTestCase {
     
-    let testFileName = "CV Dmytro Skorokhod 12:26:2023"
+    let testFileName = "CV Dmytro Skorokhod 2024 PDF"
     var testFileId: UUID? = nil
     var initialFileCount = 0
     var diskFileStorage: DiskFileStorage?
