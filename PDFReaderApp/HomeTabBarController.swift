@@ -12,7 +12,7 @@ class HomeTabBarController: UITabBarController {
         super.viewDidLoad()
 
         selectedIndex = 0
-        tabBar.tintColor = .iconPurple
-        tabBar.unselectedItemTintColor = .iconGray
+        tabBar.tintColor = .systemIndigo
+        tabBar.unselectedItemTintColor = .systemGray
     }
  }

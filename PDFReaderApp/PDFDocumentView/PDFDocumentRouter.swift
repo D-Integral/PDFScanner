@@ -13,6 +13,11 @@ class PDFDocumentRouter: RouterProtocol {
         let pdfDocumentViewController = PDFDocumentViewController(diskFile: diskFile)
         pdfDocumentViewController.title = diskFile.name
         
-        return UINavigationController(rootViewController: pdfDocumentViewController)
+        let nav = UINavigationController(rootViewController: pdfDocumentViewController)
+        nav.modalPresentationStyle = .fullScreen
+        nav.isModalInPresentation = false
+        nav.modalTransitionStyle = .crossDissolve
+        
+        return nav
     }
 }

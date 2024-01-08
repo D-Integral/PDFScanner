@@ -101,7 +101,7 @@ class MyFilesCollectionViewCell: UICollectionViewCell {
     
     private func setupDocumentTitleLabel() {
         documentTitleLabel.numberOfLines = 2
-        documentTitleLabel.textColor = .colourDocumentTitle
+        documentTitleLabel.textColor = .label
         documentTitleLabel.font = .systemFont(ofSize: Constants.TitleLabel.fontSize)
         documentTitleLabel.textAlignment = .center
         
@@ -110,7 +110,7 @@ class MyFilesCollectionViewCell: UICollectionViewCell {
     
     private func setupDocumentInfoLabel() {
         documentInfoLabel.numberOfLines = 1
-        documentInfoLabel.textColor = .colourDocumentInfo
+        documentInfoLabel.textColor = .secondaryLabel
         documentInfoLabel.font = .systemFont(ofSize: Constants.InfoLabel.fontSize)
         documentInfoLabel.textAlignment = .center
         

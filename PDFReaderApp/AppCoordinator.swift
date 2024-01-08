@@ -62,20 +62,20 @@ class AppCoordinator {
     
     func filesTabBarItem() -> UITabBarItem {
         return tabBarItem(withTitle: String(localized: "filesTabBarItemTitle"),
-                          image: UIImage.iconFilesSelected.withTintColor(.iconGray),
+                          image: UIImage.iconFilesSelected.withTintColor(.systemGray),
                           selectedImage: UIImage.iconFilesSelected)
     }
     
     func toolsTabBarItem() -> UITabBarItem {
         return tabBarItem(withTitle: String(localized: "toolsTitle"),
                           image: UIImage.iconTools,
-                          selectedImage: UIImage.iconTools.withTintColor(.iconPurple))
+                          selectedImage: UIImage.iconTools.withTintColor(.systemPurple))
     }
     
     func accountTabBarItem() -> UITabBarItem {
         return tabBarItem(withTitle: String(localized: "accountTabBarItemTitle"),
                           image: UIImage.iconAccount,
-                          selectedImage: UIImage.iconAccount.withTintColor(.iconPurple))
+                          selectedImage: UIImage.iconAccount.withTintColor(.systemPurple))
     }
     
     func tabBarItem(withTitle title: String,

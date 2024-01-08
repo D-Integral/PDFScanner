@@ -59,7 +59,7 @@ class AccountViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .white
+        view.backgroundColor = .systemBackground
         
         setupGreetingLabel()
         setupLogOutButton()

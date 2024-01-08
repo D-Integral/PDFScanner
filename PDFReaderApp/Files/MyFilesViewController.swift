@@ -95,7 +95,7 @@ class MyFilesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .white
+        view.backgroundColor = .systemBackground
         
         setupPleaseSignInLabel()
         setupSearchController()
@@ -171,6 +171,7 @@ class MyFilesViewController: UIViewController {
         collectionView.register(MyFilesCollectionViewCell.self,
                                 forCellWithReuseIdentifier: Constants.FilesList.Reuse.cellIdentifier)
         collectionView.delegate = self
+        collectionView.backgroundColor = .systemBackground
         
         view.addSubview(collectionView)
     }
