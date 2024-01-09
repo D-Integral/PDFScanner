@@ -113,10 +113,15 @@ class PDFDocumentViewController: DocumentViewController {
     
     func showCurrentSearchResult() {
         if let currentSearchResult = presenter?.currentSearchResult {
+            hideKeyboard()
             pdfView.go(to: currentSearchResult)
             pdfView.setCurrentSelection(currentSearchResult,
                                         animate: true)
         }
+    }
+    
+    func hideKeyboard() {
+        searchController.searchBar.endEditing(true)
     }
     
     // MARK: - Setup
