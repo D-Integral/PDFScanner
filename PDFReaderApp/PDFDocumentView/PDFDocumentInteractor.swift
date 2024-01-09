@@ -56,7 +56,7 @@ class PDFDocumentInteractor: InteractorProtocol {
         
         let searchResultsCount = searchResultsCount ?? 0
         
-        if (currentSearchResultIndex >= searchResultsCount) {
+        if (currentSearchResultIndex > searchResultsCount) {
             currentSearchResultIndex = 1
         }
     }
@@ -66,7 +66,7 @@ class PDFDocumentInteractor: InteractorProtocol {
         
         if (currentSearchResultIndex < 1) {
             let searchResultsCount = searchResultsCount ?? 0
-            currentSearchResultIndex = searchResultsCount - 1
+            currentSearchResultIndex = searchResultsCount
         }
     }
 }
