@@ -10,6 +10,6 @@ import UIKit
 
 extension DocumentViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
-        updateSearchResults()
+        search()
     }
 }

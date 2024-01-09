@@ -10,7 +10,7 @@ import PDFKit
 
 extension PDFDocumentViewController {
     override func updateDynamicUI() {
-        pdfView.highlightedSelections = presenter?.searchResults
+        showHideSearchResults()
     }
     
     override func timeConsumingOperationStarted() {

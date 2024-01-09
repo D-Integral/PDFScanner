@@ -20,6 +20,16 @@ class PDFDocumentInteractor: InteractorProtocol {
         return pdfDocumentKeeper?.searchResults
     }
     
+    var searchResultsCount: Int? {
+        return pdfDocumentKeeper?.searchResultsCount
+    }
+    
+    private(set) var currentSearchResultIndex = 0
+    
+    var currentSearchResult: PDFSelection? {
+        return searchResults?[currentSearchResultIndex - 1]
+    }
+    
     init(diskFile: DiskFile?) {
         self.documentName = diskFile?.name ?? ""
         self.pdfDocumentKeeper = PDFDocumentKeeper(diskFile: diskFile)
@@ -39,5 +49,24 @@ class PDFDocumentInteractor: InteractorProtocol {
     
     func resetSearchResults() {
         pdfDocumentKeeper?.resetSearchResults()
+    }
+    
+    func incrementCurrentSearchResultIndex() {
+        currentSearchResultIndex += 1
+        
+        let searchResultsCount = searchResultsCount ?? 0
+        
+        if (currentSearchResultIndex >= searchResultsCount) {
+            currentSearchResultIndex = 1
+        }
+    }
+    
+    func decrementCurrentSearchResultIndex() {
+        currentSearchResultIndex -= 1
+        
+        if (currentSearchResultIndex < 1) {
+            let searchResultsCount = searchResultsCount ?? 0
+            currentSearchResultIndex = searchResultsCount - 1
+        }
     }
 }

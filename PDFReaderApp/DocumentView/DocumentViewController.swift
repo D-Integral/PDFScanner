@@ -13,6 +13,7 @@ class DocumentViewController: UIViewController {
     // MARK: - Properties
     
     var searchController = UISearchController(searchResultsController: nil)
+    let searchResultsView = UIStackView(frame: .zero)
     
     // MARK: - Life Cycle
     
@@ -28,7 +29,7 @@ class DocumentViewController: UIViewController {
     
     // MARK: - Search
     
-    func updateSearchResults() { }
+    func search() { }
     
     var searchBarPlaceholderText: String {
         return String(localized: "search")
@@ -45,6 +46,7 @@ class DocumentViewController: UIViewController {
         let tapGestureRecognizer = UITapGestureRecognizer(target: self,
                                                           action: #selector(dismissNavBarAction))
         tapGestureRecognizer.cancelsTouchesInView = false
+        tapGestureRecognizer.delegate = self
         view.addGestureRecognizer(tapGestureRecognizer)
     }
     

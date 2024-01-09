@@ -23,6 +23,18 @@ class PDFDocumentPresenter: PresenterProtocol {
         return interactor?.searchResults ?? []
     }
     
+    var searchResultsCount: Int? {
+        return interactor?.searchResultsCount
+    }
+    
+    var currentSearchResultIndex: Int? {
+        return interactor?.currentSearchResultIndex
+    }
+    
+    var currentSearchResult: PDFSelection? {
+        return interactor?.currentSearchResult
+    }
+    
     init(interactor: PDFDocumentInteractor?) {
         self.interactor = interactor
     }
@@ -46,5 +58,13 @@ class PDFDocumentPresenter: PresenterProtocol {
     
     func resetSearchResults() {
         interactor?.resetSearchResults()
+    }
+    
+    func incrementCurrentSearchResultIndex() {
+        interactor?.incrementCurrentSearchResultIndex()
+    }
+    
+    func decrementCurrentSearchResultIndex() {
+        interactor?.decrementCurrentSearchResultIndex()
     }
 }
