@@ -98,6 +98,8 @@ final class DiskFileStorage: FileStorageProtocol {
                                         from: jsonData)
     }
     
+    // MARK: - Private Methods
+    
     private var filesListUrl: URL? {
         guard let currentUserEmail = userKeeper.currentUser?.email else {
             return nil

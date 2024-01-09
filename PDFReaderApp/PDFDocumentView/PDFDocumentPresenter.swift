@@ -35,6 +35,10 @@ class PDFDocumentPresenter: PresenterProtocol {
         return interactor?.currentSearchResult
     }
     
+    var savedPosition: PositionProtocol? {
+        return interactor?.savedPosition
+    }
+    
     init(interactor: PDFDocumentInteractor?) {
         self.interactor = interactor
     }
@@ -66,5 +70,9 @@ class PDFDocumentPresenter: PresenterProtocol {
     
     func decrementCurrentSearchResultIndex() {
         interactor?.decrementCurrentSearchResultIndex()
+    }
+    
+    func save(position: PositionProtocol) {
+        interactor?.save(position: position)
     }
 }

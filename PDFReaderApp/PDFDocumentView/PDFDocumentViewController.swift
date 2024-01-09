@@ -27,7 +27,7 @@ class PDFDocumentViewController: DocumentViewController {
     
     let presenter: PDFDocumentPresenter?
     
-    private let pdfView = PDFView()
+    private let pdfView = PDFView(frame: .zero)
     
     let activityView = UIActivityIndicatorView(style: .large)
     
@@ -83,6 +83,12 @@ class PDFDocumentViewController: DocumentViewController {
                                                object: self.view.window)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        restoreCurrentPosition()
+    }
+    
     override func viewWillDisappear(_ animated: Bool) {
         NotificationCenter.default.removeObserver(self,
                                                   name: UIResponder.keyboardWillShowNotification,
@@ -90,6 +96,8 @@ class PDFDocumentViewController: DocumentViewController {
         NotificationCenter.default.removeObserver(self,
                                                   name: UIResponder.keyboardWillHideNotification,
                                                   object: self.view.window)
+        
+        saveCurrentPosition()
     }
     
     // MARK: - Search
@@ -250,5 +258,33 @@ class PDFDocumentViewController: DocumentViewController {
         UIView.animate(withDuration: Constants.SearchResults.animationDuration) { [weak self] in
             self?.view.layoutIfNeeded()
         }
+    }
+    
+    // MARK: - Private Methods
+    
+    private func saveCurrentPosition() {
+        
+        if let currentDestination = pdfView.currentDestination,
+           let currentPage = pdfView.currentPage,
+           let currentPageNumber = pdfView.document?.index(for: currentPage) {
+            let position = Position(page: currentPageNumber,
+                                    point: currentDestination.point,
+                                    zoom: currentDestination.zoom)
+            
+            presenter?.save(position: position)
+        }
+    }
+    
+    private func restoreCurrentPosition() {
+        guard let savedPosition = presenter?.savedPosition,
+              let page = pdfView.document?.page(at: savedPosition.page) else {
+            return
+        }
+        
+        let savedDestination = PDFDestination(page: page,
+                                              at: savedPosition.point)
+        savedDestination.zoom = savedPosition.zoom
+        
+        pdfView.go(to: savedDestination)
     }
 }

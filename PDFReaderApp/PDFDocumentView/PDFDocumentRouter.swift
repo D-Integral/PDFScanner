@@ -9,8 +9,10 @@ import Foundation
 import UIKit
 
 class PDFDocumentRouter: DocumentRouter {
-    func make(diskFile: DiskFile) -> UIViewController {
-        let interactor = PDFDocumentInteractor(diskFile: diskFile)
+    func make(diskFile: DiskFile,
+              positionKeeper: PositionKeeperProtocol) -> UIViewController {
+        let interactor = PDFDocumentInteractor(diskFile: diskFile,
+                                               positionKeeper: positionKeeper)
         let presenter = PDFDocumentPresenter(interactor: interactor)
         let viewController = PDFDocumentViewController(presenter: presenter)
         

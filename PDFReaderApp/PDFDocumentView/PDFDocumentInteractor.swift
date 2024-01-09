@@ -10,7 +10,8 @@ import PDFKit
 
 class PDFDocumentInteractor: InteractorProtocol {
     private let pdfDocumentKeeper: PDFDocumentKeeper?
-    var documentName: String
+    private let positionKeeper: PositionKeeperProtocol?
+    private let diskFile: DiskFile?
     
     var pdfDocument: PDFDocument? {
         return pdfDocumentKeeper?.pdfDocument
@@ -24,15 +25,25 @@ class PDFDocumentInteractor: InteractorProtocol {
         return pdfDocumentKeeper?.searchResultsCount
     }
     
+    var documentName: String {
+        return diskFile?.name ?? ""
+    }
+    
     private(set) var currentSearchResultIndex = 0
     
     var currentSearchResult: PDFSelection? {
         return searchResults?[currentSearchResultIndex - 1]
     }
     
-    init(diskFile: DiskFile?) {
-        self.documentName = diskFile?.name ?? ""
+    var savedPosition: PositionProtocol? {
+        return positionKeeper?.position(for: diskFile?.id)
+    }
+    
+    init(diskFile: DiskFile?,
+         positionKeeper: PositionKeeperProtocol?) {
         self.pdfDocumentKeeper = PDFDocumentKeeper(diskFile: diskFile)
+        self.diskFile = diskFile
+        self.positionKeeper = positionKeeper
     }
     
     func add(dynamicUI: any DynamicUIProtocol) {
@@ -67,6 +78,15 @@ class PDFDocumentInteractor: InteractorProtocol {
         if (currentSearchResultIndex < 1) {
             let searchResultsCount = searchResultsCount ?? 0
             currentSearchResultIndex = searchResultsCount
+        }
+    }
+    
+    func save(position: PositionProtocol) {
+        guard let fileId = diskFile?.id else { return }
+        
+        DispatchQueue.global(qos: .utility).async { [weak self] in
+            self?.positionKeeper?.save(position: position,
+                                       for: fileId)
         }
     }
 }
