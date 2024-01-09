@@ -34,6 +34,7 @@ class PDFDocumentKeeper: DynamicUINotifier {
             timeConsumingOperationStarted()
         }
         
+        pdfDocument?.cancelFindString()
         pdfDocument?.beginFindString(searchQuery,
                                      withOptions: .caseInsensitive)
     }
