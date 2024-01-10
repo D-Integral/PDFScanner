@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F3218282B4ECE7200840917 /* ScanViewController+ VNDocumentCameraViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3218272B4ECE7200840917 /* ScanViewController+ VNDocumentCameraViewControllerDelegate.swift */; };
+		0F32182E2B4EDA4000840917 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F32182D2B4EDA4000840917 /* UIViewExtensions.swift */; };
+		0F3218302B4EE1C700840917 /* DocumentCameraRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F32182F2B4EE1C700840917 /* DocumentCameraRouter.swift */; };
 		0F4130B42B40C85900981698 /* MyFilesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4130B32B40C85900981698 /* MyFilesPresenter.swift */; };
 		0F4130B62B40C86C00981698 /* MyFilesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4130B52B40C86C00981698 /* MyFilesInteractor.swift */; };
 		0F4130B82B40C9F800981698 /* PresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4130B72B40C9F800981698 /* PresenterProtocol.swift */; };
@@ -52,7 +55,7 @@
 		0FAA0E012B45DE3D002FC0F9 /* MyFilesViewController+UISearchResultsUpdating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAA0E002B45DE3D002FC0F9 /* MyFilesViewController+UISearchResultsUpdating.swift */; };
 		0FAA0E032B462895002FC0F9 /* PDFDocumentRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAA0E022B462895002FC0F9 /* PDFDocumentRouter.swift */; };
 		0FAA0E052B46FFF6002FC0F9 /* MyFilesViewController+UICollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAA0E042B46FFF6002FC0F9 /* MyFilesViewController+UICollectionViewDelegate.swift */; };
-		0FAA6E7E2B4C64F70009D0A3 /* DocumentRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAA6E7D2B4C64F70009D0A3 /* DocumentRouter.swift */; };
+		0FAA6E7E2B4C64F70009D0A3 /* FullScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAA6E7D2B4C64F70009D0A3 /* FullScreenRouter.swift */; };
 		0FAA6E802B4C65470009D0A3 /* DocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAA6E7F2B4C65470009D0A3 /* DocumentViewController.swift */; };
 		0FAA6E842B4C69260009D0A3 /* DocumentViewController+UISearchResultsUpdating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAA6E832B4C69260009D0A3 /* DocumentViewController+UISearchResultsUpdating.swift */; };
 		0FAA6E862B4C6EDB0009D0A3 /* PDFDocumentPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAA6E852B4C6EDB0009D0A3 /* PDFDocumentPresenter.swift */; };
@@ -104,6 +107,9 @@
 
 /* Begin PBXFileReference section */
 		0F04FD3B2B4087DA005F9968 /* PDFReaderApp.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = PDFReaderApp.xctestplan; sourceTree = "<group>"; };
+		0F3218272B4ECE7200840917 /* ScanViewController+ VNDocumentCameraViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ScanViewController+ VNDocumentCameraViewControllerDelegate.swift"; sourceTree = "<group>"; };
+		0F32182D2B4EDA4000840917 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		0F32182F2B4EE1C700840917 /* DocumentCameraRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentCameraRouter.swift; sourceTree = "<group>"; };
 		0F4130B32B40C85900981698 /* MyFilesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFilesPresenter.swift; sourceTree = "<group>"; };
 		0F4130B52B40C86C00981698 /* MyFilesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFilesInteractor.swift; sourceTree = "<group>"; };
 		0F4130B72B40C9F800981698 /* PresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterProtocol.swift; sourceTree = "<group>"; };
@@ -146,7 +152,7 @@
 		0FAA0E002B45DE3D002FC0F9 /* MyFilesViewController+UISearchResultsUpdating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyFilesViewController+UISearchResultsUpdating.swift"; sourceTree = "<group>"; };
 		0FAA0E022B462895002FC0F9 /* PDFDocumentRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFDocumentRouter.swift; sourceTree = "<group>"; };
 		0FAA0E042B46FFF6002FC0F9 /* MyFilesViewController+UICollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyFilesViewController+UICollectionViewDelegate.swift"; sourceTree = "<group>"; };
-		0FAA6E7D2B4C64F70009D0A3 /* DocumentRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentRouter.swift; sourceTree = "<group>"; };
+		0FAA6E7D2B4C64F70009D0A3 /* FullScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenRouter.swift; sourceTree = "<group>"; };
 		0FAA6E7F2B4C65470009D0A3 /* DocumentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentViewController.swift; sourceTree = "<group>"; };
 		0FAA6E832B4C69260009D0A3 /* DocumentViewController+UISearchResultsUpdating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DocumentViewController+UISearchResultsUpdating.swift"; sourceTree = "<group>"; };
 		0FAA6E852B4C6EDB0009D0A3 /* PDFDocumentPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFDocumentPresenter.swift; sourceTree = "<group>"; };
@@ -210,6 +216,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F3218312B4EE6C100840917 /* SearchablePDFMaker */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SearchablePDFMaker;
+			sourceTree = "<group>";
+		};
 		0F4130C12B40E30C00981698 /* FileImport */ = {
 			isa = PBXGroup;
 			children = (
@@ -277,6 +290,7 @@
 				0F4130B72B40C9F800981698 /* PresenterProtocol.swift */,
 				0F4130B92B40CA0600981698 /* InteractorProtocol.swift */,
 				0F4130BD2B40CD3400981698 /* RouterProtocol.swift */,
+				0F32182D2B4EDA4000840917 /* UIViewExtensions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -284,10 +298,10 @@
 		0FAA6E812B4C66200009D0A3 /* DocumentView */ = {
 			isa = PBXGroup;
 			children = (
-				0FAA6E7D2B4C64F70009D0A3 /* DocumentRouter.swift */,
 				0FAA6E7F2B4C65470009D0A3 /* DocumentViewController.swift */,
 				0FB1CEAB2B4D5D34005EDF0F /* DocumentViewController+UIGestureRecognizerDelegate.swift */,
 				0FAA6E832B4C69260009D0A3 /* DocumentViewController+UISearchResultsUpdating.swift */,
+				0FAA6E7D2B4C64F70009D0A3 /* FullScreenRouter.swift */,
 			);
 			path = DocumentView;
 			sourceTree = "<group>";
@@ -363,15 +377,17 @@
 			path = Account;
 			sourceTree = "<group>";
 		};
-		0FB7DAEF2B3F127800985825 /* Tools */ = {
+		0FB7DAEF2B3F127800985825 /* Scanning */ = {
 			isa = PBXGroup;
 			children = (
 				0FB7DAE72B3DF51B00985825 /* ScanViewController.swift */,
+				0F3218272B4ECE7200840917 /* ScanViewController+ VNDocumentCameraViewControllerDelegate.swift */,
 				0F60798E2B49B32D008DD313 /* ScanPresenter.swift */,
 				0F6079902B49B33A008DD313 /* ScanInteractor.swift */,
 				0F60798C2B49B31E008DD313 /* ScanRouter.swift */,
+				0F32182F2B4EE1C700840917 /* DocumentCameraRouter.swift */,
 			);
-			path = Tools;
+			path = Scanning;
 			sourceTree = "<group>";
 		};
 		0FB7DAF02B3F12A600985825 /* FileStorage */ = {
@@ -428,6 +444,7 @@
 			isa = PBXGroup;
 			children = (
 				0FAA6E822B4C664F0009D0A3 /* AppCoordination */,
+				0F3218312B4EE6C100840917 /* SearchablePDFMaker */,
 				0F4130C12B40E30C00981698 /* FileImport */,
 				0FB7DAF02B3F12A600985825 /* FileStorage */,
 				0FB7DAEE2B3F126300985825 /* Account */,
@@ -435,7 +452,7 @@
 				0F84D9052B4AD4A800CD3E3F /* User */,
 				0F60796F2B497C6E008DD313 /* SignUp */,
 				0FB7DAED2B3F124D00985825 /* Files */,
-				0FB7DAEF2B3F127800985825 /* Tools */,
+				0FB7DAEF2B3F127800985825 /* Scanning */,
 				0FAA6E812B4C66200009D0A3 /* DocumentView */,
 				0F4130CE2B458B3800981698 /* PDFDocumentView */,
 				0FAA6E8D2B4C80A80009D0A3 /* PDF */,
@@ -598,8 +615,9 @@
 				0FB7DAEA2B3DF54100985825 /* AccountViewController.swift in Sources */,
 				0F4130C52B41B99A00981698 /* PDFDocumentImportManager.swift in Sources */,
 				0F4130BC2B40CD2400981698 /* MyFilesRouter.swift in Sources */,
-				0FAA6E7E2B4C64F70009D0A3 /* DocumentRouter.swift in Sources */,
+				0FAA6E7E2B4C64F70009D0A3 /* FullScreenRouter.swift in Sources */,
 				0F60798D2B49B31E008DD313 /* ScanRouter.swift in Sources */,
+				0F32182E2B4EDA4000840917 /* UIViewExtensions.swift in Sources */,
 				0F4130C32B41B96D00981698 /* DocumentImportManagerProtocol.swift in Sources */,
 				0F6079912B49B33A008DD313 /* ScanInteractor.swift in Sources */,
 				0FAA0DFD2B45CB9D002FC0F9 /* DynamicUIProtocol.swift in Sources */,
@@ -615,6 +633,7 @@
 				0FAA6E8F2B4C80BE0009D0A3 /* PDFSelection+Comparable.swift in Sources */,
 				0F4130B82B40C9F800981698 /* PresenterProtocol.swift in Sources */,
 				0FB7DAEC2B3E0A1600985825 /* HomeTabBarController.swift in Sources */,
+				0F3218282B4ECE7200840917 /* ScanViewController+ VNDocumentCameraViewControllerDelegate.swift in Sources */,
 				0F4130C92B41BB5A00981698 /* DocumentImportError.swift in Sources */,
 				0FAA6E8A2B4C71730009D0A3 /* PDFDocumentKeeper.swift in Sources */,
 				0F60797A2B49A100008DD313 /* AccountPresenter.swift in Sources */,
@@ -650,6 +669,7 @@
 				0F6079812B49A1CB008DD313 /* AccountManagerProtocol.swift in Sources */,
 				0F84D9002B4AC24600CD3E3F /* AccountManagementError+LocalizedError.swift in Sources */,
 				0F6079712B497C95008DD313 /* SignUpViewController.swift in Sources */,
+				0F3218302B4EE1C700840917 /* DocumentCameraRouter.swift in Sources */,
 				0F4130BA2B40CA0600981698 /* InteractorProtocol.swift in Sources */,
 				0FB7DAFB2B3F1A6F00985825 /* FilesListProtocol.swift in Sources */,
 				0FBCA99C2B3DA7A000149F38 /* SceneDelegate.swift in Sources */,

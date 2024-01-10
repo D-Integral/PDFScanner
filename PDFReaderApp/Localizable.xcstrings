@@ -114,6 +114,9 @@
         }
       }
     },
+    "documentCameraNotSupported" : {
+
+    },
     "email" : {
       "comment" : "The e-mail text field placeholder.",
       "localizations" : {
@@ -616,6 +619,9 @@
           }
         }
       }
+    },
+    "startScanButtonTitle" : {
+
     },
     "The attempt to sign in has been unsuccessful: no id token retrieved from the sign in provider server." : {
       "localizations" : {

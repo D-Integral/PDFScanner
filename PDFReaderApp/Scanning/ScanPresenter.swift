@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import VisionKit
 
 class ScanPresenter: PresenterProtocol {
     let interactor: ScanInteractor
@@ -16,5 +17,9 @@ class ScanPresenter: PresenterProtocol {
     
     var title: String {
         return String(localized: "scan")
+    }
+    
+    var isDocumentCameraSupported: Bool {
+        return VNDocumentCameraViewController.isSupported
     }
 }

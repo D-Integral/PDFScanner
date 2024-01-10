@@ -8,8 +8,8 @@
 import Foundation
 import UIKit
 
-class DocumentRouter: RouterProtocol {
-    func navigationController(with viewController: UIViewController) -> UINavigationController {
+class FullScreenRouter: RouterProtocol {
+    func fullScreenNavigationController(with viewController: UIViewController) -> UINavigationController {
         let nav = UINavigationController(rootViewController: viewController)
         nav.modalPresentationStyle = .fullScreen
         nav.isModalInPresentation = false

@@ -1,0 +1,102 @@
+//
+//  ScanViewController.swift
+//  PDFReaderApp
+//
+//  Created by Dmytro Skorokhod on 28/12/2023.
+//
+
+import UIKit
+import VisionKit
+
+class ScanViewController: UIViewController {
+    
+    // MARK: - Properties
+    
+    private let presenter: ScanPresenter?
+    
+    private let startScanningButton = UIButton(type: .system)
+    private let documentCameraNotSupportedLabel = UILabel(frame: .zero)
+    
+    private var isDocumentCameraSupported: Bool {
+        return presenter?.isDocumentCameraSupported ?? false
+    }
+    
+    // MARK: - Life Cycle
+    
+    init(presenter: ScanPresenter) {
+        self.presenter = presenter
+        
+        super.init(nibName: nil,
+                   bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        self.presenter = nil
+        
+        super.init(coder: coder)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        view.backgroundColor = .systemBackground
+        
+        setupDocumentCameraNotSupportedLabel()
+        setupStartScanButton()
+        
+        setupConstraints()
+    }
+    
+    // MARK: - Setup
+    
+    private func setupStartScanButton() {
+        startScanningButton.setTitle(String(localized: "startScanButtonTitle"),
+                              for: .normal)
+        startScanningButton.titleLabel?.textAlignment = .center
+        startScanningButton.addTarget(self,
+                                  action: #selector(startScanningAction),
+                                  for: .touchUpInside)
+        startScanningButton.isHidden = !isDocumentCameraSupported
+        
+        view.addSubview(startScanningButton)
+    }
+    
+    private func setupDocumentCameraNotSupportedLabel() {
+        documentCameraNotSupportedLabel.text = String(localized: "documentCameraNotSupported")
+        documentCameraNotSupportedLabel.textAlignment = .center
+        documentCameraNotSupportedLabel.isHidden = isDocumentCameraSupported
+        
+        view.addSubview(documentCameraNotSupportedLabel)
+    }
+    
+    private func setupConstraints() {
+        startScanningButton.translatesAutoresizingMaskIntoConstraints = false
+        startScanningButton.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor).isActive = true
+        startScanningButton.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor).isActive = true
+        startScanningButton.setContentHuggingPriority(.defaultHigh,
+                                                  for: .vertical)
+        startScanningButton.setContentHuggingPriority(.defaultHigh,
+                                                  for: .horizontal)
+        
+        documentCameraNotSupportedLabel.translatesAutoresizingMaskIntoConstraints = false
+        documentCameraNotSupportedLabel.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor).isActive = true
+        documentCameraNotSupportedLabel.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor).isActive = true
+        documentCameraNotSupportedLabel.setContentHuggingPriority(.defaultHigh,
+                                                                  for: .vertical)
+        documentCameraNotSupportedLabel.setContentHuggingPriority(.defaultHigh,
+                                                                  for: .horizontal)
+    }
+
+    // MARK: - Actions
+    
+    @objc private func startScanningAction() {
+        startScanning()
+    }
+    
+    // MARK: - Private Functions
+    
+    private func startScanning() {
+        navigationController?.present(DocumentCameraRouter().make(withDelegate: self),
+                                      animated: true)
+    }
+}
