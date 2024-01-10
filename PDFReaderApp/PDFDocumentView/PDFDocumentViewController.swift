@@ -21,6 +21,10 @@ class PDFDocumentViewController: DocumentViewController {
             static let buttonSide = 50.0
             static let animationDuration = 0.25
         }
+        
+        struct Position {
+            static let animationDuration = 0.25
+        }
     }
     
     // MARK: - Properties
@@ -116,7 +120,7 @@ class PDFDocumentViewController: DocumentViewController {
     }
     
     func updateSearchResultsInfoLabelText() {
-        searchResultsInfoLabel.text = String(localized: "\(currentSearchResultIndex) of \(searchResultsCount) Search Results")
+        searchResultsInfoLabel.text = String(localized: "\(currentSearchResultIndex) of \(searchResultsCount) search results")
     }
     
     func showCurrentSearchResult() {
@@ -166,8 +170,6 @@ class PDFDocumentViewController: DocumentViewController {
         searchResultsInfoLabel.textColor = .label
         searchResultsInfoLabel.font = .systemFont(ofSize: Constants.SearchResults.fontSize)
         searchResultsInfoLabel.textAlignment = .center
-        
-        searchResultsInfoLabel.text = "0 of 0 Search Results"
     }
     
     private func setupSearchResultsView() {
@@ -285,6 +287,8 @@ class PDFDocumentViewController: DocumentViewController {
                                               at: savedPosition.point)
         savedDestination.zoom = savedPosition.zoom
         
-        pdfView.go(to: savedDestination)
+        UIView.animate(withDuration: Constants.Position.animationDuration) { [weak self]  in
+            self?.pdfView.go(to: savedDestination)
+        }
     }
 }
