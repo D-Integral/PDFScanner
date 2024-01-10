@@ -32,9 +32,9 @@
 		0F6079872B49A5DC008DD313 /* UserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6079862B49A5DC008DD313 /* UserProtocol.swift */; };
 		0F6079892B49A786008DD313 /* SignUpInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6079882B49A786008DD313 /* SignUpInteractor.swift */; };
 		0F60798B2B49A796008DD313 /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F60798A2B49A796008DD313 /* SignUpPresenter.swift */; };
-		0F60798D2B49B31E008DD313 /* ToolsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F60798C2B49B31E008DD313 /* ToolsRouter.swift */; };
-		0F60798F2B49B32D008DD313 /* ToolsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F60798E2B49B32D008DD313 /* ToolsPresenter.swift */; };
-		0F6079912B49B33A008DD313 /* ToolsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6079902B49B33A008DD313 /* ToolsInteractor.swift */; };
+		0F60798D2B49B31E008DD313 /* ScanRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F60798C2B49B31E008DD313 /* ScanRouter.swift */; };
+		0F60798F2B49B32D008DD313 /* ScanPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F60798E2B49B32D008DD313 /* ScanPresenter.swift */; };
+		0F6079912B49B33A008DD313 /* ScanInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6079902B49B33A008DD313 /* ScanInteractor.swift */; };
 		0F6079932B49CA35008DD313 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0F6079922B49CA34008DD313 /* GoogleService-Info.plist */; };
 		0F84D8F62B49D11400CD3E3F /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 0F84D8F52B49D11400CD3E3F /* GoogleSignIn */; };
 		0F84D8F82B49D11400CD3E3F /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0F84D8F72B49D11400CD3E3F /* GoogleSignInSwift */; };
@@ -72,7 +72,7 @@
 		0FB1CEB92B4DB60E005EDF0F /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB1CEB82B4DB60E005EDF0F /* Position.swift */; };
 		0FB1CEBB2B4DB736005EDF0F /* PositionKeeperError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB1CEBA2B4DB736005EDF0F /* PositionKeeperError.swift */; };
 		0FB7DAE62B3DF08000985825 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 0FB7DAE52B3DF08000985825 /* Localizable.xcstrings */; };
-		0FB7DAE82B3DF51B00985825 /* ToolsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB7DAE72B3DF51B00985825 /* ToolsViewController.swift */; };
+		0FB7DAE82B3DF51B00985825 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB7DAE72B3DF51B00985825 /* ScanViewController.swift */; };
 		0FB7DAEA2B3DF54100985825 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB7DAE92B3DF54100985825 /* AccountViewController.swift */; };
 		0FB7DAEC2B3E0A1600985825 /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB7DAEB2B3E0A1600985825 /* HomeTabBarController.swift */; };
 		0FB7DAF22B3F150E00985825 /* FileStorageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB7DAF12B3F150E00985825 /* FileStorageProtocol.swift */; };
@@ -128,9 +128,9 @@
 		0F6079862B49A5DC008DD313 /* UserProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProtocol.swift; sourceTree = "<group>"; };
 		0F6079882B49A786008DD313 /* SignUpInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpInteractor.swift; sourceTree = "<group>"; };
 		0F60798A2B49A796008DD313 /* SignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
-		0F60798C2B49B31E008DD313 /* ToolsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsRouter.swift; sourceTree = "<group>"; };
-		0F60798E2B49B32D008DD313 /* ToolsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsPresenter.swift; sourceTree = "<group>"; };
-		0F6079902B49B33A008DD313 /* ToolsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsInteractor.swift; sourceTree = "<group>"; };
+		0F60798C2B49B31E008DD313 /* ScanRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanRouter.swift; sourceTree = "<group>"; };
+		0F60798E2B49B32D008DD313 /* ScanPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanPresenter.swift; sourceTree = "<group>"; };
+		0F6079902B49B33A008DD313 /* ScanInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanInteractor.swift; sourceTree = "<group>"; };
 		0F6079922B49CA34008DD313 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0F84D8F92B49EB9B00CD3E3F /* MyFilesViewController+DynamicUIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyFilesViewController+DynamicUIProtocol.swift"; sourceTree = "<group>"; };
 		0F84D8FB2B4ABF4B00CD3E3F /* SignInServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInServiceProvider.swift; sourceTree = "<group>"; };
@@ -166,7 +166,7 @@
 		0FB1CEB82B4DB60E005EDF0F /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
 		0FB1CEBA2B4DB736005EDF0F /* PositionKeeperError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionKeeperError.swift; sourceTree = "<group>"; };
 		0FB7DAE52B3DF08000985825 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
-		0FB7DAE72B3DF51B00985825 /* ToolsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsViewController.swift; sourceTree = "<group>"; };
+		0FB7DAE72B3DF51B00985825 /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
 		0FB7DAE92B3DF54100985825 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		0FB7DAEB2B3E0A1600985825 /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
 		0FB7DAF12B3F150E00985825 /* FileStorageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileStorageProtocol.swift; sourceTree = "<group>"; };
@@ -366,10 +366,10 @@
 		0FB7DAEF2B3F127800985825 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				0FB7DAE72B3DF51B00985825 /* ToolsViewController.swift */,
-				0F60798E2B49B32D008DD313 /* ToolsPresenter.swift */,
-				0F6079902B49B33A008DD313 /* ToolsInteractor.swift */,
-				0F60798C2B49B31E008DD313 /* ToolsRouter.swift */,
+				0FB7DAE72B3DF51B00985825 /* ScanViewController.swift */,
+				0F60798E2B49B32D008DD313 /* ScanPresenter.swift */,
+				0F6079902B49B33A008DD313 /* ScanInteractor.swift */,
+				0F60798C2B49B31E008DD313 /* ScanRouter.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -591,7 +591,7 @@
 				0FAA6E8C2B4C7F9B0009D0A3 /* PDFDocumentKeeper+PDFDocumentDelegate.swift in Sources */,
 				0FB7DAF22B3F150E00985825 /* FileStorageProtocol.swift in Sources */,
 				0F6079832B49A1EE008DD313 /* FirebaseAccountManager.swift in Sources */,
-				0FB7DAE82B3DF51B00985825 /* ToolsViewController.swift in Sources */,
+				0FB7DAE82B3DF51B00985825 /* ScanViewController.swift in Sources */,
 				0FB7DAFF2B3F1C8900985825 /* AppCoordinator.swift in Sources */,
 				0F60797E2B49A124008DD313 /* AccountRouter.swift in Sources */,
 				0FAA6E882B4C6F050009D0A3 /* PDFDocumentInteractor.swift in Sources */,
@@ -599,9 +599,9 @@
 				0F4130C52B41B99A00981698 /* PDFDocumentImportManager.swift in Sources */,
 				0F4130BC2B40CD2400981698 /* MyFilesRouter.swift in Sources */,
 				0FAA6E7E2B4C64F70009D0A3 /* DocumentRouter.swift in Sources */,
-				0F60798D2B49B31E008DD313 /* ToolsRouter.swift in Sources */,
+				0F60798D2B49B31E008DD313 /* ScanRouter.swift in Sources */,
 				0F4130C32B41B96D00981698 /* DocumentImportManagerProtocol.swift in Sources */,
-				0F6079912B49B33A008DD313 /* ToolsInteractor.swift in Sources */,
+				0F6079912B49B33A008DD313 /* ScanInteractor.swift in Sources */,
 				0FAA0DFD2B45CB9D002FC0F9 /* DynamicUIProtocol.swift in Sources */,
 				0F4130C72B41B9F100981698 /* DocumentImportManager.swift in Sources */,
 				0FAA6E912B4C82170009D0A3 /* DynamicUINotifier.swift in Sources */,
@@ -623,7 +623,7 @@
 				0FB1CEB52B4DB562005EDF0F /* PositionsList.swift in Sources */,
 				0F6079872B49A5DC008DD313 /* UserProtocol.swift in Sources */,
 				0FAA6E802B4C65470009D0A3 /* DocumentViewController.swift in Sources */,
-				0F60798F2B49B32D008DD313 /* ToolsPresenter.swift in Sources */,
+				0F60798F2B49B32D008DD313 /* ScanPresenter.swift in Sources */,
 				0FB1CEB72B4DB5D4005EDF0F /* PositionProtocol.swift in Sources */,
 				0FB7DAF92B3F16B400985825 /* DiskFileStorage.swift in Sources */,
 				0F60798B2B49A796008DD313 /* SignUpPresenter.swift in Sources */,

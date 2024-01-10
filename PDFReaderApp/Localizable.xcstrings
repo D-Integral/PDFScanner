@@ -1,12 +1,12 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "%lld of %lld Search Results" : {
+    "%lld of %lld search results" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "%1$lld of %2$lld Search Results"
+            "value" : "%1$lld of %2$lld search results"
           }
         }
       }
@@ -527,8 +527,25 @@
         }
       }
     },
+    "scan" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scan"
+          }
+        }
+      }
+    },
     "search" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search"
+          }
+        }
+      }
     },
     "searchPdfDocuments" : {
       "extractionState" : "manual",

@@ -1,5 +1,5 @@
 //
-//  ToolsViewController.swift
+//  ScanViewController.swift
 //  PDFReaderApp
 //
 //  Created by Dmytro Skorokhod on 28/12/2023.
@@ -7,11 +7,11 @@
 
 import UIKit
 
-class ToolsViewController: UIViewController {
+class ScanViewController: UIViewController {
     
-    let presenter: ToolsPresenter?
+    let presenter: ScanPresenter?
     
-    init(presenter: ToolsPresenter) {
+    init(presenter: ScanPresenter) {
         self.presenter = presenter
         
         super.init(nibName: nil,

@@ -48,7 +48,7 @@ class AppCoordinator {
     }
     
     func toolsNavigationController() -> UINavigationController {
-        return navigationController(with: ToolsRouter().make(),
+        return navigationController(with: ScanRouter().make(),
                                     tabBarItem: toolsTabBarItem())
     }
     
@@ -62,25 +62,22 @@ class AppCoordinator {
     
     func filesTabBarItem() -> UITabBarItem {
         return tabBarItem(withTitle: String(localized: "filesTabBarItemTitle"),
-                          image: UIImage.iconFilesSelected.withTintColor(.systemGray),
-                          selectedImage: UIImage.iconFilesSelected)
+                          image: UIImage(systemName: "folder"))
     }
     
     func toolsTabBarItem() -> UITabBarItem {
-        return tabBarItem(withTitle: String(localized: "toolsTitle"),
-                          image: UIImage.iconTools,
-                          selectedImage: UIImage.iconTools.withTintColor(.systemPurple))
+        return tabBarItem(withTitle: String(localized: "scan"),
+                          image: UIImage(systemName: "doc.viewfinder"))
     }
     
     func accountTabBarItem() -> UITabBarItem {
         return tabBarItem(withTitle: String(localized: "accountTabBarItemTitle"),
-                          image: UIImage.iconAccount,
-                          selectedImage: UIImage.iconAccount.withTintColor(.systemPurple))
+                          image: UIImage(systemName: "person.crop.circle"))
     }
     
     func tabBarItem(withTitle title: String,
-                    image: UIImage,
-                    selectedImage: UIImage) -> UITabBarItem {
+                    image: UIImage?,
+                    selectedImage: UIImage? = nil) -> UITabBarItem {
         return UITabBarItem(title: title,
                             image: image,
                             selectedImage: selectedImage)
