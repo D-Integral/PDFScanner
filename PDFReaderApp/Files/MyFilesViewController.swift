@@ -59,17 +59,8 @@ class MyFilesViewController: UIViewController {
     private let collectionView = UICollectionView(frame: .zero,
                                                   collectionViewLayout: UICollectionViewFlowLayout())
     private var searchController = UISearchController(searchResultsController: nil)
-    private var pleaseSignInLabel = UILabel(frame: .zero)
     
     private var signInAutomaticallyRequested = false
-    
-    private var userLogged: Bool {
-        return presenter?.userLogged ?? false
-    }
-    
-    private var automaticSignInRequestNeeded: Bool {
-        return !signInAutomaticallyRequested && !userLogged
-    }
     
     let activityView = UIActivityIndicatorView(style: .large)
     
@@ -97,7 +88,6 @@ class MyFilesViewController: UIViewController {
         
         view.backgroundColor = .systemBackground
         
-        setupPleaseSignInLabel()
         setupSearchController()
         setupCollectionView()
         setupImportButton()
@@ -105,18 +95,8 @@ class MyFilesViewController: UIViewController {
         setupActivityView()
         
         setupConstraints()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         
-        updateUIAccordingToUserLogInStatus()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        automaticallyRequestSignInIfNeeded()
+        applySnapshot()
     }
     
     // MARK: - Collection View
@@ -153,13 +133,6 @@ class MyFilesViewController: UIViewController {
     
     // MARK: - Setup
     
-    private func setupPleaseSignInLabel() {
-        pleaseSignInLabel.text = String(localized: "Please Sign In")
-        pleaseSignInLabel.textAlignment = .center
-        
-        view.addSubview(pleaseSignInLabel)
-    }
-    
     private func setupSearchController() {
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
@@ -195,14 +168,6 @@ class MyFilesViewController: UIViewController {
     }
     
     private func setupConstraints() {
-        pleaseSignInLabel.translatesAutoresizingMaskIntoConstraints = false
-        pleaseSignInLabel.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor).isActive = true
-        pleaseSignInLabel.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor).isActive = true
-        pleaseSignInLabel.setContentHuggingPriority(.defaultHigh,
-                                                    for: .vertical)
-        pleaseSignInLabel.setContentHuggingPriority(.defaultHigh,
-                                                    for: .horizontal)
-        
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor,
                                             constant: Constants.FilesList.Layout.contentInset).isActive = true
@@ -266,16 +231,6 @@ class MyFilesViewController: UIViewController {
         snapshot.appendItems(files)
         dataSource.apply(snapshot,
                          animatingDifferences: true)
-    }
-    
-    func updateVisibility() {
-        let loggedIn = userLogged
-        
-        pleaseSignInLabel.isHidden = loggedIn
-        
-        for loggedInView in [searchController.searchBar, collectionView, importButton] {
-            loggedInView.isHidden = !userLogged
-        }
     }
     
     private func presentActionSheet(forFile file: DiskFile) {
@@ -344,38 +299,5 @@ class MyFilesViewController: UIViewController {
                                       handler: nil))
         
         return alert
-    }
-    
-    private func automaticallyRequestSignInIfNeeded() {
-        if automaticSignInRequestNeeded {
-            signInAutomaticallyRequested = true
-            signInViaGoogleAccount()
-        }
-    }
-    
-    // MARK: - Sign In via Google Account
-    
-    private func signInViaGoogleAccount() {
-        activityView.startAnimating()
-        
-        presenter?.signIn(withServiceProvider: .Google,
-                         completionHandler: { [weak self] user, error in
-            guard let self = self else { return }
-            
-            self.activityView.stopAnimating()
-            
-            if let error = error {
-                self.present(self.errorAlert(withMessage: error.localizedDescription),
-                             animated: true,
-                             completion: nil)
-            }
-            
-            self.updateUIAccordingToUserLogInStatus()
-        })
-    }
-    
-    private func updateUIAccordingToUserLogInStatus() {
-        self.updateVisibility()
-        self.updateDynamicUI()
     }
 }

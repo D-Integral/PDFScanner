@@ -8,10 +8,15 @@
 import Foundation
 import UIKit
 
-class DynamicUINotifier: NSObject {
+class DynamicUINotifier: NSObject, DynamicUINotifierProtocol {
+    
+    // MARK: - Properties
+    
     private var dynamicUserInterfaces = [Weak<UIViewController>]()
     
-    func add(dynamicUI: any DynamicUIProtocol) {
+    // MARK: - DynamicUINotifierProtocol
+    
+    public func add(dynamicUI: any DynamicUIProtocol) {
         guard let viewController = dynamicUI as? UIViewController else {
             return
         }
@@ -19,7 +24,7 @@ class DynamicUINotifier: NSObject {
         dynamicUserInterfaces.append(Weak(value: viewController))
     }
     
-    func remove(dynamicUI: any DynamicUIProtocol) {
+    public func remove(dynamicUI: any DynamicUIProtocol) {
         guard let viewController = dynamicUI as? UIViewController else {
             return
         }
@@ -38,6 +43,8 @@ class DynamicUINotifier: NSObject {
             dynamicUserInterfaces.remove(at: index)
         }
     }
+    
+    // MARK: - Internal Methods
     
     func updateUI() {
         for weakDynamicUI in Array(dynamicUserInterfaces) {

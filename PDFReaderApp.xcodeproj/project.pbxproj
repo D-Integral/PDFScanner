@@ -7,9 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0F3218282B4ECE7200840917 /* ScanViewController+ VNDocumentCameraViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3218272B4ECE7200840917 /* ScanViewController+ VNDocumentCameraViewControllerDelegate.swift */; };
 		0F32182E2B4EDA4000840917 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F32182D2B4EDA4000840917 /* UIViewExtensions.swift */; };
-		0F3218302B4EE1C700840917 /* DocumentCameraRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F32182F2B4EE1C700840917 /* DocumentCameraRouter.swift */; };
+		0F3218302B4EE1C700840917 /* VisionDocumentCameraRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F32182F2B4EE1C700840917 /* VisionDocumentCameraRouter.swift */; };
+		0F3218342B4F0DCB00840917 /* VisionDocumentCameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3218332B4F0DCB00840917 /* VisionDocumentCameraManager.swift */; };
+		0F3218362B4F0DE600840917 /* DocumentCameraManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3218352B4F0DE600840917 /* DocumentCameraManagerProtocol.swift */; };
+		0F3218382B4F0E3C00840917 /* DocumentCameraManager+VNDocumentCameraViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3218372B4F0E3C00840917 /* DocumentCameraManager+VNDocumentCameraViewControllerDelegate.swift */; };
+		0F32183A2B4F0E8800840917 /* DocumentPickerManager+UIDocumentPickerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3218392B4F0E8800840917 /* DocumentPickerManager+UIDocumentPickerDelegate.swift */; };
+		0F32183C2B4F11F800840917 /* DynamicUINotifierProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F32183B2B4F11F800840917 /* DynamicUINotifierProtocol.swift */; };
+		0F32183E2B4F208200840917 /* ScanningViewController+DynamicUIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F32183D2B4F208200840917 /* ScanningViewController+DynamicUIProtocol.swift */; };
 		0F4130B42B40C85900981698 /* MyFilesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4130B32B40C85900981698 /* MyFilesPresenter.swift */; };
 		0F4130B62B40C86C00981698 /* MyFilesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4130B52B40C86C00981698 /* MyFilesInteractor.swift */; };
 		0F4130B82B40C9F800981698 /* PresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4130B72B40C9F800981698 /* PresenterProtocol.swift */; };
@@ -24,30 +29,14 @@
 		0F4130CD2B4587E100981698 /* MyFilesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4130CC2B4587E100981698 /* MyFilesCollectionViewCell.swift */; };
 		0F4130D02B458B6800981698 /* PDFDocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4130CF2B458B6800981698 /* PDFDocumentViewController.swift */; };
 		0F60796E2B497A01008DD313 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 0F60796D2B497A01008DD313 /* FirebaseAuth */; };
-		0F6079712B497C95008DD313 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6079702B497C95008DD313 /* SignUpViewController.swift */; };
-		0F6079732B497D87008DD313 /* SignUpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6079722B497D87008DD313 /* SignUpRouter.swift */; };
 		0F60797A2B49A100008DD313 /* AccountPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6079792B49A100008DD313 /* AccountPresenter.swift */; };
 		0F60797C2B49A111008DD313 /* AccountInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F60797B2B49A111008DD313 /* AccountInteractor.swift */; };
 		0F60797E2B49A124008DD313 /* AccountRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F60797D2B49A124008DD313 /* AccountRouter.swift */; };
-		0F6079812B49A1CB008DD313 /* AccountManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6079802B49A1CB008DD313 /* AccountManagerProtocol.swift */; };
-		0F6079832B49A1EE008DD313 /* FirebaseAccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6079822B49A1EE008DD313 /* FirebaseAccountManager.swift */; };
-		0F6079852B49A5AB008DD313 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6079842B49A5AB008DD313 /* User.swift */; };
-		0F6079872B49A5DC008DD313 /* UserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6079862B49A5DC008DD313 /* UserProtocol.swift */; };
-		0F6079892B49A786008DD313 /* SignUpInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6079882B49A786008DD313 /* SignUpInteractor.swift */; };
-		0F60798B2B49A796008DD313 /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F60798A2B49A796008DD313 /* SignUpPresenter.swift */; };
-		0F60798D2B49B31E008DD313 /* ScanRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F60798C2B49B31E008DD313 /* ScanRouter.swift */; };
-		0F60798F2B49B32D008DD313 /* ScanPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F60798E2B49B32D008DD313 /* ScanPresenter.swift */; };
-		0F6079912B49B33A008DD313 /* ScanInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6079902B49B33A008DD313 /* ScanInteractor.swift */; };
+		0F60798D2B49B31E008DD313 /* ScanningRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F60798C2B49B31E008DD313 /* ScanningRouter.swift */; };
+		0F60798F2B49B32D008DD313 /* ScanningPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F60798E2B49B32D008DD313 /* ScanningPresenter.swift */; };
+		0F6079912B49B33A008DD313 /* ScanningInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6079902B49B33A008DD313 /* ScanningInteractor.swift */; };
 		0F6079932B49CA35008DD313 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0F6079922B49CA34008DD313 /* GoogleService-Info.plist */; };
-		0F84D8F62B49D11400CD3E3F /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 0F84D8F52B49D11400CD3E3F /* GoogleSignIn */; };
-		0F84D8F82B49D11400CD3E3F /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0F84D8F72B49D11400CD3E3F /* GoogleSignInSwift */; };
 		0F84D8FA2B49EB9B00CD3E3F /* MyFilesViewController+DynamicUIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F84D8F92B49EB9B00CD3E3F /* MyFilesViewController+DynamicUIProtocol.swift */; };
-		0F84D8FC2B4ABF4B00CD3E3F /* SignInServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F84D8FB2B4ABF4B00CD3E3F /* SignInServiceProvider.swift */; };
-		0F84D8FE2B4AC10800CD3E3F /* AccountManagementError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F84D8FD2B4AC10800CD3E3F /* AccountManagementError.swift */; };
-		0F84D9002B4AC24600CD3E3F /* AccountManagementError+LocalizedError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F84D8FF2B4AC24600CD3E3F /* AccountManagementError+LocalizedError.swift */; };
-		0F84D9022B4AD45000CD3E3F /* UserKeeperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F84D9012B4AD45000CD3E3F /* UserKeeperProtocol.swift */; };
-		0F84D9042B4AD49900CD3E3F /* UserKeeper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F84D9032B4AD49900CD3E3F /* UserKeeper.swift */; };
-		0F84D9072B4AD82000CD3E3F /* UserError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F84D9062B4AD82000CD3E3F /* UserError.swift */; };
 		0F84D9092B4AEE5400CD3E3F /* FileInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F84D9082B4AEE5400CD3E3F /* FileInfoView.swift */; };
 		0FAA0DF52B45C0D5002FC0F9 /* Weak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAA0DF42B45C0D5002FC0F9 /* Weak.swift */; };
 		0FAA0DFD2B45CB9D002FC0F9 /* DynamicUIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAA0DFC2B45CB9D002FC0F9 /* DynamicUIProtocol.swift */; };
@@ -75,7 +64,7 @@
 		0FB1CEB92B4DB60E005EDF0F /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB1CEB82B4DB60E005EDF0F /* Position.swift */; };
 		0FB1CEBB2B4DB736005EDF0F /* PositionKeeperError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB1CEBA2B4DB736005EDF0F /* PositionKeeperError.swift */; };
 		0FB7DAE62B3DF08000985825 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 0FB7DAE52B3DF08000985825 /* Localizable.xcstrings */; };
-		0FB7DAE82B3DF51B00985825 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB7DAE72B3DF51B00985825 /* ScanViewController.swift */; };
+		0FB7DAE82B3DF51B00985825 /* ScanningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB7DAE72B3DF51B00985825 /* ScanningViewController.swift */; };
 		0FB7DAEA2B3DF54100985825 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB7DAE92B3DF54100985825 /* AccountViewController.swift */; };
 		0FB7DAEC2B3E0A1600985825 /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB7DAEB2B3E0A1600985825 /* HomeTabBarController.swift */; };
 		0FB7DAF22B3F150E00985825 /* FileStorageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB7DAF12B3F150E00985825 /* FileStorageProtocol.swift */; };
@@ -107,9 +96,14 @@
 
 /* Begin PBXFileReference section */
 		0F04FD3B2B4087DA005F9968 /* PDFReaderApp.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = PDFReaderApp.xctestplan; sourceTree = "<group>"; };
-		0F3218272B4ECE7200840917 /* ScanViewController+ VNDocumentCameraViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ScanViewController+ VNDocumentCameraViewControllerDelegate.swift"; sourceTree = "<group>"; };
 		0F32182D2B4EDA4000840917 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
-		0F32182F2B4EE1C700840917 /* DocumentCameraRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentCameraRouter.swift; sourceTree = "<group>"; };
+		0F32182F2B4EE1C700840917 /* VisionDocumentCameraRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionDocumentCameraRouter.swift; sourceTree = "<group>"; };
+		0F3218332B4F0DCB00840917 /* VisionDocumentCameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionDocumentCameraManager.swift; sourceTree = "<group>"; };
+		0F3218352B4F0DE600840917 /* DocumentCameraManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentCameraManagerProtocol.swift; sourceTree = "<group>"; };
+		0F3218372B4F0E3C00840917 /* DocumentCameraManager+VNDocumentCameraViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DocumentCameraManager+VNDocumentCameraViewControllerDelegate.swift"; sourceTree = "<group>"; };
+		0F3218392B4F0E8800840917 /* DocumentPickerManager+UIDocumentPickerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DocumentPickerManager+UIDocumentPickerDelegate.swift"; sourceTree = "<group>"; };
+		0F32183B2B4F11F800840917 /* DynamicUINotifierProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicUINotifierProtocol.swift; sourceTree = "<group>"; };
+		0F32183D2B4F208200840917 /* ScanningViewController+DynamicUIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ScanningViewController+DynamicUIProtocol.swift"; sourceTree = "<group>"; };
 		0F4130B32B40C85900981698 /* MyFilesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFilesPresenter.swift; sourceTree = "<group>"; };
 		0F4130B52B40C86C00981698 /* MyFilesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFilesInteractor.swift; sourceTree = "<group>"; };
 		0F4130B72B40C9F800981698 /* PresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterProtocol.swift; sourceTree = "<group>"; };
@@ -123,28 +117,14 @@
 		0F4130CA2B41BE0900981698 /* DocumentPickerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPickerManager.swift; sourceTree = "<group>"; };
 		0F4130CC2B4587E100981698 /* MyFilesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFilesCollectionViewCell.swift; sourceTree = "<group>"; };
 		0F4130CF2B458B6800981698 /* PDFDocumentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFDocumentViewController.swift; sourceTree = "<group>"; };
-		0F6079702B497C95008DD313 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		0F6079722B497D87008DD313 /* SignUpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRouter.swift; sourceTree = "<group>"; };
 		0F6079792B49A100008DD313 /* AccountPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountPresenter.swift; sourceTree = "<group>"; };
 		0F60797B2B49A111008DD313 /* AccountInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInteractor.swift; sourceTree = "<group>"; };
 		0F60797D2B49A124008DD313 /* AccountRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRouter.swift; sourceTree = "<group>"; };
-		0F6079802B49A1CB008DD313 /* AccountManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountManagerProtocol.swift; sourceTree = "<group>"; };
-		0F6079822B49A1EE008DD313 /* FirebaseAccountManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAccountManager.swift; sourceTree = "<group>"; };
-		0F6079842B49A5AB008DD313 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		0F6079862B49A5DC008DD313 /* UserProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProtocol.swift; sourceTree = "<group>"; };
-		0F6079882B49A786008DD313 /* SignUpInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpInteractor.swift; sourceTree = "<group>"; };
-		0F60798A2B49A796008DD313 /* SignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
-		0F60798C2B49B31E008DD313 /* ScanRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanRouter.swift; sourceTree = "<group>"; };
-		0F60798E2B49B32D008DD313 /* ScanPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanPresenter.swift; sourceTree = "<group>"; };
-		0F6079902B49B33A008DD313 /* ScanInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanInteractor.swift; sourceTree = "<group>"; };
+		0F60798C2B49B31E008DD313 /* ScanningRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanningRouter.swift; sourceTree = "<group>"; };
+		0F60798E2B49B32D008DD313 /* ScanningPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanningPresenter.swift; sourceTree = "<group>"; };
+		0F6079902B49B33A008DD313 /* ScanningInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanningInteractor.swift; sourceTree = "<group>"; };
 		0F6079922B49CA34008DD313 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0F84D8F92B49EB9B00CD3E3F /* MyFilesViewController+DynamicUIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyFilesViewController+DynamicUIProtocol.swift"; sourceTree = "<group>"; };
-		0F84D8FB2B4ABF4B00CD3E3F /* SignInServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInServiceProvider.swift; sourceTree = "<group>"; };
-		0F84D8FD2B4AC10800CD3E3F /* AccountManagementError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountManagementError.swift; sourceTree = "<group>"; };
-		0F84D8FF2B4AC24600CD3E3F /* AccountManagementError+LocalizedError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountManagementError+LocalizedError.swift"; sourceTree = "<group>"; };
-		0F84D9012B4AD45000CD3E3F /* UserKeeperProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserKeeperProtocol.swift; sourceTree = "<group>"; };
-		0F84D9032B4AD49900CD3E3F /* UserKeeper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserKeeper.swift; sourceTree = "<group>"; };
-		0F84D9062B4AD82000CD3E3F /* UserError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserError.swift; sourceTree = "<group>"; };
 		0F84D9082B4AEE5400CD3E3F /* FileInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileInfoView.swift; sourceTree = "<group>"; };
 		0FAA0DF42B45C0D5002FC0F9 /* Weak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weak.swift; sourceTree = "<group>"; };
 		0FAA0DFC2B45CB9D002FC0F9 /* DynamicUIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicUIProtocol.swift; sourceTree = "<group>"; };
@@ -172,7 +152,7 @@
 		0FB1CEB82B4DB60E005EDF0F /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
 		0FB1CEBA2B4DB736005EDF0F /* PositionKeeperError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionKeeperError.swift; sourceTree = "<group>"; };
 		0FB7DAE52B3DF08000985825 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
-		0FB7DAE72B3DF51B00985825 /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
+		0FB7DAE72B3DF51B00985825 /* ScanningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanningViewController.swift; sourceTree = "<group>"; };
 		0FB7DAE92B3DF54100985825 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		0FB7DAEB2B3E0A1600985825 /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
 		0FB7DAF12B3F150E00985825 /* FileStorageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileStorageProtocol.swift; sourceTree = "<group>"; };
@@ -200,9 +180,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F84D8F82B49D11400CD3E3F /* GoogleSignInSwift in Frameworks */,
 				0F60796E2B497A01008DD313 /* FirebaseAuth in Frameworks */,
-				0F84D8F62B49D11400CD3E3F /* GoogleSignIn in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,6 +201,17 @@
 			path = SearchablePDFMaker;
 			sourceTree = "<group>";
 		};
+		0F3218322B4F0DA400840917 /* DocumentCamera */ = {
+			isa = PBXGroup;
+			children = (
+				0F3218332B4F0DCB00840917 /* VisionDocumentCameraManager.swift */,
+				0F3218372B4F0E3C00840917 /* DocumentCameraManager+VNDocumentCameraViewControllerDelegate.swift */,
+				0F3218352B4F0DE600840917 /* DocumentCameraManagerProtocol.swift */,
+				0F32182F2B4EE1C700840917 /* VisionDocumentCameraRouter.swift */,
+			);
+			path = DocumentCamera;
+			sourceTree = "<group>";
+		};
 		0F4130C12B40E30C00981698 /* FileImport */ = {
 			isa = PBXGroup;
 			children = (
@@ -230,6 +219,7 @@
 				0F4130C62B41B9F100981698 /* DocumentImportManager.swift */,
 				0F4130C42B41B99A00981698 /* PDFDocumentImportManager.swift */,
 				0F4130CA2B41BE0900981698 /* DocumentPickerManager.swift */,
+				0F3218392B4F0E8800840917 /* DocumentPickerManager+UIDocumentPickerDelegate.swift */,
 				0F4130C82B41BB5A00981698 /* DocumentImportError.swift */,
 			);
 			path = FileImport;
@@ -247,41 +237,6 @@
 				0FAA0E022B462895002FC0F9 /* PDFDocumentRouter.swift */,
 			);
 			path = PDFDocumentView;
-			sourceTree = "<group>";
-		};
-		0F60796F2B497C6E008DD313 /* SignUp */ = {
-			isa = PBXGroup;
-			children = (
-				0F6079702B497C95008DD313 /* SignUpViewController.swift */,
-				0F60798A2B49A796008DD313 /* SignUpPresenter.swift */,
-				0F6079882B49A786008DD313 /* SignUpInteractor.swift */,
-				0F6079722B497D87008DD313 /* SignUpRouter.swift */,
-			);
-			path = SignUp;
-			sourceTree = "<group>";
-		};
-		0F60797F2B49A19A008DD313 /* AccountManagement */ = {
-			isa = PBXGroup;
-			children = (
-				0F6079802B49A1CB008DD313 /* AccountManagerProtocol.swift */,
-				0F6079822B49A1EE008DD313 /* FirebaseAccountManager.swift */,
-				0F84D8FB2B4ABF4B00CD3E3F /* SignInServiceProvider.swift */,
-				0F84D8FD2B4AC10800CD3E3F /* AccountManagementError.swift */,
-				0F84D8FF2B4AC24600CD3E3F /* AccountManagementError+LocalizedError.swift */,
-			);
-			path = AccountManagement;
-			sourceTree = "<group>";
-		};
-		0F84D9052B4AD4A800CD3E3F /* User */ = {
-			isa = PBXGroup;
-			children = (
-				0F6079862B49A5DC008DD313 /* UserProtocol.swift */,
-				0F6079842B49A5AB008DD313 /* User.swift */,
-				0F84D9012B4AD45000CD3E3F /* UserKeeperProtocol.swift */,
-				0F84D9032B4AD49900CD3E3F /* UserKeeper.swift */,
-				0F84D9062B4AD82000CD3E3F /* UserError.swift */,
-			);
-			path = User;
 			sourceTree = "<group>";
 		};
 		0FAA0DF32B45C0C1002FC0F9 /* Helpers */ = {
@@ -331,6 +286,7 @@
 				0FAA0DF42B45C0D5002FC0F9 /* Weak.swift */,
 				0FAA0DFC2B45CB9D002FC0F9 /* DynamicUIProtocol.swift */,
 				0FAA6E902B4C82170009D0A3 /* DynamicUINotifier.swift */,
+				0F32183B2B4F11F800840917 /* DynamicUINotifierProtocol.swift */,
 				0FAA0DFE2B45CBD5002FC0F9 /* UIViewController+DynamicUIProtocol.swift */,
 			);
 			path = DynamicUI;
@@ -380,12 +336,11 @@
 		0FB7DAEF2B3F127800985825 /* Scanning */ = {
 			isa = PBXGroup;
 			children = (
-				0FB7DAE72B3DF51B00985825 /* ScanViewController.swift */,
-				0F3218272B4ECE7200840917 /* ScanViewController+ VNDocumentCameraViewControllerDelegate.swift */,
-				0F60798E2B49B32D008DD313 /* ScanPresenter.swift */,
-				0F6079902B49B33A008DD313 /* ScanInteractor.swift */,
-				0F60798C2B49B31E008DD313 /* ScanRouter.swift */,
-				0F32182F2B4EE1C700840917 /* DocumentCameraRouter.swift */,
+				0FB7DAE72B3DF51B00985825 /* ScanningViewController.swift */,
+				0F32183D2B4F208200840917 /* ScanningViewController+DynamicUIProtocol.swift */,
+				0F60798E2B49B32D008DD313 /* ScanningPresenter.swift */,
+				0F6079902B49B33A008DD313 /* ScanningInteractor.swift */,
+				0F60798C2B49B31E008DD313 /* ScanningRouter.swift */,
 			);
 			path = Scanning;
 			sourceTree = "<group>";
@@ -448,11 +403,9 @@
 				0F4130C12B40E30C00981698 /* FileImport */,
 				0FB7DAF02B3F12A600985825 /* FileStorage */,
 				0FB7DAEE2B3F126300985825 /* Account */,
-				0F60797F2B49A19A008DD313 /* AccountManagement */,
-				0F84D9052B4AD4A800CD3E3F /* User */,
-				0F60796F2B497C6E008DD313 /* SignUp */,
 				0FB7DAED2B3F124D00985825 /* Files */,
 				0FB7DAEF2B3F127800985825 /* Scanning */,
+				0F3218322B4F0DA400840917 /* DocumentCamera */,
 				0FAA6E812B4C66200009D0A3 /* DocumentView */,
 				0F4130CE2B458B3800981698 /* PDFDocumentView */,
 				0FAA6E8D2B4C80A80009D0A3 /* PDF */,
@@ -503,8 +456,6 @@
 			name = PDFReaderApp;
 			packageProductDependencies = (
 				0F60796D2B497A01008DD313 /* FirebaseAuth */,
-				0F84D8F52B49D11400CD3E3F /* GoogleSignIn */,
-				0F84D8F72B49D11400CD3E3F /* GoogleSignInSwift */,
 			);
 			productName = PDFReaderApp;
 			productReference = 0FBCA9962B3DA7A000149F38 /* PDFReaderApp.app */;
@@ -562,7 +513,6 @@
 			mainGroup = 0FBCA98D2B3DA7A000149F38;
 			packageReferences = (
 				0F60796C2B497A01008DD313 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-				0F84D8F42B49D11400CD3E3F /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 			);
 			productRefGroup = 0FBCA9972B3DA7A000149F38 /* Products */;
 			projectDirPath = "";
@@ -601,14 +551,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F84D9022B4AD45000CD3E3F /* UserKeeperProtocol.swift in Sources */,
 				0FB1CEAC2B4D5D34005EDF0F /* DocumentViewController+UIGestureRecognizerDelegate.swift in Sources */,
-				0F84D8FC2B4ABF4B00CD3E3F /* SignInServiceProvider.swift in Sources */,
-				0F6079732B497D87008DD313 /* SignUpRouter.swift in Sources */,
+				0F32183A2B4F0E8800840917 /* DocumentPickerManager+UIDocumentPickerDelegate.swift in Sources */,
 				0FAA6E8C2B4C7F9B0009D0A3 /* PDFDocumentKeeper+PDFDocumentDelegate.swift in Sources */,
 				0FB7DAF22B3F150E00985825 /* FileStorageProtocol.swift in Sources */,
-				0F6079832B49A1EE008DD313 /* FirebaseAccountManager.swift in Sources */,
-				0FB7DAE82B3DF51B00985825 /* ScanViewController.swift in Sources */,
+				0FB7DAE82B3DF51B00985825 /* ScanningViewController.swift in Sources */,
 				0FB7DAFF2B3F1C8900985825 /* AppCoordinator.swift in Sources */,
 				0F60797E2B49A124008DD313 /* AccountRouter.swift in Sources */,
 				0FAA6E882B4C6F050009D0A3 /* PDFDocumentInteractor.swift in Sources */,
@@ -616,40 +563,40 @@
 				0F4130C52B41B99A00981698 /* PDFDocumentImportManager.swift in Sources */,
 				0F4130BC2B40CD2400981698 /* MyFilesRouter.swift in Sources */,
 				0FAA6E7E2B4C64F70009D0A3 /* FullScreenRouter.swift in Sources */,
-				0F60798D2B49B31E008DD313 /* ScanRouter.swift in Sources */,
+				0F60798D2B49B31E008DD313 /* ScanningRouter.swift in Sources */,
 				0F32182E2B4EDA4000840917 /* UIViewExtensions.swift in Sources */,
 				0F4130C32B41B96D00981698 /* DocumentImportManagerProtocol.swift in Sources */,
-				0F6079912B49B33A008DD313 /* ScanInteractor.swift in Sources */,
+				0F6079912B49B33A008DD313 /* ScanningInteractor.swift in Sources */,
 				0FAA0DFD2B45CB9D002FC0F9 /* DynamicUIProtocol.swift in Sources */,
 				0F4130C72B41B9F100981698 /* DocumentImportManager.swift in Sources */,
 				0FAA6E912B4C82170009D0A3 /* DynamicUINotifier.swift in Sources */,
-				0F84D8FE2B4AC10800CD3E3F /* AccountManagementError.swift in Sources */,
 				0F4130B62B40C86C00981698 /* MyFilesInteractor.swift in Sources */,
 				0FB1CEB12B4DB47E005EDF0F /* PDFDocumentPositionKeeper.swift in Sources */,
 				0FAA0E032B462895002FC0F9 /* PDFDocumentRouter.swift in Sources */,
 				0F4130CB2B41BE0900981698 /* DocumentPickerManager.swift in Sources */,
-				0F84D9042B4AD49900CD3E3F /* UserKeeper.swift in Sources */,
+				0F3218342B4F0DCB00840917 /* VisionDocumentCameraManager.swift in Sources */,
+				0F32183C2B4F11F800840917 /* DynamicUINotifierProtocol.swift in Sources */,
 				0FB7DB072B3F2A2F00985825 /* DiskFile.swift in Sources */,
 				0FAA6E8F2B4C80BE0009D0A3 /* PDFSelection+Comparable.swift in Sources */,
 				0F4130B82B40C9F800981698 /* PresenterProtocol.swift in Sources */,
 				0FB7DAEC2B3E0A1600985825 /* HomeTabBarController.swift in Sources */,
-				0F3218282B4ECE7200840917 /* ScanViewController+ VNDocumentCameraViewControllerDelegate.swift in Sources */,
+				0F3218362B4F0DE600840917 /* DocumentCameraManagerProtocol.swift in Sources */,
 				0F4130C92B41BB5A00981698 /* DocumentImportError.swift in Sources */,
 				0FAA6E8A2B4C71730009D0A3 /* PDFDocumentKeeper.swift in Sources */,
+				0F3218382B4F0E3C00840917 /* DocumentCameraManager+VNDocumentCameraViewControllerDelegate.swift in Sources */,
 				0F60797A2B49A100008DD313 /* AccountPresenter.swift in Sources */,
 				0FAA0DF52B45C0D5002FC0F9 /* Weak.swift in Sources */,
 				0FB1CEAF2B4DB46C005EDF0F /* PositionKeeperProtocol.swift in Sources */,
 				0FB1CEB52B4DB562005EDF0F /* PositionsList.swift in Sources */,
-				0F6079872B49A5DC008DD313 /* UserProtocol.swift in Sources */,
 				0FAA6E802B4C65470009D0A3 /* DocumentViewController.swift in Sources */,
-				0F60798F2B49B32D008DD313 /* ScanPresenter.swift in Sources */,
+				0F60798F2B49B32D008DD313 /* ScanningPresenter.swift in Sources */,
 				0FB1CEB72B4DB5D4005EDF0F /* PositionProtocol.swift in Sources */,
 				0FB7DAF92B3F16B400985825 /* DiskFileStorage.swift in Sources */,
-				0F60798B2B49A796008DD313 /* SignUpPresenter.swift in Sources */,
 				0F4130BE2B40CD3400981698 /* RouterProtocol.swift in Sources */,
 				0FAA6E862B4C6EDB0009D0A3 /* PDFDocumentPresenter.swift in Sources */,
 				0FAA6E942B4C855C0009D0A3 /* PDFDocumentViewController+DynamicUIProtocol.swift in Sources */,
 				0FAA6E842B4C69260009D0A3 /* DocumentViewController+UISearchResultsUpdating.swift in Sources */,
+				0F32183E2B4F208200840917 /* ScanningViewController+DynamicUIProtocol.swift in Sources */,
 				0FBCA99E2B3DA7A000149F38 /* MyFilesViewController.swift in Sources */,
 				0FAA0E012B45DE3D002FC0F9 /* MyFilesViewController+UISearchResultsUpdating.swift in Sources */,
 				0FAA0DFF2B45CBD5002FC0F9 /* UIViewController+DynamicUIProtocol.swift in Sources */,
@@ -658,7 +605,6 @@
 				0F84D9092B4AEE5400CD3E3F /* FileInfoView.swift in Sources */,
 				0F4130D02B458B6800981698 /* PDFDocumentViewController.swift in Sources */,
 				0F84D8FA2B49EB9B00CD3E3F /* MyFilesViewController+DynamicUIProtocol.swift in Sources */,
-				0F84D9072B4AD82000CD3E3F /* UserError.swift in Sources */,
 				0FAA0E052B46FFF6002FC0F9 /* MyFilesViewController+UICollectionViewDelegate.swift in Sources */,
 				0FB7DB012B3F1F2000985825 /* FileType.swift in Sources */,
 				0F60797C2B49A111008DD313 /* AccountInteractor.swift in Sources */,
@@ -666,17 +612,12 @@
 				0FB1CEB92B4DB60E005EDF0F /* Position.swift in Sources */,
 				0F4130B42B40C85900981698 /* MyFilesPresenter.swift in Sources */,
 				0FBCA99A2B3DA7A000149F38 /* AppDelegate.swift in Sources */,
-				0F6079812B49A1CB008DD313 /* AccountManagerProtocol.swift in Sources */,
-				0F84D9002B4AC24600CD3E3F /* AccountManagementError+LocalizedError.swift in Sources */,
-				0F6079712B497C95008DD313 /* SignUpViewController.swift in Sources */,
-				0F3218302B4EE1C700840917 /* DocumentCameraRouter.swift in Sources */,
+				0F3218302B4EE1C700840917 /* VisionDocumentCameraRouter.swift in Sources */,
 				0F4130BA2B40CA0600981698 /* InteractorProtocol.swift in Sources */,
 				0FB7DAFB2B3F1A6F00985825 /* FilesListProtocol.swift in Sources */,
 				0FBCA99C2B3DA7A000149F38 /* SceneDelegate.swift in Sources */,
 				0FB7DB0B2B3F30F600985825 /* DiskFileStorageError.swift in Sources */,
 				0F4130CD2B4587E100981698 /* MyFilesCollectionViewCell.swift in Sources */,
-				0F6079892B49A786008DD313 /* SignUpInteractor.swift in Sources */,
-				0F6079852B49A5AB008DD313 /* User.swift in Sources */,
 				0FB1CEBB2B4DB736005EDF0F /* PositionKeeperError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -969,14 +910,6 @@
 				minimumVersion = 10.19.1;
 			};
 		};
-		0F84D8F42B49D11400CD3E3F /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 7.0.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -984,16 +917,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0F60796C2B497A01008DD313 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
-		};
-		0F84D8F52B49D11400CD3E3F /* GoogleSignIn */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0F84D8F42B49D11400CD3E3F /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
-			productName = GoogleSignIn;
-		};
-		0F84D8F72B49D11400CD3E3F /* GoogleSignInSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0F84D8F42B49D11400CD3E3F /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
-			productName = GoogleSignInSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

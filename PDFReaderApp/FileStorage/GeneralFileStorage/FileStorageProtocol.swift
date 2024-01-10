@@ -8,8 +8,6 @@
 import Foundation
 
 protocol FileStorageProtocol {
-    var userKeeper: UserKeeperProtocol { get set }
-    
     var fileNames: [String] { get }
     var filesCount: Int { get }
     

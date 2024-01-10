@@ -9,7 +9,11 @@ import Foundation
 import UIKit
 
 class FullScreenRouter: RouterProtocol {
-    func fullScreenNavigationController(with viewController: UIViewController) -> UINavigationController {
+    public func make() -> UIViewController {
+        return UIViewController()
+    }
+    
+    public func fullScreenNavigationController(with viewController: UIViewController) -> UINavigationController {
         let nav = UINavigationController(rootViewController: viewController)
         nav.modalPresentationStyle = .fullScreen
         nav.isModalInPresentation = false

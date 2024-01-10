@@ -15,19 +15,12 @@ class MyFilesInteractor: InteractorProtocol {
         return fileStorage.files()
     }
     
-    var userLogged: Bool {
-        return accountManager.userLogged
-    }
-    
     private let fileStorage: FileStorageProtocol
-    private let accountManager: AccountManagerProtocol
     
     // MARK: - Life Cycle
     
-    init(fileStorage: FileStorageProtocol,
-         accountManager: AccountManagerProtocol) {
+    init(fileStorage: FileStorageProtocol) {
         self.fileStorage = fileStorage
-        self.accountManager = accountManager
     }
     
     // MARK: - File Management
@@ -39,16 +32,6 @@ class MyFilesInteractor: InteractorProtocol {
     func sortedAndFilteredFiles(for queryOrNil: String?) -> [any FileProtocol] {
         return filteredFiles(for: queryOrNil).sorted { fileA, fileB in
             return fileA.modifiedDate > fileB.modifiedDate
-        }
-    }
-    
-    // MARK: - Sign In
-    
-    func signIn(withServiceProvider signInServiceProvider: SignInServiceProvider,
-                completionHandler: @escaping (User?, Error?) -> ()) {
-        accountManager.signIn(withServiceProvider: signInServiceProvider) { [weak self] user, error in
-            self?.fileStorage.updateFilesList()
-            completionHandler(user, error)
         }
     }
     

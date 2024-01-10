@@ -9,15 +9,10 @@ import Foundation
 import UIKit
 
 class AccountRouter: RouterProtocol {
-    func make(accountManager: AccountManagerProtocol,
-              fileStorage: FileStorageProtocol) -> UIViewController {
-        let interactor = AccountInteractor(accountManager: accountManager,
-                                           fileStorage: fileStorage)
+    func make() -> UIViewController {
+        let interactor = AccountInteractor()
         let presenter = AccountPresenter(interactor: interactor)
-                                         
-        let signUpViewController = SignUpRouter().make(accountManager: accountManager)
         
-        return AccountViewController(presenter: presenter,
-                                     signUpViewController: signUpViewController)
+        return AccountViewController(presenter: presenter)
     }
 }

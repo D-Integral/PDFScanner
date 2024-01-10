@@ -8,11 +8,20 @@
 import UIKit
 import VisionKit
 
-class ScanViewController: UIViewController {
+class ScanningViewController: UIViewController {
+    
+    // MARK: - Public Interface
+    
+    public init(presenter: ScanningPresenter) {
+        self.presenter = presenter
+        
+        super.init(nibName: nil,
+                   bundle: nil)
+    }
     
     // MARK: - Properties
     
-    private let presenter: ScanPresenter?
+    private let presenter: ScanningPresenter?
     
     private let startScanningButton = UIButton(type: .system)
     private let documentCameraNotSupportedLabel = UILabel(frame: .zero)
@@ -22,13 +31,6 @@ class ScanViewController: UIViewController {
     }
     
     // MARK: - Life Cycle
-    
-    init(presenter: ScanPresenter) {
-        self.presenter = presenter
-        
-        super.init(nibName: nil,
-                   bundle: nil)
-    }
     
     required init?(coder: NSCoder) {
         self.presenter = nil
@@ -95,8 +97,16 @@ class ScanViewController: UIViewController {
     
     // MARK: - Private Functions
     
+    var documentCameraViewController: UIViewController? = nil
+    
     private func startScanning() {
-        navigationController?.present(DocumentCameraRouter().make(withDelegate: self),
-                                      animated: true)
+        documentCameraViewController = presenter?.documentCameraRouter().make()
+        
+        presenter?.add(dynamicUI: self)
+        
+        if let documentCameraViewController = documentCameraViewController {
+            navigationController?.present(documentCameraViewController,
+                                          animated: true)
+        }
     }
 }

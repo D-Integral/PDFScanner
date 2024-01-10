@@ -119,6 +119,7 @@
     },
     "email" : {
       "comment" : "The e-mail text field placeholder.",
+      "extractionState" : "stale",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -222,6 +223,7 @@
       }
     },
     "Hello %@!" : {
+      "extractionState" : "stale",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -256,6 +258,7 @@
       }
     },
     "logIn" : {
+      "extractionState" : "stale",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -290,6 +293,7 @@
       }
     },
     "logOut" : {
+      "extractionState" : "stale",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -394,6 +398,7 @@
       }
     },
     "No auth result retrieved from the sign in provider server." : {
+      "extractionState" : "stale",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -428,6 +433,7 @@
       }
     },
     "No sign in credential retrieved from the sign in provider server." : {
+      "extractionState" : "stale",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -463,6 +469,7 @@
     },
     "password" : {
       "comment" : "The password text field placeholder.",
+      "extractionState" : "stale",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -497,6 +504,7 @@
       }
     },
     "Please Sign In" : {
+      "extractionState" : "stale",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -624,6 +632,7 @@
 
     },
     "The attempt to sign in has been unsuccessful: no id token retrieved from the sign in provider server." : {
+      "extractionState" : "stale",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -658,6 +667,7 @@
       }
     },
     "The attempt to sign in has been unsuccessful: no user retrieved from the sign in provider server." : {
+      "extractionState" : "stale",
       "localizations" : {
         "cs" : {
           "stringUnit" : {

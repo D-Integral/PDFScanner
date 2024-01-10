@@ -9,15 +9,19 @@ import Foundation
 import UIKit
 
 class MyFilesRouter: RouterProtocol {
-    func make(fileStorage: FileStorageProtocol,
-              accountManager: AccountManagerProtocol) -> UIViewController {
+    init(fileStorage: FileStorageProtocol) {
+        self.fileStorage = fileStorage
+    }
+    
+    func make() -> UIViewController {
         let documentImportManager = PDFDocumentImportManager(fileStorage: fileStorage)
-        let interactor = MyFilesInteractor(fileStorage: fileStorage,
-                                           accountManager: accountManager)
+        let interactor = MyFilesInteractor(fileStorage: fileStorage)
         let presenter = MyFilesPresenter(interactor: interactor,
                                          documentImportManager: documentImportManager,
                                          title: String(localized: "myFilesViewControllerTitle"))
         
         return MyFilesViewController(presenter: presenter)
     }
+    
+    let fileStorage: FileStorageProtocol
 }

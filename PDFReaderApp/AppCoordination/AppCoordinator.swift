@@ -13,19 +13,17 @@ class AppCoordinator {
     
     let homeTabBarController: HomeTabBarController
     
-    let userKeeper: UserKeeperProtocol
     let fileStorage: FileStorageProtocol
-    let accountManager: AccountManagerProtocol
+    let documentCameraManager: DocumentCameraManagerProtocol
     
     private init() {
         homeTabBarController = HomeTabBarController()
         
-        userKeeper = UserKeeper()
-        fileStorage = DiskFileStorage(userKeeper: userKeeper)
-        accountManager = FirebaseAccountManager(userKeeper: userKeeper)
+        fileStorage = DiskFileStorage()
+        documentCameraManager = VisionDocumentCameraManager()
         
         homeTabBarController.viewControllers = [filesNavigationController(),
-                                                toolsNavigationController(),
+                                                scanningNavigationController(),
                                                 accountNavigationController()]
     }
     
@@ -42,19 +40,17 @@ class AppCoordinator {
     }
     
     func filesNavigationController() -> UINavigationController {
-        return navigationController(with: MyFilesRouter().make(fileStorage: fileStorage,
-                                                               accountManager: accountManager),
+        return navigationController(with: MyFilesRouter(fileStorage: fileStorage).make(),
                                     tabBarItem: filesTabBarItem())
     }
     
-    func toolsNavigationController() -> UINavigationController {
-        return navigationController(with: ScanRouter().make(),
-                                    tabBarItem: toolsTabBarItem())
+    func scanningNavigationController() -> UINavigationController {
+        return navigationController(with: ScanningRouter(documentCameraManager: documentCameraManager).make(),
+                                    tabBarItem: scanningTabBarItem())
     }
     
     func accountNavigationController() -> UINavigationController {
-        return navigationController(with: AccountRouter().make(accountManager: accountManager,
-                                                               fileStorage: fileStorage),
+        return navigationController(with: AccountRouter().make(),
                                     tabBarItem: accountTabBarItem())
     }
     
@@ -65,7 +61,7 @@ class AppCoordinator {
                           image: UIImage(systemName: "folder"))
     }
     
-    func toolsTabBarItem() -> UITabBarItem {
+    func scanningTabBarItem() -> UITabBarItem {
         return tabBarItem(withTitle: String(localized: "scan"),
                           image: UIImage(systemName: "doc.viewfinder"))
     }
