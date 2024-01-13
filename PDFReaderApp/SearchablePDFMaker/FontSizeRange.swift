@@ -19,12 +19,16 @@ struct FontSizeRange: FontSizeRangeProtocol {
     }
     
     init(minFontSize: CGFloat? = nil,
-         maxFontSize: CGFloat,
+         maxFontSize: CGFloat? = nil,
          minFontScale: CGFloat = Constants.defaultMinFontScale) {
-        self.maxFontSize = maxFontSize.isNaN ? Constants.defaultMaxFontSize : maxFontSize
+        if let maxFontSize = maxFontSize {
+            self.maxFontSize = maxFontSize.isNaN ? Constants.defaultMaxFontSize : maxFontSize
+        } else {
+            self.maxFontSize = Constants.defaultMaxFontSize
+        }
         
         let reliableMinFontScale = minFontScale.isNaN ? Constants.defaultMinFontScale : minFontScale
-        let defaultMinFontSize = maxFontSize * reliableMinFontScale
+        let defaultMinFontSize = self.maxFontSize * reliableMinFontScale
         
         if let minFontSize = minFontSize {
             self.minFontSize = minFontSize.isNaN ? defaultMinFontSize : minFontSize

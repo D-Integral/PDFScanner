@@ -20,15 +20,14 @@ class VisionSearchablePDFMaker: PDFMakerProtocol {
                                         completionHandler: @escaping ((any FileProtocol)?, Error?) -> ()) -> ()? {
         DispatchQueue.global(qos: .userInitiated).async { [weak self] in
             let dispatchGroup = DispatchGroup()
-            let file: DiskFile? = nil
-            var scanResults = [PDFMakerScanResult]()
+            var scanResults = [PDFMakerScanResultPage]()
             
             for (index, documentImage) in documentImages.enumerated() {
                 dispatchGroup.enter()
                 let sourcePage = PDFMakerSourcePage(image: documentImage,
                                                     pageNumber: index)
                 
-                self?.recognizeText(from: sourcePage) { [weak self] recognizedTexts, error  in
+                self?.recognizeText(from: sourcePage) { recognizedTexts, error  in
                     if let error = error {
                         print(error)
                         dispatchGroup.leave()
@@ -40,29 +39,8 @@ class VisionSearchablePDFMaker: PDFMakerProtocol {
                         return
                     }
                     
-                    let data = UIGraphicsPDFRenderer().pdfData { [weak self] context in
-                        guard let pageRect = self?.pdfPageSize(for: sourcePage) else { return }
-                        
-                        let drawContext = context.cgContext
-                        
-                        context.beginPage(withBounds: pageRect,
-                                          pageInfo: [:])
-                        
-                        recognizedTexts.forEach { recognizedText in
-//                            guard let recognizedText = recognizedText as? VisionRecognizedText else { continue }
-//                            self.writeTextOnTextBoxLevel(recognizedText: recognizedText.recognizedText,
-//                                                         on: drawContext,
-//                                                         bounds: pageRect)
-                        }
-                        
-//                        self?.draw(image: sourcePage.image.cgImage,
-//                                   on: drawContext,
-//                                   withSize: pageRect)
-                    }
-                    
-                    let scanResult = PDFMakerScanResult(data: data, pageNumber: sourcePage.pageNumber)
-                    
-                    scanResults.append(scanResult)
+                    scanResults.append(PDFMakerScanResultPage(sourcePage: sourcePage,
+                                                              recognizedTexts: recognizedTexts))
                     
                     dispatchGroup.leave()
                 }
@@ -71,8 +49,22 @@ class VisionSearchablePDFMaker: PDFMakerProtocol {
             dispatchGroup.wait()
             
             let sortedScanResults = scanResults.sorted { left, right in
-                left.pageNumber < right.pageNumber
+                left.sourcePage.pageNumber < right.sourcePage.pageNumber
             }
+            
+            let data = UIGraphicsPDFRenderer().pdfData { [weak self] context in
+                for scanResult in scanResults {
+                    self?.fillPdfDocumentLayers(with: scanResult,
+                                                on: context)
+                }
+            }
+            
+            let currentDate = Date()
+            let file = DiskFile(name: "Scan \(Date())",
+                                data: data,
+                                createdDate: currentDate,
+                                modifiedDate: currentDate,
+                                fileType: .pdfDocument)
             
             DispatchQueue.main.async {
                 completionHandler(file, nil)
@@ -152,11 +144,52 @@ class VisionSearchablePDFMaker: PDFMakerProtocol {
                       height: pageHeight)
     }
     
-    func pdfDocumentData(from images: [UIImage]) -> Data {
-        let data = UIGraphicsPDFRenderer().pdfData { context in
-            let drawContext = context.cgContext
+    private func fillPdfDocumentLayers(with scanResult: PDFMakerScanResultPage,
+                                       on context: UIGraphicsPDFRendererContext) {
+        let pageRect = self.pdfPageSize(for: scanResult.sourcePage)
+        
+        context.beginPage(withBounds: pageRect,
+                          pageInfo: [:])
+        
+        scanResult.recognizedTexts.forEach { recognizedText in
+            if let recognizedText = recognizedText as? VisionRecognizedText {
+                self.fillTextLayer(with: recognizedText.recognizedText, in: pageRect)
+            }
         }
         
-        return data
+        self.fillImageLayer(with: scanResult.sourcePage.image,
+                            in: pageRect)
+    }
+    
+    private func fillTextLayer(with recognizedText: VNRecognizedText,
+                               in rect: CGRect) {
+        let text = recognizedText.string
+        let pageWidth = rect.size.width
+        let pageHeight = rect.size.height
+        
+        let start = text.index(text.startIndex, offsetBy: 0)
+        let end = text.index(text.endIndex, offsetBy: 0)
+        
+        guard let boundingBox = try? recognizedText.boundingBox(for: start..<end) else {
+            return
+        }
+        
+        let transform = CGAffineTransform(scaleX: 1, y: -1).translatedBy(x: 0, y: -pageHeight)
+        let transformedRect: CGRect = VNImageRectForNormalizedRect(boundingBox.boundingBox,
+                                                                   Int(pageWidth),
+                                                                   Int(pageHeight)).applying(transform)
+        let fontSize = fontSizeCalculator.fontSizeThatFits(FontSizeCalculatorSource(text: text,
+                                                                                    rectSize: transformedRect.size))
+        let font = UIFont.systemFont(ofSize: fontSize)
+        
+        let attributedString = NSAttributedString(string: text,
+                                                  attributes:  [NSAttributedString.Key.font: font])
+        
+        attributedString.draw(in: transformedRect)
+    }
+    
+    private func fillImageLayer(with image: UIImage,
+                                in rect: CGRect) {
+        image.draw(in: rect)
     }
 }

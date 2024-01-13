@@ -23,7 +23,7 @@ struct FontSizeCalculatorSource: FontSizeCalculatorSourceProtocol {
     }
     
     init(text: String,
-         fontSizeRange: FontSizeRange,
+         fontSizeRange: FontSizeRange = FontSizeRange(),
          rectSize: CGSize) {
         self.text = text
         self.fontSizeRange = fontSizeRange

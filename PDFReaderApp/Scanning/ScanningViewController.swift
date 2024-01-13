@@ -26,6 +26,8 @@ class ScanningViewController: UIViewController {
     private let startScanningButton = UIButton(type: .system)
     private let documentCameraNotSupportedLabel = UILabel(frame: .zero)
     
+    let activityView = UIActivityIndicatorView(style: .large)
+    
     private var isDocumentCameraSupported: Bool {
         return presenter?.isDocumentCameraSupported ?? false
     }
@@ -45,6 +47,8 @@ class ScanningViewController: UIViewController {
         
         setupDocumentCameraNotSupportedLabel()
         setupStartScanButton()
+        
+        setupActivityView()
         
         setupConstraints()
     }
@@ -69,6 +73,12 @@ class ScanningViewController: UIViewController {
         documentCameraNotSupportedLabel.isHidden = isDocumentCameraSupported
         
         view.addSubview(documentCameraNotSupportedLabel)
+    }
+    
+    private func setupActivityView() {
+        activityView.center = view.center
+        
+        view.addSubview(activityView)
     }
     
     private func setupConstraints() {

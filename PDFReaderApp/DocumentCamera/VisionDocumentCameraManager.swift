@@ -11,11 +11,14 @@ import VisionKit
 class VisionDocumentCameraManager: DynamicUINotifier, DocumentCameraManagerProtocol {
     
     let pdfMaker: PDFMakerProtocol
+    let fileStorage: FileStorageProtocol
     
     var lastScannedFile: (any FileProtocol)? = nil
     
-    init(pdfMaker: PDFMakerProtocol) {
+    init(pdfMaker: PDFMakerProtocol,
+         fileStorage: FileStorageProtocol) {
         self.pdfMaker = pdfMaker
+        self.fileStorage = fileStorage
     }
     
     public var isDocumentCameraSupported: Bool {

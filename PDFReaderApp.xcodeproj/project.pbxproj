@@ -22,8 +22,8 @@
 		0F3218482B52B74300840917 /* PDFMakerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3218472B52B74300840917 /* PDFMakerError.swift */; };
 		0F32184A2B52B98800840917 /* PDFMakerSourcePageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3218492B52B98800840917 /* PDFMakerSourcePageProtocol.swift */; };
 		0F32184C2B52B9EA00840917 /* PDFMakerSourcePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F32184B2B52B9EA00840917 /* PDFMakerSourcePage.swift */; };
-		0F32184E2B52CC6E00840917 /* PDFMakerScanResultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F32184D2B52CC6E00840917 /* PDFMakerScanResultProtocol.swift */; };
-		0F3218502B52D0B500840917 /* PDFMakerScanResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F32184F2B52D0B500840917 /* PDFMakerScanResult.swift */; };
+		0F32184E2B52CC6E00840917 /* PDFMakerScanResultPageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F32184D2B52CC6E00840917 /* PDFMakerScanResultPageProtocol.swift */; };
+		0F3218502B52D0B500840917 /* PDFMakerScanResultPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F32184F2B52D0B500840917 /* PDFMakerScanResultPage.swift */; };
 		0F3218522B52D3E800840917 /* FontSizeCalculatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3218512B52D3E800840917 /* FontSizeCalculatorProtocol.swift */; };
 		0F3218542B52D47400840917 /* FontSizeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3218532B52D47400840917 /* FontSizeCalculator.swift */; };
 		0F3218562B52D75500840917 /* FontSizeCalculatorSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3218552B52D75500840917 /* FontSizeCalculatorSourceProtocol.swift */; };
@@ -127,8 +127,8 @@
 		0F3218472B52B74300840917 /* PDFMakerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFMakerError.swift; sourceTree = "<group>"; };
 		0F3218492B52B98800840917 /* PDFMakerSourcePageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFMakerSourcePageProtocol.swift; sourceTree = "<group>"; };
 		0F32184B2B52B9EA00840917 /* PDFMakerSourcePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFMakerSourcePage.swift; sourceTree = "<group>"; };
-		0F32184D2B52CC6E00840917 /* PDFMakerScanResultProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFMakerScanResultProtocol.swift; sourceTree = "<group>"; };
-		0F32184F2B52D0B500840917 /* PDFMakerScanResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFMakerScanResult.swift; sourceTree = "<group>"; };
+		0F32184D2B52CC6E00840917 /* PDFMakerScanResultPageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFMakerScanResultPageProtocol.swift; sourceTree = "<group>"; };
+		0F32184F2B52D0B500840917 /* PDFMakerScanResultPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFMakerScanResultPage.swift; sourceTree = "<group>"; };
 		0F3218512B52D3E800840917 /* FontSizeCalculatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSizeCalculatorProtocol.swift; sourceTree = "<group>"; };
 		0F3218532B52D47400840917 /* FontSizeCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSizeCalculator.swift; sourceTree = "<group>"; };
 		0F3218552B52D75500840917 /* FontSizeCalculatorSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSizeCalculatorSourceProtocol.swift; sourceTree = "<group>"; };
@@ -232,12 +232,12 @@
 				0F32183F2B52B0CF00840917 /* VisionSearchablePDFMaker.swift */,
 				0F3218452B52B5E500840917 /* VisionRecognizedText.swift */,
 				0F32184B2B52B9EA00840917 /* PDFMakerSourcePage.swift */,
-				0F32184F2B52D0B500840917 /* PDFMakerScanResult.swift */,
+				0F32184F2B52D0B500840917 /* PDFMakerScanResultPage.swift */,
 				0F3218532B52D47400840917 /* FontSizeCalculator.swift */,
 				0F3218572B52D87200840917 /* FontSizeCalculatorSource.swift */,
 				0F32185B2B52F15800840917 /* FontSizeRange.swift */,
 				0F3218432B52B5D300840917 /* RecognizedTextProtocol.swift */,
-				0F32184D2B52CC6E00840917 /* PDFMakerScanResultProtocol.swift */,
+				0F32184D2B52CC6E00840917 /* PDFMakerScanResultPageProtocol.swift */,
 				0F3218412B52B10C00840917 /* PDFMakerProtocol.swift */,
 				0F3218492B52B98800840917 /* PDFMakerSourcePageProtocol.swift */,
 				0F3218512B52D3E800840917 /* FontSizeCalculatorProtocol.swift */,
@@ -607,7 +607,7 @@
 				0FB7DAF22B3F150E00985825 /* FileStorageProtocol.swift in Sources */,
 				0FB7DAE82B3DF51B00985825 /* ScanningViewController.swift in Sources */,
 				0FB7DAFF2B3F1C8900985825 /* AppCoordinator.swift in Sources */,
-				0F32184E2B52CC6E00840917 /* PDFMakerScanResultProtocol.swift in Sources */,
+				0F32184E2B52CC6E00840917 /* PDFMakerScanResultPageProtocol.swift in Sources */,
 				0F60797E2B49A124008DD313 /* AccountRouter.swift in Sources */,
 				0FAA6E882B4C6F050009D0A3 /* PDFDocumentInteractor.swift in Sources */,
 				0FB7DAEA2B3DF54100985825 /* AccountViewController.swift in Sources */,
@@ -675,7 +675,7 @@
 				0F4130B42B40C85900981698 /* MyFilesPresenter.swift in Sources */,
 				0FBCA99A2B3DA7A000149F38 /* AppDelegate.swift in Sources */,
 				0F3218302B4EE1C700840917 /* VisionDocumentCameraRouter.swift in Sources */,
-				0F3218502B52D0B500840917 /* PDFMakerScanResult.swift in Sources */,
+				0F3218502B52D0B500840917 /* PDFMakerScanResultPage.swift in Sources */,
 				0F32185E2B52FF3B00840917 /* BinarySearchFitState.swift in Sources */,
 				0F4130BA2B40CA0600981698 /* InteractorProtocol.swift in Sources */,
 				0FB7DAFB2B3F1A6F00985825 /* FilesListProtocol.swift in Sources */,

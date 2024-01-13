@@ -16,8 +16,10 @@ extension ScanningViewController {
     }
     
     override func timeConsumingOperationStarted() {
+        activityView.startAnimating()
     }
     
     override func timeConsumingOperationCompleted() {
+        activityView.stopAnimating()
     }
 }
