@@ -41,7 +41,8 @@ class AppCoordinator {
     }
     
     func filesNavigationController() -> UINavigationController {
-        return navigationController(with: MyFilesRouter(fileStorage: fileStorage).make(),
+        return navigationController(with: MyFilesRouter(fileStorage: fileStorage,
+                                                        documentCameraManager: documentCameraManager).make(),
                                     tabBarItem: filesTabBarItem())
     }
     

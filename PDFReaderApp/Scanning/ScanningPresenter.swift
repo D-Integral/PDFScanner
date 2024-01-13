@@ -20,6 +20,10 @@ class ScanningPresenter: PresenterProtocol {
         return interactor.isDocumentCameraSupported
     }
     
+    public var lastScannedFile: (any FileProtocol)? {
+        return interactor.lastScannedFile
+    }
+    
     public init(interactor: ScanningInteractor) {
         self.interactor = interactor
     }

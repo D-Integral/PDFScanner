@@ -53,6 +53,25 @@ class ScanningViewController: UIViewController {
         setupConstraints()
     }
     
+    // MARK: - Update UI
+    
+    func hideDocumentCamera() {
+        if documentCameraViewController != nil {
+            navigationController?.dismiss(animated: true)
+            documentCameraViewController = nil
+        }
+    }
+    
+    func showJustScannedFileIfExists() {
+        if let lastScannedFile = presenter?.lastScannedFile as? DiskFile {
+            let positionKeeper = PDFDocumentPositionKeeper()
+            
+            navigationController?.present(PDFDocumentRouter().make(diskFile: lastScannedFile,
+                                                                   positionKeeper: positionKeeper),
+                                          animated: true)
+        }
+    }
+    
     // MARK: - Setup
     
     private func setupStartScanButton() {

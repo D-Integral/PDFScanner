@@ -26,9 +26,9 @@ extension VisionDocumentCameraManager: VNDocumentCameraViewControllerDelegate {
                 return
             }
             
-            self?.lastScannedFile = file
-            
             if let file = file as? DiskFile {
+                self?.lastScannedFile = file
+                
                 do {
                     try self?.fileStorage.save(file)
                 } catch {

@@ -15,12 +15,19 @@ class MyFilesInteractor: InteractorProtocol {
         return fileStorage.files()
     }
     
+    let documentPickerManager: DocumentPickerManager
+    
     private let fileStorage: FileStorageProtocol
+    private let documentCameraManager: DocumentCameraManagerProtocol?
     
     // MARK: - Life Cycle
     
-    init(fileStorage: FileStorageProtocol) {
+    init(fileStorage: FileStorageProtocol,
+         documentImportManager: DocumentImportManagerProtocol,
+         documentCameraManager: DocumentCameraManagerProtocol? = nil) {
         self.fileStorage = fileStorage
+        self.documentPickerManager = DocumentPickerManager(documentImportManager: documentImportManager)
+        self.documentCameraManager = documentCameraManager
     }
     
     // MARK: - File Management
@@ -33,6 +40,16 @@ class MyFilesInteractor: InteractorProtocol {
         return filteredFiles(for: queryOrNil).sorted { fileA, fileB in
             return fileA.modifiedDate > fileB.modifiedDate
         }
+    }
+    
+    // MARK: - Dynamic UI
+    
+    func add(dynamicUI: any DynamicUIProtocol) {
+        documentCameraManager?.add(dynamicUI: dynamicUI)
+    }
+    
+    func remove(dynamicUI: any DynamicUIProtocol) {
+        documentCameraManager?.remove(dynamicUI: dynamicUI)
     }
     
     // MARK: - Private Functions

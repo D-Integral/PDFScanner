@@ -10,5 +10,7 @@ import Foundation
 protocol DocumentCameraManagerProtocol: DynamicUINotifierProtocol {
     var isDocumentCameraSupported: Bool { get }
     
+    var lastScannedFile: (any FileProtocol)? { get set }
+    
     func documentCameraRouter() -> RouterProtocol
 }

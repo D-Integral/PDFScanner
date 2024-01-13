@@ -15,6 +15,10 @@ class ScanningInteractor: InteractorProtocol {
         return documentCameraManager.isDocumentCameraSupported
     }
     
+    public var lastScannedFile: (any FileProtocol)? {
+        return documentCameraManager.lastScannedFile
+    }
+    
     public init(documentCameraManager: DocumentCameraManagerProtocol) {
         self.documentCameraManager = documentCameraManager
     }

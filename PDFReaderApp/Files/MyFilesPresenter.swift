@@ -12,28 +12,24 @@ import PDFKit
 class MyFilesPresenter: PresenterProtocol {
     private let interactor: MyFilesInteractor
     
-    private let documentPickerManager: DocumentPickerManager
-    
     let title: String
     
     var documentPickerViewController: UIDocumentPickerViewController? {
-        return documentPickerManager.documentPickerViewController
+        return interactor.documentPickerManager.documentPickerViewController
     }
     
     init(interactor: MyFilesInteractor,
-         documentImportManager: DocumentImportManagerProtocol,
          title: String) {
         self.interactor = interactor
-        self.documentPickerManager = DocumentPickerManager(documentImportManager: documentImportManager)
         self.title = title
     }
     
     func add(dynamicUI: DynamicUIProtocol) {
-        documentPickerManager.add(dynamicUI: dynamicUI)
+        interactor.add(dynamicUI: dynamicUI)
     }
     
     func remove(dynamicUI: DynamicUIProtocol) {
-        documentPickerManager.remove(dynamicUI: dynamicUI)
+        interactor.remove(dynamicUI: dynamicUI)
     }
     
     func sortedAndFilteredFiles(for queryOrNil: String?) -> [any FileProtocol] {

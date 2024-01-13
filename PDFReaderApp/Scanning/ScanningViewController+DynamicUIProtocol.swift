@@ -9,10 +9,8 @@ import Foundation
 
 extension ScanningViewController {
     override func updateDynamicUI() {
-        if documentCameraViewController != nil {
-            navigationController?.dismiss(animated: true)
-            documentCameraViewController = nil
-        }
+        hideDocumentCamera()
+        showJustScannedFileIfExists()
     }
     
     override func timeConsumingOperationStarted() {
