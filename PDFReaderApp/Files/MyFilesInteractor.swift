@@ -15,19 +15,19 @@ class MyFilesInteractor: InteractorProtocol {
         return fileStorage.files()
     }
     
-    var userLogged: Bool {
-        return accountManager.userLogged
-    }
+    let documentPickerManager: DocumentPickerManager
     
     private let fileStorage: FileStorageProtocol
-    private let accountManager: AccountManagerProtocol
+    private let documentCameraManager: DocumentCameraManagerProtocol?
     
     // MARK: - Life Cycle
     
     init(fileStorage: FileStorageProtocol,
-         accountManager: AccountManagerProtocol) {
+         documentImportManager: DocumentImportManagerProtocol,
+         documentCameraManager: DocumentCameraManagerProtocol? = nil) {
         self.fileStorage = fileStorage
-        self.accountManager = accountManager
+        self.documentPickerManager = DocumentPickerManager(documentImportManager: documentImportManager)
+        self.documentCameraManager = documentCameraManager
     }
     
     // MARK: - File Management
@@ -42,14 +42,14 @@ class MyFilesInteractor: InteractorProtocol {
         }
     }
     
-    // MARK: - Sign In
+    // MARK: - Dynamic UI
     
-    func signIn(withServiceProvider signInServiceProvider: SignInServiceProvider,
-                completionHandler: @escaping (User?, Error?) -> ()) {
-        accountManager.signIn(withServiceProvider: signInServiceProvider) { [weak self] user, error in
-            self?.fileStorage.updateFilesList()
-            completionHandler(user, error)
-        }
+    func add(dynamicUI: any DynamicUIProtocol) {
+        documentCameraManager?.add(dynamicUI: dynamicUI)
+    }
+    
+    func remove(dynamicUI: any DynamicUIProtocol) {
+        documentCameraManager?.remove(dynamicUI: dynamicUI)
     }
     
     // MARK: - Private Functions

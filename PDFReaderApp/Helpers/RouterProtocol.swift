@@ -6,7 +6,8 @@
 //
 
 import Foundation
+import UIKit
 
 protocol RouterProtocol {
-    
+    func make() -> UIViewController
 }

@@ -8,29 +8,22 @@
 import Foundation
 
 final class DiskFileStorage: FileStorageProtocol {
-    var userKeeper: UserKeeperProtocol
     
-    init(userKeeper: UserKeeperProtocol) {
-        self.userKeeper = userKeeper
-        
+    init() {
         self.updateFilesList()
     }
     
     // MARK: FileStorageProtocol
     
     func updateFilesList() {
-        if userKeeper.currentUser == nil {
-            self.filesList = nil
-        } else {
-            do {
-                self.filesList = try retrieveFilesList()
-            } catch {
-                print(error)
-            }
-            
-            if nil == self.filesList {
-                self.filesList = DiskFilesList(diskFiles: [UUID : DiskFile]())
-            }
+        do {
+            self.filesList = try retrieveFilesList()
+        } catch {
+            print(error)
+        }
+        
+        if nil == self.filesList {
+            self.filesList = DiskFilesList(diskFiles: [UUID : DiskFile]())
         }
     }
     
@@ -101,14 +94,10 @@ final class DiskFileStorage: FileStorageProtocol {
     // MARK: - Private Methods
     
     private var filesListUrl: URL? {
-        guard let currentUserEmail = userKeeper.currentUser?.email else {
-            return nil
-        }
-        
         let fileManager = FileManager.default
         let documentDirectoryURL = (fileManager.urls(for: .documentDirectory,
                                                      in: .userDomainMask)).last as? NSURL
         
-        return documentDirectoryURL?.appendingPathComponent(currentUserEmail) as? URL
+        return documentDirectoryURL?.appendingPathComponent("filesList") as? URL
     }
 }

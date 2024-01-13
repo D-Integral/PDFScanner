@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class PDFDocumentRouter: DocumentRouter {
+class PDFDocumentRouter: FullScreenRouter {
     func make(diskFile: DiskFile,
               positionKeeper: PositionKeeperProtocol) -> UIViewController {
         let interactor = PDFDocumentInteractor(diskFile: diskFile,
@@ -16,6 +16,6 @@ class PDFDocumentRouter: DocumentRouter {
         let presenter = PDFDocumentPresenter(interactor: interactor)
         let viewController = PDFDocumentViewController(presenter: presenter)
         
-        return navigationController(with: viewController)
+        return fullScreenNavigationController(with: viewController)
     }
 }

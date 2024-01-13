@@ -114,37 +114,12 @@
         }
       }
     },
-    "email" : {
-      "comment" : "The e-mail text field placeholder.",
+    "documentCameraNotSupported" : {
       "localizations" : {
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "E-mailem"
-          }
-        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "E-mail"
-          }
-        },
-        "ka-GE" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ელ.ფოსტა"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Электронная почта"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Електронна пошта"
+            "value" : "The document scanning is not supported for your device."
           }
         }
       }
@@ -218,108 +193,6 @@
         }
       }
     },
-    "Hello %@!" : {
-      "localizations" : {
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ahoj, %@!"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hello %@!"
-          }
-        },
-        "ka-GE" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "გამარჯობა, %@!"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Здравствуйте, %@!"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Вітаємо, %@!"
-          }
-        }
-      }
-    },
-    "logIn" : {
-      "localizations" : {
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vejít do"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Log In"
-          }
-        },
-        "ka-GE" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Შესვლა"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Войти"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Увійти"
-          }
-        }
-      }
-    },
-    "logOut" : {
-      "localizations" : {
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Odhlásit se"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Log Out"
-          }
-        },
-        "ka-GE" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "გასვლა"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Выйти"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Вийти"
-          }
-        }
-      }
-    },
     "myAccount" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -386,143 +259,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Мої файли"
-          }
-        }
-      }
-    },
-    "No auth result retrieved from the sign in provider server." : {
-      "localizations" : {
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ze serveru poskytovatele přihlášení nebyl načten žádný výsledek ověření."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No auth result retrieved from the sign in provider server."
-          }
-        },
-        "ka-GE" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ავტორიზაციის შედეგი არ არის მოძიებული შესვლის პროვაიდერის სერვერიდან."
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "С сервера поставщика входа не получен результат аутентификации."
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Немає результатів автентифікації, отриманих із сервера постачальника входу."
-          }
-        }
-      }
-    },
-    "No sign in credential retrieved from the sign in provider server." : {
-      "localizations" : {
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ze serveru poskytovatele přihlášení nebyly získány žádné přihlašovací údaje."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No sign in credential retrieved from the sign in provider server."
-          }
-        },
-        "ka-GE" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "შესვლის პროვაიდერის სერვერიდან შესვლის სერთიფიკატი არ არის მოძიებული."
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Не получены учетные данные для входа с сервера поставщика входа."
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Немає облікових даних для входу, отриманих із сервера постачальника послуг входу."
-          }
-        }
-      }
-    },
-    "password" : {
-      "comment" : "The password text field placeholder.",
-      "localizations" : {
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Heslo"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Password"
-          }
-        },
-        "ka-GE" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "პაროლი"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Пароль"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Пароль"
-          }
-        }
-      }
-    },
-    "Please Sign In" : {
-      "localizations" : {
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Prosím přihlašte se"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Please Sign In"
-          }
-        },
-        "ka-GE" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "გთხოვთ შეხვიდეთ"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Пожалуйста войдите"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Будь ласка, увійдіть"
           }
         }
       }
@@ -617,70 +353,12 @@
         }
       }
     },
-    "The attempt to sign in has been unsuccessful: no id token retrieved from the sign in provider server." : {
+    "startScanButtonTitle" : {
       "localizations" : {
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pokus o přihlášení byl neúspěšný: ze serveru poskytovatele přihlášení nebyl načten žádný token ID."
-          }
-        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "The attempt to sign in has been unsuccessful: no id token retrieved from the sign in provider server."
-          }
-        },
-        "ka-GE" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "შესვლის მცდელობა წარუმატებელი აღმოჩნდა: შესვლის პროვაიდერის სერვერიდან არ არის მოძიებული ID ჟეტონი."
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Попытка входа не удалась: с сервера поставщика входа не получен токен идентификатора."
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Спроба входу виявилася невдалою: id token не отримано із сервера постачальника входу."
-          }
-        }
-      }
-    },
-    "The attempt to sign in has been unsuccessful: no user retrieved from the sign in provider server." : {
-      "localizations" : {
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pokus o přihlášení byl neúspěšný: ze serveru poskytovatele přihlášení nebyl načten žádný uživatel."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "The attempt to sign in has been unsuccessful: no user retrieved from the sign in provider server."
-          }
-        },
-        "ka-GE" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "შესვლის მცდელობა წარუმატებელი აღმოჩნდა: შესვლის პროვაიდერის სერვერიდან არცერთი მომხმარებელი არ არის მოძიებული."
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Попытка входа не удалась: ни один пользователь не получен с сервера провайдера входа."
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Спроба входу виявилася невдалою: жоден користувач не отриманий із сервера постачальника входу."
+            "value" : "Scan a Document into PDF"
           }
         }
       }

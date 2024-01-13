@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import UniformTypeIdentifiers
 
-final class DocumentPickerManager: DynamicUINotifier, UIDocumentPickerDelegate {
+final class DocumentPickerManager: DynamicUINotifier {
     let documentImportManager: DocumentImportManagerProtocol
     var documentPickerViewController: UIDocumentPickerViewController? = nil
     
@@ -33,19 +33,6 @@ final class DocumentPickerManager: DynamicUINotifier, UIDocumentPickerDelegate {
         
         documentPickerViewController?.delegate = self
         documentPickerViewController?.allowsMultipleSelection = true
-    }
-
-    func documentPickerWasCancelled(_ controller: UIDocumentPickerViewController) {
-    }
-    
-    func documentPicker(_ controller: UIDocumentPickerViewController,
-                        didPickDocumentsAt urls: [URL]) {
-        timeConsumingOperationStarted()
-        
-        documentImportManager.importDocuments(at: urls) { [weak self] in
-            self?.timeConsumingOperationCompleted()
-            self?.updateUI()
-        }
     }
     
     // MARK: Helpers

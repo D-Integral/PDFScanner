@@ -12,32 +12,24 @@ import PDFKit
 class MyFilesPresenter: PresenterProtocol {
     private let interactor: MyFilesInteractor
     
-    private let documentPickerManager: DocumentPickerManager
-    
     let title: String
     
-    var userLogged: Bool {
-        return interactor.userLogged
-    }
-    
     var documentPickerViewController: UIDocumentPickerViewController? {
-        return documentPickerManager.documentPickerViewController
+        return interactor.documentPickerManager.documentPickerViewController
     }
     
     init(interactor: MyFilesInteractor,
-         documentImportManager: DocumentImportManagerProtocol,
          title: String) {
         self.interactor = interactor
-        self.documentPickerManager = DocumentPickerManager(documentImportManager: documentImportManager)
         self.title = title
     }
     
     func add(dynamicUI: DynamicUIProtocol) {
-        documentPickerManager.add(dynamicUI: dynamicUI)
+        interactor.add(dynamicUI: dynamicUI)
     }
     
     func remove(dynamicUI: DynamicUIProtocol) {
-        documentPickerManager.remove(dynamicUI: dynamicUI)
+        interactor.remove(dynamicUI: dynamicUI)
     }
     
     func sortedAndFilteredFiles(for queryOrNil: String?) -> [any FileProtocol] {
@@ -59,13 +51,6 @@ class MyFilesPresenter: PresenterProtocol {
                 completionHandler(pdfDocumentPage?.thumbnail(of: thumbnailSize,
                                                              for: PDFDisplayBox.trimBox))
             }
-        }
-    }
-    
-    func signIn(withServiceProvider signInServiceProvider: SignInServiceProvider,
-                completionHandler: @escaping (User?, Error?) -> ()) {
-        interactor.signIn(withServiceProvider: signInServiceProvider) { user, error in
-            completionHandler(user, error)
         }
     }
 }
