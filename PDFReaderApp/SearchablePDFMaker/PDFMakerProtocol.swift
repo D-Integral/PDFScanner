@@ -9,6 +9,8 @@ import Foundation
 import UIKit
 
 protocol PDFMakerProtocol {
+    var fontSizeCalculator: FontSizeCalculatorProtocol { get }
+    
     func generatePdfDocumentFile(from documentImages: [UIImage],
                                  completionHandler: @escaping ((any FileProtocol)?, Error?) -> ()) -> ()?
 }

@@ -10,36 +10,72 @@ import UIKit
 import Vision
 
 class VisionSearchablePDFMaker: PDFMakerProtocol {
+    var fontSizeCalculator: FontSizeCalculatorProtocol
+    
+    init(fontSizeCalculator: FontSizeCalculatorProtocol = FontSizeCalculator()) {
+        self.fontSizeCalculator = fontSizeCalculator
+    }
+    
     public func generatePdfDocumentFile(from documentImages: [UIImage],
                                         completionHandler: @escaping ((any FileProtocol)?, Error?) -> ()) -> ()? {
         DispatchQueue.global(qos: .userInitiated).async { [weak self] in
             let dispatchGroup = DispatchGroup()
-            var allRecognizedTexts = [RecognizedTextProtocol]()
+            let file: DiskFile? = nil
+            var scanResults = [PDFMakerScanResult]()
             
             for (index, documentImage) in documentImages.enumerated() {
                 dispatchGroup.enter()
                 let sourcePage = PDFMakerSourcePage(image: documentImage,
                                                     pageNumber: index)
                 
-                self?.recognizeText(from: sourcePage) { currentRecognizedTexts, error  in
+                self?.recognizeText(from: sourcePage) { [weak self] recognizedTexts, error  in
                     if let error = error {
                         print(error)
                         dispatchGroup.leave()
                         return
                     }
                     
-                    guard let currentRecognizedTexts = currentRecognizedTexts else {
+                    guard let recognizedTexts = recognizedTexts else {
                         dispatchGroup.leave()
                         return
                     }
                     
-                    allRecognizedTexts.append(contentsOf: currentRecognizedTexts)
+                    let data = UIGraphicsPDFRenderer().pdfData { [weak self] context in
+                        guard let pageRect = self?.pdfPageSize(for: sourcePage) else { return }
+                        
+                        let drawContext = context.cgContext
+                        
+                        context.beginPage(withBounds: pageRect,
+                                          pageInfo: [:])
+                        
+                        recognizedTexts.forEach { recognizedText in
+//                            guard let recognizedText = recognizedText as? VisionRecognizedText else { continue }
+//                            self.writeTextOnTextBoxLevel(recognizedText: recognizedText.recognizedText,
+//                                                         on: drawContext,
+//                                                         bounds: pageRect)
+                        }
+                        
+//                        self?.draw(image: sourcePage.image.cgImage,
+//                                   on: drawContext,
+//                                   withSize: pageRect)
+                    }
+                    
+                    let scanResult = PDFMakerScanResult(data: data, pageNumber: sourcePage.pageNumber)
+                    
+                    scanResults.append(scanResult)
+                    
                     dispatchGroup.leave()
                 }
             }
             
-            dispatchGroup.notify(queue: DispatchQueue.main) {
-                completionHandler(nil, nil)
+            dispatchGroup.wait()
+            
+            let sortedScanResults = scanResults.sorted { left, right in
+                left.pageNumber < right.pageNumber
+            }
+            
+            DispatchQueue.main.async {
+                completionHandler(file, nil)
             }
         }
     }
@@ -104,5 +140,23 @@ class VisionSearchablePDFMaker: PDFMakerProtocol {
         request.recognitionLevel = .accurate
         
         return request
+    }
+    
+    func pdfPageSize(for sourcePage: PDFMakerSourcePageProtocol) -> CGRect {
+        let pageWidth = sourcePage.image.size.width
+        let pageHeight = sourcePage.image.size.height
+        
+        return CGRect(x: 0,
+                      y: 0,
+                      width: pageWidth,
+                      height: pageHeight)
+    }
+    
+    func pdfDocumentData(from images: [UIImage]) -> Data {
+        let data = UIGraphicsPDFRenderer().pdfData { context in
+            let drawContext = context.cgContext
+        }
+        
+        return data
     }
 }
