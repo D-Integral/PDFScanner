@@ -31,6 +31,7 @@
 		0F32185A2B52F11D00840917 /* FontSizeRangeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3218592B52F11D00840917 /* FontSizeRangeProtocol.swift */; };
 		0F32185C2B52F15800840917 /* FontSizeRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F32185B2B52F15800840917 /* FontSizeRange.swift */; };
 		0F32185E2B52FF3B00840917 /* BinarySearchFitState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F32185D2B52FF3B00840917 /* BinarySearchFitState.swift */; };
+		0F3218602B532D6100840917 /* DocumentViewController+UINavigationItemRenameDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F32185F2B532D6000840917 /* DocumentViewController+UINavigationItemRenameDelegate.swift */; };
 		0F4130B42B40C85900981698 /* MyFilesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4130B32B40C85900981698 /* MyFilesPresenter.swift */; };
 		0F4130B62B40C86C00981698 /* MyFilesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4130B52B40C86C00981698 /* MyFilesInteractor.swift */; };
 		0F4130B82B40C9F800981698 /* PresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4130B72B40C9F800981698 /* PresenterProtocol.swift */; };
@@ -136,6 +137,7 @@
 		0F3218592B52F11D00840917 /* FontSizeRangeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSizeRangeProtocol.swift; sourceTree = "<group>"; };
 		0F32185B2B52F15800840917 /* FontSizeRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSizeRange.swift; sourceTree = "<group>"; };
 		0F32185D2B52FF3B00840917 /* BinarySearchFitState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarySearchFitState.swift; sourceTree = "<group>"; };
+		0F32185F2B532D6000840917 /* DocumentViewController+UINavigationItemRenameDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DocumentViewController+UINavigationItemRenameDelegate.swift"; sourceTree = "<group>"; };
 		0F4130B32B40C85900981698 /* MyFilesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFilesPresenter.swift; sourceTree = "<group>"; };
 		0F4130B52B40C86C00981698 /* MyFilesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFilesInteractor.swift; sourceTree = "<group>"; };
 		0F4130B72B40C9F800981698 /* PresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterProtocol.swift; sourceTree = "<group>"; };
@@ -304,6 +306,7 @@
 				0FAA6E7F2B4C65470009D0A3 /* DocumentViewController.swift */,
 				0FB1CEAB2B4D5D34005EDF0F /* DocumentViewController+UIGestureRecognizerDelegate.swift */,
 				0FAA6E832B4C69260009D0A3 /* DocumentViewController+UISearchResultsUpdating.swift */,
+				0F32185F2B532D6000840917 /* DocumentViewController+UINavigationItemRenameDelegate.swift */,
 				0FAA6E7D2B4C64F70009D0A3 /* FullScreenRouter.swift */,
 			);
 			path = DocumentView;
@@ -674,6 +677,7 @@
 				0FB1CEB92B4DB60E005EDF0F /* Position.swift in Sources */,
 				0F4130B42B40C85900981698 /* MyFilesPresenter.swift in Sources */,
 				0FBCA99A2B3DA7A000149F38 /* AppDelegate.swift in Sources */,
+				0F3218602B532D6100840917 /* DocumentViewController+UINavigationItemRenameDelegate.swift in Sources */,
 				0F3218302B4EE1C700840917 /* VisionDocumentCameraRouter.swift in Sources */,
 				0F3218502B52D0B500840917 /* PDFMakerScanResultPage.swift in Sources */,
 				0F32185E2B52FF3B00840917 /* BinarySearchFitState.swift in Sources */,
