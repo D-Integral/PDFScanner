@@ -20,7 +20,7 @@ class AppCoordinator {
         homeTabBarController = HomeTabBarController()
         
         fileStorage = DiskFileStorage()
-        documentCameraManager = VisionDocumentCameraManager()
+        documentCameraManager = VisionDocumentCameraManager(pdfMaker: VisionSearchablePDFMaker())
         
         homeTabBarController.viewControllers = [filesNavigationController(),
                                                 scanningNavigationController(),

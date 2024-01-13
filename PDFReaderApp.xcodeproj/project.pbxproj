@@ -15,6 +15,13 @@
 		0F32183A2B4F0E8800840917 /* DocumentPickerManager+UIDocumentPickerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3218392B4F0E8800840917 /* DocumentPickerManager+UIDocumentPickerDelegate.swift */; };
 		0F32183C2B4F11F800840917 /* DynamicUINotifierProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F32183B2B4F11F800840917 /* DynamicUINotifierProtocol.swift */; };
 		0F32183E2B4F208200840917 /* ScanningViewController+DynamicUIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F32183D2B4F208200840917 /* ScanningViewController+DynamicUIProtocol.swift */; };
+		0F3218402B52B0CF00840917 /* VisionSearchablePDFMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F32183F2B52B0CF00840917 /* VisionSearchablePDFMaker.swift */; };
+		0F3218422B52B10C00840917 /* PDFMakerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3218412B52B10C00840917 /* PDFMakerProtocol.swift */; };
+		0F3218442B52B5D300840917 /* RecognizedTextProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3218432B52B5D300840917 /* RecognizedTextProtocol.swift */; };
+		0F3218462B52B5E500840917 /* VisionRecognizedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3218452B52B5E500840917 /* VisionRecognizedText.swift */; };
+		0F3218482B52B74300840917 /* PDFMakerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3218472B52B74300840917 /* PDFMakerError.swift */; };
+		0F32184A2B52B98800840917 /* PDFMakerSourcePageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3218492B52B98800840917 /* PDFMakerSourcePageProtocol.swift */; };
+		0F32184C2B52B9EA00840917 /* PDFMakerSourcePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F32184B2B52B9EA00840917 /* PDFMakerSourcePage.swift */; };
 		0F4130B42B40C85900981698 /* MyFilesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4130B32B40C85900981698 /* MyFilesPresenter.swift */; };
 		0F4130B62B40C86C00981698 /* MyFilesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4130B52B40C86C00981698 /* MyFilesInteractor.swift */; };
 		0F4130B82B40C9F800981698 /* PresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4130B72B40C9F800981698 /* PresenterProtocol.swift */; };
@@ -104,6 +111,13 @@
 		0F3218392B4F0E8800840917 /* DocumentPickerManager+UIDocumentPickerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DocumentPickerManager+UIDocumentPickerDelegate.swift"; sourceTree = "<group>"; };
 		0F32183B2B4F11F800840917 /* DynamicUINotifierProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicUINotifierProtocol.swift; sourceTree = "<group>"; };
 		0F32183D2B4F208200840917 /* ScanningViewController+DynamicUIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ScanningViewController+DynamicUIProtocol.swift"; sourceTree = "<group>"; };
+		0F32183F2B52B0CF00840917 /* VisionSearchablePDFMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionSearchablePDFMaker.swift; sourceTree = "<group>"; };
+		0F3218412B52B10C00840917 /* PDFMakerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFMakerProtocol.swift; sourceTree = "<group>"; };
+		0F3218432B52B5D300840917 /* RecognizedTextProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognizedTextProtocol.swift; sourceTree = "<group>"; };
+		0F3218452B52B5E500840917 /* VisionRecognizedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionRecognizedText.swift; sourceTree = "<group>"; };
+		0F3218472B52B74300840917 /* PDFMakerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFMakerError.swift; sourceTree = "<group>"; };
+		0F3218492B52B98800840917 /* PDFMakerSourcePageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFMakerSourcePageProtocol.swift; sourceTree = "<group>"; };
+		0F32184B2B52B9EA00840917 /* PDFMakerSourcePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFMakerSourcePage.swift; sourceTree = "<group>"; };
 		0F4130B32B40C85900981698 /* MyFilesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFilesPresenter.swift; sourceTree = "<group>"; };
 		0F4130B52B40C86C00981698 /* MyFilesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFilesInteractor.swift; sourceTree = "<group>"; };
 		0F4130B72B40C9F800981698 /* PresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterProtocol.swift; sourceTree = "<group>"; };
@@ -197,6 +211,13 @@
 		0F3218312B4EE6C100840917 /* SearchablePDFMaker */ = {
 			isa = PBXGroup;
 			children = (
+				0F32183F2B52B0CF00840917 /* VisionSearchablePDFMaker.swift */,
+				0F3218452B52B5E500840917 /* VisionRecognizedText.swift */,
+				0F32184B2B52B9EA00840917 /* PDFMakerSourcePage.swift */,
+				0F3218432B52B5D300840917 /* RecognizedTextProtocol.swift */,
+				0F3218412B52B10C00840917 /* PDFMakerProtocol.swift */,
+				0F3218492B52B98800840917 /* PDFMakerSourcePageProtocol.swift */,
+				0F3218472B52B74300840917 /* PDFMakerError.swift */,
 			);
 			path = SearchablePDFMaker;
 			sourceTree = "<group>";
@@ -561,14 +582,17 @@
 				0FAA6E882B4C6F050009D0A3 /* PDFDocumentInteractor.swift in Sources */,
 				0FB7DAEA2B3DF54100985825 /* AccountViewController.swift in Sources */,
 				0F4130C52B41B99A00981698 /* PDFDocumentImportManager.swift in Sources */,
+				0F32184A2B52B98800840917 /* PDFMakerSourcePageProtocol.swift in Sources */,
 				0F4130BC2B40CD2400981698 /* MyFilesRouter.swift in Sources */,
 				0FAA6E7E2B4C64F70009D0A3 /* FullScreenRouter.swift in Sources */,
+				0F3218462B52B5E500840917 /* VisionRecognizedText.swift in Sources */,
 				0F60798D2B49B31E008DD313 /* ScanningRouter.swift in Sources */,
 				0F32182E2B4EDA4000840917 /* UIViewExtensions.swift in Sources */,
 				0F4130C32B41B96D00981698 /* DocumentImportManagerProtocol.swift in Sources */,
 				0F6079912B49B33A008DD313 /* ScanningInteractor.swift in Sources */,
 				0FAA0DFD2B45CB9D002FC0F9 /* DynamicUIProtocol.swift in Sources */,
 				0F4130C72B41B9F100981698 /* DocumentImportManager.swift in Sources */,
+				0F3218442B52B5D300840917 /* RecognizedTextProtocol.swift in Sources */,
 				0FAA6E912B4C82170009D0A3 /* DynamicUINotifier.swift in Sources */,
 				0F4130B62B40C86C00981698 /* MyFilesInteractor.swift in Sources */,
 				0FB1CEB12B4DB47E005EDF0F /* PDFDocumentPositionKeeper.swift in Sources */,
@@ -578,7 +602,9 @@
 				0F32183C2B4F11F800840917 /* DynamicUINotifierProtocol.swift in Sources */,
 				0FB7DB072B3F2A2F00985825 /* DiskFile.swift in Sources */,
 				0FAA6E8F2B4C80BE0009D0A3 /* PDFSelection+Comparable.swift in Sources */,
+				0F32184C2B52B9EA00840917 /* PDFMakerSourcePage.swift in Sources */,
 				0F4130B82B40C9F800981698 /* PresenterProtocol.swift in Sources */,
+				0F3218482B52B74300840917 /* PDFMakerError.swift in Sources */,
 				0FB7DAEC2B3E0A1600985825 /* HomeTabBarController.swift in Sources */,
 				0F3218362B4F0DE600840917 /* DocumentCameraManagerProtocol.swift in Sources */,
 				0F4130C92B41BB5A00981698 /* DocumentImportError.swift in Sources */,
@@ -600,7 +626,9 @@
 				0FBCA99E2B3DA7A000149F38 /* MyFilesViewController.swift in Sources */,
 				0FAA0E012B45DE3D002FC0F9 /* MyFilesViewController+UISearchResultsUpdating.swift in Sources */,
 				0FAA0DFF2B45CBD5002FC0F9 /* UIViewController+DynamicUIProtocol.swift in Sources */,
+				0F3218402B52B0CF00840917 /* VisionSearchablePDFMaker.swift in Sources */,
 				0FB1CEB32B4DB53D005EDF0F /* PositionsListProtocol.swift in Sources */,
+				0F3218422B52B10C00840917 /* PDFMakerProtocol.swift in Sources */,
 				0FB7DB092B3F2B9D00985825 /* DiskFilesList.swift in Sources */,
 				0F84D9092B4AEE5400CD3E3F /* FileInfoView.swift in Sources */,
 				0F4130D02B458B6800981698 /* PDFDocumentViewController.swift in Sources */,
