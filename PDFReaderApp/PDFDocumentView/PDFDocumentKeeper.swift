@@ -16,7 +16,7 @@ class PDFDocumentKeeper: DynamicUINotifier {
     
     init(diskFile: DiskFile?) {
         if (.pdfDocument == diskFile?.fileType),
-           let pdfDocumentData = diskFile?.data {
+           let pdfDocumentData = diskFile?.documentData {
             self.pdfDocument = PDFDocument(data: pdfDocumentData)
         } else {
             self.pdfDocument = nil

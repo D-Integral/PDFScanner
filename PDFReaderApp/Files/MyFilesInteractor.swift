@@ -36,19 +36,31 @@ class MyFilesInteractor: InteractorProtocol {
         fileStorage.delete(fileId)
     }
     
+    func openedFile(withId fileId: UUID) {
+        fileStorage.opened(fileId)
+    }
+    
+    public func rename(_ fileId: UUID,
+                       to newName: String) {
+        fileStorage.rename(fileId, to: newName)
+    }
+    
     func sortedAndFilteredFiles(for queryOrNil: String?) -> [any FileProtocol] {
-        return filteredFiles(for: queryOrNil).sorted { fileA, fileB in
-            return fileA.modifiedDate > fileB.modifiedDate
-        }
+        let filteredFiles = filteredFiles(for: queryOrNil)
+        let sortedFiles = (filteredFiles as? [DiskFile])?.sorted(by: >)
+        
+        return sortedFiles ?? filteredFiles
     }
     
     // MARK: - Dynamic UI
     
     func add(dynamicUI: any DynamicUIProtocol) {
+        documentPickerManager.add(dynamicUI: dynamicUI)
         documentCameraManager?.add(dynamicUI: dynamicUI)
     }
     
     func remove(dynamicUI: any DynamicUIProtocol) {
+        documentPickerManager.remove(dynamicUI: dynamicUI)
         documentCameraManager?.remove(dynamicUI: dynamicUI)
     }
     
@@ -65,7 +77,7 @@ class MyFilesInteractor: InteractorProtocol {
         }
         
         return files.filter {
-            return $0.name.lowercased().contains(query.lowercased())
+            return $0.title.lowercased().contains(query.lowercased())
         }
     }
 }

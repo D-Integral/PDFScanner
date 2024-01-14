@@ -27,6 +27,11 @@ class DocumentViewController: UIViewController {
         setupSearchController()
     }
     
+    // MARK: - Public Interface
+    
+    public func rename(to newName: String) {
+    }
+    
     // MARK: - Search
     
     func search() { }
@@ -40,6 +45,12 @@ class DocumentViewController: UIViewController {
     private func setupNavigationBar() {
         navigationItem.leftBarButtonItem = closeBarButtonItem()
         navigationItem.rightBarButtonItem = searchBarButtonItem()
+        
+        navigationItem.renameDelegate = self
+        
+        navigationItem.titleMenuProvider = { suggestions in
+            return UIMenu(children: suggestions)
+        }
     }
     
     private func setupDismissNavBarGestureRecognizer() {

@@ -12,16 +12,26 @@ class ScanningViewController: UIViewController {
     
     // MARK: - Public Interface
     
-    public init(presenter: ScanningPresenter) {
+    public init(presenter: ScanningPresenter,
+                pdfDocumentRouter: PDFDocumentRouter) {
         self.presenter = presenter
+        self.pdfDocumentRouter = pdfDocumentRouter
         
         super.init(nibName: nil,
                    bundle: nil)
     }
     
+    required init?(coder: NSCoder) {
+        self.presenter = nil
+        self.pdfDocumentRouter = nil
+        
+        super.init(coder: coder)
+    }
+    
     // MARK: - Properties
     
     private let presenter: ScanningPresenter?
+    let pdfDocumentRouter: PDFDocumentRouter?
     
     private let startScanningButton = UIButton(type: .system)
     private let documentCameraNotSupportedLabel = UILabel(frame: .zero)
@@ -33,12 +43,6 @@ class ScanningViewController: UIViewController {
     }
     
     // MARK: - Life Cycle
-    
-    required init?(coder: NSCoder) {
-        self.presenter = nil
-        
-        super.init(coder: coder)
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,10 +68,11 @@ class ScanningViewController: UIViewController {
     
     func showJustScannedFileIfExists() {
         if let lastScannedFile = presenter?.lastScannedFile as? DiskFile {
-            let positionKeeper = PDFDocumentPositionKeeper()
+            self.pdfDocumentRouter?.diskFile = lastScannedFile
             
-            navigationController?.present(PDFDocumentRouter().make(diskFile: lastScannedFile,
-                                                                   positionKeeper: positionKeeper),
+            guard let pdfDocumentViewController = pdfDocumentRouter?.make() else { return }
+            
+            navigationController?.present(pdfDocumentViewController,
                                           animated: true)
         }
     }

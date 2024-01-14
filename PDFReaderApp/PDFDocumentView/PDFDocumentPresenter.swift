@@ -75,4 +75,8 @@ class PDFDocumentPresenter: PresenterProtocol {
     func save(position: PositionProtocol) {
         interactor?.save(position: position)
     }
+    
+    func rename(to newName: String) {
+        interactor?.rename(to: newName)
+    }
 }

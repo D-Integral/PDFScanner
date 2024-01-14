@@ -10,8 +10,15 @@ import UIKit
 import UniformTypeIdentifiers
 
 final class DocumentPickerManager: DynamicUINotifier {
+    
+    struct Constants {
+        static let defaulsThumbnailSize = CGSize(width: 65, height: 90)
+    }
+    
     let documentImportManager: DocumentImportManagerProtocol
     var documentPickerViewController: UIDocumentPickerViewController? = nil
+    
+    var thumbnailSize: CGSize = Constants.defaulsThumbnailSize
     
     init(documentImportManager: DocumentImportManagerProtocol) {
         self.documentImportManager = documentImportManager

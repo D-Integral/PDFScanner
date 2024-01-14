@@ -22,8 +22,10 @@ class DocumentImportManager: NSObject, DocumentImportManagerProtocol {
     }
     
     func save(from url: URL,
+              thumbnailSize: CGSize,
               completionHandler: @escaping () -> ()) {
-        documentFile(from: url) { [weak self] file, error in
+        documentFile(from: url,
+                     thumbnailSize: thumbnailSize) { [weak self] file, error in
             if let error = error {
                 print(error)
             }
@@ -39,6 +41,7 @@ class DocumentImportManager: NSObject, DocumentImportManagerProtocol {
     }
     
     func documentFile(from fileUrl: URL,
+                      thumbnailSize: CGSize,
                       completionHandler: @escaping ((any FileProtocol)?,
                                                     DocumentImportError?) -> ()) {
         completionHandler(nil,
@@ -46,6 +49,7 @@ class DocumentImportManager: NSObject, DocumentImportManagerProtocol {
     }
     
     func importDocuments(at urls: [URL],
+                         thumbnailSize: CGSize,
                          completionHandler: @escaping () -> ()) { }
     
     // MARK: Private Methods
@@ -54,7 +58,7 @@ class DocumentImportManager: NSObject, DocumentImportManagerProtocol {
         do {
             try fileStorage.save(file)
         } catch {
-            print("An attempt to save the file \"\(file.name)\" to the storage has failed with the following error: \(error.localizedDescription)")
+            print("An attempt to save the file \"\(file.title)\" to the storage has failed with the following error: \(error.localizedDescription)")
             return
         }
     }

@@ -11,6 +11,7 @@ import PDFKit
 
 final class PDFDocumentImportManager: DocumentImportManager {
     override func documentFile(from fileUrl: URL,
+                               thumbnailSize: CGSize,
                                completionHandler: @escaping ((any FileProtocol)?,
                                                              DocumentImportError?) -> ()) {
         DispatchQueue.global(qos: .userInitiated).async {
@@ -27,16 +28,20 @@ final class PDFDocumentImportManager: DocumentImportManager {
             }
             
             let documentAttributes = pdfDocument.documentAttributes
-            let defaultDate = Date()
-            let createdDate = documentAttributes?["CreationDate"] as? Date ?? defaultDate
-            let modifiedDate = documentAttributes?["ModDate"] as? Date ?? defaultDate
+            let importDate = Date()
+            let createdDate = documentAttributes?["CreationDate"] as? Date ?? importDate
+            let modifiedDate = documentAttributes?["ModDate"] as? Date ?? importDate
             
-            completionHandler(DiskFile(name: fileUrl.lastPathComponent,
-                                       data: fileData,
-                                       createdDate: createdDate,
-                                       modifiedDate: modifiedDate,
-                                       fileType: .pdfDocument),
-                              nil)
+            let thumbnailData = pdfDocument.generateThumbnailData(for: thumbnailSize)
+            
+            let file = DiskFile(title: fileUrl.deletingPathExtension().lastPathComponent,
+                                documentData: fileData,
+                                thumbnailData: thumbnailData,
+                                createdDate: createdDate,
+                                modifiedDate: modifiedDate,
+                                importedDate: importDate)
+            
+            completionHandler(file, nil)
         }
         
         
@@ -49,6 +54,7 @@ final class PDFDocumentImportManager: DocumentImportManager {
     var securityScopedResources = Set<URL>()
     
     override func importDocuments(at urls: [URL],
+                                  thumbnailSize: CGSize,
                                   completionHandler: @escaping () -> ()) {
         DispatchQueue.global(qos: .userInitiated).async { [weak self] in
             let dispatchGroup = DispatchGroup()
@@ -61,7 +67,8 @@ final class PDFDocumentImportManager: DocumentImportManager {
                 
                 NSFileCoordinator().coordinate(with: [.readingIntent(with: url)],
                                                queue: queue) { [weak self] error in
-                    self?.onFileCoordinatorCompleted(for: url) {
+                    self?.onFileCoordinatorCompleted(for: url,
+                                                     thumbnailSize: thumbnailSize) {
                         dispatchGroup.leave()
                     }
                 }
@@ -74,8 +81,10 @@ final class PDFDocumentImportManager: DocumentImportManager {
     }
     
     private func onFileCoordinatorCompleted(for url: URL,
+                                            thumbnailSize: CGSize,
                                             completionHandler: @escaping () -> ()) {
-        save(from: url) { [weak self] in
+        save(from: url,
+             thumbnailSize: thumbnailSize) { [weak self] in
             self?.stopAccessingSecurityScopedResource(for: url)
             completionHandler()
         }

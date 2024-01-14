@@ -53,18 +53,21 @@ class VisionSearchablePDFMaker: PDFMakerProtocol {
             }
             
             let data = UIGraphicsPDFRenderer().pdfData { [weak self] context in
-                for scanResult in scanResults {
+                for scanResult in sortedScanResults {
                     self?.fillPdfDocumentLayers(with: scanResult,
                                                 on: context)
                 }
             }
             
             let currentDate = Date()
-            let file = DiskFile(name: "Scan \(Date())",
-                                data: data,
+            
+            let thumbnailData = documentImages.count > 0 ? documentImages[0].pngData() : nil
+            
+            let file = DiskFile(title: "Scan \(currentDate)",
+                                documentData: data,
+                                thumbnailData: thumbnailData,
                                 createdDate: currentDate,
-                                modifiedDate: currentDate,
-                                fileType: .pdfDocument)
+                                modifiedDate: currentDate)
             
             DispatchQueue.main.async {
                 completionHandler(file, nil)

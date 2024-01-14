@@ -158,6 +158,16 @@
         }
       }
     },
+    "fileRename" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "File Rename"
+          }
+        }
+      }
+    },
     "filesTabBarItemTitle" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -259,6 +269,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Мої файли"
+          }
+        }
+      }
+    },
+    "rename" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rename"
           }
         }
       }

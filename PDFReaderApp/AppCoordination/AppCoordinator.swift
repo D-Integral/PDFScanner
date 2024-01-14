@@ -15,6 +15,8 @@ class AppCoordinator {
     
     let fileStorage: FileStorageProtocol
     let documentCameraManager: DocumentCameraManagerProtocol
+    let positionKeeper: PDFDocumentPositionKeeper
+    let pdfDocumentRouter: PDFDocumentRouter
     
     private init() {
         homeTabBarController = HomeTabBarController()
@@ -22,6 +24,9 @@ class AppCoordinator {
         fileStorage = DiskFileStorage()
         documentCameraManager = VisionDocumentCameraManager(pdfMaker: VisionSearchablePDFMaker(),
                                                             fileStorage: fileStorage)
+        positionKeeper = PDFDocumentPositionKeeper()
+        pdfDocumentRouter = PDFDocumentRouter(fileStorage: fileStorage,
+                                              positionKeeper: positionKeeper)
         
         homeTabBarController.viewControllers = [filesNavigationController(),
                                                 scanningNavigationController(),
@@ -42,12 +47,14 @@ class AppCoordinator {
     
     func filesNavigationController() -> UINavigationController {
         return navigationController(with: MyFilesRouter(fileStorage: fileStorage,
-                                                        documentCameraManager: documentCameraManager).make(),
+                                                        documentCameraManager: documentCameraManager,
+                                                        pdfDocumentRouter: pdfDocumentRouter).make(),
                                     tabBarItem: filesTabBarItem())
     }
     
     func scanningNavigationController() -> UINavigationController {
-        return navigationController(with: ScanningRouter(documentCameraManager: documentCameraManager).make(),
+        return navigationController(with: ScanningRouter(documentCameraManager: documentCameraManager,
+                                                         pdfDocumentRouter: pdfDocumentRouter).make(),
                                     tabBarItem: scanningTabBarItem())
     }
     

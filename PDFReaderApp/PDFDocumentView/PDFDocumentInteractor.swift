@@ -12,6 +12,7 @@ class PDFDocumentInteractor: InteractorProtocol {
     private let pdfDocumentKeeper: PDFDocumentKeeper?
     private let positionKeeper: PositionKeeperProtocol?
     private let diskFile: DiskFile?
+    private let fileStorage: FileStorageProtocol?
     
     var pdfDocument: PDFDocument? {
         return pdfDocumentKeeper?.pdfDocument
@@ -26,7 +27,7 @@ class PDFDocumentInteractor: InteractorProtocol {
     }
     
     var documentName: String {
-        return diskFile?.name ?? ""
+        return diskFile?.title ?? ""
     }
     
     private(set) var currentSearchResultIndex = 0
@@ -40,10 +41,18 @@ class PDFDocumentInteractor: InteractorProtocol {
     }
     
     init(diskFile: DiskFile?,
-         positionKeeper: PositionKeeperProtocol?) {
+         positionKeeper: PositionKeeperProtocol?,
+         fileStorage: FileStorageProtocol?) {
         self.pdfDocumentKeeper = PDFDocumentKeeper(diskFile: diskFile)
         self.diskFile = diskFile
         self.positionKeeper = positionKeeper
+        self.fileStorage = fileStorage
+    }
+    
+    public func rename(to newName: String) {
+        guard let id = diskFile?.id else { return }
+        
+        fileStorage?.rename(id, to: newName)
     }
     
     func add(dynamicUI: any DynamicUIProtocol) {

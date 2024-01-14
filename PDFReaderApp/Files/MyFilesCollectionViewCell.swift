@@ -51,10 +51,7 @@ class MyFilesCollectionViewCell: UICollectionViewCell {
     
     var diskFile: DiskFile? {
         didSet {
-            guard let diskFile = diskFile else { return }
-            
-            documentTitleLabel.text = diskFile.name
-            documentInfoLabel.text = diskFile.info()
+            update()
         }
     }
     
@@ -82,6 +79,15 @@ class MyFilesCollectionViewCell: UICollectionViewCell {
         super.init(coder: coder)
         
         setupUI()
+    }
+    
+    // MARK: - Public Interface
+    
+    public func update() {
+        guard let diskFile = diskFile else { return }
+        
+        documentTitleLabel.text = diskFile.title
+        documentInfoLabel.text = diskFile.info()
     }
     
     // MARK: - Setup

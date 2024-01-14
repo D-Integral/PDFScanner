@@ -136,6 +136,12 @@ class PDFDocumentViewController: DocumentViewController {
         searchController.searchBar.endEditing(true)
     }
     
+    // MARK: - Rename
+    
+    public override func rename(to newName: String) {
+        presenter?.rename(to: newName)
+    }
+    
     // MARK: - Setup
     
     private func setupPdfView() {

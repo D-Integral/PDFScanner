@@ -80,7 +80,7 @@ final class DiskFileStorageTests: XCTestCase {
         
         let retrievedFile = diskFileStorage?.file(withId: diskFile.id)
         XCTAssertNotNil(retrievedFile)
-        XCTAssertTrue(retrievedFile?.name == testFileName)
+        XCTAssertTrue(retrievedFile?.title == testFileName)
         XCTAssertNotNil(retrievedFile?.data)
         XCTAssertTrue(retrievedFile?.createdDate == createdDate)
         XCTAssertTrue(retrievedFile?.modifiedDate == modifiedDate)

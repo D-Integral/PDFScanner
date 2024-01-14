@@ -9,13 +9,13 @@ import Foundation
 
 final class DiskFileStorage: FileStorageProtocol {
     
-    init() {
+    public init() {
         self.updateFilesList()
     }
     
     // MARK: FileStorageProtocol
     
-    func updateFilesList() {
+    public func updateFilesList() {
         do {
             self.filesList = try retrieveFilesList()
         } catch {
@@ -27,19 +27,19 @@ final class DiskFileStorage: FileStorageProtocol {
         }
     }
     
-    var fileNames: [String] {
+    public var fileNames: [String] {
         return Array(arrayLiteral: filesList?.files.keys) as? [String] ?? []
     }
     
-    var filesCount: Int {
+    public var filesCount: Int {
         return filesList?.files.count ?? 0
     }
     
-    func file(withId fileId: UUID) -> (any FileProtocol)? {
+    public func file(withId fileId: UUID) -> (any FileProtocol)? {
         return filesList?.files[fileId]
     }
     
-    func save(_ file: any FileProtocol) throws {
+    public func save(_ file: any FileProtocol) throws {
         guard let diskFile = file as? DiskFile else {
             throw DiskFileStorageError.wrongFileType
         }
@@ -49,13 +49,36 @@ final class DiskFileStorage: FileStorageProtocol {
         synchronize()
     }
     
-    func delete(_ fileId: UUID) {
+    public func delete(_ fileId: UUID) {
+        guard let diskFile = file(withId: fileId) as? DiskFile else { return }
+        diskFile.clearData()
+        
         filesList?.files.removeValue(forKey: fileId)
         
         synchronize()
     }
     
-    func files() -> [any FileProtocol] {
+    public func opened(_ fileId: UUID) {
+        guard var diskFile = file(withId: fileId) as? DiskFile else { return }
+        
+        diskFile.openedDate = Date()
+        filesList?.files[fileId] = diskFile
+        
+        synchronize()
+    }
+    
+    public func rename(_ fileId: UUID,
+                       to newName: String) {
+        guard !newName.isEmpty,
+              var diskFile = file(withId: fileId) as? DiskFile else { return }
+        
+        diskFile.rename(to: newName)
+        filesList?.files[fileId] = diskFile
+        
+        synchronize()
+    }
+    
+    public func files() -> [any FileProtocol] {
         return Array(filesList?.files.values ?? [UUID: any FileProtocol]().values)
     }
     
@@ -71,7 +94,7 @@ final class DiskFileStorage: FileStorageProtocol {
         }
     }
     
-    func saveFilesList() throws {
+    private func saveFilesList() throws {
         guard let url = filesListUrl else {
             throw DiskFileStorageError.filesListUrlIsBroken
         }
@@ -80,7 +103,7 @@ final class DiskFileStorage: FileStorageProtocol {
         try jsonData.write(to: url)
     }
     
-    func retrieveFilesList() throws -> DiskFilesList? {
+    private func retrieveFilesList() throws -> DiskFilesList? {
         guard let url = filesListUrl else {
             throw DiskFileStorageError.filesListUrlIsBroken
         }
