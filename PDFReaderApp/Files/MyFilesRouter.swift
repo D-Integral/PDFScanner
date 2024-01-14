@@ -10,9 +10,11 @@ import UIKit
 
 class MyFilesRouter: RouterProtocol {
     init(fileStorage: FileStorageProtocol,
-         documentCameraManager: DocumentCameraManagerProtocol? = nil) {
+         documentCameraManager: DocumentCameraManagerProtocol? = nil,
+         pdfDocumentRouter: PDFDocumentRouter) {
         self.fileStorage = fileStorage
         self.documentCameraManager = documentCameraManager
+        self.pdfDocumentRouter = pdfDocumentRouter
     }
     
     func make() -> UIViewController {
@@ -23,9 +25,11 @@ class MyFilesRouter: RouterProtocol {
         let presenter = MyFilesPresenter(interactor: interactor,
                                          title: String(localized: "myFilesViewControllerTitle"))
         
-        return MyFilesViewController(presenter: presenter)
+        return MyFilesViewController(presenter: presenter,
+                                     pdfDocumentRouter: pdfDocumentRouter)
     }
     
     let fileStorage: FileStorageProtocol
     let documentCameraManager: DocumentCameraManagerProtocol?
+    let pdfDocumentRouter: PDFDocumentRouter
 }

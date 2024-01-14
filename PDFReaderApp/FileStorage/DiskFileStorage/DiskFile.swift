@@ -118,7 +118,7 @@ struct DiskFile: FileProtocol {
     }
     
     static func == (lhs: DiskFile, rhs: DiskFile) -> Bool {
-        lhs.id == rhs.id
+        (lhs.id == rhs.id) && (lhs.title == rhs.title)
     }
     
     // MARK: - Comparable

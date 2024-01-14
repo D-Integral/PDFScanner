@@ -16,13 +16,15 @@ extension MyFilesViewController: UICollectionViewDelegate {
             return
         }
         
+        pdfDocumentRouter?.diskFile = diskFile
+        
+        guard let pdfDocumentViewController = pdfDocumentRouter?.make() else { return }
+        
         let fileId = diskFile.id
         
-        let positionKeeper = PDFDocumentPositionKeeper()
-        
-        navigationController?.present(PDFDocumentRouter().make(diskFile: diskFile,
-                                                               positionKeeper: positionKeeper),
-                                      animated: true, completion: { [weak self] in
+        navigationController?.present(pdfDocumentViewController,
+                                      animated: true,
+                                      completion: { [weak self] in
             self?.presenter?.openedFile(withId: fileId)
         })
     }

@@ -10,6 +10,7 @@ import UIKit
 
 extension DocumentViewController: UINavigationItemRenameDelegate {
     func navigationItem(_: UINavigationItem, didEndRenamingWith title: String) {
+        rename(to: title)
     }
     
     func navigationItemShouldBeginRenaming(_: UINavigationItem) -> Bool {

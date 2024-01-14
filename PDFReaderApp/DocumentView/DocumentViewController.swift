@@ -27,6 +27,11 @@ class DocumentViewController: UIViewController {
         setupSearchController()
     }
     
+    // MARK: - Public Interface
+    
+    public func rename(to newName: String) {
+    }
+    
     // MARK: - Search
     
     func search() { }

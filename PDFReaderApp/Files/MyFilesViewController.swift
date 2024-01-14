@@ -52,6 +52,7 @@ class MyFilesViewController: UIViewController {
     // MARK: - Properties
     
     let presenter: MyFilesPresenter?
+    let pdfDocumentRouter: PDFDocumentRouter?
     
     lazy var dataSource = makeDataSource()
     
@@ -66,8 +67,10 @@ class MyFilesViewController: UIViewController {
     
     // MARK: - Life Cycle
     
-    init(presenter: MyFilesPresenter?) {
+    init(presenter: MyFilesPresenter?,
+         pdfDocumentRouter: PDFDocumentRouter) {
         self.presenter = presenter
+        self.pdfDocumentRouter = pdfDocumentRouter
         
         super.init(nibName: nil,
                    bundle: nil)
@@ -79,6 +82,7 @@ class MyFilesViewController: UIViewController {
     
     required init?(coder: NSCoder) {
         self.presenter = nil
+        self.pdfDocumentRouter = nil
         
         super.init(coder: coder)
     }
