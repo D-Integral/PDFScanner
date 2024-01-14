@@ -95,6 +95,10 @@ class MyFilesViewController: UIViewController {
         setupActivityView()
         
         setupConstraints()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
         applySnapshot()
     }
@@ -211,9 +215,7 @@ class MyFilesViewController: UIViewController {
               self?.presentActionSheet(forFile: file)
           }
           
-          let thumbnailSize = MyFilesCollectionViewCell.Constants.Thumbnail.size
-          self?.presenter?.pdfDocumentThumbnail(ofSize: thumbnailSize,
-                                                forFile: diskFile,
+          self?.presenter?.pdfDocumentThumbnail(forFile: diskFile,
                                                 completionHandler: { thumbnailImage in
               cell?.thumbnail = thumbnailImage
           })
@@ -279,11 +281,8 @@ class MyFilesViewController: UIViewController {
         
         view.update(withFile: file)
         
-        let thumbnailSize = FileInfoView.Constants.Thumbnail.size
-        
-        self.presenter?.pdfDocumentThumbnail(ofSize: thumbnailSize,
-                                              forFile: file,
-                                              completionHandler: { thumbnailImage in
+        self.presenter?.pdfDocumentThumbnail(forFile: file,
+                                             completionHandler: { thumbnailImage in
             view.thumbnail = thumbnailImage
         })
         

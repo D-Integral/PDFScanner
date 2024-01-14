@@ -16,7 +16,8 @@ extension DocumentPickerManager: UIDocumentPickerDelegate {
                         didPickDocumentsAt urls: [URL]) {
         timeConsumingOperationStarted()
         
-        documentImportManager.importDocuments(at: urls) { [weak self] in
+        documentImportManager.importDocuments(at: urls,
+                                              thumbnailSize: thumbnailSize) { [weak self] in
             self?.timeConsumingOperationCompleted()
             self?.updateUI()
         }

@@ -14,11 +14,14 @@ protocol DocumentImportManagerProtocol {
     init(fileStorage: FileStorageProtocol)
     
     func save(from url: URL,
+              thumbnailSize: CGSize,
               completionHandler: @escaping () -> ())
     func documentFile(from fileUrl: URL,
+                      thumbnailSize: CGSize,
                       completionHandler: @escaping ((any FileProtocol)?,
                                                     DocumentImportError?) -> ())
     func importDocuments(at urls: [URL],
+                         thumbnailSize: CGSize,
                          completionHandler: @escaping () -> ())
 
 }

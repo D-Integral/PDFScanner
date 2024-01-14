@@ -26,7 +26,7 @@ class PDFDocumentInteractor: InteractorProtocol {
     }
     
     var documentName: String {
-        return diskFile?.name ?? ""
+        return diskFile?.title ?? ""
     }
     
     private(set) var currentSearchResultIndex = 0

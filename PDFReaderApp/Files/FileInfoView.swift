@@ -60,7 +60,7 @@ class FileInfoView: UIView {
             return
         }
         
-        documentTitleLabel.text = file.name
+        documentTitleLabel.text = file.title
         documentInfoLabel.text = file.info()
     }
     

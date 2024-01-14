@@ -40,16 +40,25 @@ class MyFilesPresenter: PresenterProtocol {
         interactor.deleteFile(withId: fileId)
     }
     
-    func pdfDocumentThumbnail(ofSize thumbnailSize: CGSize,
-                              forFile file: DiskFile,
+    func openedFile(withId fileId: UUID) {
+        interactor.openedFile(withId: fileId)
+    }
+    
+    func pdfDocumentThumbnail(forFile file: DiskFile,
                               completionHandler: @escaping (UIImage?) -> ()) {
         DispatchQueue.global(qos: .userInteractive).async {
-            let pdfDocument = PDFDocument(data: file.data)
-            let pdfDocumentPage = pdfDocument?.page(at: 0)
+            guard let documentPreviewData = file.thumbnailData else {
+                
+                DispatchQueue.main.async {
+                    completionHandler(nil)
+                }
+                return
+            }
+            
+            let previewImage = UIImage(data: documentPreviewData)
             
             DispatchQueue.main.async {
-                completionHandler(pdfDocumentPage?.thumbnail(of: thumbnailSize,
-                                                             for: PDFDisplayBox.trimBox))
+                completionHandler(previewImage)
             }
         }
     }

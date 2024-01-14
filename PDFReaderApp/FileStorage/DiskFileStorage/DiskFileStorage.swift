@@ -55,6 +55,15 @@ final class DiskFileStorage: FileStorageProtocol {
         synchronize()
     }
     
+    func opened(_ fileId: UUID) {
+        guard var diskFile = file(withId: fileId) as? DiskFile else { return }
+        
+        diskFile.openedDate = Date()
+        filesList?.files[fileId] = diskFile
+        
+        synchronize()
+    }
+    
     func files() -> [any FileProtocol] {
         return Array(filesList?.files.values ?? [UUID: any FileProtocol]().values)
     }

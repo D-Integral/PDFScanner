@@ -53,7 +53,7 @@ class MyFilesCollectionViewCell: UICollectionViewCell {
         didSet {
             guard let diskFile = diskFile else { return }
             
-            documentTitleLabel.text = diskFile.name
+            documentTitleLabel.text = diskFile.title
             documentInfoLabel.text = diskFile.info()
         }
     }
