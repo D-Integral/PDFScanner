@@ -38,7 +38,7 @@ class MyFilesViewController: UIViewController {
         struct FileActions {
             static let infoViewOffset = 15.0
             static let infoViewHeight = 56.0
-            static let menuHeight = 200.0
+            static let menuHeight = 260.0
         }
     }
     
@@ -239,8 +239,42 @@ class MyFilesViewController: UIViewController {
                          animatingDifferences: true)
     }
     
+    private func initiateRename(of file: DiskFile) {
+        let alert = UIAlertController(title: String(localized: "fileRename"),
+                                      message: "",
+                                      preferredStyle: .alert)
+        
+        alert.addTextField { textField in
+            textField.text = file.title
+        }
+        
+        let fileId = file.id
+        
+        alert.addAction(UIAlertAction(title: "OK",
+                                      style: .default,
+                                      handler: { [weak self, weak alert] (_) in
+            guard let textFields = alert?.textFields,
+                  textFields.count > 0 else { return }
+            
+            let textField = textFields[0]
+            
+            guard let newTitle = textField.text else { return }
+            
+            self?.presenter?.rename(fileId, to: newTitle)
+            self?.applySnapshot()
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     private func presentActionSheet(forFile file: DiskFile) {
         let alertController = UIAlertController(title: "", message: "", preferredStyle: .actionSheet)
+        
+        let renameAction = UIAlertAction(title: String(localized: "rename"),
+                                         style: .default,
+                                         handler: { [weak self] (action: UIAlertAction) -> Void in
+            self?.initiateRename(of: file)
+        })
         
         let deleteAction = UIAlertAction(title: String(localized: "delete"),
                                          style: .destructive,
@@ -272,6 +306,7 @@ class MyFilesViewController: UIViewController {
         alertController.view.translatesAutoresizingMaskIntoConstraints = false
         alertController.view.heightAnchor.constraint(equalToConstant: Constants.FileActions.menuHeight).isActive = true
         
+        alertController.addAction(renameAction)
         alertController.addAction(deleteAction)
         alertController.addAction(cancelAction)
         

@@ -44,6 +44,10 @@ class MyFilesPresenter: PresenterProtocol {
         interactor.openedFile(withId: fileId)
     }
     
+    public func rename(_ fileId: UUID, to newName: String) {
+        interactor.rename(fileId, to: newName)
+    }
+    
     func pdfDocumentThumbnail(forFile file: DiskFile,
                               completionHandler: @escaping (UIImage?) -> ()) {
         DispatchQueue.global(qos: .userInteractive).async {

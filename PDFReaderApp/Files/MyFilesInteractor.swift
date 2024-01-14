@@ -40,6 +40,11 @@ class MyFilesInteractor: InteractorProtocol {
         fileStorage.opened(fileId)
     }
     
+    public func rename(_ fileId: UUID,
+                       to newName: String) {
+        fileStorage.rename(fileId, to: newName)
+    }
+    
     func sortedAndFilteredFiles(for queryOrNil: String?) -> [any FileProtocol] {
         let filteredFiles = filteredFiles(for: queryOrNil)
         let sortedFiles = (filteredFiles as? [DiskFile])?.sorted(by: >)

@@ -53,7 +53,7 @@ class VisionSearchablePDFMaker: PDFMakerProtocol {
             }
             
             let data = UIGraphicsPDFRenderer().pdfData { [weak self] context in
-                for scanResult in scanResults {
+                for scanResult in sortedScanResults {
                     self?.fillPdfDocumentLayers(with: scanResult,
                                                 on: context)
                 }

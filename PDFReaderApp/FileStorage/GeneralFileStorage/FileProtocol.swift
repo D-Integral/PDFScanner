@@ -19,4 +19,5 @@ protocol FileProtocol: Codable, Hashable, Comparable {
     var fileType: FileType { get set }
     
     func info() -> String?
+    func clearData()
 }

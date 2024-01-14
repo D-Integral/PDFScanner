@@ -33,6 +33,10 @@ struct DiskFile: FileProtocol {
         self.importedDate = importedDate
         self.fileType = fileType
         
+        if let uniqueTitle = chooseUniqueTitleIfFileExists() {
+            self.title = uniqueTitle
+        }
+        
         self.documentData = documentData
         self.thumbnailData = thumbnailData
     }
@@ -41,17 +45,7 @@ struct DiskFile: FileProtocol {
     
     var id = UUID()
     
-    var title: String {
-        didSet {
-            guard let oldDocumentDataUrl = documentDataUrl(for: oldValue),
-                  let newDocumentDataUrl = documentDataUrl(for: title),
-                  let oldThumbnailDataUrl = thumbnailDataUrl(for: oldValue),
-                  let newThumbnailDataUrl = thumbnailDataUrl(for: title) else { return }
-            
-            moveItem(at: oldDocumentDataUrl, to: newDocumentDataUrl)
-            moveItem(at: oldThumbnailDataUrl, to: newThumbnailDataUrl)
-        }
-    }
+    var title: String
     
     var documentData: Data? {
         get {
@@ -107,8 +101,36 @@ struct DiskFile: FileProtocol {
     
     // MARK: - Public Methods
     
+    public func clearData() {
+        if let documentDataUrl = documentDataUrl {
+            try? FileManager.default.removeItem(at: documentDataUrl)
+        }
+        
+        if let thumbnailDataUrl = thumbnailDataUrl {
+            try? FileManager.default.removeItem(at: thumbnailDataUrl)
+        }
+    }
+    
     func info() -> String? {
         return "\(modifiedDateInfo()) • \(documentDataSizeInfo())"
+    }
+    
+    mutating func rename(to newName: String) {
+        var newNameOrUniqueAlternative = newName
+        
+        if let originalTitle = chooseUniqueTitleIfFileExists(proposedTitle: newName) {
+            newNameOrUniqueAlternative = originalTitle
+        }
+        
+        guard let oldDocumentDataUrl = documentDataUrl(for: title),
+              let newDocumentDataUrl = documentDataUrl(for: newNameOrUniqueAlternative),
+              let oldThumbnailDataUrl = thumbnailDataUrl(for: title),
+              let newThumbnailDataUrl = thumbnailDataUrl(for: newNameOrUniqueAlternative) else { return }
+        
+        moveItem(at: oldDocumentDataUrl, to: newDocumentDataUrl)
+        moveItem(at: oldThumbnailDataUrl, to: newThumbnailDataUrl)
+        
+        title = newNameOrUniqueAlternative
     }
     
     // MARK: - Hashable
@@ -174,6 +196,29 @@ struct DiskFile: FileProtocol {
     }
     
     // MARK: - Private Functions
+    
+    private mutating func chooseUniqueTitleIfFileExists(proposedTitle: String? = nil,
+                                                        addingIndex index: Int = 1) -> String? {
+        var proposed = proposedTitle
+        
+        if nil == proposed {
+            proposed = title
+        }
+        
+        if let proposed = proposed,
+           let baseUrl = documentDataUrl(for: proposed)?.deletingPathExtension() {
+            let pathEnd = (index > 1) ? " \(index)" : ""
+            
+            if FileManager.default.fileExists(atPath: baseUrl.path + pathEnd) {
+                return chooseUniqueTitleIfFileExists(proposedTitle: proposedTitle,
+                                                     addingIndex: index + 1)
+            } else if (index > 1) {
+                return baseUrl.lastPathComponent + pathEnd
+            }
+        }
+        
+        return nil
+    }
     
     private func documentDataSizeInfo() -> String {
         guard let path = documentDataUrl?.path else {

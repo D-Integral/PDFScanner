@@ -59,8 +59,8 @@ class FontSizeCalculator: FontSizeCalculatorProtocol {
             }
         }
         
-        var newMinFontSize = (.wantedIsLess == fitState) ? source.fontSizeRange.minFontSize : source.currentFontSize
-        var newMaxFontSize = (.wantedIsLess == fitState) ? source.currentFontSize : source.fontSizeRange.maxFontSize
+        let newMinFontSize = (.wantedIsLess == fitState) ? source.fontSizeRange.minFontSize : source.currentFontSize
+        let newMaxFontSize = (.wantedIsLess == fitState) ? source.currentFontSize : source.fontSizeRange.maxFontSize
         let newFontSizeRange = FontSizeRange(minFontSize: newMinFontSize,
                                              maxFontSize: newMaxFontSize)
         let newSource = FontSizeCalculatorSource(text: source.text,

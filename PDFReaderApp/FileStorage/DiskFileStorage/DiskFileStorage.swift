@@ -50,6 +50,9 @@ final class DiskFileStorage: FileStorageProtocol {
     }
     
     public func delete(_ fileId: UUID) {
+        guard let diskFile = file(withId: fileId) as? DiskFile else { return }
+        diskFile.clearData()
+        
         filesList?.files.removeValue(forKey: fileId)
         
         synchronize()
@@ -66,9 +69,10 @@ final class DiskFileStorage: FileStorageProtocol {
     
     public func rename(_ fileId: UUID,
                        to newName: String) {
-        guard var diskFile = file(withId: fileId) as? DiskFile else { return }
+        guard !newName.isEmpty,
+              var diskFile = file(withId: fileId) as? DiskFile else { return }
         
-        diskFile.title = newName
+        diskFile.rename(to: newName)
         filesList?.files[fileId] = diskFile
         
         synchronize()
