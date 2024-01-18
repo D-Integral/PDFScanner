@@ -8,10 +8,9 @@
 import Foundation
 
 protocol DocumentImportManagerProtocol {
-    var fileStorage: FileStorageProtocol { get }
     var documentTypeTag: String? { get }
     
-    init(fileStorage: FileStorageProtocol)
+    init(applicationState: FileManagerApplicationStateProtocol)
     
     func save(from url: URL,
               thumbnailSize: CGSize,

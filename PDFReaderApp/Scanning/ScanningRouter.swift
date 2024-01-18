@@ -12,14 +12,14 @@ class ScanningRouter: RouterProtocol {
     
     // MARK: Public Interface
     
-    public init(documentCameraManager: DocumentCameraManagerProtocol,
+    public init(applicationState: (DocumentScannerApplicationStateProtocol & DynamicUINotifierProtocol),
                 pdfDocumentRouter: PDFDocumentRouter) {
-        self.documentCameraManager = documentCameraManager
+        self.applicationState = applicationState
         self.pdfDocumentRouter = pdfDocumentRouter
     }
     
     func make() -> UIViewController {
-        let interactor = ScanningInteractor(documentCameraManager: documentCameraManager)
+        let interactor = ScanningInteractor(applicationState: applicationState)
         let presenter = ScanningPresenter(interactor: interactor)
         
         return ScanningViewController(presenter: presenter,
@@ -28,6 +28,6 @@ class ScanningRouter: RouterProtocol {
     
     // MARK: - Private Properties
     
-    private let documentCameraManager: DocumentCameraManagerProtocol
+    private let applicationState: (DocumentScannerApplicationStateProtocol & DynamicUINotifierProtocol)
     private let pdfDocumentRouter: PDFDocumentRouter
 }

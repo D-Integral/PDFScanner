@@ -9,19 +9,16 @@ import Foundation
 import UIKit
 
 class MyFilesRouter: RouterProtocol {
-    init(fileStorage: FileStorageProtocol,
-         documentCameraManager: DocumentCameraManagerProtocol? = nil,
+    init(applicationState: (FileManagerApplicationStateProtocol & DynamicUINotifierProtocol),
          pdfDocumentRouter: PDFDocumentRouter) {
-        self.fileStorage = fileStorage
-        self.documentCameraManager = documentCameraManager
+        self.applicationState = applicationState
         self.pdfDocumentRouter = pdfDocumentRouter
     }
     
     func make() -> UIViewController {
-        let documentImportManager = PDFDocumentImportManager(fileStorage: fileStorage)
-        let interactor = MyFilesInteractor(fileStorage: fileStorage,
-                                           documentImportManager: documentImportManager,
-                                           documentCameraManager: documentCameraManager)
+        let documentImportManager = PDFDocumentImportManager(applicationState: applicationState)
+        let interactor = MyFilesInteractor(applicationState: applicationState,
+                                           documentImportManager: documentImportManager)
         let presenter = MyFilesPresenter(interactor: interactor,
                                          title: String(localized: "myFilesViewControllerTitle"))
         
@@ -29,7 +26,6 @@ class MyFilesRouter: RouterProtocol {
                                      pdfDocumentRouter: pdfDocumentRouter)
     }
     
-    let fileStorage: FileStorageProtocol
-    let documentCameraManager: DocumentCameraManagerProtocol?
+    let applicationState: (FileManagerApplicationStateProtocol & DynamicUINotifierProtocol)
     let pdfDocumentRouter: PDFDocumentRouter
 }

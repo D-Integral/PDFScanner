@@ -9,10 +9,9 @@ import Foundation
 import PDFKit
 
 class PDFDocumentInteractor: InteractorProtocol {
+    private let applicationState: (DocumentViewerApplicationStateProtocol & FileManagerApplicationStateProtocol)
     private let pdfDocumentKeeper: PDFDocumentKeeper?
-    private let positionKeeper: PositionKeeperProtocol?
     private let diskFile: DiskFile?
-    private let fileStorage: FileStorageProtocol?
     
     var pdfDocument: PDFDocument? {
         return pdfDocumentKeeper?.pdfDocument
@@ -37,22 +36,20 @@ class PDFDocumentInteractor: InteractorProtocol {
     }
     
     var savedPosition: PositionProtocol? {
-        return positionKeeper?.position(for: diskFile?.id)
+        return applicationState.position(for: diskFile?.id)
     }
     
-    init(diskFile: DiskFile?,
-         positionKeeper: PositionKeeperProtocol?,
-         fileStorage: FileStorageProtocol?) {
+    init(applicationState: (DocumentViewerApplicationStateProtocol & FileManagerApplicationStateProtocol),
+         diskFile: DiskFile?) {
+        self.applicationState = applicationState
         self.pdfDocumentKeeper = PDFDocumentKeeper(diskFile: diskFile)
         self.diskFile = diskFile
-        self.positionKeeper = positionKeeper
-        self.fileStorage = fileStorage
     }
     
     public func rename(to newName: String) {
         guard let id = diskFile?.id else { return }
         
-        fileStorage?.rename(id, to: newName)
+        applicationState.rename(id, to: newName)
     }
     
     func add(dynamicUI: any DynamicUIProtocol) {
@@ -94,8 +91,8 @@ class PDFDocumentInteractor: InteractorProtocol {
         guard let fileId = diskFile?.id else { return }
         
         DispatchQueue.global(qos: .utility).async { [weak self] in
-            self?.positionKeeper?.save(position: position,
-                                       for: fileId)
+            self?.applicationState.save(position: position,
+                                        for: fileId)
         }
     }
 }

@@ -12,37 +12,35 @@ class MyFilesInteractor: InteractorProtocol {
     // MARK: - Properties
     
     var files: [any FileProtocol]? {
-        return fileStorage.files()
+        return applicationState.files
     }
     
     let documentPickerManager: DocumentPickerManager
     
-    private let fileStorage: FileStorageProtocol
-    private let documentCameraManager: DocumentCameraManagerProtocol?
+    private let applicationState: (FileManagerApplicationStateProtocol & DynamicUINotifierProtocol)
     
     // MARK: - Life Cycle
     
-    init(fileStorage: FileStorageProtocol,
-         documentImportManager: DocumentImportManagerProtocol,
-         documentCameraManager: DocumentCameraManagerProtocol? = nil) {
-        self.fileStorage = fileStorage
+    init(applicationState: (FileManagerApplicationStateProtocol & DynamicUINotifierProtocol),
+         documentImportManager: DocumentImportManagerProtocol) {
+        self.applicationState = applicationState
+        
         self.documentPickerManager = DocumentPickerManager(documentImportManager: documentImportManager)
-        self.documentCameraManager = documentCameraManager
     }
     
     // MARK: - File Management
     
     func deleteFile(withId fileId: UUID) {
-        fileStorage.delete(fileId)
+        applicationState.delete(fileId)
     }
     
     func openedFile(withId fileId: UUID) {
-        fileStorage.opened(fileId)
+        applicationState.opened(fileId)
     }
     
     public func rename(_ fileId: UUID,
                        to newName: String) {
-        fileStorage.rename(fileId, to: newName)
+        applicationState.rename(fileId, to: newName)
     }
     
     func sortedAndFilteredFiles(for queryOrNil: String?) -> [any FileProtocol] {
@@ -56,12 +54,12 @@ class MyFilesInteractor: InteractorProtocol {
     
     func add(dynamicUI: any DynamicUIProtocol) {
         documentPickerManager.add(dynamicUI: dynamicUI)
-        documentCameraManager?.add(dynamicUI: dynamicUI)
+        applicationState.add(dynamicUI: dynamicUI)
     }
     
     func remove(dynamicUI: any DynamicUIProtocol) {
         documentPickerManager.remove(dynamicUI: dynamicUI)
-        documentCameraManager?.remove(dynamicUI: dynamicUI)
+        applicationState.remove(dynamicUI: dynamicUI)
     }
     
     // MARK: - Private Functions

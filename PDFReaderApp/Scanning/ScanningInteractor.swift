@@ -12,30 +12,32 @@ class ScanningInteractor: InteractorProtocol {
     // MARK: - Public Interface
     
     public var isDocumentCameraSupported: Bool {
-        return documentCameraManager.isDocumentCameraSupported
+        return applicationState.isDocumentCameraSupported
     }
     
     public var lastScannedFile: (any FileProtocol)? {
-        return documentCameraManager.lastScannedFile
+        return applicationState.lastScannedFile
     }
     
-    public init(documentCameraManager: DocumentCameraManagerProtocol) {
-        self.documentCameraManager = documentCameraManager
+    // MARK: - Initializers
+    
+    public init(applicationState: (DocumentScannerApplicationStateProtocol & DynamicUINotifierProtocol)) {
+        self.applicationState = applicationState
     }
     
     public func documentCameraRouter() -> RouterProtocol {
-        return documentCameraManager.documentCameraRouter()
+        return applicationState.documentCameraRouter
     }
     
     public func add(dynamicUI: DynamicUIProtocol) {
-        documentCameraManager.add(dynamicUI: dynamicUI)
+        applicationState.add(dynamicUI: dynamicUI)
     }
     
     public func remove(dynamicUI: DynamicUIProtocol) {
-        documentCameraManager.remove(dynamicUI: dynamicUI)
+        applicationState.remove(dynamicUI: dynamicUI)
     }
     
     // MARK: - Private Properties
     
-    private let documentCameraManager: DocumentCameraManagerProtocol
+    private let applicationState: (DocumentScannerApplicationStateProtocol & DynamicUINotifierProtocol)
 }

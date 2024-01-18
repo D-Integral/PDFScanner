@@ -13,20 +13,23 @@ class AppCoordinator {
     
     let homeTabBarController: HomeTabBarController
     
-    let fileStorage: FileStorageProtocol
-    let documentCameraManager: DocumentCameraManagerProtocol
-    let positionKeeper: PDFDocumentPositionKeeper
+    let applicationState: ApplicationState
+    
     let pdfDocumentRouter: PDFDocumentRouter
     
     private init() {
         homeTabBarController = HomeTabBarController()
         
-        fileStorage = DiskFileStorage()
-        documentCameraManager = VisionDocumentCameraManager(pdfMaker: VisionSearchablePDFMaker(),
-                                                            fileStorage: fileStorage)
-        positionKeeper = PDFDocumentPositionKeeper()
-        pdfDocumentRouter = PDFDocumentRouter(fileStorage: fileStorage,
-                                              positionKeeper: positionKeeper)
+        let fileStorage = DiskFileStorage()
+        let documentCameraManager = VisionDocumentCameraManager(pdfMaker: VisionSearchablePDFMaker(),
+                                                                fileStorage: fileStorage)
+        let positionKeeper = PDFDocumentPositionKeeper()
+        
+        applicationState = ApplicationState(fileStorage: fileStorage,
+                                            positionKeeper: positionKeeper,
+                                            documentCameraManager: documentCameraManager)
+        
+        pdfDocumentRouter = PDFDocumentRouter(applicationState: applicationState)
         
         homeTabBarController.viewControllers = [filesNavigationController(),
                                                 scanningNavigationController(),
@@ -46,14 +49,13 @@ class AppCoordinator {
     }
     
     func filesNavigationController() -> UINavigationController {
-        return navigationController(with: MyFilesRouter(fileStorage: fileStorage,
-                                                        documentCameraManager: documentCameraManager,
+        return navigationController(with: MyFilesRouter(applicationState: applicationState,
                                                         pdfDocumentRouter: pdfDocumentRouter).make(),
                                     tabBarItem: filesTabBarItem())
     }
     
     func scanningNavigationController() -> UINavigationController {
-        return navigationController(with: ScanningRouter(documentCameraManager: documentCameraManager,
+        return navigationController(with: ScanningRouter(applicationState: applicationState,
                                                          pdfDocumentRouter: pdfDocumentRouter).make(),
                                     tabBarItem: scanningTabBarItem())
     }
