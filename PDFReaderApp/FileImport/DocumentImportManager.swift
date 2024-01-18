@@ -11,14 +11,14 @@ class DocumentImportManager: NSObject, DocumentImportManagerProtocol {
     
     // MARK: DocumentImportManagerProtocol
     
-    var fileStorage: FileStorageProtocol
+    let applicationState: FileManagerApplicationStateProtocol
     
     var documentTypeTag: String? {
         return nil
     }
     
-    required init(fileStorage: FileStorageProtocol) {
-        self.fileStorage = fileStorage
+    required init(applicationState: FileManagerApplicationStateProtocol) {
+        self.applicationState = applicationState
     }
     
     func save(from url: URL,
@@ -56,7 +56,7 @@ class DocumentImportManager: NSObject, DocumentImportManagerProtocol {
     
     private func save(_ file: any FileProtocol) {
         do {
-            try fileStorage.save(file)
+            try applicationState.save(file)
         } catch {
             print("An attempt to save the file \"\(file.title)\" to the storage has failed with the following error: \(error.localizedDescription)")
             return

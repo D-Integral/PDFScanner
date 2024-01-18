@@ -11,24 +11,20 @@ import UIKit
 class PDFDocumentRouter: FullScreenRouter {
     public var diskFile: DiskFile? = nil
     
-    init(fileStorage: FileStorageProtocol,
-         positionKeeper: PositionKeeperProtocol) {
-        self.fileStorage = fileStorage
-        self.positionKeeper = positionKeeper
+    init(applicationState: (DocumentViewerApplicationStateProtocol & FileManagerApplicationStateProtocol)) {
+        self.applicationState = applicationState
         
         super.init()
     }
     
     override func make() -> UIViewController {
-        let interactor = PDFDocumentInteractor(diskFile: diskFile,
-                                               positionKeeper: positionKeeper,
-                                               fileStorage: fileStorage)
+        let interactor = PDFDocumentInteractor(applicationState: applicationState,
+                                               diskFile: diskFile)
         let presenter = PDFDocumentPresenter(interactor: interactor)
         let viewController = PDFDocumentViewController(presenter: presenter)
         
         return fullScreenNavigationController(with: viewController)
     }
     
-    private let fileStorage: FileStorageProtocol
-    private let positionKeeper: PositionKeeperProtocol
+    private let applicationState: (DocumentViewerApplicationStateProtocol & FileManagerApplicationStateProtocol)
 }

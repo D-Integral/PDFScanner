@@ -56,6 +56,13 @@
 		0F6079932B49CA35008DD313 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0F6079922B49CA34008DD313 /* GoogleService-Info.plist */; };
 		0F84D8FA2B49EB9B00CD3E3F /* MyFilesViewController+DynamicUIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F84D8F92B49EB9B00CD3E3F /* MyFilesViewController+DynamicUIProtocol.swift */; };
 		0F84D9092B4AEE5400CD3E3F /* FileInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F84D9082B4AEE5400CD3E3F /* FileInfoView.swift */; };
+		0FA833F62B58CF8700E04788 /* ApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA833F52B58CF8600E04788 /* ApplicationState.swift */; };
+		0FA833F92B58CFFA00E04788 /* FileManagerApplicationStateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA833F82B58CFFA00E04788 /* FileManagerApplicationStateProtocol.swift */; };
+		0FA833FB2B58D06A00E04788 /* ApplicationState+FileManagerApplicationStateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA833FA2B58D06A00E04788 /* ApplicationState+FileManagerApplicationStateProtocol.swift */; };
+		0FA833FD2B58D0C800E04788 /* DocumentScannerApplicationStateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA833FC2B58D0C800E04788 /* DocumentScannerApplicationStateProtocol.swift */; };
+		0FA833FF2B58D0F300E04788 /* ApplicationState+DocumentScannerApplicationStateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA833FE2B58D0F300E04788 /* ApplicationState+DocumentScannerApplicationStateProtocol.swift */; };
+		0FA834012B58DD4100E04788 /* DocumentViewerApplicationStateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA834002B58DD4100E04788 /* DocumentViewerApplicationStateProtocol.swift */; };
+		0FA834032B58DD8100E04788 /* ApplicationState+DocumentViewerApplicationStateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA834022B58DD8100E04788 /* ApplicationState+DocumentViewerApplicationStateProtocol.swift */; };
 		0FAA0DF52B45C0D5002FC0F9 /* Weak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAA0DF42B45C0D5002FC0F9 /* Weak.swift */; };
 		0FAA0DFD2B45CB9D002FC0F9 /* DynamicUIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAA0DFC2B45CB9D002FC0F9 /* DynamicUIProtocol.swift */; };
 		0FAA0DFF2B45CBD5002FC0F9 /* UIViewController+DynamicUIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAA0DFE2B45CBD5002FC0F9 /* UIViewController+DynamicUIProtocol.swift */; };
@@ -162,6 +169,13 @@
 		0F6079922B49CA34008DD313 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0F84D8F92B49EB9B00CD3E3F /* MyFilesViewController+DynamicUIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyFilesViewController+DynamicUIProtocol.swift"; sourceTree = "<group>"; };
 		0F84D9082B4AEE5400CD3E3F /* FileInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileInfoView.swift; sourceTree = "<group>"; };
+		0FA833F52B58CF8600E04788 /* ApplicationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationState.swift; sourceTree = "<group>"; };
+		0FA833F82B58CFFA00E04788 /* FileManagerApplicationStateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerApplicationStateProtocol.swift; sourceTree = "<group>"; };
+		0FA833FA2B58D06A00E04788 /* ApplicationState+FileManagerApplicationStateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApplicationState+FileManagerApplicationStateProtocol.swift"; sourceTree = "<group>"; };
+		0FA833FC2B58D0C800E04788 /* DocumentScannerApplicationStateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentScannerApplicationStateProtocol.swift; sourceTree = "<group>"; };
+		0FA833FE2B58D0F300E04788 /* ApplicationState+DocumentScannerApplicationStateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApplicationState+DocumentScannerApplicationStateProtocol.swift"; sourceTree = "<group>"; };
+		0FA834002B58DD4100E04788 /* DocumentViewerApplicationStateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentViewerApplicationStateProtocol.swift; sourceTree = "<group>"; };
+		0FA834022B58DD8100E04788 /* ApplicationState+DocumentViewerApplicationStateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApplicationState+DocumentViewerApplicationStateProtocol.swift"; sourceTree = "<group>"; };
 		0FAA0DF42B45C0D5002FC0F9 /* Weak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weak.swift; sourceTree = "<group>"; };
 		0FAA0DFC2B45CB9D002FC0F9 /* DynamicUIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicUIProtocol.swift; sourceTree = "<group>"; };
 		0FAA0DFE2B45CBD5002FC0F9 /* UIViewController+DynamicUIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+DynamicUIProtocol.swift"; sourceTree = "<group>"; };
@@ -289,6 +303,20 @@
 				0FAA0E022B462895002FC0F9 /* PDFDocumentRouter.swift */,
 			);
 			path = PDFDocumentView;
+			sourceTree = "<group>";
+		};
+		0FA833F72B58CF9200E04788 /* ApplicationState */ = {
+			isa = PBXGroup;
+			children = (
+				0FA833F52B58CF8600E04788 /* ApplicationState.swift */,
+				0FA833FA2B58D06A00E04788 /* ApplicationState+FileManagerApplicationStateProtocol.swift */,
+				0FA833FE2B58D0F300E04788 /* ApplicationState+DocumentScannerApplicationStateProtocol.swift */,
+				0FA834022B58DD8100E04788 /* ApplicationState+DocumentViewerApplicationStateProtocol.swift */,
+				0FA833F82B58CFFA00E04788 /* FileManagerApplicationStateProtocol.swift */,
+				0FA833FC2B58D0C800E04788 /* DocumentScannerApplicationStateProtocol.swift */,
+				0FA834002B58DD4100E04788 /* DocumentViewerApplicationStateProtocol.swift */,
+			);
+			path = ApplicationState;
 			sourceTree = "<group>";
 		};
 		0FAA0DF32B45C0C1002FC0F9 /* Helpers */ = {
@@ -452,6 +480,7 @@
 		0FBCA9982B3DA7A000149F38 /* PDFReaderApp */ = {
 			isa = PBXGroup;
 			children = (
+				0FA833F72B58CF9200E04788 /* ApplicationState */,
 				0FAA6E822B4C664F0009D0A3 /* AppCoordination */,
 				0F3218312B4EE6C100840917 /* SearchablePDFMaker */,
 				0F4130C12B40E30C00981698 /* FileImport */,
@@ -608,6 +637,8 @@
 				0FB1CEAC2B4D5D34005EDF0F /* DocumentViewController+UIGestureRecognizerDelegate.swift in Sources */,
 				0F32183A2B4F0E8800840917 /* DocumentPickerManager+UIDocumentPickerDelegate.swift in Sources */,
 				0F3218522B52D3E800840917 /* FontSizeCalculatorProtocol.swift in Sources */,
+				0FA834012B58DD4100E04788 /* DocumentViewerApplicationStateProtocol.swift in Sources */,
+				0FA833F62B58CF8700E04788 /* ApplicationState.swift in Sources */,
 				0FAA6E8C2B4C7F9B0009D0A3 /* PDFDocumentKeeper+PDFDocumentDelegate.swift in Sources */,
 				0F32185C2B52F15800840917 /* FontSizeRange.swift in Sources */,
 				0FB7DAF22B3F150E00985825 /* FileStorageProtocol.swift in Sources */,
@@ -618,6 +649,7 @@
 				0FAA6E882B4C6F050009D0A3 /* PDFDocumentInteractor.swift in Sources */,
 				0FB7DAEA2B3DF54100985825 /* AccountViewController.swift in Sources */,
 				0F4130C52B41B99A00981698 /* PDFDocumentImportManager.swift in Sources */,
+				0FA833FB2B58D06A00E04788 /* ApplicationState+FileManagerApplicationStateProtocol.swift in Sources */,
 				0F32184A2B52B98800840917 /* PDFMakerSourcePageProtocol.swift in Sources */,
 				0F4130BC2B40CD2400981698 /* MyFilesRouter.swift in Sources */,
 				0FAA6E7E2B4C64F70009D0A3 /* FullScreenRouter.swift in Sources */,
@@ -626,10 +658,12 @@
 				0F32182E2B4EDA4000840917 /* UIViewExtensions.swift in Sources */,
 				0F4130C32B41B96D00981698 /* DocumentImportManagerProtocol.swift in Sources */,
 				0F6079912B49B33A008DD313 /* ScanningInteractor.swift in Sources */,
+				0FA833F92B58CFFA00E04788 /* FileManagerApplicationStateProtocol.swift in Sources */,
 				0FAA0DFD2B45CB9D002FC0F9 /* DynamicUIProtocol.swift in Sources */,
 				0F4130C72B41B9F100981698 /* DocumentImportManager.swift in Sources */,
 				0F3218442B52B5D300840917 /* RecognizedTextProtocol.swift in Sources */,
 				0FAA6E912B4C82170009D0A3 /* DynamicUINotifier.swift in Sources */,
+				0FA833FD2B58D0C800E04788 /* DocumentScannerApplicationStateProtocol.swift in Sources */,
 				0F3218542B52D47400840917 /* FontSizeCalculator.swift in Sources */,
 				0F4130B62B40C86C00981698 /* MyFilesInteractor.swift in Sources */,
 				0FB1CEB12B4DB47E005EDF0F /* PDFDocumentPositionKeeper.swift in Sources */,
@@ -649,6 +683,7 @@
 				0F4130C92B41BB5A00981698 /* DocumentImportError.swift in Sources */,
 				0FAA6E8A2B4C71730009D0A3 /* PDFDocumentKeeper.swift in Sources */,
 				0F3218382B4F0E3C00840917 /* DocumentCameraManager+VNDocumentCameraViewControllerDelegate.swift in Sources */,
+				0FA834032B58DD8100E04788 /* ApplicationState+DocumentViewerApplicationStateProtocol.swift in Sources */,
 				0F60797A2B49A100008DD313 /* AccountPresenter.swift in Sources */,
 				0FAA0DF52B45C0D5002FC0F9 /* Weak.swift in Sources */,
 				0FB1CEAF2B4DB46C005EDF0F /* PositionKeeperProtocol.swift in Sources */,
@@ -684,6 +719,7 @@
 				0F3218302B4EE1C700840917 /* VisionDocumentCameraRouter.swift in Sources */,
 				0F3218502B52D0B500840917 /* PDFMakerScanResultPage.swift in Sources */,
 				0F32185E2B52FF3B00840917 /* BinarySearchFitState.swift in Sources */,
+				0FA833FF2B58D0F300E04788 /* ApplicationState+DocumentScannerApplicationStateProtocol.swift in Sources */,
 				0F4130BA2B40CA0600981698 /* InteractorProtocol.swift in Sources */,
 				0FB7DAFB2B3F1A6F00985825 /* FilesListProtocol.swift in Sources */,
 				0F3218622B54098B00840917 /* PDFDocumentExtensions.swift in Sources */,
