@@ -34,7 +34,7 @@ final class PDFDocumentImportManager: DocumentImportManager {
             
             let thumbnailData = pdfDocument.generateThumbnailData(for: thumbnailSize)
             
-            let file = DiskFile(title: fileUrl.deletingPathExtension().lastPathComponent,
+            let file = DiskFile(title: fileUrl.lastPathComponent,
                                 documentData: fileData,
                                 thumbnailData: thumbnailData,
                                 createdDate: createdDate,

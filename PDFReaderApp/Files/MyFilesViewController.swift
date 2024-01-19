@@ -38,7 +38,7 @@ class MyFilesViewController: UIViewController {
         struct FileActions {
             static let infoViewOffset = 15.0
             static let infoViewHeight = 56.0
-            static let menuHeight = 260.0
+            static let menuHeight = 320.0
         }
     }
     
@@ -269,11 +269,24 @@ class MyFilesViewController: UIViewController {
     
     private func presentActionSheet(forFile file: DiskFile) {
         let alertController = UIAlertController(title: "", message: "", preferredStyle: .actionSheet)
+        let pdfDocumentDataUrl = file.documentDataUrl
         
         let renameAction = UIAlertAction(title: String(localized: "rename"),
                                          style: .default,
                                          handler: { [weak self] (action: UIAlertAction) -> Void in
             self?.initiateRename(of: file)
+        })
+        
+        let shareAction = UIAlertAction(title: String(localized: "share"),
+                                        style: .default,
+                                        handler: { [weak self] (action: UIAlertAction) -> Void in
+            guard let self = self, let pdfDocumentDataUrl = pdfDocumentDataUrl else { return }
+            
+            let activityViewController = UIActivityViewController(activityItems: [pdfDocumentDataUrl],
+                                                                  applicationActivities: nil)
+            self.present(activityViewController,
+                         animated: true,
+                         completion: nil)
         })
         
         let deleteAction = UIAlertAction(title: String(localized: "delete"),
@@ -307,6 +320,7 @@ class MyFilesViewController: UIViewController {
         alertController.view.heightAnchor.constraint(equalToConstant: Constants.FileActions.menuHeight).isActive = true
         
         alertController.addAction(renameAction)
+        alertController.addAction(shareAction)
         alertController.addAction(deleteAction)
         alertController.addAction(cancelAction)
         

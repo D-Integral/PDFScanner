@@ -188,7 +188,7 @@ struct DiskFile: FileProtocol {
     }
     
     private func documentDataUrl(for fileTitle: String) -> URL? {
-        return directoryUrl(forFolder: Constants.filesFolderTitle)?.appendingPathComponent("\(fileTitle)") as? URL
+        return directoryUrl(forFolder: Constants.filesFolderTitle)?.appendingPathComponent("\(fileTitle)")?.appendingPathExtension("pdf") as? URL
     }
     
     private func thumbnailDataUrl(for fileTitle: String) -> URL? {
