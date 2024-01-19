@@ -248,11 +248,9 @@ class MyFilesViewController: UIViewController {
             textField.text = file.title
         }
         
-        let fileId = file.id
-        
-        alert.addAction(UIAlertAction(title: "OK",
-                                      style: .default,
-                                      handler: { [weak self, weak alert] (_) in
+        let renameAction = UIAlertAction(title: "ok",
+                                         style: .default,
+                                         handler: { [weak self, weak alert] _ in
             guard let textFields = alert?.textFields,
                   textFields.count > 0 else { return }
             
@@ -260,9 +258,19 @@ class MyFilesViewController: UIViewController {
             
             guard let newTitle = textField.text else { return }
             
-            self?.presenter?.rename(fileId, to: newTitle)
-            self?.applySnapshot()
-        }))
+            if newTitle != file.title {
+                self?.presenter?.rename(file.id, to: newTitle)
+                self?.applySnapshot()
+            }
+        })
+        
+        let cancelAction = UIAlertAction(title: String(localized:"cancel"),
+                                         style: .cancel) { [weak self] _ in
+            self?.dismiss(animated: true)
+        }
+        
+        alert.addAction(renameAction)
+        alert.addAction(cancelAction)
         
         self.present(alert, animated: true, completion: nil)
     }
