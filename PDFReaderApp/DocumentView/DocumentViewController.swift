@@ -29,8 +29,7 @@ class DocumentViewController: UIViewController {
     
     // MARK: - Public Interface
     
-    public func rename(to newName: String) {
-    }
+    public func rename(to newName: String) { }
     
     // MARK: - Search
     
@@ -40,6 +39,14 @@ class DocumentViewController: UIViewController {
         return String(localized: "search")
     }
     
+    // MARK: - Share
+    
+    public func share() { }
+    
+    // MARK: - Delete
+    
+    public func delete() { }
+    
     // MARK: - Setup
     
     private func setupNavigationBar() {
@@ -48,8 +55,20 @@ class DocumentViewController: UIViewController {
         
         navigationItem.renameDelegate = self
         
-        navigationItem.titleMenuProvider = { suggestions in
-            return UIMenu(children: suggestions)
+        navigationItem.titleMenuProvider = { [weak self] suggestions in
+            var finalMenuElements = suggestions
+            let shareCommand = UICommand(title: String(localized: "share"),
+                                         image: UIImage(systemName: "square.and.arrow.up"),
+                                         action: #selector(self?.shareAction))
+            let deleteCommand = UICommand(title: String(localized: "delete"),
+                                          image: UIImage(systemName: "trash"),
+                                          action: #selector(self?.deleteAction),
+                                          attributes: [.destructive])
+            
+            finalMenuElements.append(contentsOf: [shareCommand, deleteCommand])
+
+            
+            return UIMenu(children: finalMenuElements)
         }
     }
     
@@ -85,6 +104,14 @@ class DocumentViewController: UIViewController {
         guard let isNavigationBarHidden = navigationController?.isNavigationBarHidden else { return }
         
         navigationController?.setNavigationBarHidden(!isNavigationBarHidden, animated: true)
+    }
+    
+    @objc private func shareAction() {
+        share()
+    }
+    
+    @objc private func deleteAction() {
+        delete()
     }
     
     // MARK: - Private Methods

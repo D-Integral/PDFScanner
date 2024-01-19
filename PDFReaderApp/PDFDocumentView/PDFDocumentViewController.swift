@@ -8,7 +8,7 @@
 import UIKit
 import PDFKit
 
-class PDFDocumentViewController: DocumentViewController {
+final class PDFDocumentViewController: DocumentViewController {
     
     // MARK: - Constants
     
@@ -55,7 +55,7 @@ class PDFDocumentViewController: DocumentViewController {
         
         super.init(nibName: nil, bundle: nil)
         
-        self.title = self.presenter?.title ?? ""
+        updateTitle()
         
         presenter?.add(dynamicUI: self)
     }
@@ -104,6 +104,12 @@ class PDFDocumentViewController: DocumentViewController {
         saveCurrentPosition()
     }
     
+    // MARK: - Update
+    
+    public func updateTitle() {
+        self.title = self.presenter?.title ?? ""
+    }
+    
     // MARK: - Search
     
     override func search() {
@@ -140,6 +146,26 @@ class PDFDocumentViewController: DocumentViewController {
     
     public override func rename(to newName: String) {
         presenter?.rename(to: newName)
+        updateTitle()
+    }
+    
+    // MARK: - Share
+    
+    public override func share() {
+        guard let dataFileUrl = presenter?.dataFileUrl else { return }
+        
+        let activityViewController = UIActivityViewController(activityItems: [dataFileUrl],
+                                                              applicationActivities: nil)
+        self.present(activityViewController,
+                     animated: true,
+                     completion: nil)
+    }
+    
+    // MARK: - Delete
+    
+    public override func delete() {
+        presenter?.deleteFile()
+        navigationController?.dismiss(animated: true)
     }
     
     // MARK: - Setup
