@@ -116,6 +116,10 @@ struct DiskFile: FileProtocol {
     }
     
     mutating func rename(to newName: String) {
+        if newName == title {
+            return
+        }
+        
         var newNameOrUniqueAlternative = newName
         
         if let originalTitle = chooseUniqueTitleIfFileExists(proposedTitle: newName) {
