@@ -67,7 +67,7 @@ struct DiskFile: FileProtocol {
     }
     
     var documentDataUrl: URL? {
-        return documentDataUrl(for: title)
+        return documentDataUrl(for: title)?.appendingPathExtension("pdf")
     }
     
     var thumbnailData: Data? {
@@ -122,8 +122,8 @@ struct DiskFile: FileProtocol {
             newNameOrUniqueAlternative = originalTitle
         }
         
-        guard let oldDocumentDataUrl = documentDataUrl(for: title),
-              let newDocumentDataUrl = documentDataUrl(for: newNameOrUniqueAlternative),
+        guard let oldDocumentDataUrl = documentDataUrl(for: title)?.appendingPathExtension("pdf"),
+              let newDocumentDataUrl = documentDataUrl(for: newNameOrUniqueAlternative)?.appendingPathExtension("pdf"),
               let oldThumbnailDataUrl = thumbnailDataUrl(for: title),
               let newThumbnailDataUrl = thumbnailDataUrl(for: newNameOrUniqueAlternative) else { return }
         
@@ -206,10 +206,10 @@ struct DiskFile: FileProtocol {
         }
         
         if let proposed = proposed,
-           let baseUrl = documentDataUrl(for: proposed)?.deletingPathExtension() {
+           let baseUrl = documentDataUrl(for: proposed) {
             let pathEnd = (index > 1) ? " \(index)" : ""
             
-            if FileManager.default.fileExists(atPath: baseUrl.path + pathEnd) {
+            if FileManager.default.fileExists(atPath: baseUrl.path + pathEnd + ".pdf") {
                 return chooseUniqueTitleIfFileExists(proposedTitle: proposedTitle,
                                                      addingIndex: index + 1)
             } else if (index > 1) {

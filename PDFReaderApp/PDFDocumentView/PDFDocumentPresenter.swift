@@ -13,6 +13,10 @@ class PDFDocumentPresenter: PresenterProtocol {
         interactor?.documentName ?? ""
     }
     
+    var dataFileUrl: URL? {
+        interactor?.dataFileUrl
+    }
+    
     var pdfDocument: PDFDocument? {
         interactor?.pdfDocument
     }
@@ -58,6 +62,10 @@ class PDFDocumentPresenter: PresenterProtocol {
         }
         
         interactor?.search(withQuery: searchQuery)
+    }
+    
+    func deleteFile() {
+        interactor?.deleteFile()
     }
     
     func resetSearchResults() {

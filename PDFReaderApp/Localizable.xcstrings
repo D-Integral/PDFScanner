@@ -338,6 +338,16 @@
         }
       }
     },
+    "share" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Share"
+          }
+        }
+      }
+    },
     "signUp" : {
       "extractionState" : "manual",
       "localizations" : {

@@ -17,14 +17,12 @@ final class DiskFileStorageTests: XCTestCase {
     var diskFileStorage: DiskFileStorage?
 
     override func setUpWithError() throws {
-        let userKeeper = UserKeeper()
-        let user = User(name: "Test User Name",
-                        email: "Test User Email")
-        userKeeper.updateCurrentUser(withUser: user)
-        diskFileStorage = DiskFileStorage(userKeeper: userKeeper)
+        diskFileStorage = DiskFileStorage()
     }
 
     override func tearDownWithError() throws {
+        diskFileStorage = nil
+        testFileId = nil
     }
 
     func testFileSavingAndDeleting() throws {
@@ -58,11 +56,10 @@ final class DiskFileStorageTests: XCTestCase {
             return
         }
         
-        let diskFile = DiskFile(name: testFileName,
-                                data: diskFileData,
+        let diskFile = DiskFile(title: testFileName,
+                                documentData: diskFileData,
                                 createdDate: createdDate,
-                                modifiedDate: modifiedDate,
-                                fileType: .pdfDocument)
+                                modifiedDate: modifiedDate)
         XCTAssertNotNil(diskFile)
         
         testFileId = diskFile.id
@@ -81,19 +78,19 @@ final class DiskFileStorageTests: XCTestCase {
         let retrievedFile = diskFileStorage?.file(withId: diskFile.id)
         XCTAssertNotNil(retrievedFile)
         XCTAssertTrue(retrievedFile?.title == testFileName)
-        XCTAssertNotNil(retrievedFile?.data)
+        XCTAssertNotNil(retrievedFile?.documentData)
         XCTAssertTrue(retrievedFile?.createdDate == createdDate)
         XCTAssertTrue(retrievedFile?.modifiedDate == modifiedDate)
         XCTAssertTrue(retrievedFile?.fileType == .pdfDocument)
         
-        guard let data = retrievedFile?.data else {
+        guard let data = retrievedFile?.documentData else {
             XCTFail("Data from saved file is nil")
             return
         }
         
         let pdfDocument = PDFDocument(data: data)
         XCTAssertNotNil(pdfDocument)
-        XCTAssertTrue(pdfDocument?.pageCount == 4)
+        XCTAssertTrue(pdfDocument?.pageCount == 5)
     }
     
 }

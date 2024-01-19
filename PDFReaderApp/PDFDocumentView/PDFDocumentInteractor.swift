@@ -11,7 +11,7 @@ import PDFKit
 class PDFDocumentInteractor: InteractorProtocol {
     private let applicationState: (DocumentViewerApplicationStateProtocol & FileManagerApplicationStateProtocol)
     private let pdfDocumentKeeper: PDFDocumentKeeper?
-    private let diskFile: DiskFile?
+    private var diskFile: DiskFile?
     
     var pdfDocument: PDFDocument? {
         return pdfDocumentKeeper?.pdfDocument
@@ -27,6 +27,10 @@ class PDFDocumentInteractor: InteractorProtocol {
     
     var documentName: String {
         return diskFile?.title ?? ""
+    }
+    
+    var dataFileUrl: URL? {
+        return diskFile?.documentDataUrl
     }
     
     private(set) var currentSearchResultIndex = 0
@@ -47,9 +51,17 @@ class PDFDocumentInteractor: InteractorProtocol {
     }
     
     public func rename(to newName: String) {
-        guard let id = diskFile?.id else { return }
+        guard let fileId = diskFile?.id else { return }
         
-        applicationState.rename(id, to: newName)
+        applicationState.rename(fileId, to: newName)
+        
+        diskFile = applicationState.file(withId: fileId) as? DiskFile
+    }
+    
+    public func deleteFile() {
+        guard let fileId = diskFile?.id else { return }
+        
+        applicationState.delete(fileId)
     }
     
     func add(dynamicUI: any DynamicUIProtocol) {

@@ -13,6 +13,10 @@ extension ApplicationState: FileManagerApplicationStateProtocol {
         return fileStorage.files()
     }
     
+    func file(withId fileId: UUID) -> (any FileProtocol)? {
+        return fileStorage.file(withId: fileId)
+    }
+    
     public func save(_ file: any FileProtocol) throws {
         try fileStorage.save(file)
     }
