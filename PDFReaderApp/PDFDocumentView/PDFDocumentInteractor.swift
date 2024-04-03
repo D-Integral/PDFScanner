@@ -9,7 +9,9 @@ import Foundation
 import PDFKit
 
 class PDFDocumentInteractor: InteractorProtocol {
-    private let applicationState: (DocumentViewerApplicationStateProtocol & FileManagerApplicationStateProtocol)
+    private let applicationState: (DocumentViewerApplicationStateProtocol &
+                                   FileManagerApplicationStateProtocol &
+                                   SubscriptionApplicationStateProtocol)
     private let pdfDocumentKeeper: PDFDocumentKeeper?
     private var diskFile: DiskFile?
     
@@ -43,7 +45,9 @@ class PDFDocumentInteractor: InteractorProtocol {
         return applicationState.position(for: diskFile?.id)
     }
     
-    init(applicationState: (DocumentViewerApplicationStateProtocol & FileManagerApplicationStateProtocol),
+    init(applicationState: (DocumentViewerApplicationStateProtocol &
+                            FileManagerApplicationStateProtocol &
+                            SubscriptionApplicationStateProtocol),
          diskFile: DiskFile?) {
         self.applicationState = applicationState
         self.pdfDocumentKeeper = PDFDocumentKeeper(diskFile: diskFile)
@@ -105,6 +109,17 @@ class PDFDocumentInteractor: InteractorProtocol {
         DispatchQueue.global(qos: .utility).async { [weak self] in
             self?.applicationState.save(position: position,
                                         for: fileId)
+        }
+    }
+    
+    // MARK: - Subscription
+    
+    func checkIfSubscribed(subscribedCompletionHandler: () -> (),
+                           notSubscribedCompletionHandler: () -> ()) {
+        applicationState.checkIfSubscribed {
+            subscribedCompletionHandler()
+        } notSubscribedCompletionHandler: {
+            notSubscribedCompletionHandler()
         }
     }
 }

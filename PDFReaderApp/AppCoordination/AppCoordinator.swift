@@ -16,6 +16,7 @@ class AppCoordinator {
     let applicationState: ApplicationState
     
     let pdfDocumentRouter: PDFDocumentRouter
+    let subscriptionProposalRouter: SubscriptionProposalRouter
     
     private init() {
         homeTabBarController = HomeTabBarController()
@@ -27,9 +28,13 @@ class AppCoordinator {
         
         applicationState = ApplicationState(fileStorage: fileStorage,
                                             positionKeeper: positionKeeper,
-                                            documentCameraManager: documentCameraManager)
+                                            documentCameraManager: documentCameraManager,
+                                            subscriptionManager: SubscriptionManager())
         
-        pdfDocumentRouter = PDFDocumentRouter(applicationState: applicationState)
+        subscriptionProposalRouter = SubscriptionProposalRouter(state: applicationState)
+        
+        pdfDocumentRouter = PDFDocumentRouter(applicationState: applicationState,
+                                              subscriptionProposalRouter: subscriptionProposalRouter)
         
         homeTabBarController.viewControllers = [filesNavigationController(),
                                                 scanningNavigationController(),
@@ -50,7 +55,8 @@ class AppCoordinator {
     
     func filesNavigationController() -> UINavigationController {
         return navigationController(with: MyFilesRouter(applicationState: applicationState,
-                                                        pdfDocumentRouter: pdfDocumentRouter).make(),
+                                                        pdfDocumentRouter: pdfDocumentRouter,
+                                                        subscriptionProposalRouter: subscriptionProposalRouter).make(),
                                     tabBarItem: filesTabBarItem())
     }
     

@@ -66,4 +66,10 @@ class MyFilesPresenter: PresenterProtocol {
             }
         }
     }
+    
+    func checkIfSubscribed(subscribedCompletionHandler: () -> (),
+                           notSubscribedCompletionHandler: () -> ()) {
+        interactor.checkIfSubscribed(subscribedCompletionHandler: subscribedCompletionHandler,
+                                     notSubscribedCompletionHandler: notSubscribedCompletionHandler)
+    }
 }

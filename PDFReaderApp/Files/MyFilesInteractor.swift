@@ -17,11 +17,15 @@ class MyFilesInteractor: InteractorProtocol {
     
     let documentPickerManager: DocumentPickerManager
     
-    private let applicationState: (FileManagerApplicationStateProtocol & DynamicUINotifierProtocol)
+    private let applicationState: (FileManagerApplicationStateProtocol &
+                                   DynamicUINotifierProtocol &
+                                   SubscriptionApplicationStateProtocol)
     
     // MARK: - Life Cycle
     
-    init(applicationState: (FileManagerApplicationStateProtocol & DynamicUINotifierProtocol),
+    init(applicationState: (FileManagerApplicationStateProtocol &
+                            DynamicUINotifierProtocol &
+                            SubscriptionApplicationStateProtocol),
          documentImportManager: DocumentImportManagerProtocol) {
         self.applicationState = applicationState
         
@@ -76,6 +80,17 @@ class MyFilesInteractor: InteractorProtocol {
         
         return files.filter {
             return $0.title.lowercased().contains(query.lowercased())
+        }
+    }
+    
+    // MARK: - Subscription
+    
+    func checkIfSubscribed(subscribedCompletionHandler: () -> (),
+                           notSubscribedCompletionHandler: () -> ()) {
+        applicationState.checkIfSubscribed {
+            subscribedCompletionHandler()
+        } notSubscribedCompletionHandler: {
+            notSubscribedCompletionHandler()
         }
     }
 }

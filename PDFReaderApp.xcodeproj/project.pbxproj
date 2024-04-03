@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F0BFF002BBD7C0A007CCF2D /* SubscriptionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0BFEFF2BBD7C0A007CCF2D /* SubscriptionManager.swift */; };
+		0F0BFF022BBD7C44007CCF2D /* SubscriptionManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0BFF012BBD7C44007CCF2D /* SubscriptionManagerProtocol.swift */; };
+		0F0BFF052BBD7D8F007CCF2D /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F0BFF042BBD7D8F007CCF2D /* StoreKit.framework */; };
+		0F0BFF072BBD7DB2007CCF2D /* IAPProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0BFF062BBD7DB2007CCF2D /* IAPProduct.swift */; };
+		0F0BFF092BBD7DD7007CCF2D /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0BFF082BBD7DD6007CCF2D /* IAPHelper.swift */; };
+		0F0BFF0B2BBD7E4F007CCF2D /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0BFF0A2BBD7E4F007CCF2D /* Subscription.swift */; };
+		0F0BFF0F2BBD80BB007CCF2D /* SubscriptionProposalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0BFF0E2BBD80BB007CCF2D /* SubscriptionProposalView.swift */; };
+		0F0BFF122BBD8C4E007CCF2D /* SubscriptionProposalRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0BFF112BBD8C4E007CCF2D /* SubscriptionProposalRouter.swift */; };
+		0F0BFF142BBD906B007CCF2D /* SubscriptionApplicationStateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0BFF132BBD906B007CCF2D /* SubscriptionApplicationStateProtocol.swift */; };
+		0F0BFF162BBD9088007CCF2D /* ApplicationState+SubscriptionApplicationStateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0BFF152BBD9088007CCF2D /* ApplicationState+SubscriptionApplicationStateProtocol.swift */; };
+		0F0BFF182BBDAAEE007CCF2D /* PDFDocumentScannerStoreKitConfiguration.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 0F0BFF172BBDAAEE007CCF2D /* PDFDocumentScannerStoreKitConfiguration.storekit */; };
 		0F32182E2B4EDA4000840917 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F32182D2B4EDA4000840917 /* UIViewExtensions.swift */; };
 		0F3218302B4EE1C700840917 /* VisionDocumentCameraRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F32182F2B4EE1C700840917 /* VisionDocumentCameraRouter.swift */; };
 		0F3218342B4F0DCB00840917 /* VisionDocumentCameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3218332B4F0DCB00840917 /* VisionDocumentCameraManager.swift */; };
@@ -122,6 +133,17 @@
 
 /* Begin PBXFileReference section */
 		0F04FD3B2B4087DA005F9968 /* PDFReaderApp.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = PDFReaderApp.xctestplan; sourceTree = "<group>"; };
+		0F0BFEFF2BBD7C0A007CCF2D /* SubscriptionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionManager.swift; sourceTree = "<group>"; };
+		0F0BFF012BBD7C44007CCF2D /* SubscriptionManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionManagerProtocol.swift; sourceTree = "<group>"; };
+		0F0BFF042BBD7D8F007CCF2D /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		0F0BFF062BBD7DB2007CCF2D /* IAPProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPProduct.swift; sourceTree = "<group>"; };
+		0F0BFF082BBD7DD6007CCF2D /* IAPHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPHelper.swift; sourceTree = "<group>"; };
+		0F0BFF0A2BBD7E4F007CCF2D /* Subscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
+		0F0BFF0E2BBD80BB007CCF2D /* SubscriptionProposalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionProposalView.swift; sourceTree = "<group>"; };
+		0F0BFF112BBD8C4E007CCF2D /* SubscriptionProposalRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionProposalRouter.swift; sourceTree = "<group>"; };
+		0F0BFF132BBD906B007CCF2D /* SubscriptionApplicationStateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionApplicationStateProtocol.swift; sourceTree = "<group>"; };
+		0F0BFF152BBD9088007CCF2D /* ApplicationState+SubscriptionApplicationStateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApplicationState+SubscriptionApplicationStateProtocol.swift"; sourceTree = "<group>"; };
+		0F0BFF172BBDAAEE007CCF2D /* PDFDocumentScannerStoreKitConfiguration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = PDFDocumentScannerStoreKitConfiguration.storekit; sourceTree = "<group>"; };
 		0F32182D2B4EDA4000840917 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		0F32182F2B4EE1C700840917 /* VisionDocumentCameraRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionDocumentCameraRouter.swift; sourceTree = "<group>"; };
 		0F3218332B4F0DCB00840917 /* VisionDocumentCameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionDocumentCameraManager.swift; sourceTree = "<group>"; };
@@ -232,6 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F60796E2B497A01008DD313 /* FirebaseAuth in Frameworks */,
+				0F0BFF052BBD7D8F007CCF2D /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,6 +268,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F0BFEFE2BBD7BCE007CCF2D /* SubscriptionManager */ = {
+			isa = PBXGroup;
+			children = (
+				0F0BFEFF2BBD7C0A007CCF2D /* SubscriptionManager.swift */,
+				0F0BFF012BBD7C44007CCF2D /* SubscriptionManagerProtocol.swift */,
+				0F0BFF062BBD7DB2007CCF2D /* IAPProduct.swift */,
+				0F0BFF082BBD7DD6007CCF2D /* IAPHelper.swift */,
+				0F0BFF0A2BBD7E4F007CCF2D /* Subscription.swift */,
+			);
+			path = SubscriptionManager;
+			sourceTree = "<group>";
+		};
+		0F0BFF032BBD7D8F007CCF2D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0F0BFF042BBD7D8F007CCF2D /* StoreKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0F0BFF102BBD8C0E007CCF2D /* SubscriptionProposalView */ = {
+			isa = PBXGroup;
+			children = (
+				0F0BFF0E2BBD80BB007CCF2D /* SubscriptionProposalView.swift */,
+				0F0BFF112BBD8C4E007CCF2D /* SubscriptionProposalRouter.swift */,
+			);
+			path = SubscriptionProposalView;
+			sourceTree = "<group>";
+		};
 		0F3218312B4EE6C100840917 /* SearchablePDFMaker */ = {
 			isa = PBXGroup;
 			children = (
@@ -313,9 +365,11 @@
 				0FA833FA2B58D06A00E04788 /* ApplicationState+FileManagerApplicationStateProtocol.swift */,
 				0FA833FE2B58D0F300E04788 /* ApplicationState+DocumentScannerApplicationStateProtocol.swift */,
 				0FA834022B58DD8100E04788 /* ApplicationState+DocumentViewerApplicationStateProtocol.swift */,
+				0F0BFF152BBD9088007CCF2D /* ApplicationState+SubscriptionApplicationStateProtocol.swift */,
 				0FA833F82B58CFFA00E04788 /* FileManagerApplicationStateProtocol.swift */,
 				0FA833FC2B58D0C800E04788 /* DocumentScannerApplicationStateProtocol.swift */,
 				0FA834002B58DD4100E04788 /* DocumentViewerApplicationStateProtocol.swift */,
+				0F0BFF132BBD906B007CCF2D /* SubscriptionApplicationStateProtocol.swift */,
 			);
 			path = ApplicationState;
 			sourceTree = "<group>";
@@ -327,6 +381,7 @@
 				0F4130B92B40CA0600981698 /* InteractorProtocol.swift */,
 				0F4130BD2B40CD3400981698 /* RouterProtocol.swift */,
 				0F32182D2B4EDA4000840917 /* UIViewExtensions.swift */,
+				0FAA6E7D2B4C64F70009D0A3 /* FullScreenRouter.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -338,7 +393,6 @@
 				0FB1CEAB2B4D5D34005EDF0F /* DocumentViewController+UIGestureRecognizerDelegate.swift */,
 				0FAA6E832B4C69260009D0A3 /* DocumentViewController+UISearchResultsUpdating.swift */,
 				0F32185F2B532D6000840917 /* DocumentViewController+UINavigationItemRenameDelegate.swift */,
-				0FAA6E7D2B4C64F70009D0A3 /* FullScreenRouter.swift */,
 			);
 			path = DocumentView;
 			sourceTree = "<group>";
@@ -462,10 +516,12 @@
 		0FBCA98D2B3DA7A000149F38 = {
 			isa = PBXGroup;
 			children = (
+				0F0BFF172BBDAAEE007CCF2D /* PDFDocumentScannerStoreKitConfiguration.storekit */,
 				0F04FD3B2B4087DA005F9968 /* PDFReaderApp.xctestplan */,
 				0FBCA9982B3DA7A000149F38 /* PDFReaderApp */,
 				0FBCA9AF2B3DA7A300149F38 /* PDFReaderAppTests */,
 				0FBCA9972B3DA7A000149F38 /* Products */,
+				0F0BFF032BBD7D8F007CCF2D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -486,6 +542,8 @@
 				0F3218312B4EE6C100840917 /* SearchablePDFMaker */,
 				0F4130C12B40E30C00981698 /* FileImport */,
 				0FB7DAF02B3F12A600985825 /* FileStorage */,
+				0F0BFEFE2BBD7BCE007CCF2D /* SubscriptionManager */,
+				0F0BFF102BBD8C0E007CCF2D /* SubscriptionProposalView */,
 				0FB7DAEE2B3F126300985825 /* Account */,
 				0FB7DAED2B3F124D00985825 /* Files */,
 				0FB7DAEF2B3F127800985825 /* Scanning */,
@@ -618,6 +676,7 @@
 				0FB7DAE62B3DF08000985825 /* Localizable.xcstrings in Resources */,
 				0FA834062B5A95F700E04788 /* CV Dmytro Skorokhod 2024 PDF.pdf in Resources */,
 				0F6079932B49CA35008DD313 /* GoogleService-Info.plist in Resources */,
+				0F0BFF182BBDAAEE007CCF2D /* PDFDocumentScannerStoreKitConfiguration.storekit in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -642,6 +701,7 @@
 				0FA834012B58DD4100E04788 /* DocumentViewerApplicationStateProtocol.swift in Sources */,
 				0FA833F62B58CF8700E04788 /* ApplicationState.swift in Sources */,
 				0FAA6E8C2B4C7F9B0009D0A3 /* PDFDocumentKeeper+PDFDocumentDelegate.swift in Sources */,
+				0F0BFF072BBD7DB2007CCF2D /* IAPProduct.swift in Sources */,
 				0F32185C2B52F15800840917 /* FontSizeRange.swift in Sources */,
 				0FB7DAF22B3F150E00985825 /* FileStorageProtocol.swift in Sources */,
 				0FB7DAE82B3DF51B00985825 /* ScanningViewController.swift in Sources */,
@@ -661,6 +721,7 @@
 				0F4130C32B41B96D00981698 /* DocumentImportManagerProtocol.swift in Sources */,
 				0F6079912B49B33A008DD313 /* ScanningInteractor.swift in Sources */,
 				0FA833F92B58CFFA00E04788 /* FileManagerApplicationStateProtocol.swift in Sources */,
+				0F0BFF162BBD9088007CCF2D /* ApplicationState+SubscriptionApplicationStateProtocol.swift in Sources */,
 				0FAA0DFD2B45CB9D002FC0F9 /* DynamicUIProtocol.swift in Sources */,
 				0F4130C72B41B9F100981698 /* DocumentImportManager.swift in Sources */,
 				0F3218442B52B5D300840917 /* RecognizedTextProtocol.swift in Sources */,
@@ -677,15 +738,18 @@
 				0FB7DB072B3F2A2F00985825 /* DiskFile.swift in Sources */,
 				0FAA6E8F2B4C80BE0009D0A3 /* PDFSelection+Comparable.swift in Sources */,
 				0F32184C2B52B9EA00840917 /* PDFMakerSourcePage.swift in Sources */,
+				0F0BFF142BBD906B007CCF2D /* SubscriptionApplicationStateProtocol.swift in Sources */,
 				0F4130B82B40C9F800981698 /* PresenterProtocol.swift in Sources */,
 				0F3218482B52B74300840917 /* PDFMakerError.swift in Sources */,
 				0FB7DAEC2B3E0A1600985825 /* HomeTabBarController.swift in Sources */,
 				0F3218362B4F0DE600840917 /* DocumentCameraManagerProtocol.swift in Sources */,
 				0F3218582B52D87200840917 /* FontSizeCalculatorSource.swift in Sources */,
+				0F0BFF002BBD7C0A007CCF2D /* SubscriptionManager.swift in Sources */,
 				0F4130C92B41BB5A00981698 /* DocumentImportError.swift in Sources */,
 				0FAA6E8A2B4C71730009D0A3 /* PDFDocumentKeeper.swift in Sources */,
 				0F3218382B4F0E3C00840917 /* DocumentCameraManager+VNDocumentCameraViewControllerDelegate.swift in Sources */,
 				0FA834032B58DD8100E04788 /* ApplicationState+DocumentViewerApplicationStateProtocol.swift in Sources */,
+				0F0BFF0B2BBD7E4F007CCF2D /* Subscription.swift in Sources */,
 				0F60797A2B49A100008DD313 /* AccountPresenter.swift in Sources */,
 				0FAA0DF52B45C0D5002FC0F9 /* Weak.swift in Sources */,
 				0FB1CEAF2B4DB46C005EDF0F /* PositionKeeperProtocol.swift in Sources */,
@@ -699,6 +763,7 @@
 				0FAA6E942B4C855C0009D0A3 /* PDFDocumentViewController+DynamicUIProtocol.swift in Sources */,
 				0FAA6E842B4C69260009D0A3 /* DocumentViewController+UISearchResultsUpdating.swift in Sources */,
 				0F32183E2B4F208200840917 /* ScanningViewController+DynamicUIProtocol.swift in Sources */,
+				0F0BFF0F2BBD80BB007CCF2D /* SubscriptionProposalView.swift in Sources */,
 				0FBCA99E2B3DA7A000149F38 /* MyFilesViewController.swift in Sources */,
 				0FAA0E012B45DE3D002FC0F9 /* MyFilesViewController+UISearchResultsUpdating.swift in Sources */,
 				0FAA0DFF2B45CBD5002FC0F9 /* UIViewController+DynamicUIProtocol.swift in Sources */,
@@ -712,13 +777,16 @@
 				0F3218562B52D75500840917 /* FontSizeCalculatorSourceProtocol.swift in Sources */,
 				0FAA0E052B46FFF6002FC0F9 /* MyFilesViewController+UICollectionViewDelegate.swift in Sources */,
 				0FB7DB012B3F1F2000985825 /* FileType.swift in Sources */,
+				0F0BFF092BBD7DD7007CCF2D /* IAPHelper.swift in Sources */,
 				0F60797C2B49A111008DD313 /* AccountInteractor.swift in Sources */,
+				0F0BFF122BBD8C4E007CCF2D /* SubscriptionProposalRouter.swift in Sources */,
 				0FB7DAF52B3F159900985825 /* FileProtocol.swift in Sources */,
 				0FB1CEB92B4DB60E005EDF0F /* Position.swift in Sources */,
 				0F4130B42B40C85900981698 /* MyFilesPresenter.swift in Sources */,
 				0FBCA99A2B3DA7A000149F38 /* AppDelegate.swift in Sources */,
 				0F3218602B532D6100840917 /* DocumentViewController+UINavigationItemRenameDelegate.swift in Sources */,
 				0F3218302B4EE1C700840917 /* VisionDocumentCameraRouter.swift in Sources */,
+				0F0BFF022BBD7C44007CCF2D /* SubscriptionManagerProtocol.swift in Sources */,
 				0F3218502B52D0B500840917 /* PDFMakerScanResultPage.swift in Sources */,
 				0F32185E2B52FF3B00840917 /* BinarySearchFitState.swift in Sources */,
 				0FA833FF2B58D0F300E04788 /* ApplicationState+DocumentScannerApplicationStateProtocol.swift in Sources */,

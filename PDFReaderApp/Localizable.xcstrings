@@ -273,6 +273,12 @@
         }
       }
     },
+    "PDF Document Scanner" : {
+
+    },
+    "Privacy policy here" : {
+
+    },
     "rename" : {
       "localizations" : {
         "en" : {
@@ -292,6 +298,9 @@
           }
         }
       }
+    },
+    "Scan PDF documents like a pro with PDF Document Scanner subscription." : {
+      "comment" : "The subscription proposal string."
     },
     "search" : {
       "localizations" : {
@@ -392,6 +401,9 @@
           }
         }
       }
+    },
+    "Terms of service here" : {
+
     },
     "toolsTitle" : {
       "extractionState" : "manual",

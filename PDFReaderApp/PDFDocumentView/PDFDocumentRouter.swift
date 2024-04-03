@@ -11,8 +11,12 @@ import UIKit
 class PDFDocumentRouter: FullScreenRouter {
     public var diskFile: DiskFile? = nil
     
-    init(applicationState: (DocumentViewerApplicationStateProtocol & FileManagerApplicationStateProtocol)) {
+    init(applicationState: (DocumentViewerApplicationStateProtocol &
+                            FileManagerApplicationStateProtocol &
+                            SubscriptionApplicationStateProtocol),
+         subscriptionProposalRouter: SubscriptionProposalRouter) {
         self.applicationState = applicationState
+        self.subscriptionProposalRouter = subscriptionProposalRouter
         
         super.init()
     }
@@ -21,10 +25,14 @@ class PDFDocumentRouter: FullScreenRouter {
         let interactor = PDFDocumentInteractor(applicationState: applicationState,
                                                diskFile: diskFile)
         let presenter = PDFDocumentPresenter(interactor: interactor)
-        let viewController = PDFDocumentViewController(presenter: presenter)
+        let viewController = PDFDocumentViewController(presenter: presenter,
+                                                       subscriptionProposalRouter: subscriptionProposalRouter)
         
         return fullScreenNavigationController(with: viewController)
     }
     
-    private let applicationState: (DocumentViewerApplicationStateProtocol & FileManagerApplicationStateProtocol)
+    private let applicationState: (DocumentViewerApplicationStateProtocol &
+                                   FileManagerApplicationStateProtocol &
+                                   SubscriptionApplicationStateProtocol)
+    let subscriptionProposalRouter: SubscriptionProposalRouter
 }

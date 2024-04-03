@@ -13,7 +13,8 @@ class FullScreenRouter: RouterProtocol {
         return UIViewController()
     }
     
-    public func fullScreenNavigationController(with viewController: UIViewController) -> UINavigationController {
+    public func fullScreenNavigationController(with viewController: UIViewController,
+                                               navigationBarHidden: Bool = false) -> UINavigationController {
         let nav = UINavigationController(rootViewController: viewController)
         nav.modalPresentationStyle = .fullScreen
         nav.isModalInPresentation = false
@@ -24,6 +25,9 @@ class FullScreenRouter: RouterProtocol {
         UINavigationBar.appearance().standardAppearance = navBarAppearance
         UINavigationBar.appearance().scrollEdgeAppearance = navBarAppearance
         nav.navigationBar.isTranslucent = false
+        
+        nav.setNavigationBarHidden(navigationBarHidden,
+                                   animated: false)
         
         return nav
     }

@@ -21,14 +21,20 @@ class ApplicationState: DynamicUINotifier {
     
     let documentCameraManager: DocumentCameraManagerProtocol
     
+    // MARK: - Subscription
+    
+    let subscriptionManager: SubscriptionManagerProtocol
+    
     // MARK: - Initializers
     
     init(fileStorage: FileStorageProtocol,
          positionKeeper: PositionKeeperProtocol,
-         documentCameraManager: DocumentCameraManagerProtocol) {
+         documentCameraManager: DocumentCameraManagerProtocol,
+         subscriptionManager: SubscriptionManagerProtocol) {
         self.fileStorage = fileStorage
         self.positionKeeper = positionKeeper
         self.documentCameraManager = documentCameraManager
+        self.subscriptionManager = subscriptionManager
         
         super.init()
     }

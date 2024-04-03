@@ -15,6 +15,8 @@ class DocumentViewController: UIViewController {
     var searchController = UISearchController(searchResultsController: nil)
     let searchResultsView = UIStackView(frame: .zero)
     
+    var subscriptionProposalRouter: SubscriptionProposalRouter?
+    
     // MARK: - Life Cycle
     
     override func viewDidLoad() {

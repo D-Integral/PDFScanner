@@ -9,10 +9,14 @@ import Foundation
 import UIKit
 
 class MyFilesRouter: RouterProtocol {
-    init(applicationState: (FileManagerApplicationStateProtocol & DynamicUINotifierProtocol),
-         pdfDocumentRouter: PDFDocumentRouter) {
+    init(applicationState: (FileManagerApplicationStateProtocol &
+                            DynamicUINotifierProtocol &
+                            SubscriptionApplicationStateProtocol),
+         pdfDocumentRouter: PDFDocumentRouter,
+         subscriptionProposalRouter: SubscriptionProposalRouter) {
         self.applicationState = applicationState
         self.pdfDocumentRouter = pdfDocumentRouter
+        self.subscriptionProposalRouter = subscriptionProposalRouter
     }
     
     func make() -> UIViewController {
@@ -23,9 +27,13 @@ class MyFilesRouter: RouterProtocol {
                                          title: String(localized: "myFilesViewControllerTitle"))
         
         return MyFilesViewController(presenter: presenter,
-                                     pdfDocumentRouter: pdfDocumentRouter)
+                                     pdfDocumentRouter: pdfDocumentRouter,
+                                     subscriptionProposalRouter: subscriptionProposalRouter)
     }
     
-    let applicationState: (FileManagerApplicationStateProtocol & DynamicUINotifierProtocol)
+    let applicationState: (FileManagerApplicationStateProtocol &
+                           DynamicUINotifierProtocol &
+                           SubscriptionApplicationStateProtocol)
     let pdfDocumentRouter: PDFDocumentRouter
+    let subscriptionProposalRouter: SubscriptionProposalRouter
 }
