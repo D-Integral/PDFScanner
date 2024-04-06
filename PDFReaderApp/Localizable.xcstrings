@@ -114,6 +114,9 @@
         }
       }
     },
+    "Dmytro Skorokhod is the owner of this application. You may scan and preview documents for free, but for sharing, saving, editing and/or signing you need a subscription. The devices compatible with the scanning feature: an iPhone or iPad running iOS 17 or later with an A12 Bionic processor or better (from late 2017)." : {
+
+    },
     "documentCameraNotSupported" : {
       "localizations" : {
         "en" : {
@@ -276,9 +279,6 @@
     "PDF Document Scanner" : {
 
     },
-    "Privacy policy here" : {
-
-    },
     "rename" : {
       "localizations" : {
         "en" : {
@@ -402,9 +402,6 @@
         }
       }
     },
-    "Terms of service here" : {
-
-    },
     "toolsTitle" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -439,6 +436,9 @@
           }
         }
       }
+    },
+    "We collect crash and usage data. Crash and usage reports are using to improve the app. For those purposes we use Firebase Analytics (a Google service)." : {
+
     }
   },
   "version" : "1.0"

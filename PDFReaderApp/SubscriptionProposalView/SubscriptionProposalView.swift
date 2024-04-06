@@ -34,10 +34,10 @@ struct SubscriptionProposalView: View {
         .storeButton(.visible, for: .restorePurchases, .policies, .cancellation)
         .subscriptionStorePolicyForegroundStyle(.white)
         .subscriptionStorePolicyDestination(for: .privacyPolicy) {
-            Text("Privacy policy here")
+            Text("We collect crash and usage data. Crash and usage reports are using to improve the app. For those purposes we use Firebase Analytics (a Google service).").padding(EdgeInsets(top: 15.0, leading: 15.0, bottom: 15.0, trailing: 15.0))
         }
         .subscriptionStorePolicyDestination(for: .termsOfService) {
-            Text("Terms of service here")
+            Text("Dmytro Skorokhod is the owner of this application. You may scan and preview documents for free, but for sharing, saving, editing and/or signing you need a subscription. The devices compatible with the scanning feature: an iPhone or iPad running iOS 17 or later with an A12 Bionic processor or better (from late 2017).").padding(EdgeInsets(top: 15.0, leading: 15.0, bottom: 15.0, trailing: 15.0))
         }
         .subscriptionStoreControlStyle(.prominentPicker)
     }
