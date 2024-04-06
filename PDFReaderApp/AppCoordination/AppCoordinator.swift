@@ -37,8 +37,7 @@ class AppCoordinator {
                                               subscriptionProposalRouter: subscriptionProposalRouter)
         
         homeTabBarController.viewControllers = [filesNavigationController(),
-                                                scanningNavigationController(),
-                                                accountNavigationController()]
+                                                scanningNavigationController()]
     }
     
     // MARK: Navigation controllers
@@ -66,11 +65,6 @@ class AppCoordinator {
                                     tabBarItem: scanningTabBarItem())
     }
     
-    func accountNavigationController() -> UINavigationController {
-        return navigationController(with: AccountRouter().make(),
-                                    tabBarItem: accountTabBarItem())
-    }
-    
     // MARK: Tab bar items
     
     func filesTabBarItem() -> UITabBarItem {
@@ -81,11 +75,6 @@ class AppCoordinator {
     func scanningTabBarItem() -> UITabBarItem {
         return tabBarItem(withTitle: String(localized: "scan"),
                           image: UIImage(systemName: "doc.viewfinder"))
-    }
-    
-    func accountTabBarItem() -> UITabBarItem {
-        return tabBarItem(withTitle: String(localized: "accountTabBarItemTitle"),
-                          image: UIImage(systemName: "person.crop.circle"))
     }
     
     func tabBarItem(withTitle title: String,

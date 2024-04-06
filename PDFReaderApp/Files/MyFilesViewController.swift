@@ -103,6 +103,17 @@ class MyFilesViewController: UIViewController {
         setupActivityView()
         
         setupConstraints()
+        
+        self.presenter?.checkIfSubscribed(subscribedCompletionHandler: {
+        }, notSubscribedCompletionHandler: {
+            DispatchQueue.main.async {
+                guard let subscriptionProposalViewController = self.subscriptionProposalRouter?.make() else { return }
+                
+                self.navigationController?.present(subscriptionProposalViewController,
+                                                   animated: true,
+                                                   completion: nil)
+            }
+        })
     }
     
     override func viewDidAppear(_ animated: Bool) {

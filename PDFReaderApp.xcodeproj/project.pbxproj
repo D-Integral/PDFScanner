@@ -58,9 +58,6 @@
 		0F4130CD2B4587E100981698 /* MyFilesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4130CC2B4587E100981698 /* MyFilesCollectionViewCell.swift */; };
 		0F4130D02B458B6800981698 /* PDFDocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4130CF2B458B6800981698 /* PDFDocumentViewController.swift */; };
 		0F60796E2B497A01008DD313 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 0F60796D2B497A01008DD313 /* FirebaseAuth */; };
-		0F60797A2B49A100008DD313 /* AccountPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6079792B49A100008DD313 /* AccountPresenter.swift */; };
-		0F60797C2B49A111008DD313 /* AccountInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F60797B2B49A111008DD313 /* AccountInteractor.swift */; };
-		0F60797E2B49A124008DD313 /* AccountRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F60797D2B49A124008DD313 /* AccountRouter.swift */; };
 		0F60798D2B49B31E008DD313 /* ScanningRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F60798C2B49B31E008DD313 /* ScanningRouter.swift */; };
 		0F60798F2B49B32D008DD313 /* ScanningPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F60798E2B49B32D008DD313 /* ScanningPresenter.swift */; };
 		0F6079912B49B33A008DD313 /* ScanningInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6079902B49B33A008DD313 /* ScanningInteractor.swift */; };
@@ -102,7 +99,6 @@
 		0FB1CEBB2B4DB736005EDF0F /* PositionKeeperError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB1CEBA2B4DB736005EDF0F /* PositionKeeperError.swift */; };
 		0FB7DAE62B3DF08000985825 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 0FB7DAE52B3DF08000985825 /* Localizable.xcstrings */; };
 		0FB7DAE82B3DF51B00985825 /* ScanningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB7DAE72B3DF51B00985825 /* ScanningViewController.swift */; };
-		0FB7DAEA2B3DF54100985825 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB7DAE92B3DF54100985825 /* AccountViewController.swift */; };
 		0FB7DAEC2B3E0A1600985825 /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB7DAEB2B3E0A1600985825 /* HomeTabBarController.swift */; };
 		0FB7DAF22B3F150E00985825 /* FileStorageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB7DAF12B3F150E00985825 /* FileStorageProtocol.swift */; };
 		0FB7DAF52B3F159900985825 /* FileProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB7DAF42B3F159900985825 /* FileProtocol.swift */; };
@@ -183,9 +179,6 @@
 		0F4130CA2B41BE0900981698 /* DocumentPickerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPickerManager.swift; sourceTree = "<group>"; };
 		0F4130CC2B4587E100981698 /* MyFilesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFilesCollectionViewCell.swift; sourceTree = "<group>"; };
 		0F4130CF2B458B6800981698 /* PDFDocumentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFDocumentViewController.swift; sourceTree = "<group>"; };
-		0F6079792B49A100008DD313 /* AccountPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountPresenter.swift; sourceTree = "<group>"; };
-		0F60797B2B49A111008DD313 /* AccountInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInteractor.swift; sourceTree = "<group>"; };
-		0F60797D2B49A124008DD313 /* AccountRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRouter.swift; sourceTree = "<group>"; };
 		0F60798C2B49B31E008DD313 /* ScanningRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanningRouter.swift; sourceTree = "<group>"; };
 		0F60798E2B49B32D008DD313 /* ScanningPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanningPresenter.swift; sourceTree = "<group>"; };
 		0F6079902B49B33A008DD313 /* ScanningInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanningInteractor.swift; sourceTree = "<group>"; };
@@ -226,7 +219,6 @@
 		0FB1CEBA2B4DB736005EDF0F /* PositionKeeperError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionKeeperError.swift; sourceTree = "<group>"; };
 		0FB7DAE52B3DF08000985825 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		0FB7DAE72B3DF51B00985825 /* ScanningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanningViewController.swift; sourceTree = "<group>"; };
-		0FB7DAE92B3DF54100985825 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		0FB7DAEB2B3E0A1600985825 /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
 		0FB7DAF12B3F150E00985825 /* FileStorageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileStorageProtocol.swift; sourceTree = "<group>"; };
 		0FB7DAF42B3F159900985825 /* FileProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileProtocol.swift; sourceTree = "<group>"; };
@@ -459,17 +451,6 @@
 			path = Files;
 			sourceTree = "<group>";
 		};
-		0FB7DAEE2B3F126300985825 /* Account */ = {
-			isa = PBXGroup;
-			children = (
-				0FB7DAE92B3DF54100985825 /* AccountViewController.swift */,
-				0F6079792B49A100008DD313 /* AccountPresenter.swift */,
-				0F60797B2B49A111008DD313 /* AccountInteractor.swift */,
-				0F60797D2B49A124008DD313 /* AccountRouter.swift */,
-			);
-			path = Account;
-			sourceTree = "<group>";
-		};
 		0FB7DAEF2B3F127800985825 /* Scanning */ = {
 			isa = PBXGroup;
 			children = (
@@ -544,7 +525,6 @@
 				0FB7DAF02B3F12A600985825 /* FileStorage */,
 				0F0BFEFE2BBD7BCE007CCF2D /* SubscriptionManager */,
 				0F0BFF102BBD8C0E007CCF2D /* SubscriptionProposalView */,
-				0FB7DAEE2B3F126300985825 /* Account */,
 				0FB7DAED2B3F124D00985825 /* Files */,
 				0FB7DAEF2B3F127800985825 /* Scanning */,
 				0F3218322B4F0DA400840917 /* DocumentCamera */,
@@ -707,9 +687,7 @@
 				0FB7DAE82B3DF51B00985825 /* ScanningViewController.swift in Sources */,
 				0FB7DAFF2B3F1C8900985825 /* AppCoordinator.swift in Sources */,
 				0F32184E2B52CC6E00840917 /* PDFMakerScanResultPageProtocol.swift in Sources */,
-				0F60797E2B49A124008DD313 /* AccountRouter.swift in Sources */,
 				0FAA6E882B4C6F050009D0A3 /* PDFDocumentInteractor.swift in Sources */,
-				0FB7DAEA2B3DF54100985825 /* AccountViewController.swift in Sources */,
 				0F4130C52B41B99A00981698 /* PDFDocumentImportManager.swift in Sources */,
 				0FA833FB2B58D06A00E04788 /* ApplicationState+FileManagerApplicationStateProtocol.swift in Sources */,
 				0F32184A2B52B98800840917 /* PDFMakerSourcePageProtocol.swift in Sources */,
@@ -750,7 +728,6 @@
 				0F3218382B4F0E3C00840917 /* DocumentCameraManager+VNDocumentCameraViewControllerDelegate.swift in Sources */,
 				0FA834032B58DD8100E04788 /* ApplicationState+DocumentViewerApplicationStateProtocol.swift in Sources */,
 				0F0BFF0B2BBD7E4F007CCF2D /* Subscription.swift in Sources */,
-				0F60797A2B49A100008DD313 /* AccountPresenter.swift in Sources */,
 				0FAA0DF52B45C0D5002FC0F9 /* Weak.swift in Sources */,
 				0FB1CEAF2B4DB46C005EDF0F /* PositionKeeperProtocol.swift in Sources */,
 				0FB1CEB52B4DB562005EDF0F /* PositionsList.swift in Sources */,
@@ -778,7 +755,6 @@
 				0FAA0E052B46FFF6002FC0F9 /* MyFilesViewController+UICollectionViewDelegate.swift in Sources */,
 				0FB7DB012B3F1F2000985825 /* FileType.swift in Sources */,
 				0F0BFF092BBD7DD7007CCF2D /* IAPHelper.swift in Sources */,
-				0F60797C2B49A111008DD313 /* AccountInteractor.swift in Sources */,
 				0F0BFF122BBD8C4E007CCF2D /* SubscriptionProposalRouter.swift in Sources */,
 				0FB7DAF52B3F159900985825 /* FileProtocol.swift in Sources */,
 				0FB1CEB92B4DB60E005EDF0F /* Position.swift in Sources */,
@@ -961,6 +937,7 @@
 				DEVELOPMENT_TEAM = EYWEP6YJP9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PDFReaderApp/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "The app needs camera access to scan documents.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
@@ -989,6 +966,7 @@
 				DEVELOPMENT_TEAM = EYWEP6YJP9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PDFReaderApp/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "The app needs camera access to scan documents.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
