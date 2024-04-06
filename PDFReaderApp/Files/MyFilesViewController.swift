@@ -291,7 +291,14 @@ class MyFilesViewController: UIViewController {
     }
     
     private func presentActionSheet(forFile file: DiskFile) {
-        let alertController = UIAlertController(title: "", message: "", preferredStyle: .actionSheet)
+        var alertStyle = UIAlertController.Style.actionSheet
+        
+        if (UIDevice.current.userInterfaceIdiom == .pad) {
+            alertStyle = UIAlertController.Style.alert
+        }
+        
+        let alertController = UIAlertController(title: "", message: "", preferredStyle: alertStyle)
+        
         let pdfDocumentDataUrl = file.documentDataUrl
         
         let renameAction = UIAlertAction(title: String(localized: "rename"),
