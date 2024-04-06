@@ -229,7 +229,7 @@
 		0FB7DB062B3F2A2F00985825 /* DiskFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskFile.swift; sourceTree = "<group>"; };
 		0FB7DB082B3F2B9D00985825 /* DiskFilesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskFilesList.swift; sourceTree = "<group>"; };
 		0FB7DB0A2B3F30F600985825 /* DiskFileStorageError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskFileStorageError.swift; sourceTree = "<group>"; };
-		0FBCA9962B3DA7A000149F38 /* PDFReaderApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PDFReaderApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FBCA9962B3DA7A000149F38 /* PDF Scanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PDF Scanner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FBCA9992B3DA7A000149F38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FBCA99B2B3DA7A000149F38 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		0FBCA99D2B3DA7A000149F38 /* MyFilesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFilesViewController.swift; sourceTree = "<group>"; };
@@ -509,7 +509,7 @@
 		0FBCA9972B3DA7A000149F38 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0FBCA9962B3DA7A000149F38 /* PDFReaderApp.app */,
+				0FBCA9962B3DA7A000149F38 /* PDF Scanner.app */,
 				0FBCA9AC2B3DA7A300149F38 /* PDFReaderAppTests.xctest */,
 			);
 			name = Products;
@@ -580,7 +580,7 @@
 				0F60796D2B497A01008DD313 /* FirebaseAuth */,
 			);
 			productName = PDFReaderApp;
-			productReference = 0FBCA9962B3DA7A000149F38 /* PDFReaderApp.app */;
+			productReference = 0FBCA9962B3DA7A000149F38 /* PDF Scanner.app */;
 			productType = "com.apple.product-type.application";
 		};
 		0FBCA9AB2B3DA7A300149F38 /* PDFReaderAppTests */ = {
@@ -937,6 +937,7 @@
 				DEVELOPMENT_TEAM = EYWEP6YJP9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PDFReaderApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "PDF Scanner";
 				INFOPLIST_KEY_NSCameraUsageDescription = "The app needs camera access to scan documents.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -949,7 +950,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dintegralas.PDFReaderApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "PDF Scanner";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -966,6 +967,7 @@
 				DEVELOPMENT_TEAM = EYWEP6YJP9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PDFReaderApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "PDF Scanner";
 				INFOPLIST_KEY_NSCameraUsageDescription = "The app needs camera access to scan documents.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -978,7 +980,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dintegralas.PDFReaderApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "PDF Scanner";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
