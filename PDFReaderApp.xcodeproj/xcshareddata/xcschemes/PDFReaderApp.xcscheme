@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0FBCA9952B3DA7A000149F38"
-               BuildableName = "PDFReaderApp.app"
+               BuildableName = "PDF Scanner.app"
                BlueprintName = "PDFReaderApp"
                ReferencedContainer = "container:PDFReaderApp.xcodeproj">
             </BuildableReference>
@@ -72,7 +72,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0FBCA9952B3DA7A000149F38"
-            BuildableName = "PDFReaderApp.app"
+            BuildableName = "PDF Scanner.app"
             BlueprintName = "PDFReaderApp"
             ReferencedContainer = "container:PDFReaderApp.xcodeproj">
          </BuildableReference>
@@ -92,7 +92,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0FBCA9952B3DA7A000149F38"
-            BuildableName = "PDFReaderApp.app"
+            BuildableName = "PDF Scanner.app"
             BlueprintName = "PDFReaderApp"
             ReferencedContainer = "container:PDFReaderApp.xcodeproj">
          </BuildableReference>

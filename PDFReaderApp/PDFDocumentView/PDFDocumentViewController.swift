@@ -155,22 +155,13 @@ final class PDFDocumentViewController: DocumentViewController {
     // MARK: - Share
     
     public override func share() {
-        presenter?.checkIfSubscribed(subscribedCompletionHandler: { [weak self] in
-            guard let self = self,
-                  let dataFileUrl = self.presenter?.dataFileUrl else { return }
-            
-            let activityViewController = UIActivityViewController(activityItems: [dataFileUrl],
-                                                                  applicationActivities: nil)
-            self.present(activityViewController,
-                         animated: true,
-                         completion: nil)
-        }, notSubscribedCompletionHandler: { [weak self] in
-            guard let self = self,
-                  let subscriptionProposalViewController = subscriptionProposalRouter?.make() else { return }
-            
-            self.navigationController?.present(subscriptionProposalViewController,
-                                               animated: true)
-        })
+        guard let dataFileUrl = self.presenter?.dataFileUrl else { return }
+        
+        let activityViewController = UIActivityViewController(activityItems: [dataFileUrl],
+                                                              applicationActivities: nil)
+        self.present(activityViewController,
+                     animated: true,
+                     completion: nil)
     }
     
     // MARK: - Delete

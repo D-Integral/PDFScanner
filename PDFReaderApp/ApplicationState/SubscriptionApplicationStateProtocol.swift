@@ -8,8 +8,8 @@
 import Foundation
 
 protocol SubscriptionApplicationStateProtocol {
-    var productIdentifiers: [String] { get }
-    
-    func checkIfSubscribed(subscribedCompletionHandler: () -> (),
-                           notSubscribedCompletionHandler: () -> ())
+//    var productIdentifiers: [String] { get }
+//    
+//    func checkIfSubscribed(subscribedCompletionHandler: () -> (),
+//                           notSubscribedCompletionHandler: () -> ())
 }

@@ -17,9 +17,11 @@ class SubscriptionProposalRouter: RouterProtocol {
     }
     
     func make() -> UIViewController {
-        let subscriptionProposalView = SubscriptionProposalView(state: state)
-        let hostingController = UIHostingController(rootView: subscriptionProposalView)
+//        let subscriptionProposalView = SubscriptionProposalView(state: state)
+//        let hostingController = UIHostingController(rootView: subscriptionProposalView)
+//        
+//        return hostingController
         
-        return hostingController
+        return UIViewController()
     }
 }

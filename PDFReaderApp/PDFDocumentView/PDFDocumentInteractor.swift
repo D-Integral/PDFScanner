@@ -114,12 +114,12 @@ class PDFDocumentInteractor: InteractorProtocol {
     
     // MARK: - Subscription
     
-    func checkIfSubscribed(subscribedCompletionHandler: () -> (),
-                           notSubscribedCompletionHandler: () -> ()) {
-        applicationState.checkIfSubscribed {
-            subscribedCompletionHandler()
-        } notSubscribedCompletionHandler: {
-            notSubscribedCompletionHandler()
-        }
-    }
+//    func checkIfSubscribed(subscribedCompletionHandler: () -> (),
+//                           notSubscribedCompletionHandler: () -> ()) {
+//        applicationState.checkIfSubscribed {
+//            subscribedCompletionHandler()
+//        } notSubscribedCompletionHandler: {
+//            notSubscribedCompletionHandler()
+//        }
+//    }
 }

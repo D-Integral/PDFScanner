@@ -103,17 +103,6 @@ class MyFilesViewController: UIViewController {
         setupActivityView()
         
         setupConstraints()
-        
-        self.presenter?.checkIfSubscribed(subscribedCompletionHandler: {
-        }, notSubscribedCompletionHandler: {
-            DispatchQueue.main.async {
-                guard let subscriptionProposalViewController = self.subscriptionProposalRouter?.make() else { return }
-                
-                self.navigationController?.present(subscriptionProposalViewController,
-                                                   animated: true,
-                                                   completion: nil)
-            }
-        })
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -310,25 +299,13 @@ class MyFilesViewController: UIViewController {
         let shareAction = UIAlertAction(title: String(localized: "share"),
                                         style: .default,
                                         handler: { [weak self] (action: UIAlertAction) -> Void in
-                guard let self = self, let pdfDocumentDataUrl = pdfDocumentDataUrl else { return }
-                
-                self.presenter?.checkIfSubscribed(subscribedCompletionHandler: {
-                    DispatchQueue.main.async {
-                        let activityViewController = UIActivityViewController(activityItems: [pdfDocumentDataUrl],
-                                                                              applicationActivities: nil)
-                        self.present(activityViewController,
-                                     animated: true,
-                                     completion: nil)
-                    }
-                }, notSubscribedCompletionHandler: {
-                    DispatchQueue.main.async {
-                        guard let subscriptionProposalViewController = self.subscriptionProposalRouter?.make() else { return }
-                        
-                        self.navigationController?.present(subscriptionProposalViewController,
-                                                           animated: true,
-                                                           completion: nil)
-                    }
-                })
+            guard let self = self, let pdfDocumentDataUrl = pdfDocumentDataUrl else { return }
+            
+            let activityViewController = UIActivityViewController(activityItems: [pdfDocumentDataUrl],
+                                                                  applicationActivities: nil)
+            self.present(activityViewController,
+                         animated: true,
+                         completion: nil)
         })
         
         let deleteAction = UIAlertAction(title: String(localized: "delete"),

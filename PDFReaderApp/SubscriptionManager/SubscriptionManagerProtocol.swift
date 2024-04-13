@@ -6,12 +6,12 @@
 //
 
 import Foundation
-import UIKit
-
+//import UIKit
+//
 protocol SubscriptionManagerProtocol {
-    func productIdentifiers() -> [String]
-    
-    func requestProducts(_ completionHandler: @escaping () -> ())
-    
-    func subscriptionPurchased() -> Bool
+//    func productIdentifiers() -> [String]
+//    
+//    func requestProducts(_ completionHandler: @escaping () -> ())
+//    
+//    func subscriptionPurchased() -> Bool
 }
