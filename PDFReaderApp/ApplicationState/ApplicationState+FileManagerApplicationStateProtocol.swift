@@ -6,18 +6,19 @@
 //
 
 import Foundation
+import NefertitiFile
 
 extension ApplicationState: FileManagerApplicationStateProtocol {
     
-    public var files: [any FileProtocol]? {
+    public var files: [any NefertitiFileProtocol]? {
         return fileStorage.files()
     }
     
-    func file(withId fileId: UUID) -> (any FileProtocol)? {
+    func file(withId fileId: UUID) -> (any NefertitiFileProtocol)? {
         return fileStorage.file(withId: fileId)
     }
     
-    public func save(_ file: any FileProtocol) throws {
+    public func save(_ file: any NefertitiFileProtocol) throws {
         try fileStorage.save(file)
     }
     

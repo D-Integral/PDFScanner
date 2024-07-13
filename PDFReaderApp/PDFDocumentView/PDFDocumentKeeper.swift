@@ -7,6 +7,7 @@
 
 import Foundation
 import PDFKit
+import NefertitiFile
 
 class PDFDocumentKeeper: DynamicUINotifier {
     let pdfDocument: PDFDocument?
@@ -14,7 +15,7 @@ class PDFDocumentKeeper: DynamicUINotifier {
     var searchResults: [PDFSelection] = []
     var searchResultsCount: Int = 0
     
-    init(diskFile: DiskFile?) {
+    init(diskFile: NefertitiFile?) {
         if (.pdfDocument == diskFile?.fileType),
            let pdfDocumentData = diskFile?.documentData {
             self.pdfDocument = PDFDocument(data: pdfDocumentData)

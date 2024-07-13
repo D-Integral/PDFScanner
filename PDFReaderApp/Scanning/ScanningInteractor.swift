@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import NefertitiFile
 
 class ScanningInteractor: InteractorProtocol {
     
@@ -15,7 +16,7 @@ class ScanningInteractor: InteractorProtocol {
         return applicationState.isDocumentCameraSupported
     }
     
-    public var lastScannedFile: (any FileProtocol)? {
+    public var lastScannedFile: (any NefertitiFileProtocol)? {
         return applicationState.lastScannedFile
     }
     

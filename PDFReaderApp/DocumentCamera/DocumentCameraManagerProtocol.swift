@@ -6,11 +6,12 @@
 //
 
 import Foundation
+import NefertitiFile
 
 protocol DocumentCameraManagerProtocol: DynamicUINotifierProtocol {
     var isDocumentCameraSupported: Bool { get }
     
-    var lastScannedFile: (any FileProtocol)? { get set }
+    var lastScannedFile: (any NefertitiFileProtocol)? { get set }
     
     func documentCameraRouter() -> RouterProtocol
 }

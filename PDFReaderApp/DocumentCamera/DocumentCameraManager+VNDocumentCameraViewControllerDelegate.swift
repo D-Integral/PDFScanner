@@ -7,6 +7,7 @@
 
 import Foundation
 import VisionKit
+import NefertitiFile
 
 extension VisionDocumentCameraManager: VNDocumentCameraViewControllerDelegate {
     func documentCameraViewController(_ controller: VNDocumentCameraViewController,
@@ -26,7 +27,7 @@ extension VisionDocumentCameraManager: VNDocumentCameraViewControllerDelegate {
                 return
             }
             
-            if let file = file as? DiskFile {
+            if let file = file as? NefertitiFile {
                 self?.lastScannedFile = file
                 
                 do {

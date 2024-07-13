@@ -6,20 +6,21 @@
 //
 
 import Foundation
+import NefertitiFile
 
 struct DiskFilesList: FilesListProtocol {
-    init(diskFiles: [UUID : DiskFile]) {
+    init(diskFiles: [UUID : NefertitiFile]) {
         self.diskFiles = diskFiles
     }
     
-    var files: [UUID: any FileProtocol] {
+    var files: [UUID: any NefertitiFileProtocol] {
         get {
             return diskFiles
         }
         set {
-            diskFiles = newValue as? [UUID: DiskFile] ?? [UUID: DiskFile]()
+            diskFiles = newValue as? [UUID: NefertitiFile] ?? [UUID: NefertitiFile]()
         }
     }
     
-    private var diskFiles: [UUID: DiskFile]
+    private var diskFiles: [UUID: NefertitiFile]
 }

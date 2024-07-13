@@ -7,9 +7,10 @@
 
 import Foundation
 import UIKit
+import NefertitiFile
 
 class PDFDocumentRouter: FullScreenRouter {
-    public var diskFile: DiskFile? = nil
+    public var diskFile: NefertitiFile? = nil
     
     init(applicationState: (DocumentViewerApplicationStateProtocol &
                             FileManagerApplicationStateProtocol &

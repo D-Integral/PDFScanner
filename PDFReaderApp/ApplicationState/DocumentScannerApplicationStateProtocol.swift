@@ -6,10 +6,11 @@
 //
 
 import Foundation
+import NefertitiFile
 
 protocol DocumentScannerApplicationStateProtocol {
     var isDocumentCameraSupported: Bool { get }
-    var lastScannedFile: (any FileProtocol)? { get }
+    var lastScannedFile: (any NefertitiFileProtocol)? { get }
     
     var documentCameraRouter: RouterProtocol { get }
 }

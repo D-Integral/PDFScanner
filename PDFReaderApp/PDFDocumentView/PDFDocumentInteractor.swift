@@ -7,13 +7,14 @@
 
 import Foundation
 import PDFKit
+import NefertitiFile
 
 class PDFDocumentInteractor: InteractorProtocol {
     private let applicationState: (DocumentViewerApplicationStateProtocol &
                                    FileManagerApplicationStateProtocol &
                                    SubscriptionApplicationStateProtocol)
     private let pdfDocumentKeeper: PDFDocumentKeeper?
-    private var diskFile: DiskFile?
+    private var diskFile: NefertitiFile?
     
     var pdfDocument: PDFDocument? {
         return pdfDocumentKeeper?.pdfDocument
@@ -48,7 +49,7 @@ class PDFDocumentInteractor: InteractorProtocol {
     init(applicationState: (DocumentViewerApplicationStateProtocol &
                             FileManagerApplicationStateProtocol &
                             SubscriptionApplicationStateProtocol),
-         diskFile: DiskFile?) {
+         diskFile: NefertitiFile?) {
         self.applicationState = applicationState
         self.pdfDocumentKeeper = PDFDocumentKeeper(diskFile: diskFile)
         self.diskFile = diskFile
@@ -59,7 +60,7 @@ class PDFDocumentInteractor: InteractorProtocol {
         
         applicationState.rename(fileId, to: newName)
         
-        diskFile = applicationState.file(withId: fileId) as? DiskFile
+        diskFile = applicationState.file(withId: fileId) as? NefertitiFile
     }
     
     public func deleteFile() {

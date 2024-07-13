@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import NefertitiFile
 
 class FileInfoView: UIView {
     
@@ -52,7 +53,7 @@ class FileInfoView: UIView {
         setup()
     }
     
-    func update(withFile file: DiskFile?) {
+    func update(withFile file: NefertitiFile?) {
         guard let file = file else {
             thumbnail = nil
             documentTitleLabel.text = nil

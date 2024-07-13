@@ -7,6 +7,7 @@
 
 import UIKit
 import VisionKit
+import NefertitiFile
 
 class ScanningViewController: UIViewController {
     
@@ -67,7 +68,7 @@ class ScanningViewController: UIViewController {
     }
     
     func showJustScannedFileIfExists() {
-        if let lastScannedFile = presenter?.lastScannedFile as? DiskFile {
+        if let lastScannedFile = presenter?.lastScannedFile as? NefertitiFile {
             self.pdfDocumentRouter?.diskFile = lastScannedFile
             
             guard let pdfDocumentViewController = pdfDocumentRouter?.make() else { return }

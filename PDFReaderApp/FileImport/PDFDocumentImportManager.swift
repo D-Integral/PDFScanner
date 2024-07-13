@@ -8,11 +8,12 @@
 import Foundation
 import UIKit
 import PDFKit
+import NefertitiFile
 
 final class PDFDocumentImportManager: DocumentImportManager {
     override func documentFile(from fileUrl: URL,
                                thumbnailSize: CGSize,
-                               completionHandler: @escaping ((any FileProtocol)?,
+                               completionHandler: @escaping ((any NefertitiFileProtocol)?,
                                                              DocumentImportError?) -> ()) {
         DispatchQueue.global(qos: .userInitiated).async {
             guard let pdfDocument = PDFDocument(url: fileUrl) else {
@@ -36,12 +37,12 @@ final class PDFDocumentImportManager: DocumentImportManager {
             
             let fileName = fileUrl.deletingPathExtension().lastPathComponent
             
-            let file = DiskFile(title: fileName,
-                                documentData: fileData,
-                                thumbnailData: thumbnailData,
-                                createdDate: createdDate,
-                                modifiedDate: modifiedDate,
-                                importedDate: importDate)
+            let file = NefertitiFile(title: fileName,
+                                     documentData: fileData,
+                                     thumbnailData: thumbnailData,
+                                     createdDate: createdDate,
+                                     modifiedDate: modifiedDate,
+                                     importedDate: importDate)
             
             completionHandler(file, nil)
         }

@@ -27,24 +27,9 @@
 		0F32183A2B4F0E8800840917 /* DocumentPickerManager+UIDocumentPickerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3218392B4F0E8800840917 /* DocumentPickerManager+UIDocumentPickerDelegate.swift */; };
 		0F32183C2B4F11F800840917 /* DynamicUINotifierProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F32183B2B4F11F800840917 /* DynamicUINotifierProtocol.swift */; };
 		0F32183E2B4F208200840917 /* ScanningViewController+DynamicUIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F32183D2B4F208200840917 /* ScanningViewController+DynamicUIProtocol.swift */; };
-		0F3218402B52B0CF00840917 /* VisionSearchablePDFMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F32183F2B52B0CF00840917 /* VisionSearchablePDFMaker.swift */; };
-		0F3218422B52B10C00840917 /* PDFMakerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3218412B52B10C00840917 /* PDFMakerProtocol.swift */; };
-		0F3218442B52B5D300840917 /* RecognizedTextProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3218432B52B5D300840917 /* RecognizedTextProtocol.swift */; };
-		0F3218462B52B5E500840917 /* VisionRecognizedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3218452B52B5E500840917 /* VisionRecognizedText.swift */; };
-		0F3218482B52B74300840917 /* PDFMakerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3218472B52B74300840917 /* PDFMakerError.swift */; };
-		0F32184A2B52B98800840917 /* PDFMakerSourcePageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3218492B52B98800840917 /* PDFMakerSourcePageProtocol.swift */; };
-		0F32184C2B52B9EA00840917 /* PDFMakerSourcePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F32184B2B52B9EA00840917 /* PDFMakerSourcePage.swift */; };
-		0F32184E2B52CC6E00840917 /* PDFMakerScanResultPageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F32184D2B52CC6E00840917 /* PDFMakerScanResultPageProtocol.swift */; };
-		0F3218502B52D0B500840917 /* PDFMakerScanResultPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F32184F2B52D0B500840917 /* PDFMakerScanResultPage.swift */; };
-		0F3218522B52D3E800840917 /* FontSizeCalculatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3218512B52D3E800840917 /* FontSizeCalculatorProtocol.swift */; };
-		0F3218542B52D47400840917 /* FontSizeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3218532B52D47400840917 /* FontSizeCalculator.swift */; };
-		0F3218562B52D75500840917 /* FontSizeCalculatorSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3218552B52D75500840917 /* FontSizeCalculatorSourceProtocol.swift */; };
-		0F3218582B52D87200840917 /* FontSizeCalculatorSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3218572B52D87200840917 /* FontSizeCalculatorSource.swift */; };
-		0F32185A2B52F11D00840917 /* FontSizeRangeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3218592B52F11D00840917 /* FontSizeRangeProtocol.swift */; };
-		0F32185C2B52F15800840917 /* FontSizeRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F32185B2B52F15800840917 /* FontSizeRange.swift */; };
-		0F32185E2B52FF3B00840917 /* BinarySearchFitState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F32185D2B52FF3B00840917 /* BinarySearchFitState.swift */; };
 		0F3218602B532D6100840917 /* DocumentViewController+UINavigationItemRenameDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F32185F2B532D6000840917 /* DocumentViewController+UINavigationItemRenameDelegate.swift */; };
 		0F3218622B54098B00840917 /* PDFDocumentExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3218612B54098B00840917 /* PDFDocumentExtensions.swift */; };
+		0F35E1432C42E7EC002F5E44 /* Nefertiti in Frameworks */ = {isa = PBXBuildFile; productRef = 0F35E1422C42E7EC002F5E44 /* Nefertiti */; };
 		0F4130B42B40C85900981698 /* MyFilesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4130B32B40C85900981698 /* MyFilesPresenter.swift */; };
 		0F4130B62B40C86C00981698 /* MyFilesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4130B52B40C86C00981698 /* MyFilesInteractor.swift */; };
 		0F4130B82B40C9F800981698 /* PresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4130B72B40C9F800981698 /* PresenterProtocol.swift */; };
@@ -58,6 +43,7 @@
 		0F4130CB2B41BE0900981698 /* DocumentPickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4130CA2B41BE0900981698 /* DocumentPickerManager.swift */; };
 		0F4130CD2B4587E100981698 /* MyFilesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4130CC2B4587E100981698 /* MyFilesCollectionViewCell.swift */; };
 		0F4130D02B458B6800981698 /* PDFDocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4130CF2B458B6800981698 /* PDFDocumentViewController.swift */; };
+		0F4D1BC52C42E439006DAA5B /* NefertitiFile in Frameworks */ = {isa = PBXBuildFile; productRef = 0F4D1BC42C42E439006DAA5B /* NefertitiFile */; };
 		0F60796E2B497A01008DD313 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 0F60796D2B497A01008DD313 /* FirebaseAuth */; };
 		0F60798D2B49B31E008DD313 /* ScanningRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F60798C2B49B31E008DD313 /* ScanningRouter.swift */; };
 		0F60798F2B49B32D008DD313 /* ScanningPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F60798E2B49B32D008DD313 /* ScanningPresenter.swift */; };
@@ -102,12 +88,9 @@
 		0FB7DAE82B3DF51B00985825 /* ScanningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB7DAE72B3DF51B00985825 /* ScanningViewController.swift */; };
 		0FB7DAEC2B3E0A1600985825 /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB7DAEB2B3E0A1600985825 /* HomeTabBarController.swift */; };
 		0FB7DAF22B3F150E00985825 /* FileStorageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB7DAF12B3F150E00985825 /* FileStorageProtocol.swift */; };
-		0FB7DAF52B3F159900985825 /* FileProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB7DAF42B3F159900985825 /* FileProtocol.swift */; };
 		0FB7DAF92B3F16B400985825 /* DiskFileStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB7DAF82B3F16B400985825 /* DiskFileStorage.swift */; };
 		0FB7DAFB2B3F1A6F00985825 /* FilesListProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB7DAFA2B3F1A6F00985825 /* FilesListProtocol.swift */; };
 		0FB7DAFF2B3F1C8900985825 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB7DAFE2B3F1C8900985825 /* AppCoordinator.swift */; };
-		0FB7DB012B3F1F2000985825 /* FileType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB7DB002B3F1F2000985825 /* FileType.swift */; };
-		0FB7DB072B3F2A2F00985825 /* DiskFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB7DB062B3F2A2F00985825 /* DiskFile.swift */; };
 		0FB7DB092B3F2B9D00985825 /* DiskFilesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB7DB082B3F2B9D00985825 /* DiskFilesList.swift */; };
 		0FB7DB0B2B3F30F600985825 /* DiskFileStorageError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB7DB0A2B3F30F600985825 /* DiskFileStorageError.swift */; };
 		0FBCA99A2B3DA7A000149F38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBCA9992B3DA7A000149F38 /* AppDelegate.swift */; };
@@ -149,22 +132,6 @@
 		0F3218392B4F0E8800840917 /* DocumentPickerManager+UIDocumentPickerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DocumentPickerManager+UIDocumentPickerDelegate.swift"; sourceTree = "<group>"; };
 		0F32183B2B4F11F800840917 /* DynamicUINotifierProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicUINotifierProtocol.swift; sourceTree = "<group>"; };
 		0F32183D2B4F208200840917 /* ScanningViewController+DynamicUIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ScanningViewController+DynamicUIProtocol.swift"; sourceTree = "<group>"; };
-		0F32183F2B52B0CF00840917 /* VisionSearchablePDFMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionSearchablePDFMaker.swift; sourceTree = "<group>"; };
-		0F3218412B52B10C00840917 /* PDFMakerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFMakerProtocol.swift; sourceTree = "<group>"; };
-		0F3218432B52B5D300840917 /* RecognizedTextProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognizedTextProtocol.swift; sourceTree = "<group>"; };
-		0F3218452B52B5E500840917 /* VisionRecognizedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionRecognizedText.swift; sourceTree = "<group>"; };
-		0F3218472B52B74300840917 /* PDFMakerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFMakerError.swift; sourceTree = "<group>"; };
-		0F3218492B52B98800840917 /* PDFMakerSourcePageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFMakerSourcePageProtocol.swift; sourceTree = "<group>"; };
-		0F32184B2B52B9EA00840917 /* PDFMakerSourcePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFMakerSourcePage.swift; sourceTree = "<group>"; };
-		0F32184D2B52CC6E00840917 /* PDFMakerScanResultPageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFMakerScanResultPageProtocol.swift; sourceTree = "<group>"; };
-		0F32184F2B52D0B500840917 /* PDFMakerScanResultPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFMakerScanResultPage.swift; sourceTree = "<group>"; };
-		0F3218512B52D3E800840917 /* FontSizeCalculatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSizeCalculatorProtocol.swift; sourceTree = "<group>"; };
-		0F3218532B52D47400840917 /* FontSizeCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSizeCalculator.swift; sourceTree = "<group>"; };
-		0F3218552B52D75500840917 /* FontSizeCalculatorSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSizeCalculatorSourceProtocol.swift; sourceTree = "<group>"; };
-		0F3218572B52D87200840917 /* FontSizeCalculatorSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSizeCalculatorSource.swift; sourceTree = "<group>"; };
-		0F3218592B52F11D00840917 /* FontSizeRangeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSizeRangeProtocol.swift; sourceTree = "<group>"; };
-		0F32185B2B52F15800840917 /* FontSizeRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSizeRange.swift; sourceTree = "<group>"; };
-		0F32185D2B52FF3B00840917 /* BinarySearchFitState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarySearchFitState.swift; sourceTree = "<group>"; };
 		0F32185F2B532D6000840917 /* DocumentViewController+UINavigationItemRenameDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DocumentViewController+UINavigationItemRenameDelegate.swift"; sourceTree = "<group>"; };
 		0F3218612B54098B00840917 /* PDFDocumentExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFDocumentExtensions.swift; sourceTree = "<group>"; };
 		0F4130B32B40C85900981698 /* MyFilesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFilesPresenter.swift; sourceTree = "<group>"; };
@@ -222,12 +189,9 @@
 		0FB7DAE72B3DF51B00985825 /* ScanningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanningViewController.swift; sourceTree = "<group>"; };
 		0FB7DAEB2B3E0A1600985825 /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
 		0FB7DAF12B3F150E00985825 /* FileStorageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileStorageProtocol.swift; sourceTree = "<group>"; };
-		0FB7DAF42B3F159900985825 /* FileProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileProtocol.swift; sourceTree = "<group>"; };
 		0FB7DAF82B3F16B400985825 /* DiskFileStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskFileStorage.swift; sourceTree = "<group>"; };
 		0FB7DAFA2B3F1A6F00985825 /* FilesListProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesListProtocol.swift; sourceTree = "<group>"; };
 		0FB7DAFE2B3F1C8900985825 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
-		0FB7DB002B3F1F2000985825 /* FileType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileType.swift; sourceTree = "<group>"; };
-		0FB7DB062B3F2A2F00985825 /* DiskFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskFile.swift; sourceTree = "<group>"; };
 		0FB7DB082B3F2B9D00985825 /* DiskFilesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskFilesList.swift; sourceTree = "<group>"; };
 		0FB7DB0A2B3F30F600985825 /* DiskFileStorageError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskFileStorageError.swift; sourceTree = "<group>"; };
 		0FBCA9962B3DA7A000149F38 /* PDF Scanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PDF Scanner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -248,7 +212,9 @@
 			files = (
 				0F17AB492BCEBC1000749AA6 /* FirebaseCrashlytics in Frameworks */,
 				0F60796E2B497A01008DD313 /* FirebaseAuth in Frameworks */,
+				0F35E1432C42E7EC002F5E44 /* Nefertiti in Frameworks */,
 				0F0BFF052BBD7D8F007CCF2D /* StoreKit.framework in Frameworks */,
+				0F4D1BC52C42E439006DAA5B /* NefertitiFile in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,29 +255,6 @@
 				0F0BFF112BBD8C4E007CCF2D /* SubscriptionProposalRouter.swift */,
 			);
 			path = SubscriptionProposalView;
-			sourceTree = "<group>";
-		};
-		0F3218312B4EE6C100840917 /* SearchablePDFMaker */ = {
-			isa = PBXGroup;
-			children = (
-				0F32183F2B52B0CF00840917 /* VisionSearchablePDFMaker.swift */,
-				0F3218452B52B5E500840917 /* VisionRecognizedText.swift */,
-				0F32184B2B52B9EA00840917 /* PDFMakerSourcePage.swift */,
-				0F32184F2B52D0B500840917 /* PDFMakerScanResultPage.swift */,
-				0F3218532B52D47400840917 /* FontSizeCalculator.swift */,
-				0F3218572B52D87200840917 /* FontSizeCalculatorSource.swift */,
-				0F32185B2B52F15800840917 /* FontSizeRange.swift */,
-				0F3218432B52B5D300840917 /* RecognizedTextProtocol.swift */,
-				0F32184D2B52CC6E00840917 /* PDFMakerScanResultPageProtocol.swift */,
-				0F3218412B52B10C00840917 /* PDFMakerProtocol.swift */,
-				0F3218492B52B98800840917 /* PDFMakerSourcePageProtocol.swift */,
-				0F3218512B52D3E800840917 /* FontSizeCalculatorProtocol.swift */,
-				0F3218552B52D75500840917 /* FontSizeCalculatorSourceProtocol.swift */,
-				0F3218592B52F11D00840917 /* FontSizeRangeProtocol.swift */,
-				0F3218472B52B74300840917 /* PDFMakerError.swift */,
-				0F32185D2B52FF3B00840917 /* BinarySearchFitState.swift */,
-			);
-			path = SearchablePDFMaker;
 			sourceTree = "<group>";
 		};
 		0F3218322B4F0DA400840917 /* DocumentCamera */ = {
@@ -478,7 +421,6 @@
 			isa = PBXGroup;
 			children = (
 				0FB7DAF82B3F16B400985825 /* DiskFileStorage.swift */,
-				0FB7DB062B3F2A2F00985825 /* DiskFile.swift */,
 				0FB7DB082B3F2B9D00985825 /* DiskFilesList.swift */,
 				0FB7DB0A2B3F30F600985825 /* DiskFileStorageError.swift */,
 			);
@@ -489,8 +431,6 @@
 			isa = PBXGroup;
 			children = (
 				0FB7DAF12B3F150E00985825 /* FileStorageProtocol.swift */,
-				0FB7DAF42B3F159900985825 /* FileProtocol.swift */,
-				0FB7DB002B3F1F2000985825 /* FileType.swift */,
 				0FB7DAFA2B3F1A6F00985825 /* FilesListProtocol.swift */,
 			);
 			path = GeneralFileStorage;
@@ -522,7 +462,6 @@
 			children = (
 				0FA833F72B58CF9200E04788 /* ApplicationState */,
 				0FAA6E822B4C664F0009D0A3 /* AppCoordination */,
-				0F3218312B4EE6C100840917 /* SearchablePDFMaker */,
 				0F4130C12B40E30C00981698 /* FileImport */,
 				0FB7DAF02B3F12A600985825 /* FileStorage */,
 				0F0BFEFE2BBD7BCE007CCF2D /* SubscriptionManager */,
@@ -582,6 +521,8 @@
 			packageProductDependencies = (
 				0F60796D2B497A01008DD313 /* FirebaseAuth */,
 				0F17AB482BCEBC1000749AA6 /* FirebaseCrashlytics */,
+				0F4D1BC42C42E439006DAA5B /* NefertitiFile */,
+				0F35E1422C42E7EC002F5E44 /* Nefertiti */,
 			);
 			productName = PDFReaderApp;
 			productReference = 0FBCA9962B3DA7A000149F38 /* PDF Scanner.app */;
@@ -638,6 +579,8 @@
 			mainGroup = 0FBCA98D2B3DA7A000149F38;
 			packageReferences = (
 				0F60796C2B497A01008DD313 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				0F4D1BC32C42E439006DAA5B /* XCRemoteSwiftPackageReference "NefertitiFile" */,
+				0F35E1412C42E7EC002F5E44 /* XCRemoteSwiftPackageReference "Nefertiti" */,
 			);
 			productRefGroup = 0FBCA9972B3DA7A000149F38 /* Products */;
 			projectDirPath = "";
@@ -705,23 +648,18 @@
 			files = (
 				0FB1CEAC2B4D5D34005EDF0F /* DocumentViewController+UIGestureRecognizerDelegate.swift in Sources */,
 				0F32183A2B4F0E8800840917 /* DocumentPickerManager+UIDocumentPickerDelegate.swift in Sources */,
-				0F3218522B52D3E800840917 /* FontSizeCalculatorProtocol.swift in Sources */,
 				0FA834012B58DD4100E04788 /* DocumentViewerApplicationStateProtocol.swift in Sources */,
 				0FA833F62B58CF8700E04788 /* ApplicationState.swift in Sources */,
 				0FAA6E8C2B4C7F9B0009D0A3 /* PDFDocumentKeeper+PDFDocumentDelegate.swift in Sources */,
 				0F0BFF072BBD7DB2007CCF2D /* IAPProduct.swift in Sources */,
-				0F32185C2B52F15800840917 /* FontSizeRange.swift in Sources */,
 				0FB7DAF22B3F150E00985825 /* FileStorageProtocol.swift in Sources */,
 				0FB7DAE82B3DF51B00985825 /* ScanningViewController.swift in Sources */,
 				0FB7DAFF2B3F1C8900985825 /* AppCoordinator.swift in Sources */,
-				0F32184E2B52CC6E00840917 /* PDFMakerScanResultPageProtocol.swift in Sources */,
 				0FAA6E882B4C6F050009D0A3 /* PDFDocumentInteractor.swift in Sources */,
 				0F4130C52B41B99A00981698 /* PDFDocumentImportManager.swift in Sources */,
 				0FA833FB2B58D06A00E04788 /* ApplicationState+FileManagerApplicationStateProtocol.swift in Sources */,
-				0F32184A2B52B98800840917 /* PDFMakerSourcePageProtocol.swift in Sources */,
 				0F4130BC2B40CD2400981698 /* MyFilesRouter.swift in Sources */,
 				0FAA6E7E2B4C64F70009D0A3 /* FullScreenRouter.swift in Sources */,
-				0F3218462B52B5E500840917 /* VisionRecognizedText.swift in Sources */,
 				0F60798D2B49B31E008DD313 /* ScanningRouter.swift in Sources */,
 				0F32182E2B4EDA4000840917 /* UIViewExtensions.swift in Sources */,
 				0F4130C32B41B96D00981698 /* DocumentImportManagerProtocol.swift in Sources */,
@@ -730,26 +668,19 @@
 				0F0BFF162BBD9088007CCF2D /* ApplicationState+SubscriptionApplicationStateProtocol.swift in Sources */,
 				0FAA0DFD2B45CB9D002FC0F9 /* DynamicUIProtocol.swift in Sources */,
 				0F4130C72B41B9F100981698 /* DocumentImportManager.swift in Sources */,
-				0F3218442B52B5D300840917 /* RecognizedTextProtocol.swift in Sources */,
 				0FAA6E912B4C82170009D0A3 /* DynamicUINotifier.swift in Sources */,
 				0FA833FD2B58D0C800E04788 /* DocumentScannerApplicationStateProtocol.swift in Sources */,
-				0F3218542B52D47400840917 /* FontSizeCalculator.swift in Sources */,
 				0F4130B62B40C86C00981698 /* MyFilesInteractor.swift in Sources */,
 				0FB1CEB12B4DB47E005EDF0F /* PDFDocumentPositionKeeper.swift in Sources */,
-				0F32185A2B52F11D00840917 /* FontSizeRangeProtocol.swift in Sources */,
 				0FAA0E032B462895002FC0F9 /* PDFDocumentRouter.swift in Sources */,
 				0F4130CB2B41BE0900981698 /* DocumentPickerManager.swift in Sources */,
 				0F3218342B4F0DCB00840917 /* VisionDocumentCameraManager.swift in Sources */,
 				0F32183C2B4F11F800840917 /* DynamicUINotifierProtocol.swift in Sources */,
-				0FB7DB072B3F2A2F00985825 /* DiskFile.swift in Sources */,
 				0FAA6E8F2B4C80BE0009D0A3 /* PDFSelection+Comparable.swift in Sources */,
-				0F32184C2B52B9EA00840917 /* PDFMakerSourcePage.swift in Sources */,
 				0F0BFF142BBD906B007CCF2D /* SubscriptionApplicationStateProtocol.swift in Sources */,
 				0F4130B82B40C9F800981698 /* PresenterProtocol.swift in Sources */,
-				0F3218482B52B74300840917 /* PDFMakerError.swift in Sources */,
 				0FB7DAEC2B3E0A1600985825 /* HomeTabBarController.swift in Sources */,
 				0F3218362B4F0DE600840917 /* DocumentCameraManagerProtocol.swift in Sources */,
-				0F3218582B52D87200840917 /* FontSizeCalculatorSource.swift in Sources */,
 				0F0BFF002BBD7C0A007CCF2D /* SubscriptionManager.swift in Sources */,
 				0F4130C92B41BB5A00981698 /* DocumentImportError.swift in Sources */,
 				0FAA6E8A2B4C71730009D0A3 /* PDFDocumentKeeper.swift in Sources */,
@@ -772,27 +703,20 @@
 				0FBCA99E2B3DA7A000149F38 /* MyFilesViewController.swift in Sources */,
 				0FAA0E012B45DE3D002FC0F9 /* MyFilesViewController+UISearchResultsUpdating.swift in Sources */,
 				0FAA0DFF2B45CBD5002FC0F9 /* UIViewController+DynamicUIProtocol.swift in Sources */,
-				0F3218402B52B0CF00840917 /* VisionSearchablePDFMaker.swift in Sources */,
 				0FB1CEB32B4DB53D005EDF0F /* PositionsListProtocol.swift in Sources */,
-				0F3218422B52B10C00840917 /* PDFMakerProtocol.swift in Sources */,
 				0FB7DB092B3F2B9D00985825 /* DiskFilesList.swift in Sources */,
 				0F84D9092B4AEE5400CD3E3F /* FileInfoView.swift in Sources */,
 				0F4130D02B458B6800981698 /* PDFDocumentViewController.swift in Sources */,
 				0F84D8FA2B49EB9B00CD3E3F /* MyFilesViewController+DynamicUIProtocol.swift in Sources */,
-				0F3218562B52D75500840917 /* FontSizeCalculatorSourceProtocol.swift in Sources */,
 				0FAA0E052B46FFF6002FC0F9 /* MyFilesViewController+UICollectionViewDelegate.swift in Sources */,
-				0FB7DB012B3F1F2000985825 /* FileType.swift in Sources */,
 				0F0BFF092BBD7DD7007CCF2D /* IAPHelper.swift in Sources */,
 				0F0BFF122BBD8C4E007CCF2D /* SubscriptionProposalRouter.swift in Sources */,
-				0FB7DAF52B3F159900985825 /* FileProtocol.swift in Sources */,
 				0FB1CEB92B4DB60E005EDF0F /* Position.swift in Sources */,
 				0F4130B42B40C85900981698 /* MyFilesPresenter.swift in Sources */,
 				0FBCA99A2B3DA7A000149F38 /* AppDelegate.swift in Sources */,
 				0F3218602B532D6100840917 /* DocumentViewController+UINavigationItemRenameDelegate.swift in Sources */,
 				0F3218302B4EE1C700840917 /* VisionDocumentCameraRouter.swift in Sources */,
 				0F0BFF022BBD7C44007CCF2D /* SubscriptionManagerProtocol.swift in Sources */,
-				0F3218502B52D0B500840917 /* PDFMakerScanResultPage.swift in Sources */,
-				0F32185E2B52FF3B00840917 /* BinarySearchFitState.swift in Sources */,
 				0FA833FF2B58D0F300E04788 /* ApplicationState+DocumentScannerApplicationStateProtocol.swift in Sources */,
 				0F4130BA2B40CA0600981698 /* InteractorProtocol.swift in Sources */,
 				0FB7DAFB2B3F1A6F00985825 /* FilesListProtocol.swift in Sources */,
@@ -1092,6 +1016,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		0F35E1412C42E7EC002F5E44 /* XCRemoteSwiftPackageReference "Nefertiti" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/D-Integral/Nefertiti/";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		0F4D1BC32C42E439006DAA5B /* XCRemoteSwiftPackageReference "NefertitiFile" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/D-Integral/NefertitiFile";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.3;
+			};
+		};
 		0F60796C2B497A01008DD313 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
@@ -1107,6 +1047,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0F60796C2B497A01008DD313 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseCrashlytics;
+		};
+		0F35E1422C42E7EC002F5E44 /* Nefertiti */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0F35E1412C42E7EC002F5E44 /* XCRemoteSwiftPackageReference "Nefertiti" */;
+			productName = Nefertiti;
+		};
+		0F4D1BC42C42E439006DAA5B /* NefertitiFile */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0F4D1BC32C42E439006DAA5B /* XCRemoteSwiftPackageReference "NefertitiFile" */;
+			productName = NefertitiFile;
 		};
 		0F60796D2B497A01008DD313 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import NefertitiFile
 
 protocol DocumentImportManagerProtocol {
     var documentTypeTag: String? { get }
@@ -17,7 +18,7 @@ protocol DocumentImportManagerProtocol {
               completionHandler: @escaping () -> ())
     func documentFile(from fileUrl: URL,
                       thumbnailSize: CGSize,
-                      completionHandler: @escaping ((any FileProtocol)?,
+                      completionHandler: @escaping ((any NefertitiFileProtocol)?,
                                                     DocumentImportError?) -> ())
     func importDocuments(at urls: [URL],
                          thumbnailSize: CGSize,

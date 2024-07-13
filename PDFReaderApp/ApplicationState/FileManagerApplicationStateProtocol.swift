@@ -6,12 +6,13 @@
 //
 
 import Foundation
+import NefertitiFile
 
 protocol FileManagerApplicationStateProtocol {
-    var files: [any FileProtocol]? { get }
+    var files: [any NefertitiFileProtocol]? { get }
     
-    func file(withId fileId: UUID) -> (any FileProtocol)?
-    func save(_ file: any FileProtocol) throws
+    func file(withId fileId: UUID) -> (any NefertitiFileProtocol)?
+    func save(_ file: any NefertitiFileProtocol) throws
     func delete(_ fileId: UUID)
     func opened(_ fileId: UUID)
     func rename(_ fileId: UUID,

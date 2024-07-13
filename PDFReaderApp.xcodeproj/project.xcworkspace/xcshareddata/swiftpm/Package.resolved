@@ -100,6 +100,24 @@
       }
     },
     {
+      "identity" : "nefertiti",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/D-Integral/Nefertiti/",
+      "state" : {
+        "revision" : "3e1bfa3985fded87dcb66c4c54a97ff754aceba9",
+        "version" : "1.0.2"
+      }
+    },
+    {
+      "identity" : "nefertitifile",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/D-Integral/NefertitiFile",
+      "state" : {
+        "revision" : "4765272f223c8ff3b85be50526d523c3d6dc1a5f",
+        "version" : "1.0.4"
+      }
+    },
+    {
       "identity" : "promises",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/google/promises.git",

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import NefertitiFile
 
 protocol FileStorageProtocol {
     var fileNames: [String] { get }
@@ -13,10 +14,10 @@ protocol FileStorageProtocol {
     
     func updateFilesList()
     
-    func file(withId fileId: UUID) -> (any FileProtocol)?
-    func files() -> [any FileProtocol]
+    func file(withId fileId: UUID) -> (any NefertitiFileProtocol)?
+    func files() -> [any NefertitiFileProtocol]
     
-    func save(_ file: any FileProtocol) throws
+    func save(_ file: any NefertitiFileProtocol) throws
     func delete(_ fileId: UUID)
     func opened(_ fileId: UUID)
     func rename(_ fileId: UUID,

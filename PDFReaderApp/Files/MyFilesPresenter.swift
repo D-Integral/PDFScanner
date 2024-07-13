@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import PDFKit
+import NefertitiFile
 
 class MyFilesPresenter: PresenterProtocol {
     private let interactor: MyFilesInteractor
@@ -32,7 +33,7 @@ class MyFilesPresenter: PresenterProtocol {
         interactor.remove(dynamicUI: dynamicUI)
     }
     
-    func sortedAndFilteredFiles(for queryOrNil: String?) -> [any FileProtocol] {
+    func sortedAndFilteredFiles(for queryOrNil: String?) -> [any NefertitiFileProtocol] {
         return interactor.sortedAndFilteredFiles(for: queryOrNil)
     }
     
@@ -48,7 +49,7 @@ class MyFilesPresenter: PresenterProtocol {
         interactor.rename(fileId, to: newName)
     }
     
-    func pdfDocumentThumbnail(forFile file: DiskFile,
+    func pdfDocumentThumbnail(forFile file: NefertitiFile,
                               completionHandler: @escaping (UIImage?) -> ()) {
         DispatchQueue.global(qos: .userInteractive).async {
             guard let documentPreviewData = file.thumbnailData else {

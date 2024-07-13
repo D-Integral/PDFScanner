@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import NefertitiFile
 
 class MyFilesCollectionViewCell: UICollectionViewCell {
     
@@ -42,14 +43,14 @@ class MyFilesCollectionViewCell: UICollectionViewCell {
     let documentInfoLabel = UILabel()
     let moreButton = UIButton(type: .custom)
     
-    var moreActionBlock: ((DiskFile?) -> ())? = nil
+    var moreActionBlock: ((NefertitiFile?) -> ())? = nil
     var thumbnail: UIImage? = nil {
         didSet {
             thumbnailImageView.image = thumbnail
         }
     }
     
-    var diskFile: DiskFile? {
+    var diskFile: NefertitiFile? {
         didSet {
             update()
         }
@@ -65,7 +66,7 @@ class MyFilesCollectionViewCell: UICollectionViewCell {
         setupUI()
     }
     
-    init(diskFile: DiskFile? = nil) {
+    init(diskFile: NefertitiFile? = nil) {
         self.diskFile = diskFile
         
         super.init(frame: .zero)

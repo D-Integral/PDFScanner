@@ -6,13 +6,14 @@
 //
 
 import Foundation
+import NefertitiFile
 
 extension ApplicationState: DocumentScannerApplicationStateProtocol {
     public var isDocumentCameraSupported: Bool {
         return documentCameraManager.isDocumentCameraSupported
     }
     
-    public var lastScannedFile: (any FileProtocol)? {
+    public var lastScannedFile: (any NefertitiFileProtocol)? {
         return documentCameraManager.lastScannedFile
     }
     

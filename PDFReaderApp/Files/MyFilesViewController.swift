@@ -7,6 +7,7 @@
 
 import UIKit
 import PDFKit
+import NefertitiFile
 
 class MyFilesViewController: UIViewController {
     
@@ -46,8 +47,8 @@ class MyFilesViewController: UIViewController {
       case main
     }
     
-    typealias DataSource = UICollectionViewDiffableDataSource<Section, DiskFile>
-    typealias Snapshot = NSDiffableDataSourceSnapshot<Section, DiskFile>
+    typealias DataSource = UICollectionViewDiffableDataSource<Section, NefertitiFile>
+    typealias Snapshot = NSDiffableDataSourceSnapshot<Section, NefertitiFile>
     
     // MARK: - Properties
     
@@ -237,13 +238,13 @@ class MyFilesViewController: UIViewController {
     func applySnapshot() {
         var snapshot = Snapshot()
         snapshot.appendSections([.main])
-        let files = presenter?.sortedAndFilteredFiles(for: searchController.searchBar.text) as? [DiskFile] ?? []
+        let files = presenter?.sortedAndFilteredFiles(for: searchController.searchBar.text) as? [NefertitiFile] ?? []
         snapshot.appendItems(files)
         dataSource.apply(snapshot,
                          animatingDifferences: true)
     }
     
-    private func initiateRename(of file: DiskFile) {
+    private func initiateRename(of file: NefertitiFile) {
         let alert = UIAlertController(title: String(localized: "fileRename"),
                                       message: "",
                                       preferredStyle: .alert)
@@ -279,7 +280,7 @@ class MyFilesViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
-    private func presentActionSheet(forFile file: DiskFile) {
+    private func presentActionSheet(forFile file: NefertitiFile) {
         var alertStyle = UIAlertController.Style.actionSheet
         
         if (UIDevice.current.userInterfaceIdiom == .pad) {
@@ -348,7 +349,7 @@ class MyFilesViewController: UIViewController {
                      completion: nil)
     }
     
-    private func filesActionsInfoView(forFile file: DiskFile) -> FileInfoView {
+    private func filesActionsInfoView(forFile file: NefertitiFile) -> FileInfoView {
         let view = FileInfoView()
         
         view.update(withFile: file)

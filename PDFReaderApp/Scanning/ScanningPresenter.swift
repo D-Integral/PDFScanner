@@ -7,6 +7,7 @@
 
 import Foundation
 import VisionKit
+import NefertitiFile
 
 class ScanningPresenter: PresenterProtocol {
     
@@ -20,7 +21,7 @@ class ScanningPresenter: PresenterProtocol {
         return interactor.isDocumentCameraSupported
     }
     
-    public var lastScannedFile: (any FileProtocol)? {
+    public var lastScannedFile: (any NefertitiFileProtocol)? {
         return interactor.lastScannedFile
     }
     

@@ -6,12 +6,13 @@
 //
 
 import Foundation
+import NefertitiFile
 
 class MyFilesInteractor: InteractorProtocol {
     
     // MARK: - Properties
     
-    var files: [any FileProtocol]? {
+    var files: [any NefertitiFileProtocol]? {
         return applicationState.files
     }
     
@@ -47,9 +48,9 @@ class MyFilesInteractor: InteractorProtocol {
         applicationState.rename(fileId, to: newName)
     }
     
-    func sortedAndFilteredFiles(for queryOrNil: String?) -> [any FileProtocol] {
+    func sortedAndFilteredFiles(for queryOrNil: String?) -> [any NefertitiFileProtocol] {
         let filteredFiles = filteredFiles(for: queryOrNil)
-        let sortedFiles = (filteredFiles as? [DiskFile])?.sorted(by: >)
+        let sortedFiles = (filteredFiles as? [NefertitiFile])?.sorted(by: >)
         
         return sortedFiles ?? filteredFiles
     }
@@ -68,7 +69,7 @@ class MyFilesInteractor: InteractorProtocol {
     
     // MARK: - Private Functions
     
-    private func filteredFiles(for queryOrNil: String?) -> [any FileProtocol] {
+    private func filteredFiles(for queryOrNil: String?) -> [any NefertitiFileProtocol] {
         guard let files = files else {
             return []
         }

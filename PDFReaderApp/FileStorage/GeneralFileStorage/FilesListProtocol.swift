@@ -6,7 +6,8 @@
 //
 
 import Foundation
+import NefertitiFile
 
 protocol FilesListProtocol: Codable {
-    var files: [UUID: any FileProtocol] { get set }
+    var files: [UUID: any NefertitiFileProtocol] { get set }
 }

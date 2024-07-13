@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import Nefertiti
 
 class AppCoordinator {
     static let shared = AppCoordinator()
@@ -22,7 +23,7 @@ class AppCoordinator {
         homeTabBarController = HomeTabBarController()
         
         let fileStorage = DiskFileStorage()
-        let documentCameraManager = VisionDocumentCameraManager(pdfMaker: VisionSearchablePDFMaker(),
+        let documentCameraManager = VisionDocumentCameraManager(pdfMaker: NefertitiSearchablePDFMaker(),
                                                                 fileStorage: fileStorage)
         let positionKeeper = PDFDocumentPositionKeeper()
         

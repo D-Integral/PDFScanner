@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import NefertitiFile
 
 final class DiskFileStorage: FileStorageProtocol {
     
@@ -23,7 +24,7 @@ final class DiskFileStorage: FileStorageProtocol {
         }
         
         if nil == self.filesList {
-            self.filesList = DiskFilesList(diskFiles: [UUID : DiskFile]())
+            self.filesList = DiskFilesList(diskFiles: [UUID : NefertitiFile]())
         }
     }
     
@@ -35,12 +36,12 @@ final class DiskFileStorage: FileStorageProtocol {
         return filesList?.files.count ?? 0
     }
     
-    public func file(withId fileId: UUID) -> (any FileProtocol)? {
+    public func file(withId fileId: UUID) -> (any NefertitiFileProtocol)? {
         return filesList?.files[fileId]
     }
     
-    public func save(_ file: any FileProtocol) throws {
-        guard let diskFile = file as? DiskFile else {
+    public func save(_ file: any NefertitiFileProtocol) throws {
+        guard let diskFile = file as? NefertitiFile else {
             throw DiskFileStorageError.wrongFileType
         }
         
@@ -50,7 +51,7 @@ final class DiskFileStorage: FileStorageProtocol {
     }
     
     public func delete(_ fileId: UUID) {
-        guard let diskFile = file(withId: fileId) as? DiskFile else { return }
+        guard let diskFile = file(withId: fileId) as? NefertitiFile else { return }
         diskFile.clearData()
         
         filesList?.files.removeValue(forKey: fileId)
@@ -59,7 +60,7 @@ final class DiskFileStorage: FileStorageProtocol {
     }
     
     public func opened(_ fileId: UUID) {
-        guard var diskFile = file(withId: fileId) as? DiskFile else { return }
+        guard var diskFile = file(withId: fileId) as? NefertitiFile else { return }
         
         diskFile.openedDate = Date()
         filesList?.files[fileId] = diskFile
@@ -70,7 +71,7 @@ final class DiskFileStorage: FileStorageProtocol {
     public func rename(_ fileId: UUID,
                        to newName: String) {
         guard !newName.isEmpty,
-              var diskFile = file(withId: fileId) as? DiskFile else { return }
+              var diskFile = file(withId: fileId) as? NefertitiFile else { return }
         
         diskFile.rename(to: newName)
         filesList?.files[fileId] = diskFile
@@ -78,8 +79,8 @@ final class DiskFileStorage: FileStorageProtocol {
         synchronize()
     }
     
-    public func files() -> [any FileProtocol] {
-        return Array(filesList?.files.values ?? [UUID: any FileProtocol]().values)
+    public func files() -> [any NefertitiFileProtocol] {
+        return Array(filesList?.files.values ?? [UUID: any NefertitiFileProtocol]().values)
     }
     
     // MARK: Files List

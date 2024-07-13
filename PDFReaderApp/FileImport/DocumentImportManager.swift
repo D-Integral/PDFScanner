@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import NefertitiFile
 
 class DocumentImportManager: NSObject, DocumentImportManagerProtocol {
     
@@ -42,7 +43,7 @@ class DocumentImportManager: NSObject, DocumentImportManagerProtocol {
     
     func documentFile(from fileUrl: URL,
                       thumbnailSize: CGSize,
-                      completionHandler: @escaping ((any FileProtocol)?,
+                      completionHandler: @escaping ((any NefertitiFileProtocol)?,
                                                     DocumentImportError?) -> ()) {
         completionHandler(nil,
                           nil)
@@ -54,7 +55,7 @@ class DocumentImportManager: NSObject, DocumentImportManagerProtocol {
     
     // MARK: Private Methods
     
-    private func save(_ file: any FileProtocol) {
+    private func save(_ file: any NefertitiFileProtocol) {
         do {
             try applicationState.save(file)
         } catch {

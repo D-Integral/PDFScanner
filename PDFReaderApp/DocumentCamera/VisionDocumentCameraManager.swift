@@ -7,15 +7,17 @@
 
 import Foundation
 import VisionKit
+import Nefertiti
+import NefertitiFile
 
 class VisionDocumentCameraManager: DynamicUINotifier, DocumentCameraManagerProtocol {
     
-    let pdfMaker: PDFMakerProtocol
+    let pdfMaker: NefertitiPDFMakerProtocol
     let fileStorage: FileStorageProtocol
     
-    var lastScannedFile: (any FileProtocol)? = nil
+    var lastScannedFile: (any NefertitiFileProtocol)? = nil
     
-    init(pdfMaker: PDFMakerProtocol,
+    init(pdfMaker: NefertitiPDFMakerProtocol,
          fileStorage: FileStorageProtocol) {
         self.pdfMaker = pdfMaker
         self.fileStorage = fileStorage
