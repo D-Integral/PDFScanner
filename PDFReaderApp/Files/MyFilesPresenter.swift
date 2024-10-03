@@ -68,6 +68,20 @@ class MyFilesPresenter: PresenterProtocol {
         }
     }
     
+    // MARK: - Scanning
+    
+    public func documentCameraRouter() -> RouterProtocol {
+        return interactor.documentCameraRouter()
+    }
+    
+    public var isDocumentCameraSupported: Bool {
+        return interactor.isDocumentCameraSupported
+    }
+    
+    public var lastScannedFile: (any NefertitiFileProtocol)? {
+        return interactor.lastScannedFile
+    }
+    
 //    func checkIfSubscribed(subscribedCompletionHandler: () -> (),
 //                           notSubscribedCompletionHandler: () -> ()) {
 //        interactor.checkIfSubscribed(subscribedCompletionHandler: subscribedCompletionHandler,

@@ -9,6 +9,8 @@ import Foundation
 
 extension MyFilesViewController {
     override func updateDynamicUI() {
+        hideDocumentCamera()
+        showJustScannedFileIfExists()
         applySnapshot()
     }
     

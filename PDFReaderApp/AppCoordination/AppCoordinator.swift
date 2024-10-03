@@ -12,7 +12,7 @@ import Nefertiti
 class AppCoordinator {
     static let shared = AppCoordinator()
     
-    let homeTabBarController: HomeTabBarController
+    var rootViewController: UIViewController? = nil
     
     let applicationState: ApplicationState
     
@@ -20,8 +20,6 @@ class AppCoordinator {
     let subscriptionProposalRouter: SubscriptionProposalRouter
     
     private init() {
-        homeTabBarController = HomeTabBarController()
-        
         let fileStorage = DiskFileStorage()
         let documentCameraManager = VisionDocumentCameraManager(pdfMaker: NefertitiSearchablePDFMaker(),
                                                                 fileStorage: fileStorage)
@@ -37,8 +35,7 @@ class AppCoordinator {
         pdfDocumentRouter = PDFDocumentRouter(applicationState: applicationState,
                                               subscriptionProposalRouter: subscriptionProposalRouter)
         
-        homeTabBarController.viewControllers = [filesNavigationController(),
-                                                scanningNavigationController()]
+        self.rootViewController = filesNavigationController()
     }
     
     // MARK: Navigation controllers
@@ -58,12 +55,6 @@ class AppCoordinator {
                                                         pdfDocumentRouter: pdfDocumentRouter,
                                                         subscriptionProposalRouter: subscriptionProposalRouter).make(),
                                     tabBarItem: filesTabBarItem())
-    }
-    
-    func scanningNavigationController() -> UINavigationController {
-        return navigationController(with: ScanningRouter(applicationState: applicationState,
-                                                         pdfDocumentRouter: pdfDocumentRouter).make(),
-                                    tabBarItem: scanningTabBarItem())
     }
     
     // MARK: Tab bar items

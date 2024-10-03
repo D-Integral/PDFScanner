@@ -6,8 +6,9 @@
 //
 
 import XCTest
-@testable import PDFReaderApp
+@testable import PDF_Scanner
 import PDFKit
+import NefertitiFile
 
 final class DiskFileStorageTests: XCTestCase {
     
@@ -56,10 +57,10 @@ final class DiskFileStorageTests: XCTestCase {
             return
         }
         
-        let diskFile = DiskFile(title: testFileName,
-                                documentData: diskFileData,
-                                createdDate: createdDate,
-                                modifiedDate: modifiedDate)
+        let diskFile = NefertitiFile(title: testFileName,
+                                     documentData: diskFileData,
+                                     createdDate: createdDate,
+                                     modifiedDate: modifiedDate)
         XCTAssertNotNil(diskFile)
         
         testFileId = diskFile.id

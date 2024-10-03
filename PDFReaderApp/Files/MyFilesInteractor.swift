@@ -20,13 +20,15 @@ class MyFilesInteractor: InteractorProtocol {
     
     private let applicationState: (FileManagerApplicationStateProtocol &
                                    DynamicUINotifierProtocol &
-                                   SubscriptionApplicationStateProtocol)
+                                   SubscriptionApplicationStateProtocol &
+                                   DocumentScannerApplicationStateProtocol)
     
     // MARK: - Life Cycle
     
     init(applicationState: (FileManagerApplicationStateProtocol &
                             DynamicUINotifierProtocol &
-                            SubscriptionApplicationStateProtocol),
+                            SubscriptionApplicationStateProtocol &
+                            DocumentScannerApplicationStateProtocol),
          documentImportManager: DocumentImportManagerProtocol) {
         self.applicationState = applicationState
         
@@ -53,6 +55,20 @@ class MyFilesInteractor: InteractorProtocol {
         let sortedFiles = (filteredFiles as? [NefertitiFile])?.sorted(by: >)
         
         return sortedFiles ?? filteredFiles
+    }
+    
+    // MARK: - Scanning
+    
+    public func documentCameraRouter() -> RouterProtocol {
+        return applicationState.documentCameraRouter
+    }
+    
+    public var isDocumentCameraSupported: Bool {
+        return applicationState.isDocumentCameraSupported
+    }
+    
+    public var lastScannedFile: (any NefertitiFileProtocol)? {
+        return applicationState.lastScannedFile
     }
     
     // MARK: - Dynamic UI

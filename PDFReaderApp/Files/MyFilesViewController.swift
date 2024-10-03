@@ -14,6 +14,12 @@ class MyFilesViewController: UIViewController {
     // MARK: - Definitions
     
     struct Constants {
+        struct ScanButtonLayout {
+            static let side = 60.0
+            static let rightOffset = -15.0
+            static let bottomOffset = -20.0
+        }
+        
         struct ImportButtonLayout {
             static let side = 60.0
             static let rightOffset = -15.0
@@ -58,6 +64,7 @@ class MyFilesViewController: UIViewController {
     
     lazy var dataSource = makeDataSource()
     
+    private let scanButton = UIButton(type: .custom)
     private let importButton = UIButton(type: .custom)
     private let collectionView = UICollectionView(frame: .zero,
                                                   collectionViewLayout: UICollectionViewFlowLayout())
@@ -99,6 +106,7 @@ class MyFilesViewController: UIViewController {
         
         setupSearchController()
         setupCollectionView()
+        setupScanButton()
         setupImportButton()
         
         setupActivityView()
@@ -164,13 +172,43 @@ class MyFilesViewController: UIViewController {
         view.addSubview(collectionView)
     }
     
+    private func setupScanButton() {
+        let symbolConfiguration = UIImage.SymbolConfiguration(pointSize: Constants.ScanButtonLayout.side,
+                                                              weight: .semibold)
+        let scanButtonImage = UIImage(systemName: "document.viewfinder",
+                                        withConfiguration: symbolConfiguration)
+        
+        scanButton.setImage(scanButtonImage, for: .normal)
+        scanButton.addTarget(self,
+                             action: #selector(scanAction),
+                             for: .touchUpInside)
+        
+        scanButton.layer.cornerRadius = 10
+        scanButton.clipsToBounds = true
+        scanButton.backgroundColor = .blue
+        scanButton.tintColor = .white
+        
+        view.addSubview(scanButton)
+    }
+    
     private func setupImportButton() {
-        let importButtonImage = UIImage(named: "button_import") as UIImage?
+        let symbolConfiguration = UIImage.SymbolConfiguration(pointSize: Constants.ImportButtonLayout.side,
+                                                              weight: .semibold)
+        let importButtonImage = UIImage(systemName: "square.and.arrow.down",
+                                        withConfiguration: symbolConfiguration)
         
         importButton.setImage(importButtonImage, for: .normal)
         importButton.addTarget(self,
                                action: #selector(importAction),
                                for: .touchUpInside)
+        importButton.setPreferredSymbolConfiguration(.init(scale: .large),
+                                                     forImageIn: .normal)
+        
+        importButton.layer.cornerRadius = 10
+        importButton.clipsToBounds = true
+        importButton.backgroundColor = .blue
+        importButton.tintColor = .white
+        
         view.addSubview(importButton)
     }
     
@@ -191,8 +229,16 @@ class MyFilesViewController: UIViewController {
         collectionView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor,
                                                 constant: Constants.FilesList.Layout.contentInset).isActive = true
         
+        scanButton.translatesAutoresizingMaskIntoConstraints = false
+        scanButton.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor,
+                                            constant: Constants.ScanButtonLayout.rightOffset).isActive = true
+        scanButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor,
+                                             constant: Constants.ScanButtonLayout.bottomOffset).isActive = true
+        scanButton.widthAnchor.constraint(equalToConstant: Constants.ScanButtonLayout.side).isActive = true
+        scanButton.heightAnchor.constraint(equalToConstant: Constants.ScanButtonLayout.side).isActive = true
+        
         importButton.translatesAutoresizingMaskIntoConstraints = false
-        importButton.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor,
+        importButton.rightAnchor.constraint(equalTo: scanButton.leftAnchor,
                                             constant: Constants.ImportButtonLayout.rightOffset).isActive = true
         importButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor,
                                              constant: Constants.ImportButtonLayout.bottomOffset).isActive = true
@@ -208,6 +254,10 @@ class MyFilesViewController: UIViewController {
         self.present(documentPicker,
                      animated: true,
                      completion: nil)
+    }
+    
+    @objc private func scanAction() {
+        startScanning()
     }
     
     // MARK: - Private Functions
@@ -233,6 +283,26 @@ class MyFilesViewController: UIViewController {
       })
         
       return dataSource
+    }
+    
+    // MARK: - Update UI
+    
+    func hideDocumentCamera() {
+        if documentCameraViewController != nil {
+            navigationController?.dismiss(animated: true)
+            documentCameraViewController = nil
+        }
+    }
+    
+    func showJustScannedFileIfExists() {
+        if let lastScannedFile = presenter?.lastScannedFile as? NefertitiFile {
+            self.pdfDocumentRouter?.diskFile = lastScannedFile
+            
+            guard let pdfDocumentViewController = pdfDocumentRouter?.make() else { return }
+            
+            navigationController?.present(pdfDocumentViewController,
+                                          animated: true)
+        }
     }
     
     func applySnapshot() {
@@ -371,5 +441,32 @@ class MyFilesViewController: UIViewController {
                                       handler: nil))
         
         return alert
+    }
+    
+    // MARK: - Scanning
+    
+    private var documentCameraViewController: UIViewController? = nil
+    
+    private func startScanning() {
+        guard isDocumentCameraSupported else {
+            let cameraNotSupportedAlert = errorAlert(withMessage: String(localized: "documentCameraNotSupported"))
+            
+            self.present(cameraNotSupportedAlert, animated: true, completion: nil)
+            
+            return
+        }
+        
+        documentCameraViewController = presenter?.documentCameraRouter().make()
+        
+        presenter?.add(dynamicUI: self)
+        
+        if let documentCameraViewController = documentCameraViewController {
+            navigationController?.present(documentCameraViewController,
+                                          animated: true)
+        }
+    }
+    
+    private var isDocumentCameraSupported: Bool {
+        return presenter?.isDocumentCameraSupported ?? false
     }
 }

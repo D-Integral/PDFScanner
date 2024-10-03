@@ -11,7 +11,8 @@ import UIKit
 class MyFilesRouter: RouterProtocol {
     init(applicationState: (FileManagerApplicationStateProtocol &
                             DynamicUINotifierProtocol &
-                            SubscriptionApplicationStateProtocol),
+                            SubscriptionApplicationStateProtocol &
+                            DocumentScannerApplicationStateProtocol),
          pdfDocumentRouter: PDFDocumentRouter,
          subscriptionProposalRouter: SubscriptionProposalRouter) {
         self.applicationState = applicationState
@@ -33,7 +34,8 @@ class MyFilesRouter: RouterProtocol {
     
     let applicationState: (FileManagerApplicationStateProtocol &
                            DynamicUINotifierProtocol &
-                           SubscriptionApplicationStateProtocol)
+                           SubscriptionApplicationStateProtocol &
+                           DocumentScannerApplicationStateProtocol)
     let pdfDocumentRouter: PDFDocumentRouter
     let subscriptionProposalRouter: SubscriptionProposalRouter
 }

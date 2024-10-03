@@ -384,6 +384,7 @@
       }
     },
     "startScanButtonTitle" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
