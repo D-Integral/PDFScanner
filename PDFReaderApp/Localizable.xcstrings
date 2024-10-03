@@ -3,10 +3,34 @@
   "strings" : {
     "%lld of %lld search results" : {
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld z %2$lld výsledků vyhledávání"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "new",
             "value" : "%1$lld of %2$lld search results"
+          }
+        },
+        "ka-GE" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld %2$lld ძიების შედეგებიდან"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld из %2$lld результатов поиска"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld з %2$lld результатів пошуку"
           }
         }
       }
@@ -116,10 +140,34 @@
     },
     "documentCameraNotSupported" : {
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skenování dokumentů vaše zařízení nepodporuje."
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "The document scanning is not supported for your device."
+          }
+        },
+        "ka-GE" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "დოკუმენტის სკანირება არ არის მხარდაჭერილი თქვენი მოწყობილობისთვის."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сканирование документов не поддерживается на вашем устройстве."
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сканування документів не підтримується вашим пристроєм."
           }
         }
       }
@@ -160,10 +208,34 @@
     },
     "fileRename" : {
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Přejmenovat soubor"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "File Rename"
+          }
+        },
+        "ka-GE" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ფაილის გადარქმევა"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Переименовать файл"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Перейменувати файл"
           }
         }
       }
@@ -244,61 +316,133 @@
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mé soubory"
+            "value" : "Moje PDF dokumenty"
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "My Files"
+            "value" : "My PDF documents"
           }
         },
         "ka-GE" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ჩემი ფაილები"
+            "value" : "ჩემი PDF დოკუმენტები"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Мои файлы"
+            "value" : "Мои PDF-документы"
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Мої файли"
+            "value" : "Мої PDF-документи"
           }
         }
       }
     },
     "rename" : {
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Přejmenovat"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Rename"
+          }
+        },
+        "ka-GE" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "გადარქმევა"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Переименовать"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Перейменувати"
           }
         }
       }
     },
     "scan" : {
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skenovat"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Scan"
+          }
+        },
+        "ka-GE" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "სკანირება"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сканировать"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сканувати"
           }
         }
       }
     },
     "search" : {
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vyhledávání"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Search"
+          }
+        },
+        "ka-GE" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ძიება"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Поиск"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пошук"
           }
         }
       }
@@ -340,10 +484,34 @@
     },
     "share" : {
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Podíl"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Share"
+          }
+        },
+        "ka-GE" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "გააზიარეთ"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Поделиться"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Поділитися"
           }
         }
       }
@@ -379,17 +547,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Зареєструватися"
-          }
-        }
-      }
-    },
-    "startScanButtonTitle" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Scan a Document into PDF"
           }
         }
       }
