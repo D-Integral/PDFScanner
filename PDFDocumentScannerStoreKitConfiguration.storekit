@@ -1,4 +1,14 @@
 {
+  "appPolicies" : {
+    "eula" : "",
+    "policies" : [
+      {
+        "locale" : "en_US",
+        "policyText" : "",
+        "policyURL" : ""
+      }
+    ]
+  },
   "identifier" : "D3B9DCB4",
   "nonRenewingSubscriptions" : [
 
@@ -95,7 +105,10 @@
           "recurringSubscriptionPeriod" : "P1M",
           "referenceName" : "PDF Document Scanner - Monthly",
           "subscriptionGroupID" : "21437000",
-          "type" : "RecurringSubscription"
+          "type" : "RecurringSubscription",
+          "winbackOffers" : [
+
+          ]
         },
         {
           "adHocOffers" : [
@@ -120,13 +133,16 @@
           "recurringSubscriptionPeriod" : "P1Y",
           "referenceName" : "PDF Document Scanner - Yearly",
           "subscriptionGroupID" : "21437000",
-          "type" : "RecurringSubscription"
+          "type" : "RecurringSubscription",
+          "winbackOffers" : [
+
+          ]
         }
       ]
     }
   ],
   "version" : {
-    "major" : 3,
+    "major" : 4,
     "minor" : 0
   }
 }

@@ -94,8 +94,9 @@ final class PDFDocumentImportManager: DocumentImportManager {
     }
     
     private func startAccessingSecurityScopedResource(for url: URL) {
-        url.stopAccessingSecurityScopedResource()
-        securityScopedResources.remove(url)
+        if url.startAccessingSecurityScopedResource() {
+            securityScopedResources.insert(url)
+        }
     }
     
     private func stopAccessingSecurityScopedResource(for url: URL) {
