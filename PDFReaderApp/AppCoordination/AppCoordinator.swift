@@ -50,7 +50,7 @@ class AppCoordinator {
         return navigationController
     }
     
-    func filesNavigationController() -> UINavigationController {
+    func filesNavigationController() -> UIViewController {
         return navigationController(with: MyFilesRouter(applicationState: applicationState,
                                                         pdfDocumentRouter: pdfDocumentRouter,
                                                         subscriptionProposalRouter: subscriptionProposalRouter).make(),

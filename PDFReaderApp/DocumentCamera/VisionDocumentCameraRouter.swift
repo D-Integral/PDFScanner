@@ -8,7 +8,7 @@
 import Foundation
 import VisionKit
 
-class VisionDocumentCameraRouter: FullScreenRouter {
+class VisionDocumentCameraRouter: RouterProtocol {
     
     // MARK: - Public Interface
     
@@ -16,12 +16,12 @@ class VisionDocumentCameraRouter: FullScreenRouter {
         self.delegate = delegate
     }
     
-    override public func make() -> UINavigationController {
+    public func make() -> UIViewController {
         let documentCameraViewController: VNDocumentCameraViewController = VNDocumentCameraViewController()
         
         documentCameraViewController.delegate = delegate
         
-        return fullScreenNavigationController(with: documentCameraViewController)
+        return documentCameraViewController
     }
     
     // MARK: - Private Properties

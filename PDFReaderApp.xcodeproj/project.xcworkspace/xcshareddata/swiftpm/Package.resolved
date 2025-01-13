@@ -1,12 +1,13 @@
 {
+  "originHash" : "b4a863f81b62c6faa2746642818cbcefb70f22b70858766b990ba5e58fa94727",
   "pins" : [
     {
       "identity" : "abseil-cpp-binary",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/google/abseil-cpp-binary.git",
       "state" : {
-        "revision" : "bfc0b6f81adc06ce5121eb23f628473638d67c5c",
-        "version" : "1.2022062300.0"
+        "revision" : "194a6706acbd25e4ef639bcaddea16e8758a3e27",
+        "version" : "1.2024011602.0"
       }
     },
     {
@@ -14,8 +15,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/google/app-check.git",
       "state" : {
-        "revision" : "5746b2d35c91c50581590ed97abe4c06b5037274",
-        "version" : "10.18.0"
+        "revision" : "61b85103a1aeed8218f17c794687781505fbbef5",
+        "version" : "11.2.0"
       }
     },
     {
@@ -23,8 +24,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/firebase/firebase-ios-sdk.git",
       "state" : {
-        "revision" : "c60c958e707c50a9cf8bcb7cfd7d51c566d726c5",
-        "version" : "10.19.1"
+        "revision" : "0d885d28250fb1196b614bc9455079b75c531f72",
+        "version" : "11.7.0"
       }
     },
     {
@@ -32,8 +33,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/google/GoogleAppMeasurement.git",
       "state" : {
-        "revision" : "6b332152355c372ace9966d8ee76ed191f97025e",
-        "version" : "10.17.0"
+        "revision" : "be0881ff728eca210ccb628092af400c086abda3",
+        "version" : "11.7.0"
       }
     },
     {
@@ -41,8 +42,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/google/GoogleDataTransport.git",
       "state" : {
-        "revision" : "a732a4b47f59e4f725a2ea10f0c77e93a7131117",
-        "version" : "9.3.0"
+        "revision" : "617af071af9aa1d6a091d59a202910ac482128f9",
+        "version" : "10.1.0"
       }
     },
     {
@@ -50,8 +51,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/google/GoogleUtilities.git",
       "state" : {
-        "revision" : "bc27fad73504f3d4af235de451f02ee22586ebd3",
-        "version" : "7.12.1"
+        "revision" : "53156c7ec267db846e6b64c9f4c4e31ba4cf75eb",
+        "version" : "8.0.2"
       }
     },
     {
@@ -59,8 +60,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/google/grpc-binary.git",
       "state" : {
-        "revision" : "a673bc2937fbe886dd1f99c401b01b6d977a9c98",
-        "version" : "1.49.1"
+        "revision" : "f56d8fc3162de9a498377c7b6cea43431f4f5083",
+        "version" : "1.65.1"
       }
     },
     {
@@ -68,8 +69,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/google/gtm-session-fetcher.git",
       "state" : {
-        "revision" : "115f75e43851774934d695449a4836123c3246e1",
-        "version" : "3.2.0"
+        "revision" : "a2ab612cb980066ee56d90d60d8462992c07f24b",
+        "version" : "3.5.0"
       }
     },
     {
@@ -86,8 +87,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/firebase/leveldb.git",
       "state" : {
-        "revision" : "9d108e9112aa1d65ce508facf804674546116d9c",
-        "version" : "1.22.3"
+        "revision" : "a0bc79961d7be727d258d33d5a6b2f1023270ba1",
+        "version" : "1.22.5"
       }
     },
     {
@@ -95,17 +96,17 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/firebase/nanopb.git",
       "state" : {
-        "revision" : "819d0a2173aff699fb8c364b6fb906f7cdb1a692",
-        "version" : "2.30909.0"
+        "revision" : "b7e1104502eca3a213b46303391ca4d3bc8ddec1",
+        "version" : "2.30910.0"
       }
     },
     {
       "identity" : "nefertiti",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/D-Integral/Nefertiti/",
+      "location" : "https://github.com/D-Integral/Nefertiti",
       "state" : {
-        "revision" : "3e1bfa3985fded87dcb66c4c54a97ff754aceba9",
-        "version" : "1.0.2"
+        "revision" : "57744608ae8b1eee0873500c08cd0fe1b0d6c4c5",
+        "version" : "1.0.4"
       }
     },
     {
@@ -118,12 +119,21 @@
       }
     },
     {
+      "identity" : "nefertitifontsizecalculator",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/D-Integral/NefertitiFontSizeCalculator",
+      "state" : {
+        "revision" : "ae9d57ab63274f1c64e0cefc04429638185b13b3",
+        "version" : "1.0.1"
+      }
+    },
+    {
       "identity" : "promises",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/google/promises.git",
       "state" : {
-        "revision" : "e70e889c0196c76d22759eb50d6a0270ca9f1d9e",
-        "version" : "2.3.1"
+        "revision" : "540318ecedd63d883069ae7f1ed811a2df00b6ac",
+        "version" : "2.4.0"
       }
     },
     {
@@ -131,10 +141,10 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-protobuf.git",
       "state" : {
-        "revision" : "65e8f29b2d63c4e38e736b25c27b83e012159be8",
-        "version" : "1.25.2"
+        "revision" : "ebc7251dd5b37f627c93698e4374084d98409633",
+        "version" : "1.28.2"
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }
