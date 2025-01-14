@@ -77,6 +77,13 @@ final class PDFDocumentViewController: DocumentViewController {
         setupSearchResultsView()
         
         setupConstraints()
+        
+        self.presenter?.checkIfSubscribed(subscribedCompletionHandler: {
+        }, notSubscribedCompletionHandler: { [weak self] in
+            guard let self = self else { return }
+            
+            self.presentSubscriptionProposal()
+        })
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -106,6 +113,7 @@ final class PDFDocumentViewController: DocumentViewController {
         
         saveCurrentPosition()
     }
+    
     
     // MARK: - Update
     
@@ -169,6 +177,17 @@ final class PDFDocumentViewController: DocumentViewController {
     public override func delete() {
         presenter?.deleteFile()
         navigationController?.dismiss(animated: true)
+    }
+    
+    // MARK: - Subscription
+    
+    func presentSubscriptionProposal() {
+        guard let subscriptionViewController = subscriptionProposalRouter?.make() else {
+            return
+        }
+        
+        navigationController?.present(subscriptionViewController,
+                                      animated: true)
     }
     
     // MARK: - Setup

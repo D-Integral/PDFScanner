@@ -82,9 +82,9 @@ class MyFilesPresenter: PresenterProtocol {
         return interactor.lastScannedFile
     }
     
-//    func checkIfSubscribed(subscribedCompletionHandler: () -> (),
-//                           notSubscribedCompletionHandler: () -> ()) {
-//        interactor.checkIfSubscribed(subscribedCompletionHandler: subscribedCompletionHandler,
-//                                     notSubscribedCompletionHandler: notSubscribedCompletionHandler)
-//    }
+    func checkIfSubscribed(subscribedCompletionHandler: () -> (),
+                           notSubscribedCompletionHandler: () -> ()) {
+        interactor.checkIfSubscribed(subscribedCompletionHandler: subscribedCompletionHandler,
+                                     notSubscribedCompletionHandler: notSubscribedCompletionHandler)
+    }
 }

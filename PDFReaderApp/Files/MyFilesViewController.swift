@@ -74,6 +74,8 @@ class MyFilesViewController: UIViewController {
     
     let activityView = UIActivityIndicatorView(style: .large)
     
+    var subscriptionProposalShown = false
+    
     // MARK: - Life Cycle
     
     init(presenter: MyFilesPresenter?,
@@ -112,6 +114,15 @@ class MyFilesViewController: UIViewController {
         setupActivityView()
         
         setupConstraints()
+        
+        if !subscriptionProposalShown {
+            presenter?.checkIfSubscribed(subscribedCompletionHandler: {
+            }, notSubscribedCompletionHandler: { [weak self] in
+                guard let self = self else { return }
+                
+                self.presentSubscriptionProposal()
+            })
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -303,6 +314,15 @@ class MyFilesViewController: UIViewController {
             navigationController?.present(pdfDocumentViewController,
                                           animated: true)
         }
+    }
+    
+    func presentSubscriptionProposal() {
+        guard let subscriptionViewController = subscriptionProposalRouter?.make() else {
+            return
+        }
+        
+        navigationController?.present(subscriptionViewController,
+                                      animated: true)
     }
     
     func applySnapshot() {
