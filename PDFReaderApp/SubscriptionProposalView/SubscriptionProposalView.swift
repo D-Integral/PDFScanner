@@ -21,7 +21,7 @@ struct SubscriptionProposalView: View {
     var body: some View {
         SubscriptionStoreView(productIDs: state?.productIdentifiers ?? []) {
             VStack {
-                Text("PDF Document Scanner")
+                Text(String(localized: "PDF Scanner Premium"))
                     .font(.largeTitle)
                     .fontWeight(.black)
 
