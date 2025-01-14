@@ -9,19 +9,17 @@ import Foundation
 import UIKit
 import SwiftUI
 
-class SubscriptionProposalRouter: RouterProtocol {
+class SubscriptionProposalRouter: FullScreenRouter {
     let state: SubscriptionApplicationStateProtocol
     
     init(state: SubscriptionApplicationStateProtocol) {
         self.state = state
     }
     
-    func make() -> UIViewController {
-//        let subscriptionProposalView = SubscriptionProposalView(state: state)
-//        let hostingController = UIHostingController(rootView: subscriptionProposalView)
-//        
-//        return hostingController
+    override func make() -> UIViewController {
+        let subscriptionProposalView = SubscriptionProposalView(state: state)
+        let hostingController = UIHostingController(rootView: subscriptionProposalView)
         
-        return UIViewController()
+        return hostingController
     }
 }

@@ -88,9 +88,9 @@ class PDFDocumentPresenter: PresenterProtocol {
         interactor?.rename(to: newName)
     }
     
-//    func checkIfSubscribed(subscribedCompletionHandler: () -> (),
-//                           notSubscribedCompletionHandler: () -> ()) {
-//        interactor?.checkIfSubscribed(subscribedCompletionHandler: subscribedCompletionHandler,
-//                                      notSubscribedCompletionHandler: notSubscribedCompletionHandler)
-//    }
+    func checkIfSubscribed(subscribedCompletionHandler: () -> (),
+                           notSubscribedCompletionHandler: () -> ()) {
+        interactor?.checkIfSubscribed(subscribedCompletionHandler: subscribedCompletionHandler,
+                                      notSubscribedCompletionHandler: notSubscribedCompletionHandler)
+    }
 }
