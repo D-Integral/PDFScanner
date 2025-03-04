@@ -13,8 +13,13 @@ extension ApplicationState: DocumentScannerApplicationStateProtocol {
         return documentCameraManager.isDocumentCameraSupported
     }
     
-    public var lastScannedFile: (any NefertitiFileProtocol)? {
-        return documentCameraManager.lastScannedFile
+    var lastScannedFile: (any NefertitiFileProtocol)? {
+        get {
+            return documentCameraManager.lastScannedFile
+        }
+        set {
+            documentCameraManager.lastScannedFile = newValue
+        }
     }
     
     public var documentCameraRouter: RouterProtocol {

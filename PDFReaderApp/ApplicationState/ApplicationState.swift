@@ -19,7 +19,7 @@ class ApplicationState: DynamicUINotifier {
     
     // MARK: - Document Scanner
     
-    let documentCameraManager: DocumentCameraManagerProtocol
+    var documentCameraManager: DocumentCameraManagerProtocol
     
     // MARK: - Subscription
     
