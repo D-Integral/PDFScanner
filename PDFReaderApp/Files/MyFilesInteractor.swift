@@ -18,7 +18,7 @@ class MyFilesInteractor: InteractorProtocol {
     
     let documentPickerManager: DocumentPickerManager
     
-    private let applicationState: (FileManagerApplicationStateProtocol &
+    private var applicationState: (FileManagerApplicationStateProtocol &
                                    DynamicUINotifierProtocol &
                                    SubscriptionApplicationStateProtocol &
                                    DocumentScannerApplicationStateProtocol)
@@ -69,6 +69,10 @@ class MyFilesInteractor: InteractorProtocol {
     
     public var lastScannedFile: (any NefertitiFileProtocol)? {
         return applicationState.lastScannedFile
+    }
+    
+    public func removeLastScannedFile() {
+        applicationState.lastScannedFile = nil
     }
     
     // MARK: - Dynamic UI

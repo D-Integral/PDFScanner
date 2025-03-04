@@ -82,6 +82,10 @@ class MyFilesPresenter: PresenterProtocol {
         return interactor.lastScannedFile
     }
     
+    public func removeLastScannedFile() {
+        interactor.removeLastScannedFile()
+    }
+    
     func checkIfSubscribed(subscribedCompletionHandler: () -> (),
                            notSubscribedCompletionHandler: () -> ()) {
         interactor.checkIfSubscribed(subscribedCompletionHandler: subscribedCompletionHandler,

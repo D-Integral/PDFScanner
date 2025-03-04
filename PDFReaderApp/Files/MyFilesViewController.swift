@@ -309,6 +309,8 @@ class MyFilesViewController: UIViewController {
         if let lastScannedFile = presenter?.lastScannedFile as? NefertitiFile {
             self.pdfDocumentRouter?.diskFile = lastScannedFile
             
+            presenter?.removeLastScannedFile()
+            
             guard let pdfDocumentViewController = pdfDocumentRouter?.make() else { return }
             
             navigationController?.present(pdfDocumentViewController,
