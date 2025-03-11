@@ -12,6 +12,10 @@ extension ApplicationState: SubscriptionApplicationStateProtocol {
         return subscriptionManager.productIdentifiers()
     }
     
+    func requestProducts() async {
+        await subscriptionManager.requestProducts()
+    }
+    
     func checkIfSubscribed(subscribedCompletionHandler: () -> (),
                            notSubscribedCompletionHandler: () -> ()) {
         let subscriptionPurchased = subscriptionManager.subscriptionPurchased()
@@ -21,5 +25,17 @@ extension ApplicationState: SubscriptionApplicationStateProtocol {
         } else {
             notSubscribedCompletionHandler()
         }
+    }
+    
+    var openCount: Int {
+        return subscriptionManager.openCount
+    }
+    
+    func incrementOpenCount() {
+        subscriptionManager.incrementOpenCount()
+    }
+    
+    var subscriptionViewModel: SubscriptionViewModel {
+        return subscriptionManager.subscriptionViewModel
     }
 }

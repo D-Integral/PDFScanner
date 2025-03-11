@@ -93,4 +93,16 @@ class PDFDocumentPresenter: PresenterProtocol {
         interactor?.checkIfSubscribed(subscribedCompletionHandler: subscribedCompletionHandler,
                                       notSubscribedCompletionHandler: notSubscribedCompletionHandler)
     }
+    
+    func requestProducts() async {
+        await interactor?.requestProducts()
+    }
+    
+    var openCount: Int {
+        return interactor?.openCount ?? 0
+    }
+    
+    func incrementOpenCount() {
+        interactor?.incrementOpenCount()
+    }
 }

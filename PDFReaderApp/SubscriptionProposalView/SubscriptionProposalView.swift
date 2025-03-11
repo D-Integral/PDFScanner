@@ -9,42 +9,64 @@ import SwiftUI
 import StoreKit
 
 struct SubscriptionProposalView: View {
-    let state: SubscriptionApplicationStateProtocol?
+    @ObservedObject var subscriptionViewModel: SubscriptionViewModel
+    @Environment(\.dismiss) var dismiss
     
-    weak var hostingController: UIViewController? = nil
+    @State var termsOfServicePresented: Bool = false
+    @State var privacyPolicyPresented: Bool = false
     
     let subscriptionProposalString = AttributedString(
-        localized: "Scan PDF documents like a pro with PDF Document Scanner subscription.",
-        comment: "The subscription proposal string."
+        localized: "subscriptionProposal",
+        comment: "The subscription proposal"
     )
     
+    var containerBackground: AnyGradient {
+        return Color.init(.blue).gradient
+    }
+    
     var body: some View {
-        SubscriptionStoreView(productIDs: state?.productIdentifiers ?? []) {
-            VStack {
-                Text(String(localized: "PDF Scanner Premium"))
-                    .font(.largeTitle)
-                    .fontWeight(.black)
+        NavigationStack {
+            SubscriptionStoreView(productIDs: subscriptionViewModel.productIDs()) {
+                ScrollView {
+                    VStack {
+                        Text(String(localized: "Your Support Makes All the Difference",
+                                    comment: "Subscription title"))
+                            .font(.largeTitle)
+                            .fontWeight(.black)
 
-                Text(subscriptionProposalString)
-                    .multilineTextAlignment(.center)
+                        Text(subscriptionProposalString)
+                            .multilineTextAlignment(.center)
+                    }
+                    .foregroundStyle(.white)
+                    .containerBackground(containerBackground,
+                                         for: .subscriptionStore)
+                }
             }
-            .foregroundStyle(.white)
-            .containerBackground(.blue.gradient, for: .subscriptionStore)
+            .storeButton(.visible, for: .restorePurchases, .policies)
+            .subscriptionStorePolicyForegroundStyle(.white)
+            .subscriptionStorePolicyDestination(for: .privacyPolicy) {
+                PrivacyPolicyView(privacyPolicyPresented: $privacyPolicyPresented,
+                                  fullScreen: false)
+            }
+            .subscriptionStorePolicyDestination(for: .termsOfService) {
+                TermsOfServiceView(termsOfServicePresented: $termsOfServicePresented,
+                                   fullScreen: false)
+            }
+            .subscriptionStoreControlStyle(.prominentPicker)
+            .onInAppPurchaseCompletion { product, error in
+                Task {
+                    if try await subscriptionViewModel.store.isPurchased(product) {
+                        subscriptionViewModel.subscribe()
+                        dismiss()
+                    }
+                }
+            }
         }
-        .storeButton(.visible, for: .restorePurchases, .policies, .cancellation)
-        .subscriptionStorePolicyForegroundStyle(.white)
-        .subscriptionStorePolicyDestination(for: .privacyPolicy) {
-            Text("We collect crash and usage data. Crash and usage reports are using to improve the app. For those purposes we use Firebase Analytics (a Google service).").padding(EdgeInsets(top: 15.0, leading: 15.0, bottom: 15.0, trailing: 15.0))
-        }
-        .subscriptionStorePolicyDestination(for: .termsOfService) {
-            Text("Dmytro Skorokhod is the owner of this application. You may scan and preview documents for free, but for sharing, saving, editing and/or signing you need a subscription. The devices compatible with the scanning feature: an iPhone or iPad running iOS 17 or later with an A12 Bionic processor or better (from late 2017).").padding(EdgeInsets(top: 15.0, leading: 15.0, bottom: 15.0, trailing: 15.0))
-        }
-        .subscriptionStoreControlStyle(.prominentPicker)
     }
 }
 
 struct SubscriptionProposalView_Previews: PreviewProvider {
     static var previews: some View {
-        SubscriptionProposalView(state: nil)
+        SubscriptionProposalView(subscriptionViewModel: SubscriptionViewModel())
     }
 }

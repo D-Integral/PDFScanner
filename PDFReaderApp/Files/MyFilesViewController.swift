@@ -116,12 +116,7 @@ class MyFilesViewController: UIViewController {
         setupConstraints()
         
         if !subscriptionProposalShown {
-            presenter?.checkIfSubscribed(subscribedCompletionHandler: {
-            }, notSubscribedCompletionHandler: { [weak self] in
-                guard let self = self else { return }
-                
-                self.presentSubscriptionProposal()
-            })
+            proposeSubscriptionIfNotSubscribed()
         }
     }
     
@@ -325,6 +320,19 @@ class MyFilesViewController: UIViewController {
         
         navigationController?.present(subscriptionViewController,
                                       animated: true)
+    }
+    
+    func proposeSubscriptionIfNotSubscribed() {
+        presenter?.checkIfSubscribed(subscribedCompletionHandler: {
+            print("subscribed")
+        }, notSubscribedCompletionHandler: { [weak self] in
+            guard let self = self else { return }
+            
+            Task {
+                await self.presenter?.requestProducts()
+                self.presentSubscriptionProposal()
+            }
+        })
     }
     
     func applySnapshot() {

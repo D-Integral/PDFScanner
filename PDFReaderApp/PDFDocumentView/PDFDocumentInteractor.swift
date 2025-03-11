@@ -123,4 +123,16 @@ class PDFDocumentInteractor: InteractorProtocol {
             notSubscribedCompletionHandler()
         }
     }
+    
+    func requestProducts() async {
+        await applicationState.requestProducts()
+    }
+    
+    var openCount: Int {
+        return applicationState.openCount
+    }
+    
+    func incrementOpenCount() {
+        applicationState.incrementOpenCount()
+    }
 }

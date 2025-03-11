@@ -17,7 +17,7 @@ class SubscriptionProposalRouter: FullScreenRouter {
     }
     
     override func make() -> UIViewController {
-        let subscriptionProposalView = SubscriptionProposalView(state: state)
+        let subscriptionProposalView = SubscriptionProposalView(subscriptionViewModel: state.subscriptionViewModel)
         let hostingController = UIHostingController(rootView: subscriptionProposalView)
         
         return hostingController

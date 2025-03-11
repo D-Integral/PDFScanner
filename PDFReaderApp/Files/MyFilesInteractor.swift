@@ -114,4 +114,8 @@ class MyFilesInteractor: InteractorProtocol {
             notSubscribedCompletionHandler()
         }
     }
+    
+    func requestProducts() async {
+        await applicationState.requestProducts()
+    }
 }
