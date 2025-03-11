@@ -20,4 +20,6 @@ protocol SubscriptionApplicationStateProtocol {
     func incrementOpenCount()
     
     var subscriptionViewModel: SubscriptionViewModel { get }
+    
+    var daysInUsage: Int { get }
 }

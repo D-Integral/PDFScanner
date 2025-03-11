@@ -105,4 +105,8 @@ class PDFDocumentPresenter: PresenterProtocol {
     func incrementOpenCount() {
         interactor?.incrementOpenCount()
     }
+    
+    var daysInUsage: Int {
+        return interactor?.daysInUsage ?? 0
+    }
 }

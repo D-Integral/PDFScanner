@@ -135,4 +135,8 @@ class PDFDocumentInteractor: InteractorProtocol {
     func incrementOpenCount() {
         applicationState.incrementOpenCount()
     }
+    
+    var daysInUsage: Int {
+        return applicationState.daysInUsage
+    }
 }

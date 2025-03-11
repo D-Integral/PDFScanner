@@ -20,4 +20,6 @@ protocol SubscriptionManagerProtocol {
     var openCount: Int { get }
     
     func incrementOpenCount()
+    
+    var daysInUsage: Int { get }
 }

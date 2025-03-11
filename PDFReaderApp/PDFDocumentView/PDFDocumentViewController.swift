@@ -7,6 +7,7 @@
 
 import UIKit
 import PDFKit
+import StoreKit
 
 final class PDFDocumentViewController: DocumentViewController {
     
@@ -79,6 +80,9 @@ final class PDFDocumentViewController: DocumentViewController {
         setupConstraints()
         
         incrementOpenCount()
+        
+        requestUserReviewIfNeeded()
+        
         showSubscriptionProposalIfNeeded()
     }
     
@@ -352,10 +356,20 @@ final class PDFDocumentViewController: DocumentViewController {
         }
     }
     
+    private func requestUserReviewIfNeeded() {
+        if (openCount == 2 || daysInUsage == 2) {
+            AppStore.requestReviewInCurrentScene()
+        }
+    }
+    
     // MARK: - Subscription
     
     private var openCount: Int {
         return presenter?.openCount ?? 0
+    }
+    
+    private var daysInUsage: Int {
+        return presenter?.daysInUsage ?? 0
     }
     
     private func incrementOpenCount() {
