@@ -94,10 +94,34 @@
     "privacyPolicy" : {
       "comment" : "The provacy policy.",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سياسة الخصوصية\nتلتزم D Integralas (\"نحن\"، \"خاصتنا\" أو \"لنا\") بحماية خصوصيتك. توضح سياسة الخصوصية هذه كيفية جمع معلوماتك واستخدامها وحمايتها عند استخدام تطبيقنا، PDF Scanner (\"التطبيق\").\nيرجى قراءة سياسة الخصوصية هذه بعناية. باستخدام التطبيق، فإنك توافق على الشروط الموضحة هنا.\n\n1. جمع البيانات الشخصية\n\nنحن لا نقوم بجمع أي معلومات شخصية تعريفية بشكل مباشر. ومع ذلك، نستخدم خدمات طرف ثالث قد تجمع بيانات لأغراض التحليل والتشخيص من أجل تحسين التطبيق.\n\n2. خدمات الطرف الثالث\n\nنستخدم الخدمات التالية داخل التطبيق:\n\nأ) Firebase Crashlytics\nيساعدنا Firebase Crashlytics في مراقبة وإصلاح الأعطال أو المشكلات داخل التطبيق. لا يجمع هذا النظام بيانات شخصية مباشرة، ولكنه قد يجمع معلومات مجهولة مثل:\n\nحالة الجهاز والمعلومات (مثل الطراز، نظام التشغيل)؛\nإصدار التطبيق المستخدم؛\nتفاصيل العطل أو الخطأ؛\nتُستخدم هذه المعلومات فقط لتشخيص المشكلات التقنية وحلها.\n\nب) Google Analytics for Firebase\nيساعدنا Google Analytics for Firebase على فهم كيفية تفاعل المستخدمين مع التطبيق، وأي الميزات أكثر استخدامًا، وكيف يمكننا تحسين تجربة المستخدم. قد يجمع هذا النظام بيانات مجهولة مثل:\n\nمعدل استخدام التطبيق؛\nنوع الجهاز ونظام التشغيل؛\nأنماط الاستخدام العامة (مثل الشاشات الأكثر زيارة)؛\nلا يقوم Google Analytics بجمع أي معلومات شخصية وفقًا لسياسات جمع البيانات الخاصة بـ Google.\n\n3. كيفية استخدام بياناتك\n\nتُستخدم البيانات المجهولة التي يتم جمعها عبر هذه الخدمات من أجل:\n\nتحسين أداء التطبيق ووظائفه؛\nاكتشاف الأخطاء أو الأعطال وإصلاحها؛\nفهم كيفية تفاعل المستخدمين مع التطبيق؛\nنحن لا نشارك هذه المعلومات مع أي جهات خارجية باستثناء الخدمات المذكورة أعلاه.\n\n4. التحكم في بياناتك\n\nعلى الرغم من أننا لا نجمع معلومات شخصية، يمكنك التحكم في استخدام بياناتك عن طريق تعطيل ميزات جمع البيانات من خلال إعدادات التطبيق أو إعدادات الخصوصية في جهازك. يمكنك أيضًا إلغاء الاشتراك في Google Analytics من خلال التعليمات التي تقدمها Google.\n\n5. أمان البيانات\n\nنتخذ تدابير معقولة لحماية المعلومات التي يتم جمعها عبر خدمات الطرف الثالث. ومع ذلك، فإن أي طريقة لنقل البيانات عبر الإنترنت ليست آمنة بنسبة 100%، لذلك لا يمكننا ضمان الأمان المطلق.\n\n6. التغييرات في سياسة الخصوصية\n\nقد يتم تحديث سياسة الخصوصية هذه من وقت لآخر. سيتم عكس أي تغييرات في هذا المستند، وسنقوم بتحديث تاريخ \"آخر تحديث\" في الأعلى. يرجى مراجعة هذه السياسة بانتظام للبقاء على اطلاع.\n\n7. الاتصال بنا\n\nإذا كانت لديك أي أسئلة أو استفسارات بخصوص سياسة الخصوصية هذه، فلا تتردد في الاتصال بنا عبر البريد الإلكتروني: d.integralas@gmail.com."
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Privacy Policy\nD Integralas (\"we,\" \"our,\" or \"us\") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you use our mobile application, PDF Scanner (the \"App\"). Please read this Privacy Policy carefully. By using the App, you agree to the terms described here.\n\n1. Personal Data Collection\nWe do not collect any personally identifiable information directly. However, we use third-party services that may collect data for diagnostic and analytical purposes to help improve the App.\n\n2. Third-Party Services\nWe use the following third-party services in the App:\n\na) Firebase Crashlytics\n\nFirebase Crashlytics helps us monitor and fix crashes or issues within the App. While Crashlytics does not collect any personal data directly, it may gather anonymized information such as:\n\nDevice state and information (e.g., model, operating system);\n\nApp version being used;\n\nDetails of the crash or error;\n\nThis information is used strictly for diagnosing and resolving technical problems.\n\nb) Google Analytics for Firebase\n\nGoogle Analytics for Firebase helps us understand how users interact with the App, which features are popular, and how we can improve the user experience. This service may collect anonymized data such as:\n\nFrequency of use;\n\nDevice type and operating system;\n\nGeneral usage patterns (e.g., which screens are viewed);\n\nGoogle Analytics does not collect personally identifiable information according to Google's data collection policies.\n\n3. How We Use Your Data\nThe anonymized data collected through these services is used for:\n\nImproving App functionality and performance;\n\nIdentifying and fixing bugs or crashes;\n\nUnderstanding how users engage with the App;\n\nWe do not share this information with any third-party entities except for those services mentioned above.\n\n4. Your Control Over Data\nWhile we do not collect personal information, you can control your data usage by disabling data collection features in the App settings or through your device's privacy settings. You can also opt out of Google Analytics by following instructions provided by Google.\n\n5. Data Security\nWe take reasonable steps to protect the information collected through our third-party services. However, no method of transmission over the internet is 100% secure, and we cannot guarantee absolute security.\n\n6. Changes to This Privacy Policy\nWe may update this Privacy Policy from time to time. Any changes will be reflected in this document, and we will update the \"Last updated\" date above. Please review this Privacy Policy periodically to stay informed of any changes.\n\n7. Contact Us\nIf you have any questions or concerns about this Privacy Policy, feel free to contact us at d.integralas@gmail.com."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Política de Privacidad\nD Integralas (\"nosotros,\" \"nuestro\" o \"nos\") está comprometido con la protección de su privacidad. Esta Política de Privacidad explica cómo recopilamos, utilizamos y protegemos su información cuando usa nuestra aplicación móvil, PDF Scanner (\"la Aplicación\").\nLea atentamente esta Política de Privacidad. Al utilizar la Aplicación, acepta los términos aquí descritos.\n\n1. Recopilación de Datos Personales\n\nNo recopilamos información personal identificable directamente. Sin embargo, utilizamos servicios de terceros que pueden recopilar datos con fines de diagnóstico y análisis para mejorar la Aplicación.\n\n2. Servicios de Terceros\n\nUtilizamos los siguientes servicios de terceros en la Aplicación:\n\na) Firebase Crashlytics\nFirebase Crashlytics nos ayuda a supervisar y corregir fallos o errores en la Aplicación. Crashlytics no recopila datos personales directamente, pero puede recoger información anónima como:\n\nEstado y datos del dispositivo (modelo, sistema operativo);\nVersión de la aplicación utilizada;\nDetalles del fallo o error;\nEsta información se usa estrictamente para diagnosticar y resolver problemas técnicos.\n\nb) Google Analytics for Firebase\nGoogle Analytics for Firebase nos ayuda a comprender cómo los usuarios interactúan con la Aplicación, qué funciones son populares y cómo podemos mejorar la experiencia del usuario. Este servicio puede recopilar datos anónimos como:\n\nFrecuencia de uso;\nTipo de dispositivo y sistema operativo;\nPatrones de uso generales (por ejemplo, qué pantallas se visitan);\nGoogle Analytics no recopila información personal identificable según sus políticas de recopilación de datos.\n\n3. Cómo Usamos Sus Datos\n\nLos datos anónimos recopilados a través de estos servicios se utilizan para:\n\nMejorar la funcionalidad y el rendimiento de la Aplicación;\nIdentificar y corregir errores o fallos;\nComprender cómo los usuarios interactúan con la Aplicación;\nNo compartimos esta información con terceros, excepto con los servicios mencionados anteriormente.\n\n4. Control Sobre Sus Datos\n\nAunque no recopilamos información personal, puede controlar el uso de sus datos desactivando las funciones de recopilación de datos en la configuración de la Aplicación o a través de la configuración de privacidad de su dispositivo. También puede optar por no participar en Google Analytics siguiendo las instrucciones proporcionadas por Google.\n\n5. Seguridad de los Datos\n\nTomamos medidas razonables para proteger la información recopilada a través de nuestros servicios de terceros. Sin embargo, ningún método de transmisión de datos por Internet es 100% seguro, por lo que no podemos garantizar una seguridad absoluta.\n\n6. Cambios en Esta Política de Privacidad\n\nPodemos actualizar esta Política de Privacidad de vez en cuando. Cualquier cambio se reflejará en este documento y actualizaremos la fecha de \"Última actualización\" en la parte superior. Le recomendamos que revise esta Política de Privacidad periódicamente.\n\n7. Contáctenos\n\nSi tiene preguntas o inquietudes sobre esta Política de Privacidad, puede contactarnos en d.integralas@gmail.com."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "מדיניות פרטיות\nD Integralas (\"אנחנו\", \"שלנו\" או \"אנו\") מחויבים להגן על פרטיותך. מדיניות פרטיות זו מסבירה כיצד אנו אוספים, משתמשים ומגנים על המידע שלך בעת השימוש באפליקציה שלנו, PDF Scanner (\"האפליקציה\").\nאנא קרא מדיניות פרטיות זו בעיון. על ידי שימוש באפליקציה, אתה מסכים לתנאים המתוארים כאן.\n\n1. איסוף מידע אישי\n\nאיננו אוספים מידע אישי מזהה ישירות. עם זאת, אנו משתמשים בשירותי צד שלישי אשר עשויים לאסוף נתונים לצרכים אבחוניים ואנליטיים על מנת לשפר את האפליקציה.\n\n2. שירותי צד שלישי\n\nאנו משתמשים בשירותי צד שלישי הבאים באפליקציה:\n\nא) Firebase Crashlytics\nשירות זה מסייע לנו לנטר ולתקן קריסות או בעיות באפליקציה. Crashlytics אינו אוסף נתונים אישיים ישירות, אך עשוי לאסוף מידע אנונימי כגון:\n\nמצב המכשיר ונתוניו (למשל, דגם, מערכת הפעלה);\nגרסת האפליקציה בשימוש;\nפרטים על הקריסה או השגיאה;\nמידע זה משמש אך ורק לאבחון ופתרון בעיות טכניות.\n\nב) Google Analytics for Firebase\nשירות זה עוזר לנו להבין כיצד משתמשים באפליקציה, אילו תכונות פופולריות וכיצד נוכל לשפר את חוויית המשתמש. השירות עשוי לאסוף נתונים אנונימיים כגון:\n\nתדירות השימוש;\nסוג מכשיר ומערכת הפעלה;\nדפוסי שימוש כלליים (למשל, אילו מסכים נצפים);\nGoogle Analytics אינו אוסף מידע אישי מזהה בהתאם למדיניות איסוף הנתונים של Google.\n\n3. כיצד אנו משתמשים בנתונים שלך\n\nהנתונים האנונימיים שנאספו באמצעות שירותים אלו משמשים ל:\n\nשיפור ביצועי האפליקציה;\nזיהוי ותיקון באגים או קריסות;\nהבנת אינטראקציה של משתמשים עם האפליקציה;\nאיננו משתפים מידע זה עם גורמי צד שלישי מלבד השירותים שהוזכרו לעיל.\n\n4. שליטה על הנתונים שלך\n\nלמרות שאיננו אוספים מידע אישי, באפשרותך לשלוט בשימוש בנתונים שלך על ידי השבתת תכונות איסוף נתונים בהגדרות האפליקציה או דרך הגדרות הפרטיות של המכשיר שלך. ניתן גם לבטל את Google Analytics לפי ההנחיות שמספקת Google.\n\n5. אבטחת מידע\n\nאנו נוקטים צעדים סבירים כדי להגן על המידע שנאסף באמצעות שירותי צד שלישי. עם זאת, אין שיטת שידור דרך האינטרנט שהיא בטוחה ב-100%, ואיננו יכולים להבטיח אבטחה מוחלטת.\n\n6. שינויים במדיניות פרטיות זו\n\nמדיניות פרטיות זו עשויה להתעדכן מעת לעת. כל שינוי יתבטא במסמך זה, ונעדכן את התאריך של \"עודכן לאחרונה\" בראש העמוד. מומלץ לבדוק מדיניות זו באופן תקופתי.\n\n7. יצירת קשר\n\nאם יש לך שאלות או חששות בנוגע למדיניות פרטיות זו, ניתן ליצור קשר בכתובת d.integralas@gmail.com."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "隐私政策\nD Integralas（“我们”、“我们的”或“本公司”）致力于保护您的隐私。本隐私政策解释了我们在您使用我们的移动应用程序 PDF Scanner（“应用”）时如何收集、使用和保护您的信息。\n请仔细阅读本隐私政策。使用本应用即表示您同意本政策中的条款。\n\n1. 个人数据收集\n\n我们不会直接收集任何可识别个人身份的信息。但我们使用的第三方服务可能会收集数据，以进行诊断和分析，从而改进应用性能。\n\n2. 第三方服务\n\n我们在应用中使用以下第三方服务：\n\na) Firebase Crashlytics\nFirebase Crashlytics 帮助我们监测和修复应用中的崩溃或错误。Crashlytics 不会直接收集个人数据，但可能收集匿名信息，如：\n\n设备状态和信息（例如，型号、操作系统）；\n正在使用的应用版本；\n崩溃或错误的详细信息；\n这些信息仅用于诊断和解决技术问题。\n\nb) Google Analytics for Firebase\nGoogle Analytics for Firebase 帮助我们了解用户如何与应用交互，哪些功能最受欢迎，以及如何改善用户体验。该服务可能会收集匿名数据，例如：\n\n应用使用频率；\n设备类型和操作系统；\n一般使用模式（例如，访问了哪些界面）；\n根据 Google 的数据收集政策，Google Analytics 不会收集可识别个人身份的信息。\n\n3. 我们如何使用您的数据\n\n通过这些服务收集的匿名数据用于：\n\n改进应用的功能和性能；\n识别和修复错误或崩溃；\n了解用户如何使用应用；\n除上述服务外，我们不会与任何第三方共享这些信息。\n\n4. 您对数据的控制\n\n虽然我们不会收集个人信息，但您可以通过应用设置或设备的隐私设置来控制数据收集功能。此外，您可以按照 Google 提供的说明选择退出 Google Analytics。\n\n5. 数据安全\n\n我们采取合理措施保护通过第三方服务收集的信息。然而，互联网数据传输并非 100% 安全，因此我们无法保证绝对的安全性。\n\n6. 隐私政策的变更\n\n我们可能会不时更新本隐私政策。任何更改都将在本文件中反映，并更新“最后更新”日期。请定期查看本隐私政策，以获取最新信息。\n\n7. 联系我们\n\n如果您对本隐私政策有任何疑问或疑虑，请通过 d.integralas@gmail.com 联系我们。"
           }
         }
       }
@@ -105,10 +129,34 @@
     "privacyPolicyTitle" : {
       "comment" : "The title for the privacy policy.",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سياسة الخصوصية"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Privacy Policy"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Política de Privacidad"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "מדיניות פרטיות"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "隐私政策"
           }
         }
       }
