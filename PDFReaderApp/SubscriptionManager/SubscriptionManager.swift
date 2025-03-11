@@ -31,4 +31,8 @@ class SubscriptionManager: SubscriptionManagerProtocol {
     func incrementOpenCount() {
         openTracker.incrementOpenCount()
     }
+    
+    var daysInUsage: Int {
+        return openTracker.daysInUsage
+    }
 }

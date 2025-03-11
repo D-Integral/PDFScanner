@@ -94,6 +94,7 @@
 		0FCFFB102D8099FF00BD6503 /* StoreKitTestCertificate.cer in Resources */ = {isa = PBXBuildFile; fileRef = 0FCFFB0F2D8099FF00BD6503 /* StoreKitTestCertificate.cer */; };
 		0FCFFB162D809AF000BD6503 /* Products.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0FCFFB152D809AF000BD6503 /* Products.plist */; };
 		0FCFFB1F2D80B91500BD6503 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 0FCFFB1E2D80B91500BD6503 /* Localizable.xcstrings */; };
+		0FCFFB222D80D71B00BD6503 /* AppStoreExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCFFB212D80D71900BD6503 /* AppStoreExtension.swift */; };
 		0FE159712B407F1E000F5EDD /* DiskFileStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE159702B407F1E000F5EDD /* DiskFileStorageTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -197,6 +198,7 @@
 		0FCFFB0F2D8099FF00BD6503 /* StoreKitTestCertificate.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = StoreKitTestCertificate.cer; sourceTree = "<group>"; };
 		0FCFFB152D809AF000BD6503 /* Products.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Products.plist; sourceTree = "<group>"; };
 		0FCFFB1E2D80B91500BD6503 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		0FCFFB212D80D71900BD6503 /* AppStoreExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreExtension.swift; sourceTree = "<group>"; };
 		0FE159702B407F1E000F5EDD /* DiskFileStorageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskFileStorageTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -444,6 +446,7 @@
 		0FBCA9982B3DA7A000149F38 /* PDFReaderApp */ = {
 			isa = PBXGroup;
 			children = (
+				0FCFFB202D80D70700BD6503 /* UserReview */,
 				0FCFFB1E2D80B91500BD6503 /* Localizable.xcstrings */,
 				0FA833F72B58CF9200E04788 /* ApplicationState */,
 				0FAA6E822B4C664F0009D0A3 /* AppCoordination */,
@@ -474,6 +477,14 @@
 				0FE159702B407F1E000F5EDD /* DiskFileStorageTests.swift */,
 			);
 			path = PDFReaderAppTests;
+			sourceTree = "<group>";
+		};
+		0FCFFB202D80D70700BD6503 /* UserReview */ = {
+			isa = PBXGroup;
+			children = (
+				0FCFFB212D80D71900BD6503 /* AppStoreExtension.swift */,
+			);
+			path = UserReview;
 			sourceTree = "<group>";
 		};
 		0FE1596F2B407ECA000F5EDD /* TestResources */ = {
@@ -669,6 +680,7 @@
 				0F3218602B532D6100840917 /* DocumentViewController+UINavigationItemRenameDelegate.swift in Sources */,
 				0F3218302B4EE1C700840917 /* VisionDocumentCameraRouter.swift in Sources */,
 				0F0BFF022BBD7C44007CCF2D /* SubscriptionManagerProtocol.swift in Sources */,
+				0FCFFB222D80D71B00BD6503 /* AppStoreExtension.swift in Sources */,
 				0FA833FF2B58D0F300E04788 /* ApplicationState+DocumentScannerApplicationStateProtocol.swift in Sources */,
 				0F4130BA2B40CA0600981698 /* InteractorProtocol.swift in Sources */,
 				0FB7DAFB2B3F1A6F00985825 /* FilesListProtocol.swift in Sources */,

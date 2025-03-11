@@ -412,6 +412,7 @@
       }
     },
     "scan" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {

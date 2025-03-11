@@ -38,4 +38,8 @@ extension ApplicationState: SubscriptionApplicationStateProtocol {
     var subscriptionViewModel: SubscriptionViewModel {
         return subscriptionManager.subscriptionViewModel
     }
+    
+    var daysInUsage: Int {
+        return subscriptionManager.daysInUsage
+    }
 }
