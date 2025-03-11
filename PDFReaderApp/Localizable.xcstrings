@@ -214,10 +214,34 @@
     "subscriptionProposal" : {
       "comment" : "The subscription proposal",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عند الاشتراك في PDF Scanner Premium، ستحصل على وصول غير محدود إلى ملفات PDF بينما تدعم مهمتنا في تقديم أفضل ماسح PDF.\nنحن نعتمد على اشتراكاتك للحفاظ على التطبيق الذي تحبه وتحسينه. معًا، يمكننا جعل PDF Scanner أفضل من أي وقت مضى!\nاحصل على وصول غير محدود اليوم! جرّبه مجانًا لمدة 7 أيام."
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "By subscribing to PDF Scanner Premium, you’re unlocking limitless access to PDFs while directly supporting our mission to provide the best PDF scanner.\nWe rely on your subscriptions to maintain and improve the app you love. Together, we can make PDF Scanner even better!\nGo unlimited today! Try it free for 7 days."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Al suscribirte a PDF Scanner Premium, desbloqueas acceso ilimitado a archivos PDF y apoyas directamente nuestra misión de ofrecer el mejor escáner de PDF.\nDependemos de tus suscripciones para mantener y mejorar la aplicación que tanto te gusta. ¡Juntos podemos hacer que PDF Scanner sea aún mejor!\n¡Ve por lo ilimitado hoy! Pruébalo gratis durante 7 días."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "על ידי הרשמה ל-PDF Scanner Premium, אתה מקבל גישה בלתי מוגבלת ל-PDFים ובו זמנית תומך ישירות במשימה שלנו לספק את סורק ה-PDF הטוב ביותר.\nאנו מסתמכים על המנויים שלך כדי לתחזק ולשפר את האפליקציה שאתה אוהב. יחד, נוכל להפוך את PDF Scanner לטוב עוד יותר!\nלך על גישה בלתי מוגבלת כבר היום! נסה בחינם למשך 7 ימים."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "订阅 PDF Scanner Premium，即可解锁无限制的 PDF 访问权限，同时直接支持我们的使命：提供最优质的 PDF 扫描工具。\n我们依靠您的订阅来维护和改进您喜爱的应用程序。让我们一起让 PDF Scanner 变得更好！\n立即解锁无限制访问！免费试用 7 天。"
           }
         }
       }
@@ -295,10 +319,34 @@
     "Your Support Makes All the Difference" : {
       "comment" : "Subscription title",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "دعمك هو ما يُحدث الفارق"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Your Support Makes All the Difference"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tu apoyo marca la diferencia"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "התמיכה שלך עושה את כל ההבדל"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "您的支持至关重要"
           }
         }
       }
