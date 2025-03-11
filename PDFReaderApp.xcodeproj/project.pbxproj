@@ -73,7 +73,6 @@
 		0FB1CEB92B4DB60E005EDF0F /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB1CEB82B4DB60E005EDF0F /* Position.swift */; };
 		0FB1CEBB2B4DB736005EDF0F /* PositionKeeperError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB1CEBA2B4DB736005EDF0F /* PositionKeeperError.swift */; };
 		0FB6F4FD2D35D99100B5E7D7 /* Nefertiti in Frameworks */ = {isa = PBXBuildFile; productRef = 0FB6F4FC2D35D99100B5E7D7 /* Nefertiti */; };
-		0FB7DAE62B3DF08000985825 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 0FB7DAE52B3DF08000985825 /* Localizable.xcstrings */; };
 		0FB7DAEC2B3E0A1600985825 /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB7DAEB2B3E0A1600985825 /* HomeTabBarController.swift */; };
 		0FB7DAF22B3F150E00985825 /* FileStorageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB7DAF12B3F150E00985825 /* FileStorageProtocol.swift */; };
 		0FB7DAF92B3F16B400985825 /* DiskFileStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB7DAF82B3F16B400985825 /* DiskFileStorage.swift */; };
@@ -94,6 +93,7 @@
 		0FCFFB0C2D80993B00BD6503 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F0BFF042BBD7D8F007CCF2D /* StoreKit.framework */; };
 		0FCFFB102D8099FF00BD6503 /* StoreKitTestCertificate.cer in Resources */ = {isa = PBXBuildFile; fileRef = 0FCFFB0F2D8099FF00BD6503 /* StoreKitTestCertificate.cer */; };
 		0FCFFB162D809AF000BD6503 /* Products.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0FCFFB152D809AF000BD6503 /* Products.plist */; };
+		0FCFFB1F2D80B91500BD6503 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 0FCFFB1E2D80B91500BD6503 /* Localizable.xcstrings */; };
 		0FE159712B407F1E000F5EDD /* DiskFileStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE159702B407F1E000F5EDD /* DiskFileStorageTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -174,7 +174,6 @@
 		0FB1CEB62B4DB5D4005EDF0F /* PositionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionProtocol.swift; sourceTree = "<group>"; };
 		0FB1CEB82B4DB60E005EDF0F /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
 		0FB1CEBA2B4DB736005EDF0F /* PositionKeeperError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionKeeperError.swift; sourceTree = "<group>"; };
-		0FB7DAE52B3DF08000985825 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		0FB7DAEB2B3E0A1600985825 /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
 		0FB7DAF12B3F150E00985825 /* FileStorageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileStorageProtocol.swift; sourceTree = "<group>"; };
 		0FB7DAF82B3F16B400985825 /* DiskFileStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskFileStorage.swift; sourceTree = "<group>"; };
@@ -197,6 +196,7 @@
 		0FCFFB082D80807C00BD6503 /* SubscriptionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionViewModel.swift; sourceTree = "<group>"; };
 		0FCFFB0F2D8099FF00BD6503 /* StoreKitTestCertificate.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = StoreKitTestCertificate.cer; sourceTree = "<group>"; };
 		0FCFFB152D809AF000BD6503 /* Products.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Products.plist; sourceTree = "<group>"; };
+		0FCFFB1E2D80B91500BD6503 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		0FE159702B407F1E000F5EDD /* DiskFileStorageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskFileStorageTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -444,6 +444,7 @@
 		0FBCA9982B3DA7A000149F38 /* PDFReaderApp */ = {
 			isa = PBXGroup;
 			children = (
+				0FCFFB1E2D80B91500BD6503 /* Localizable.xcstrings */,
 				0FA833F72B58CF9200E04788 /* ApplicationState */,
 				0FAA6E822B4C664F0009D0A3 /* AppCoordination */,
 				0F4130C12B40E30C00981698 /* FileImport */,
@@ -458,7 +459,6 @@
 				0FAA6E922B4C84520009D0A3 /* DynamicUI */,
 				0FAA0DF32B45C0C1002FC0F9 /* Helpers */,
 				0FB1CEAD2B4DB450005EDF0F /* PositionKeeper */,
-				0FB7DAE52B3DF08000985825 /* Localizable.xcstrings */,
 				0FBCA9A22B3DA7A200149F38 /* Assets.xcassets */,
 				0FBCA9A42B3DA7A200149F38 /* LaunchScreen.storyboard */,
 				0FBCA9A72B3DA7A200149F38 /* Info.plist */,
@@ -554,6 +554,7 @@
 				ar,
 				he,
 				"zh-Hans",
+				es,
 			);
 			mainGroup = 0FBCA98D2B3DA7A000149F38;
 			packageReferences = (
@@ -576,8 +577,8 @@
 			files = (
 				0FBCA9A62B3DA7A200149F38 /* LaunchScreen.storyboard in Resources */,
 				0FCFFB102D8099FF00BD6503 /* StoreKitTestCertificate.cer in Resources */,
+				0FCFFB1F2D80B91500BD6503 /* Localizable.xcstrings in Resources */,
 				0FBCA9A32B3DA7A200149F38 /* Assets.xcassets in Resources */,
-				0FB7DAE62B3DF08000985825 /* Localizable.xcstrings in Resources */,
 				0FCFFB162D809AF000BD6503 /* Products.plist in Resources */,
 				0FA834062B5A95F700E04788 /* CV Dmytro Skorokhod 2024 PDF.pdf in Resources */,
 				0F6079932B49CA35008DD313 /* GoogleService-Info.plist in Resources */,
@@ -769,6 +770,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -826,6 +828,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
