@@ -64,11 +64,6 @@ class AppCoordinator {
                           image: UIImage(systemName: "folder"))
     }
     
-    func scanningTabBarItem() -> UITabBarItem {
-        return tabBarItem(withTitle: String(localized: "scan"),
-                          image: UIImage(systemName: "doc.viewfinder"))
-    }
-    
     func tabBarItem(withTitle title: String,
                     image: UIImage?,
                     selectedImage: UIImage? = nil) -> UITabBarItem {
