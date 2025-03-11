@@ -78,12 +78,8 @@ final class PDFDocumentViewController: DocumentViewController {
         
         setupConstraints()
         
-        self.presenter?.checkIfSubscribed(subscribedCompletionHandler: {
-        }, notSubscribedCompletionHandler: { [weak self] in
-            guard let self = self else { return }
-            
-            self.presentSubscriptionProposal()
-        })
+        incrementOpenCount()
+        showSubscriptionProposalIfNeeded()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -95,6 +91,16 @@ final class PDFDocumentViewController: DocumentViewController {
                                                selector: #selector(keyboardWillHide),
                                                name:UIResponder.keyboardWillHideNotification,
                                                object: self.view.window)
+        
+        if nil != blurEffectView {
+            presenter?.checkIfSubscribed(subscribedCompletionHandler: { [weak self] in
+                guard let self = self else { return }
+                
+                self.blurEffectView?.removeFromSuperview()
+                self.blurEffectView = nil
+            }, notSubscribedCompletionHandler: {
+            })
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -344,5 +350,46 @@ final class PDFDocumentViewController: DocumentViewController {
         UIView.animate(withDuration: Constants.Position.animationDuration) { [weak self]  in
             self?.pdfView.go(to: savedDestination)
         }
+    }
+    
+    // MARK: - Subscription
+    
+    private var openCount: Int {
+        return presenter?.openCount ?? 0
+    }
+    
+    private func incrementOpenCount() {
+        presenter?.incrementOpenCount()
+    }
+    
+    private var blurEffectView: UIVisualEffectView? = nil
+    
+    private func showSubscriptionProposalIfNeeded() {
+        if openCount <= 3 {
+            return
+        }
+        
+        self.presenter?.checkIfSubscribed(subscribedCompletionHandler: {
+            print("subscribed")
+        }, notSubscribedCompletionHandler: { [weak self] in
+            guard let self = self else { return }
+            
+            Task {
+                let blurEffect = UIBlurEffect(style: .dark)
+                
+                self.blurEffectView = UIVisualEffectView(effect: blurEffect)
+                self.blurEffectView?.alpha = 0.9
+                
+                self.blurEffectView?.frame = self.pdfView.bounds
+                self.blurEffectView?.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+                
+                if let blurEffectView = self.blurEffectView {
+                    self.pdfView.addSubview(blurEffectView)
+                }
+                
+                await self.presenter?.requestProducts()
+                self.presentSubscriptionProposal()
+            }
+        })
     }
 }

@@ -9,10 +9,6 @@
 /* Begin PBXBuildFile section */
 		0F0BFF002BBD7C0A007CCF2D /* SubscriptionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0BFEFF2BBD7C0A007CCF2D /* SubscriptionManager.swift */; };
 		0F0BFF022BBD7C44007CCF2D /* SubscriptionManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0BFF012BBD7C44007CCF2D /* SubscriptionManagerProtocol.swift */; };
-		0F0BFF052BBD7D8F007CCF2D /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F0BFF042BBD7D8F007CCF2D /* StoreKit.framework */; };
-		0F0BFF072BBD7DB2007CCF2D /* IAPProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0BFF062BBD7DB2007CCF2D /* IAPProduct.swift */; };
-		0F0BFF092BBD7DD7007CCF2D /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0BFF082BBD7DD6007CCF2D /* IAPHelper.swift */; };
-		0F0BFF0B2BBD7E4F007CCF2D /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0BFF0A2BBD7E4F007CCF2D /* Subscription.swift */; };
 		0F0BFF0F2BBD80BB007CCF2D /* SubscriptionProposalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0BFF0E2BBD80BB007CCF2D /* SubscriptionProposalView.swift */; };
 		0F0BFF122BBD8C4E007CCF2D /* SubscriptionProposalRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0BFF112BBD8C4E007CCF2D /* SubscriptionProposalRouter.swift */; };
 		0F0BFF142BBD906B007CCF2D /* SubscriptionApplicationStateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0BFF132BBD906B007CCF2D /* SubscriptionApplicationStateProtocol.swift */; };
@@ -90,6 +86,14 @@
 		0FBCA99E2B3DA7A000149F38 /* MyFilesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBCA99D2B3DA7A000149F38 /* MyFilesViewController.swift */; };
 		0FBCA9A32B3DA7A200149F38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FBCA9A22B3DA7A200149F38 /* Assets.xcassets */; };
 		0FBCA9A62B3DA7A200149F38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FBCA9A42B3DA7A200149F38 /* LaunchScreen.storyboard */; };
+		0FCFFB012D807F9400BD6503 /* PrivacyPolicyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCFFB002D807F8C00BD6503 /* PrivacyPolicyView.swift */; };
+		0FCFFB032D807FDF00BD6503 /* TermsOfServiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCFFB022D807FD800BD6503 /* TermsOfServiceView.swift */; };
+		0FCFFB052D80801600BD6503 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCFFB042D80801400BD6503 /* Store.swift */; };
+		0FCFFB072D80805400BD6503 /* DocumentOpenTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCFFB062D80804900BD6503 /* DocumentOpenTracker.swift */; };
+		0FCFFB092D80808600BD6503 /* SubscriptionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCFFB082D80807C00BD6503 /* SubscriptionViewModel.swift */; };
+		0FCFFB0C2D80993B00BD6503 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F0BFF042BBD7D8F007CCF2D /* StoreKit.framework */; };
+		0FCFFB102D8099FF00BD6503 /* StoreKitTestCertificate.cer in Resources */ = {isa = PBXBuildFile; fileRef = 0FCFFB0F2D8099FF00BD6503 /* StoreKitTestCertificate.cer */; };
+		0FCFFB162D809AF000BD6503 /* Products.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0FCFFB152D809AF000BD6503 /* Products.plist */; };
 		0FE159712B407F1E000F5EDD /* DiskFileStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE159702B407F1E000F5EDD /* DiskFileStorageTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -108,9 +112,6 @@
 		0F0BFEFF2BBD7C0A007CCF2D /* SubscriptionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionManager.swift; sourceTree = "<group>"; };
 		0F0BFF012BBD7C44007CCF2D /* SubscriptionManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionManagerProtocol.swift; sourceTree = "<group>"; };
 		0F0BFF042BBD7D8F007CCF2D /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		0F0BFF062BBD7DB2007CCF2D /* IAPProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPProduct.swift; sourceTree = "<group>"; };
-		0F0BFF082BBD7DD6007CCF2D /* IAPHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPHelper.swift; sourceTree = "<group>"; };
-		0F0BFF0A2BBD7E4F007CCF2D /* Subscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
 		0F0BFF0E2BBD80BB007CCF2D /* SubscriptionProposalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionProposalView.swift; sourceTree = "<group>"; };
 		0F0BFF112BBD8C4E007CCF2D /* SubscriptionProposalRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionProposalRouter.swift; sourceTree = "<group>"; };
 		0F0BFF132BBD906B007CCF2D /* SubscriptionApplicationStateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionApplicationStateProtocol.swift; sourceTree = "<group>"; };
@@ -189,6 +190,13 @@
 		0FBCA9A52B3DA7A200149F38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0FBCA9A72B3DA7A200149F38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0FBCA9AC2B3DA7A300149F38 /* PDFReaderAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PDFReaderAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FCFFB002D807F8C00BD6503 /* PrivacyPolicyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyView.swift; sourceTree = "<group>"; };
+		0FCFFB022D807FD800BD6503 /* TermsOfServiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsOfServiceView.swift; sourceTree = "<group>"; };
+		0FCFFB042D80801400BD6503 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		0FCFFB062D80804900BD6503 /* DocumentOpenTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentOpenTracker.swift; sourceTree = "<group>"; };
+		0FCFFB082D80807C00BD6503 /* SubscriptionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionViewModel.swift; sourceTree = "<group>"; };
+		0FCFFB0F2D8099FF00BD6503 /* StoreKitTestCertificate.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = StoreKitTestCertificate.cer; sourceTree = "<group>"; };
+		0FCFFB152D809AF000BD6503 /* Products.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Products.plist; sourceTree = "<group>"; };
 		0FE159702B407F1E000F5EDD /* DiskFileStorageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskFileStorageTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -197,8 +205,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F0BFF052BBD7D8F007CCF2D /* StoreKit.framework in Frameworks */,
 				0FB6F4FD2D35D99100B5E7D7 /* Nefertiti in Frameworks */,
+				0FCFFB0C2D80993B00BD6503 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,9 +225,14 @@
 			children = (
 				0F0BFEFF2BBD7C0A007CCF2D /* SubscriptionManager.swift */,
 				0F0BFF012BBD7C44007CCF2D /* SubscriptionManagerProtocol.swift */,
-				0F0BFF062BBD7DB2007CCF2D /* IAPProduct.swift */,
-				0F0BFF082BBD7DD6007CCF2D /* IAPHelper.swift */,
-				0F0BFF0A2BBD7E4F007CCF2D /* Subscription.swift */,
+				0FCFFB002D807F8C00BD6503 /* PrivacyPolicyView.swift */,
+				0FCFFB022D807FD800BD6503 /* TermsOfServiceView.swift */,
+				0FCFFB042D80801400BD6503 /* Store.swift */,
+				0FCFFB062D80804900BD6503 /* DocumentOpenTracker.swift */,
+				0FCFFB082D80807C00BD6503 /* SubscriptionViewModel.swift */,
+				0F0BFF172BBDAAEE007CCF2D /* PDFDocumentScannerStoreKitConfiguration.storekit */,
+				0FCFFB0F2D8099FF00BD6503 /* StoreKitTestCertificate.cer */,
+				0FCFFB152D809AF000BD6503 /* Products.plist */,
 			);
 			path = SubscriptionManager;
 			sourceTree = "<group>";
@@ -411,7 +424,6 @@
 		0FBCA98D2B3DA7A000149F38 = {
 			isa = PBXGroup;
 			children = (
-				0F0BFF172BBDAAEE007CCF2D /* PDFDocumentScannerStoreKitConfiguration.storekit */,
 				0F04FD3B2B4087DA005F9968 /* PDFReaderApp.xctestplan */,
 				0FBCA9982B3DA7A000149F38 /* PDFReaderApp */,
 				0FBCA9AF2B3DA7A300149F38 /* PDFReaderAppTests */,
@@ -539,6 +551,9 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
+				he,
+				"zh-Hans",
 			);
 			mainGroup = 0FBCA98D2B3DA7A000149F38;
 			packageReferences = (
@@ -560,8 +575,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FBCA9A62B3DA7A200149F38 /* LaunchScreen.storyboard in Resources */,
+				0FCFFB102D8099FF00BD6503 /* StoreKitTestCertificate.cer in Resources */,
 				0FBCA9A32B3DA7A200149F38 /* Assets.xcassets in Resources */,
 				0FB7DAE62B3DF08000985825 /* Localizable.xcstrings in Resources */,
+				0FCFFB162D809AF000BD6503 /* Products.plist in Resources */,
 				0FA834062B5A95F700E04788 /* CV Dmytro Skorokhod 2024 PDF.pdf in Resources */,
 				0F6079932B49CA35008DD313 /* GoogleService-Info.plist in Resources */,
 				0F0BFF182BBDAAEE007CCF2D /* PDFDocumentScannerStoreKitConfiguration.storekit in Resources */,
@@ -588,7 +605,6 @@
 				0FA834012B58DD4100E04788 /* DocumentViewerApplicationStateProtocol.swift in Sources */,
 				0FA833F62B58CF8700E04788 /* ApplicationState.swift in Sources */,
 				0FAA6E8C2B4C7F9B0009D0A3 /* PDFDocumentKeeper+PDFDocumentDelegate.swift in Sources */,
-				0F0BFF072BBD7DB2007CCF2D /* IAPProduct.swift in Sources */,
 				0FB7DAF22B3F150E00985825 /* FileStorageProtocol.swift in Sources */,
 				0FB7DAFF2B3F1C8900985825 /* AppCoordinator.swift in Sources */,
 				0FAA6E882B4C6F050009D0A3 /* PDFDocumentInteractor.swift in Sources */,
@@ -601,6 +617,7 @@
 				0FA833F92B58CFFA00E04788 /* FileManagerApplicationStateProtocol.swift in Sources */,
 				0F0BFF162BBD9088007CCF2D /* ApplicationState+SubscriptionApplicationStateProtocol.swift in Sources */,
 				0FAA0DFD2B45CB9D002FC0F9 /* DynamicUIProtocol.swift in Sources */,
+				0FCFFB012D807F9400BD6503 /* PrivacyPolicyView.swift in Sources */,
 				0F4130C72B41B9F100981698 /* DocumentImportManager.swift in Sources */,
 				0FAA6E912B4C82170009D0A3 /* DynamicUINotifier.swift in Sources */,
 				0FA833FD2B58D0C800E04788 /* DocumentScannerApplicationStateProtocol.swift in Sources */,
@@ -610,6 +627,7 @@
 				0F4130CB2B41BE0900981698 /* DocumentPickerManager.swift in Sources */,
 				0F3218342B4F0DCB00840917 /* VisionDocumentCameraManager.swift in Sources */,
 				0F32183C2B4F11F800840917 /* DynamicUINotifierProtocol.swift in Sources */,
+				0FCFFB052D80801600BD6503 /* Store.swift in Sources */,
 				0FAA6E8F2B4C80BE0009D0A3 /* PDFSelection+Comparable.swift in Sources */,
 				0F0BFF142BBD906B007CCF2D /* SubscriptionApplicationStateProtocol.swift in Sources */,
 				0F4130B82B40C9F800981698 /* PresenterProtocol.swift in Sources */,
@@ -620,7 +638,6 @@
 				0FAA6E8A2B4C71730009D0A3 /* PDFDocumentKeeper.swift in Sources */,
 				0F3218382B4F0E3C00840917 /* DocumentCameraManager+VNDocumentCameraViewControllerDelegate.swift in Sources */,
 				0FA834032B58DD8100E04788 /* ApplicationState+DocumentViewerApplicationStateProtocol.swift in Sources */,
-				0F0BFF0B2BBD7E4F007CCF2D /* Subscription.swift in Sources */,
 				0FAA0DF52B45C0D5002FC0F9 /* Weak.swift in Sources */,
 				0FB1CEAF2B4DB46C005EDF0F /* PositionKeeperProtocol.swift in Sources */,
 				0FB1CEB52B4DB562005EDF0F /* PositionsList.swift in Sources */,
@@ -634,17 +651,19 @@
 				0F0BFF0F2BBD80BB007CCF2D /* SubscriptionProposalView.swift in Sources */,
 				0FBCA99E2B3DA7A000149F38 /* MyFilesViewController.swift in Sources */,
 				0FAA0E012B45DE3D002FC0F9 /* MyFilesViewController+UISearchResultsUpdating.swift in Sources */,
+				0FCFFB072D80805400BD6503 /* DocumentOpenTracker.swift in Sources */,
 				0FAA0DFF2B45CBD5002FC0F9 /* UIViewController+DynamicUIProtocol.swift in Sources */,
 				0FB1CEB32B4DB53D005EDF0F /* PositionsListProtocol.swift in Sources */,
 				0FB7DB092B3F2B9D00985825 /* DiskFilesList.swift in Sources */,
+				0FCFFB092D80808600BD6503 /* SubscriptionViewModel.swift in Sources */,
 				0F84D9092B4AEE5400CD3E3F /* FileInfoView.swift in Sources */,
 				0F4130D02B458B6800981698 /* PDFDocumentViewController.swift in Sources */,
 				0F84D8FA2B49EB9B00CD3E3F /* MyFilesViewController+DynamicUIProtocol.swift in Sources */,
 				0FAA0E052B46FFF6002FC0F9 /* MyFilesViewController+UICollectionViewDelegate.swift in Sources */,
-				0F0BFF092BBD7DD7007CCF2D /* IAPHelper.swift in Sources */,
 				0F0BFF122BBD8C4E007CCF2D /* SubscriptionProposalRouter.swift in Sources */,
 				0FB1CEB92B4DB60E005EDF0F /* Position.swift in Sources */,
 				0F4130B42B40C85900981698 /* MyFilesPresenter.swift in Sources */,
+				0FCFFB032D807FDF00BD6503 /* TermsOfServiceView.swift in Sources */,
 				0FBCA99A2B3DA7A000149F38 /* AppDelegate.swift in Sources */,
 				0F3218602B532D6100840917 /* DocumentViewController+UINavigationItemRenameDelegate.swift in Sources */,
 				0F3218302B4EE1C700840917 /* VisionDocumentCameraRouter.swift in Sources */,
@@ -817,7 +836,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = EYWEP6YJP9;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -834,7 +853,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.3;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dintegralas.PDFReaderApp;
 				PRODUCT_NAME = "PDF Scanner";
@@ -850,7 +869,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = EYWEP6YJP9;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -867,7 +886,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.3;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dintegralas.PDFReaderApp;
 				PRODUCT_NAME = "PDF Scanner";

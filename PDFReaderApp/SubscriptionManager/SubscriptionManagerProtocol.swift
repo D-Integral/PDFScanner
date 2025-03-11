@@ -9,9 +9,15 @@ import Foundation
 import UIKit
 //
 protocol SubscriptionManagerProtocol {
+    var subscriptionViewModel: SubscriptionViewModel { get }
+    
     func productIdentifiers() -> [String]
     
-    func requestProducts(_ completionHandler: @escaping () -> ())
+    func requestProducts() async
     
     func subscriptionPurchased() -> Bool
+    
+    var openCount: Int { get }
+    
+    func incrementOpenCount()
 }

@@ -9,19 +9,26 @@ import Foundation
 import StoreKit
 
 class SubscriptionManager: SubscriptionManagerProtocol {
+    let subscriptionViewModel = SubscriptionViewModel()
+    let openTracker = DocumentOpenTracker()
+    
     func productIdentifiers() -> [String] {
-        return Array(Subscription.store.productIdentifiers)
+        return subscriptionViewModel.productIDs()
     }
     
-    func requestProducts(_ completionHandler: @escaping () -> ()) {
-        Subscription.store.requestProducts { success, products in
-            if success {
-                completionHandler()
-            }
-        }
+    func requestProducts() async {
+        await subscriptionViewModel.requestProducts()
     }
     
     func subscriptionPurchased() -> Bool {
-        return Subscription.subscriptionPurchased()
+        return subscriptionViewModel.isSubscribed()
+    }
+    
+    var openCount: Int {
+        return openTracker.openCount
+    }
+    
+    func incrementOpenCount() {
+        openTracker.incrementOpenCount()
     }
 }
