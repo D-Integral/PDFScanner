@@ -217,7 +217,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "By subscribing to PDF Reader Unlimited, you’re unlocking limitless access to PDFs while directly supporting our mission to provide the best PDF reader.\nWe rely on your subscriptions to maintain and improve the app you love. Together, we can make PDF Reader even better!\nGo unlimited today! Try it free for 7 days."
+            "value" : "By subscribing to PDF Scanner Premium, you’re unlocking limitless access to PDFs while directly supporting our mission to provide the best PDF scanner.\nWe rely on your subscriptions to maintain and improve the app you love. Together, we can make PDF Scanner even better!\nGo unlimited today! Try it free for 7 days."
           }
         }
       }
@@ -225,10 +225,34 @@
     "termsOfService" : {
       "comment" : "The terms of service.",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "شروط الخدمة\nمرحبًا بك في PDF Scanner! باستخدام تطبيقنا (\"التطبيق\")، فإنك توافق على شروط الخدمة التالية (\"الشروط\"). يرجى قراءة هذه الشروط بعناية قبل استخدام التطبيق. إذا كنت لا توافق على هذه الشروط، فلا تستخدم التطبيق.\n\n1. استخدام التطبيق\n\nيسمح تطبيق PDF Scanner للمستخدمين بمسح المستندات بواسطة الكاميرا إلى PDF، ثم فتحها وعرضها وإدارتها على أجهزتهم. باستخدام التطبيق، فإنك توافق على استخدامه وفقًا لهذه الشروط والقوانين المعمول بها.\n\n2. حد المستندات المجانية\n\nيمكن للمستخدمين فتح وعرض ما يصل إلى 3 ملفات PDF يوميًا مجانًا. بعد الوصول إلى هذا الحد اليومي، سيتم مطالبتهم بالاشتراك لمتابعة استخدام الميزات الكاملة للتطبيق.\n\n3. الاشتراك\n\nللوصول إلى عدد غير محدود من المستندات والميزات المميزة الأخرى، يمكن للمستخدمين الاشتراك في الخدمة المدفوعة. سيتم توضيح تفاصيل الاشتراك، بما في ذلك الأسعار والشروط، داخل التطبيق.\n\nيتم تحصيل رسوم الاشتراك بشكل دوري (شهريًا أو سنويًا) وفقًا للخطة المختارة.\nسيتم خصم المدفوعات من طريقة الدفع المحددة (مثل Apple ID) عند تأكيد الاشتراك.\nيتم تجديد الاشتراك تلقائيًا ما لم يتم إلغاؤه قبل 24 ساعة على الأقل من نهاية الفترة الحالية.\nيمكنك إدارة اشتراكك وإلغاؤه في أي وقت من خلال إعدادات الحساب في App Store.\n4. مسؤوليات المستخدم\n\nأنت توافق على استخدام التطبيق للأغراض القانونية فقط، وعدم انتهاك أي قوانين أو لوائح محلية أو دولية. كما أنك توافق على عدم محاولة عكس هندسة التطبيق أو تفكيكه أو العبث بوظائفه.\n\n5. التغييرات في التطبيق\n\nنحتفظ بالحق في تعديل أو إيقاف أي جزء من التطبيق، سواء بشكل مؤقت أو دائم، مع أو بدون إشعار. نحن غير مسؤولين عن أي تغييرات أو توقف عن تقديم التطبيق.\n\n6. إنهاء الوصول\n\nيجوز لنا إنهاء أو تعليق وصولك إلى التطبيق في أي وقت، مع أو بدون سبب، بما في ذلك إذا انتهكت هذه الشروط.\n\n7. تحديد المسؤولية\n\nيتم توفير التطبيق \"كما هو\" دون أي ضمانات صريحة أو ضمنية. إلى أقصى حد يسمح به القانون، نخلي مسؤوليتنا عن أي ضمانات، بما في ذلك على سبيل المثال لا الحصر، الملاءمة لغرض معين وعدم التعدي.\n\nنحن غير مسؤولين عن أي أضرار أو خسائر أو مشاكل ناتجة عن استخدامك للتطبيق.\n\n8. التغييرات في هذه الشروط\n\nنحتفظ بالحق في تحديث هذه الشروط أو تعديلها في أي وقت. سيتم نشر أي تغييرات داخل التطبيق، وسيتم تحديث تاريخ \"آخر تحديث\". استمرار استخدام التطبيق بعد التعديلات يعني قبول الشروط الجديدة.\n\n9. الاتصال بنا\n\nإذا كان لديك أي استفسارات بخصوص هذه الشروط، يمكنك الاتصال بنا عبر البريد الإلكتروني: d.integralas@gmail.com."
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Terms of Service\nWelcome to PDF Scanner! By using our mobile application (the \"App\"), you agree to the following terms of service (\"Terms\"). Please read these Terms carefully before using the App. If you do not agree to these Terms, do not use the App.\n\n1. Use of the App\nPDF Scanner allows users to scan by camera into PDF and then open, view and manage PDF documents on their device. By using the App, you agree to use it in accordance with these Terms and applicable laws.\n\n2. Free Document Limit\nUsers can open and view up to 3 PDF documents per day for free. After reaching this daily limit, users will be prompted to subscribe to continue using the full functionality of the App.\n\n3. Subscription\nTo access unlimited document views and other premium features, users can choose to subscribe to our paid service. Details of the subscription, including pricing and terms, will be provided within the App.\n\nSubscriptions are billed periodically (e.g., monthly or yearly) based on the plan selected.\n\nPayment will be charged to your chosen payment method (e.g., Apple ID) at the time of confirmation.\n\nSubscriptions automatically renew unless canceled at least 24 hours before the end of the current period.\n\nYou can manage your subscription and cancel it at any time through your account settings in the App Store.\n\n4. User Responsibilities\nYou agree to use the App only for lawful purposes and not to violate any local, national, or international laws or regulations. You may not attempt to reverse engineer, decompile, or otherwise tamper with the App's functionality.\n\n5. Changes to the App\nWe reserve the right to modify or discontinue any part of the App, either temporarily or permanently, with or without notice. We are not liable for any changes or discontinuation of the App.\n\n6. Termination of Access\nWe may terminate or suspend your access to the App at any time, with or without cause, including if you violate these Terms.\n\n7. Limitation of Liability\nThe App is provided \"as is\" and without warranties of any kind, either express or implied. To the fullest extent permitted by law, we disclaim all warranties, including but not limited to fitness for a particular purpose and non-infringement.\n\nWe are not responsible for any damages, losses, or issues that arise from your use of the App.\n\n8. Changes to These Terms\nWe reserve the right to update or change these Terms at any time. Any changes will be posted within the App, and the \"Last updated\" date will be revised. Continued use of the App after changes have been made constitutes acceptance of the new Terms.\n\n9. Contact Us\nIf you have any questions about these Terms, please contact us at d.integralas@gmail.com."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Términos de Servicio\n¡Bienvenido a PDF Scanner! Al utilizar nuestra aplicación móvil (\"la Aplicación\"), aceptas los siguientes términos de servicio (\"Términos\"). Por favor, lee estos Términos atentamente antes de usar la Aplicación. Si no estás de acuerdo con estos Términos, no utilices la Aplicación.\n\n1. Uso de la Aplicación\n\nLa Aplicación PDF Scanner permite a los usuarios escanear documentos con la cámara en formato PDF y luego abrir, ver y gestionar archivos PDF en su dispositivo. Al utilizar la Aplicación, aceptas usarla conforme a estos Términos y las leyes aplicables.\n\n2. Límite de Documentos Gratuitos\n\nLos usuarios pueden abrir y ver hasta 3 documentos PDF al día de forma gratuita. Una vez alcanzado este límite diario, se les pedirá que se suscriban para continuar utilizando todas las funciones de la Aplicación.\n\n3. Suscripción\n\nPara acceder a una visualización ilimitada de documentos y otras funciones premium, los usuarios pueden optar por suscribirse a nuestro servicio de pago. Los detalles de la suscripción, incluyendo precios y términos, estarán disponibles dentro de la Aplicación.\n\nLa suscripción se factura periódicamente (por ejemplo, mensual o anualmente) según el plan seleccionado.\nEl pago se cargará a tu método de pago elegido (por ejemplo, Apple ID) en el momento de la confirmación.\nLa suscripción se renovará automáticamente a menos que se cancele al menos 24 horas antes de que finalice el período actual.\nPuedes gestionar y cancelar tu suscripción en cualquier momento a través de la configuración de tu cuenta en la App Store.\n4. Responsabilidades del Usuario\n\nAceptas utilizar la Aplicación solo para fines legales y no infringir ninguna ley o normativa local, nacional o internacional. No debes intentar realizar ingeniería inversa, descompilar o manipular el funcionamiento de la Aplicación.\n\n5. Cambios en la Aplicación\n\nNos reservamos el derecho de modificar o descontinuar cualquier parte de la Aplicación, ya sea de manera temporal o permanente, con o sin previo aviso. No seremos responsables de ninguna modificación o interrupción de la Aplicación.\n\n6. Terminación del Acceso\n\nPodemos suspender o terminar tu acceso a la Aplicación en cualquier momento, con o sin causa, incluyendo si incumples estos Términos.\n\n7. Limitación de Responsabilidad\n\nLa Aplicación se proporciona \"tal cual\" y sin garantías de ningún tipo, expresas o implícitas. En la máxima medida permitida por la ley, renunciamos a todas las garantías, incluidas, entre otras, la idoneidad para un propósito particular y la no infracción.\n\nNo somos responsables de ningún daño, pérdida o problema derivado del uso de la Aplicación.\n\n8. Cambios en estos Términos\n\nNos reservamos el derecho de actualizar o modificar estos Términos en cualquier momento. Cualquier cambio se publicará dentro de la Aplicación, y se actualizará la fecha de \"Última actualización\". El uso continuado de la Aplicación después de los cambios constituye la aceptación de los nuevos Términos.\n\n9. Contáctanos\n\nSi tienes preguntas sobre estos Términos, puedes contactarnos en d.integralas@gmail.com."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "תנאי שירות\nברוכים הבאים ל-PDF Scanner! בשימוש באפליקציה שלנו (\"האפליקציה\"), אתה מסכים לתנאי השימוש הבאים (\"התנאים\"). אנא קרא תנאים אלו בעיון לפני השימוש באפליקציה. אם אינך מסכים לתנאים אלו, אל תשתמש באפליקציה.\n\n1. שימוש באפליקציה\n\nהאפליקציה PDF Scanner מאפשרת למשתמשים לסרוק מסמכים באמצעות מצלמה לפורמט PDF, ולאחר מכן לפתוח, לצפות ולנהל מסמכי PDF במכשיר שלהם. בשימוש באפליקציה, אתה מסכים להשתמש בה בהתאם לתנאים אלו ולחוקים החלים.\n\n2. מגבלת מסמכים חינמיים\n\nמשתמשים יכולים לפתוח ולצפות בעד 3 מסמכי PDF ביום ללא עלות. לאחר הגעה למגבלה היומית, המשתמשים יתבקשו להירשם כמנויים כדי להמשיך להשתמש בכל הפונקציות של האפליקציה.\n\n3. מנוי\n\nכדי לגשת לתצוגה בלתי מוגבלת של מסמכים ולתכונות פרימיום נוספות, המשתמשים יכולים לבחור להירשם לשירות בתשלום. פרטי המנוי, כולל מחירים ותנאים, יופיעו בתוך האפליקציה.\n\nהמנוי מחויב באופן תקופתי (למשל, חודשי או שנתי) בהתאם לתוכנית שנבחרה.\nהחיוב יתבצע באמצעות אמצעי התשלום שנבחר (כגון Apple ID) בעת האישור.\nהמנוי יתחדש אוטומטית, אלא אם יבוטל לפחות 24 שעות לפני סיום התקופה הנוכחית.\nניתן לנהל ולבטל את המנוי בכל עת דרך הגדרות החשבון בחנות האפליקציות (App Store).\n4. אחריות המשתמש\n\nאתה מסכים להשתמש באפליקציה רק למטרות חוקיות, ולא להפר חוקים או תקנות מקומיים, לאומיים או בינלאומיים. אין לנסות לבצע הנדסה לאחור, לפרק או לשנות את פונקציונליות האפליקציה.\n\n5. שינויים באפליקציה\n\nאנו שומרים לעצמנו את הזכות לשנות או להפסיק כל חלק מהאפליקציה, באופן זמני או קבוע, עם או ללא הודעה מוקדמת. לא נהיה אחראים לכל שינוי או הפסקה של האפליקציה.\n\n6. סיום גישה\n\nאנו רשאים להפסיק או להשעות את הגישה שלך לאפליקציה בכל עת, עם או בלי סיבה, כולל אם הפרת תנאים אלה.\n\n7. הגבלת אחריות\n\nהאפליקציה מסופקת \"כמות שהיא\" וללא אחריות מכל סוג, מפורשת או משתמעת. במידה המרבית המותרת על פי חוק, אנו מתנערים מכל אחריות, לרבות אך לא רק התאמה למטרה מסוימת ואי-הפרה.\n\nאיננו אחראים לנזקים, הפסדים או בעיות הנובעים משימושך באפליקציה.\n\n8. שינויים בתנאים אלו\n\nאנו שומרים לעצמנו את הזכות לעדכן או לשנות את התנאים בכל עת. כל שינוי יפורסם באפליקציה, ותאריך ה\"עדכון האחרון\" ישונה. המשך השימוש באפליקציה לאחר ביצוע השינויים מהווה הסכמה לתנאים החדשים.\n\n9. יצירת קשר\n\nאם יש לך שאלות בנוגע לתנאים אלה, ניתן ליצור איתנו קשר בכתובת d.integralas@gmail.com."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "服务条款\n欢迎使用 PDF Scanner！使用我们的移动应用程序（“应用”）即表示您同意以下服务条款（“条款”）。请在使用本应用之前仔细阅读这些条款。如果您不同意这些条款，请勿使用本应用。\n\n1. 应用的使用\n\nPDF Scanner 应用允许用户使用摄像头扫描文档为 PDF，并在设备上打开、查看和管理 PDF 文件。使用本应用即表示您同意按照这些条款及适用法律使用它。\n\n2. 免费文档限制\n\n用户每天可以免费打开和查看最多 3 个 PDF 文档。达到每日限制后，用户将被提示订阅以继续使用应用的全部功能。\n\n3. 订阅\n\n为了享受无限制的文档查看及其他高级功能，用户可以选择订阅我们的付费服务。订阅的详细信息（包括价格和条款）将在应用内提供。\n\n订阅费用将根据所选计划（例如，每月或每年）定期收取。\n付款将在确认时通过所选支付方式（如 Apple ID）扣款。\n订阅会自动续订，除非在当前订阅期结束前至少 24 小时取消。\n您可以随时通过 App Store 账户设置管理或取消订阅。\n4. 用户责任\n\n您同意仅将应用用于合法用途，不得违反任何本地、国家或国际法律或法规。您不得尝试逆向工程、反编译或以其他方式篡改应用的功能。\n\n5. 应用变更\n\n我们保留修改或终止应用任何部分的权利，无论是临时还是永久性的，恕不另行通知。我们不对应用的更改或停用承担任何责任。\n\n6. 访问终止\n\n如果您违反了这些条款，我们有权在任何时候暂停或终止您对本应用的访问，无论是否有具体原因。\n\n7. 责任限制\n\n本应用按“原样”提供，不附带任何明示或暗示的保证。在法律允许的最大范围内，我们不对任何损失、损害或使用本应用所产生的问题承担责任。\n\n8. 条款变更\n\n我们保留随时更新或更改这些条款的权利。任何更改都将在应用内公布，并更新“最后更新”日期。继续使用应用即表示您接受新的条款。\n\n9. 联系我们\n\n如果您对这些条款有任何疑问，请通过 d.integralas@gmail.com 联系我们。"
           }
         }
       }
@@ -236,10 +260,34 @@
     "termsOfServiceTitle" : {
       "comment" : "The title for the terms of service",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "شروط الخدمة"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Terms of Service"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Términos de Servicio"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "תנאי שירות"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "服务条款"
           }
         }
       }
