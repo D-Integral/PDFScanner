@@ -3,559 +3,162 @@
   "strings" : {
     "%lld of %lld search results" : {
       "localizations" : {
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$lld z %2$lld výsledků vyhledávání"
-          }
-        },
         "en" : {
           "stringUnit" : {
             "state" : "new",
             "value" : "%1$lld of %2$lld search results"
-          }
-        },
-        "ka-GE" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$lld %2$lld ძიების შედეგებიდან"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$lld из %2$lld результатов поиска"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$lld з %2$lld результатів пошуку"
-          }
-        }
-      }
-    },
-    "accountTabBarItemTitle" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Účet"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Account"
-          }
-        },
-        "ka-GE" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ანგარიში"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Учётная запись"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Обліковий запис"
           }
         }
       }
     },
     "cancel" : {
       "localizations" : {
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Zrušení"
-          }
-        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cancel"
           }
-        },
-        "ka-GE" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "გაუქმება"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Отменить"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Скасувати"
-          }
         }
       }
     },
     "Close" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Close"
+          }
+        }
+      }
     },
     "delete" : {
       "localizations" : {
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vymazat"
-          }
-        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Delete"
-          }
-        },
-        "ka-GE" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "წაშლა"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Удалить"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Видалити"
           }
         }
       }
     },
     "documentCameraNotSupported" : {
       "localizations" : {
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Skenování dokumentů vaše zařízení nepodporuje."
-          }
-        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "The document scanning is not supported for your device."
-          }
-        },
-        "ka-GE" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "დოკუმენტის სკანირება არ არის მხარდაჭერილი თქვენი მოწყობილობისთვის."
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Сканирование документов не поддерживается на вашем устройстве."
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Сканування документів не підтримується вашим пристроєм."
           }
         }
       }
     },
     "error" : {
       "localizations" : {
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Chyba"
-          }
-        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Error"
-          }
-        },
-        "ka-GE" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "შეცდომა"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ошибка"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Помилка"
           }
         }
       }
     },
     "fileRename" : {
       "localizations" : {
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Přejmenovat soubor"
-          }
-        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "File Rename"
           }
-        },
-        "ka-GE" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ფაილის გადარქმევა"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Переименовать файл"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Перейменувати файл"
-          }
         }
       }
     },
     "filesTabBarItemTitle" : {
-      "extractionState" : "manual",
       "localizations" : {
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Soubory"
-          }
-        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Files"
           }
-        },
-        "ka-GE" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ფაილები"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Файлы"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Файли"
-          }
-        }
-      }
-    },
-    "myAccount" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Můj účet"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "My Account"
-          }
-        },
-        "ka-GE" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ჩემი ანგარიში"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Моя учётная запись"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Мій обліковий запис"
-          }
         }
       }
     },
     "myFilesViewControllerTitle" : {
-      "extractionState" : "manual",
       "localizations" : {
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Moje PDF dokumenty"
-          }
-        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "My PDF documents"
           }
-        },
-        "ka-GE" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ჩემი PDF დოკუმენტები"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Мои PDF-документы"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Мої PDF-документи"
-          }
         }
       }
     },
     "privacyPolicy" : {
-      "comment" : "The provacy policy."
+      "comment" : "The provacy policy.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Privacy Policy\nD Integralas (\"we,\" \"our,\" or \"us\") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you use our mobile application, PDF Scanner (the \"App\"). Please read this Privacy Policy carefully. By using the App, you agree to the terms described here.\n\n1. Personal Data Collection\nWe do not collect any personally identifiable information directly. However, we use third-party services that may collect data for diagnostic and analytical purposes to help improve the App.\n\n2. Third-Party Services\nWe use the following third-party services in the App:\n\na) Firebase Crashlytics\n\nFirebase Crashlytics helps us monitor and fix crashes or issues within the App. While Crashlytics does not collect any personal data directly, it may gather anonymized information such as:\n\nDevice state and information (e.g., model, operating system);\n\nApp version being used;\n\nDetails of the crash or error;\n\nThis information is used strictly for diagnosing and resolving technical problems.\n\nb) Google Analytics for Firebase\n\nGoogle Analytics for Firebase helps us understand how users interact with the App, which features are popular, and how we can improve the user experience. This service may collect anonymized data such as:\n\nFrequency of use;\n\nDevice type and operating system;\n\nGeneral usage patterns (e.g., which screens are viewed);\n\nGoogle Analytics does not collect personally identifiable information according to Google's data collection policies.\n\n3. How We Use Your Data\nThe anonymized data collected through these services is used for:\n\nImproving App functionality and performance;\n\nIdentifying and fixing bugs or crashes;\n\nUnderstanding how users engage with the App;\n\nWe do not share this information with any third-party entities except for those services mentioned above.\n\n4. Your Control Over Data\nWhile we do not collect personal information, you can control your data usage by disabling data collection features in the App settings or through your device's privacy settings. You can also opt out of Google Analytics by following instructions provided by Google.\n\n5. Data Security\nWe take reasonable steps to protect the information collected through our third-party services. However, no method of transmission over the internet is 100% secure, and we cannot guarantee absolute security.\n\n6. Changes to This Privacy Policy\nWe may update this Privacy Policy from time to time. Any changes will be reflected in this document, and we will update the \"Last updated\" date above. Please review this Privacy Policy periodically to stay informed of any changes.\n\n7. Contact Us\nIf you have any questions or concerns about this Privacy Policy, feel free to contact us at d.integralas@gmail.com."
+          }
+        }
+      }
     },
     "privacyPolicyTitle" : {
-      "comment" : "The title for the privacy policy."
+      "comment" : "The title for the privacy policy.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Privacy Policy"
+          }
+        }
+      }
     },
     "rename" : {
       "localizations" : {
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Přejmenovat"
-          }
-        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Rename"
-          }
-        },
-        "ka-GE" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "გადარქმევა"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Переименовать"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Перейменувати"
           }
         }
       }
     },
     "scan" : {
       "localizations" : {
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Skenovat"
-          }
-        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Scan"
-          }
-        },
-        "ka-GE" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "სკანირება"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Сканировать"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Сканувати"
           }
         }
       }
     },
     "search" : {
       "localizations" : {
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vyhledávání"
-          }
-        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Search"
           }
-        },
-        "ka-GE" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ძიება"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Поиск"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Пошук"
-          }
         }
       }
     },
     "searchPdfDocuments" : {
-      "extractionState" : "manual",
       "localizations" : {
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Prohledávejte PDF dokumenty"
-          }
-        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Search PDF Documents"
-          }
-        },
-        "ka-GE" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "მოძებნეთ PDF დოკუმენტები"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Поиск PDF-документов"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Пошук PDF-документів"
           }
         }
       }
     },
     "share" : {
       "localizations" : {
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Podíl"
-          }
-        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Share"
-          }
-        },
-        "ka-GE" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "გააზიარეთ"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Поделиться"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Поділитися"
-          }
-        }
-      }
-    },
-    "signUp" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Registrovat"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sign Up"
-          }
-        },
-        "ka-GE" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "დარეგისტრირდით"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Зарегистрироваться"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Зареєструватися"
           }
         }
       }
@@ -566,54 +169,43 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "By subscribing to PDF Scanner Premium, you’re unlocking limitless access to PDFs while directly supporting our mission to provide the best PDF scanner.\nWe rely on your subscriptions to maintain and improve the app you love. Together, we can make PDF Scanner even better!\nGo Unlimited Today! Try It Free for 7 Days."
+            "value" : "By subscribing to PDF Reader Unlimited, you’re unlocking limitless access to PDFs while directly supporting our mission to provide the best PDF reader.\nWe rely on your subscriptions to maintain and improve the app you love. Together, we can make PDF Reader even better!\nGo unlimited today! Try it free for 7 days."
           }
         }
       }
     },
     "termsOfService" : {
-      "comment" : "The terms of service."
-    },
-    "termsOfServiceTitle" : {
-      "comment" : "The title for the terms of service"
-    },
-    "toolsTitle" : {
-      "extractionState" : "manual",
+      "comment" : "The terms of service.",
       "localizations" : {
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nástroje"
-          }
-        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tools"
+            "value" : "Terms of Service\nWelcome to PDF Scanner! By using our mobile application (the \"App\"), you agree to the following terms of service (\"Terms\"). Please read these Terms carefully before using the App. If you do not agree to these Terms, do not use the App.\n\n1. Use of the App\nPDF Scanner allows users to scan by camera into PDF and then open, view and manage PDF documents on their device. By using the App, you agree to use it in accordance with these Terms and applicable laws.\n\n2. Free Document Limit\nUsers can open and view up to 3 PDF documents per day for free. After reaching this daily limit, users will be prompted to subscribe to continue using the full functionality of the App.\n\n3. Subscription\nTo access unlimited document views and other premium features, users can choose to subscribe to our paid service. Details of the subscription, including pricing and terms, will be provided within the App.\n\nSubscriptions are billed periodically (e.g., monthly or yearly) based on the plan selected.\n\nPayment will be charged to your chosen payment method (e.g., Apple ID) at the time of confirmation.\n\nSubscriptions automatically renew unless canceled at least 24 hours before the end of the current period.\n\nYou can manage your subscription and cancel it at any time through your account settings in the App Store.\n\n4. User Responsibilities\nYou agree to use the App only for lawful purposes and not to violate any local, national, or international laws or regulations. You may not attempt to reverse engineer, decompile, or otherwise tamper with the App's functionality.\n\n5. Changes to the App\nWe reserve the right to modify or discontinue any part of the App, either temporarily or permanently, with or without notice. We are not liable for any changes or discontinuation of the App.\n\n6. Termination of Access\nWe may terminate or suspend your access to the App at any time, with or without cause, including if you violate these Terms.\n\n7. Limitation of Liability\nThe App is provided \"as is\" and without warranties of any kind, either express or implied. To the fullest extent permitted by law, we disclaim all warranties, including but not limited to fitness for a particular purpose and non-infringement.\n\nWe are not responsible for any damages, losses, or issues that arise from your use of the App.\n\n8. Changes to These Terms\nWe reserve the right to update or change these Terms at any time. Any changes will be posted within the App, and the \"Last updated\" date will be revised. Continued use of the App after changes have been made constitutes acceptance of the new Terms.\n\n9. Contact Us\nIf you have any questions about these Terms, please contact us at d.integralas@gmail.com."
           }
-        },
-        "ka-GE" : {
+        }
+      }
+    },
+    "termsOfServiceTitle" : {
+      "comment" : "The title for the terms of service",
+      "localizations" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ხელსაწყოები"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Инструменты"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Інструменти"
+            "value" : "Terms of Service"
           }
         }
       }
     },
     "Your Support Makes All the Difference" : {
-      "comment" : "Subscription title"
+      "comment" : "Subscription title",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your Support Makes All the Difference"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"
