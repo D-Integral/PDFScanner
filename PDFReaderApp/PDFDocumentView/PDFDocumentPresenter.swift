@@ -88,9 +88,25 @@ class PDFDocumentPresenter: PresenterProtocol {
         interactor?.rename(to: newName)
     }
     
-//    func checkIfSubscribed(subscribedCompletionHandler: () -> (),
-//                           notSubscribedCompletionHandler: () -> ()) {
-//        interactor?.checkIfSubscribed(subscribedCompletionHandler: subscribedCompletionHandler,
-//                                      notSubscribedCompletionHandler: notSubscribedCompletionHandler)
-//    }
+    func checkIfSubscribed(subscribedCompletionHandler: () -> (),
+                           notSubscribedCompletionHandler: () -> ()) {
+        interactor?.checkIfSubscribed(subscribedCompletionHandler: subscribedCompletionHandler,
+                                      notSubscribedCompletionHandler: notSubscribedCompletionHandler)
+    }
+    
+    func requestProducts() async {
+        await interactor?.requestProducts()
+    }
+    
+    var openCount: Int {
+        return interactor?.openCount ?? 0
+    }
+    
+    func incrementOpenCount() {
+        interactor?.incrementOpenCount()
+    }
+    
+    var daysInUsage: Int {
+        return interactor?.daysInUsage ?? 0
+    }
 }

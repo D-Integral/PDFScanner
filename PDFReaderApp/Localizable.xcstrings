@@ -3,10 +3,10 @@
   "strings" : {
     "%lld of %lld search results" : {
       "localizations" : {
-        "cs" : {
+        "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%1$lld z %2$lld výsledků vyhledávání"
+            "value" : "%1$lld من أصل %2$lld من نتائج البحث"
           }
         },
         "en" : {
@@ -15,67 +15,32 @@
             "value" : "%1$lld of %2$lld search results"
           }
         },
-        "ka-GE" : {
+        "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%1$lld %2$lld ძიების შედეგებიდან"
+            "value" : "%1$lld de %2$lld resultados de búsqueda"
           }
         },
-        "ru" : {
+        "he" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%1$lld из %2$lld результатов поиска"
+            "value" : "תוצאה %1$lld מתוך %2$lld תוצאות חיפוש"
           }
         },
-        "uk" : {
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%1$lld з %2$lld результатів пошуку"
-          }
-        }
-      }
-    },
-    "accountTabBarItemTitle" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Účet"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Account"
-          }
-        },
-        "ka-GE" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ანგარიში"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Учётная запись"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Обліковий запис"
+            "value" : "搜索结果 %1$lld/%2$lld"
           }
         }
       }
     },
     "cancel" : {
       "localizations" : {
-        "cs" : {
+        "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Zrušení"
+            "value" : "إلغاء"
           }
         },
         "en" : {
@@ -84,32 +49,66 @@
             "value" : "Cancel"
           }
         },
-        "ka-GE" : {
+        "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "გაუქმება"
+            "value" : "Cancelar"
           }
         },
-        "ru" : {
+        "he" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Отменить"
+            "value" : "ביטול"
           }
         },
-        "uk" : {
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Скасувати"
+            "value" : "取消"
+          }
+        }
+      }
+    },
+    "Close" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إغلاق"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Close"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cerrar"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "סגור"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "关闭"
           }
         }
       }
     },
     "delete" : {
       "localizations" : {
-        "cs" : {
+        "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Vymazat"
+            "value" : "حذف"
           }
         },
         "en" : {
@@ -118,32 +117,32 @@
             "value" : "Delete"
           }
         },
-        "ka-GE" : {
+        "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "წაშლა"
+            "value" : "Eliminar"
           }
         },
-        "ru" : {
+        "he" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Удалить"
+            "value" : "מחק"
           }
         },
-        "uk" : {
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Видалити"
+            "value" : "删除"
           }
         }
       }
     },
     "documentCameraNotSupported" : {
       "localizations" : {
-        "cs" : {
+        "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Skenování dokumentů vaše zařízení nepodporuje."
+            "value" : "مسح المستندات غير مدعوم على جهازك."
           }
         },
         "en" : {
@@ -152,32 +151,32 @@
             "value" : "The document scanning is not supported for your device."
           }
         },
-        "ka-GE" : {
+        "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "დოკუმენტის სკანირება არ არის მხარდაჭერილი თქვენი მოწყობილობისთვის."
+            "value" : "La digitalización de documentos no es compatible con tu dispositivo."
           }
         },
-        "ru" : {
+        "he" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Сканирование документов не поддерживается на вашем устройстве."
+            "value" : "סריקת מסמכים אינה נתמכת במכשיר שלך."
           }
         },
-        "uk" : {
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Сканування документів не підтримується вашим пристроєм."
+            "value" : "您的设备不支持文档扫描。"
           }
         }
       }
     },
     "error" : {
       "localizations" : {
-        "cs" : {
+        "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Chyba"
+            "value" : "خطأ"
           }
         },
         "en" : {
@@ -186,32 +185,32 @@
             "value" : "Error"
           }
         },
-        "ka-GE" : {
+        "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "შეცდომა"
+            "value" : "Error"
           }
         },
-        "ru" : {
+        "he" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ошибка"
+            "value" : "שגיאה"
           }
         },
-        "uk" : {
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Помилка"
+            "value" : "错误"
           }
         }
       }
     },
     "fileRename" : {
       "localizations" : {
-        "cs" : {
+        "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Přejmenovat soubor"
+            "value" : "إعادة تسمية الملف"
           }
         },
         "en" : {
@@ -220,33 +219,32 @@
             "value" : "File Rename"
           }
         },
-        "ka-GE" : {
+        "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ფაილის გადარქმევა"
+            "value" : "Renombrar archivo"
           }
         },
-        "ru" : {
+        "he" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Переименовать файл"
+            "value" : "שינוי שם קובץ"
           }
         },
-        "uk" : {
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Перейменувати файл"
+            "value" : "文件重命名"
           }
         }
       }
     },
     "filesTabBarItemTitle" : {
-      "extractionState" : "manual",
       "localizations" : {
-        "cs" : {
+        "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Soubory"
+            "value" : "الملفات"
           }
         },
         "en" : {
@@ -255,68 +253,32 @@
             "value" : "Files"
           }
         },
-        "ka-GE" : {
+        "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ფაილები"
+            "value" : "Archivos"
           }
         },
-        "ru" : {
+        "he" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Файлы"
+            "value" : "קבצים"
           }
         },
-        "uk" : {
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Файли"
-          }
-        }
-      }
-    },
-    "myAccount" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Můj účet"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "My Account"
-          }
-        },
-        "ka-GE" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ჩემი ანგარიში"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Моя учётная запись"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Мій обліковий запис"
+            "value" : "文件"
           }
         }
       }
     },
     "myFilesViewControllerTitle" : {
-      "extractionState" : "manual",
       "localizations" : {
-        "cs" : {
+        "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Moje PDF dokumenty"
+            "value" : "مستنداتي بصيغة PDF"
           }
         },
         "en" : {
@@ -325,32 +287,102 @@
             "value" : "My PDF documents"
           }
         },
-        "ka-GE" : {
+        "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ჩემი PDF დოკუმენტები"
+            "value" : "Mis documentos PDF"
           }
         },
-        "ru" : {
+        "he" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Мои PDF-документы"
+            "value" : "המסמכים שלי ב-PDF"
           }
         },
-        "uk" : {
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Мої PDF-документи"
+            "value" : "我的 PDF 文档"
+          }
+        }
+      }
+    },
+    "privacyPolicy" : {
+      "comment" : "The provacy policy.",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سياسة الخصوصية\nتلتزم D Integralas (\"نحن\"، \"خاصتنا\" أو \"لنا\") بحماية خصوصيتك. توضح سياسة الخصوصية هذه كيفية جمع معلوماتك واستخدامها وحمايتها عند استخدام تطبيقنا، PDF Scanner (\"التطبيق\").\nيرجى قراءة سياسة الخصوصية هذه بعناية. باستخدام التطبيق، فإنك توافق على الشروط الموضحة هنا.\n\n1. جمع البيانات الشخصية\n\nنحن لا نقوم بجمع أي معلومات شخصية تعريفية بشكل مباشر. ومع ذلك، نستخدم خدمات طرف ثالث قد تجمع بيانات لأغراض التحليل والتشخيص من أجل تحسين التطبيق.\n\n2. خدمات الطرف الثالث\n\nنستخدم الخدمات التالية داخل التطبيق:\n\nأ) Firebase Crashlytics\nيساعدنا Firebase Crashlytics في مراقبة وإصلاح الأعطال أو المشكلات داخل التطبيق. لا يجمع هذا النظام بيانات شخصية مباشرة، ولكنه قد يجمع معلومات مجهولة مثل:\n\nحالة الجهاز والمعلومات (مثل الطراز، نظام التشغيل)؛\nإصدار التطبيق المستخدم؛\nتفاصيل العطل أو الخطأ؛\nتُستخدم هذه المعلومات فقط لتشخيص المشكلات التقنية وحلها.\n\nب) Google Analytics for Firebase\nيساعدنا Google Analytics for Firebase على فهم كيفية تفاعل المستخدمين مع التطبيق، وأي الميزات أكثر استخدامًا، وكيف يمكننا تحسين تجربة المستخدم. قد يجمع هذا النظام بيانات مجهولة مثل:\n\nمعدل استخدام التطبيق؛\nنوع الجهاز ونظام التشغيل؛\nأنماط الاستخدام العامة (مثل الشاشات الأكثر زيارة)؛\nلا يقوم Google Analytics بجمع أي معلومات شخصية وفقًا لسياسات جمع البيانات الخاصة بـ Google.\n\n3. كيفية استخدام بياناتك\n\nتُستخدم البيانات المجهولة التي يتم جمعها عبر هذه الخدمات من أجل:\n\nتحسين أداء التطبيق ووظائفه؛\nاكتشاف الأخطاء أو الأعطال وإصلاحها؛\nفهم كيفية تفاعل المستخدمين مع التطبيق؛\nنحن لا نشارك هذه المعلومات مع أي جهات خارجية باستثناء الخدمات المذكورة أعلاه.\n\n4. التحكم في بياناتك\n\nعلى الرغم من أننا لا نجمع معلومات شخصية، يمكنك التحكم في استخدام بياناتك عن طريق تعطيل ميزات جمع البيانات من خلال إعدادات التطبيق أو إعدادات الخصوصية في جهازك. يمكنك أيضًا إلغاء الاشتراك في Google Analytics من خلال التعليمات التي تقدمها Google.\n\n5. أمان البيانات\n\nنتخذ تدابير معقولة لحماية المعلومات التي يتم جمعها عبر خدمات الطرف الثالث. ومع ذلك، فإن أي طريقة لنقل البيانات عبر الإنترنت ليست آمنة بنسبة 100%، لذلك لا يمكننا ضمان الأمان المطلق.\n\n6. التغييرات في سياسة الخصوصية\n\nقد يتم تحديث سياسة الخصوصية هذه من وقت لآخر. سيتم عكس أي تغييرات في هذا المستند، وسنقوم بتحديث تاريخ \"آخر تحديث\" في الأعلى. يرجى مراجعة هذه السياسة بانتظام للبقاء على اطلاع.\n\n7. الاتصال بنا\n\nإذا كانت لديك أي أسئلة أو استفسارات بخصوص سياسة الخصوصية هذه، فلا تتردد في الاتصال بنا عبر البريد الإلكتروني: d.integralas@gmail.com."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Privacy Policy\nD Integralas (\"we,\" \"our,\" or \"us\") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you use our mobile application, PDF Scanner (the \"App\"). Please read this Privacy Policy carefully. By using the App, you agree to the terms described here.\n\n1. Personal Data Collection\nWe do not collect any personally identifiable information directly. However, we use third-party services that may collect data for diagnostic and analytical purposes to help improve the App.\n\n2. Third-Party Services\nWe use the following third-party services in the App:\n\na) Firebase Crashlytics\n\nFirebase Crashlytics helps us monitor and fix crashes or issues within the App. While Crashlytics does not collect any personal data directly, it may gather anonymized information such as:\n\nDevice state and information (e.g., model, operating system);\n\nApp version being used;\n\nDetails of the crash or error;\n\nThis information is used strictly for diagnosing and resolving technical problems.\n\nb) Google Analytics for Firebase\n\nGoogle Analytics for Firebase helps us understand how users interact with the App, which features are popular, and how we can improve the user experience. This service may collect anonymized data such as:\n\nFrequency of use;\n\nDevice type and operating system;\n\nGeneral usage patterns (e.g., which screens are viewed);\n\nGoogle Analytics does not collect personally identifiable information according to Google's data collection policies.\n\n3. How We Use Your Data\nThe anonymized data collected through these services is used for:\n\nImproving App functionality and performance;\n\nIdentifying and fixing bugs or crashes;\n\nUnderstanding how users engage with the App;\n\nWe do not share this information with any third-party entities except for those services mentioned above.\n\n4. Your Control Over Data\nWhile we do not collect personal information, you can control your data usage by disabling data collection features in the App settings or through your device's privacy settings. You can also opt out of Google Analytics by following instructions provided by Google.\n\n5. Data Security\nWe take reasonable steps to protect the information collected through our third-party services. However, no method of transmission over the internet is 100% secure, and we cannot guarantee absolute security.\n\n6. Changes to This Privacy Policy\nWe may update this Privacy Policy from time to time. Any changes will be reflected in this document, and we will update the \"Last updated\" date above. Please review this Privacy Policy periodically to stay informed of any changes.\n\n7. Contact Us\nIf you have any questions or concerns about this Privacy Policy, feel free to contact us at d.integralas@gmail.com."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Política de Privacidad\nD Integralas (\"nosotros,\" \"nuestro\" o \"nos\") está comprometido con la protección de su privacidad. Esta Política de Privacidad explica cómo recopilamos, utilizamos y protegemos su información cuando usa nuestra aplicación móvil, PDF Scanner (\"la Aplicación\").\nLea atentamente esta Política de Privacidad. Al utilizar la Aplicación, acepta los términos aquí descritos.\n\n1. Recopilación de Datos Personales\n\nNo recopilamos información personal identificable directamente. Sin embargo, utilizamos servicios de terceros que pueden recopilar datos con fines de diagnóstico y análisis para mejorar la Aplicación.\n\n2. Servicios de Terceros\n\nUtilizamos los siguientes servicios de terceros en la Aplicación:\n\na) Firebase Crashlytics\nFirebase Crashlytics nos ayuda a supervisar y corregir fallos o errores en la Aplicación. Crashlytics no recopila datos personales directamente, pero puede recoger información anónima como:\n\nEstado y datos del dispositivo (modelo, sistema operativo);\nVersión de la aplicación utilizada;\nDetalles del fallo o error;\nEsta información se usa estrictamente para diagnosticar y resolver problemas técnicos.\n\nb) Google Analytics for Firebase\nGoogle Analytics for Firebase nos ayuda a comprender cómo los usuarios interactúan con la Aplicación, qué funciones son populares y cómo podemos mejorar la experiencia del usuario. Este servicio puede recopilar datos anónimos como:\n\nFrecuencia de uso;\nTipo de dispositivo y sistema operativo;\nPatrones de uso generales (por ejemplo, qué pantallas se visitan);\nGoogle Analytics no recopila información personal identificable según sus políticas de recopilación de datos.\n\n3. Cómo Usamos Sus Datos\n\nLos datos anónimos recopilados a través de estos servicios se utilizan para:\n\nMejorar la funcionalidad y el rendimiento de la Aplicación;\nIdentificar y corregir errores o fallos;\nComprender cómo los usuarios interactúan con la Aplicación;\nNo compartimos esta información con terceros, excepto con los servicios mencionados anteriormente.\n\n4. Control Sobre Sus Datos\n\nAunque no recopilamos información personal, puede controlar el uso de sus datos desactivando las funciones de recopilación de datos en la configuración de la Aplicación o a través de la configuración de privacidad de su dispositivo. También puede optar por no participar en Google Analytics siguiendo las instrucciones proporcionadas por Google.\n\n5. Seguridad de los Datos\n\nTomamos medidas razonables para proteger la información recopilada a través de nuestros servicios de terceros. Sin embargo, ningún método de transmisión de datos por Internet es 100% seguro, por lo que no podemos garantizar una seguridad absoluta.\n\n6. Cambios en Esta Política de Privacidad\n\nPodemos actualizar esta Política de Privacidad de vez en cuando. Cualquier cambio se reflejará en este documento y actualizaremos la fecha de \"Última actualización\" en la parte superior. Le recomendamos que revise esta Política de Privacidad periódicamente.\n\n7. Contáctenos\n\nSi tiene preguntas o inquietudes sobre esta Política de Privacidad, puede contactarnos en d.integralas@gmail.com."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "מדיניות פרטיות\nD Integralas (\"אנחנו\", \"שלנו\" או \"אנו\") מחויבים להגן על פרטיותך. מדיניות פרטיות זו מסבירה כיצד אנו אוספים, משתמשים ומגנים על המידע שלך בעת השימוש באפליקציה שלנו, PDF Scanner (\"האפליקציה\").\nאנא קרא מדיניות פרטיות זו בעיון. על ידי שימוש באפליקציה, אתה מסכים לתנאים המתוארים כאן.\n\n1. איסוף מידע אישי\n\nאיננו אוספים מידע אישי מזהה ישירות. עם זאת, אנו משתמשים בשירותי צד שלישי אשר עשויים לאסוף נתונים לצרכים אבחוניים ואנליטיים על מנת לשפר את האפליקציה.\n\n2. שירותי צד שלישי\n\nאנו משתמשים בשירותי צד שלישי הבאים באפליקציה:\n\nא) Firebase Crashlytics\nשירות זה מסייע לנו לנטר ולתקן קריסות או בעיות באפליקציה. Crashlytics אינו אוסף נתונים אישיים ישירות, אך עשוי לאסוף מידע אנונימי כגון:\n\nמצב המכשיר ונתוניו (למשל, דגם, מערכת הפעלה);\nגרסת האפליקציה בשימוש;\nפרטים על הקריסה או השגיאה;\nמידע זה משמש אך ורק לאבחון ופתרון בעיות טכניות.\n\nב) Google Analytics for Firebase\nשירות זה עוזר לנו להבין כיצד משתמשים באפליקציה, אילו תכונות פופולריות וכיצד נוכל לשפר את חוויית המשתמש. השירות עשוי לאסוף נתונים אנונימיים כגון:\n\nתדירות השימוש;\nסוג מכשיר ומערכת הפעלה;\nדפוסי שימוש כלליים (למשל, אילו מסכים נצפים);\nGoogle Analytics אינו אוסף מידע אישי מזהה בהתאם למדיניות איסוף הנתונים של Google.\n\n3. כיצד אנו משתמשים בנתונים שלך\n\nהנתונים האנונימיים שנאספו באמצעות שירותים אלו משמשים ל:\n\nשיפור ביצועי האפליקציה;\nזיהוי ותיקון באגים או קריסות;\nהבנת אינטראקציה של משתמשים עם האפליקציה;\nאיננו משתפים מידע זה עם גורמי צד שלישי מלבד השירותים שהוזכרו לעיל.\n\n4. שליטה על הנתונים שלך\n\nלמרות שאיננו אוספים מידע אישי, באפשרותך לשלוט בשימוש בנתונים שלך על ידי השבתת תכונות איסוף נתונים בהגדרות האפליקציה או דרך הגדרות הפרטיות של המכשיר שלך. ניתן גם לבטל את Google Analytics לפי ההנחיות שמספקת Google.\n\n5. אבטחת מידע\n\nאנו נוקטים צעדים סבירים כדי להגן על המידע שנאסף באמצעות שירותי צד שלישי. עם זאת, אין שיטת שידור דרך האינטרנט שהיא בטוחה ב-100%, ואיננו יכולים להבטיח אבטחה מוחלטת.\n\n6. שינויים במדיניות פרטיות זו\n\nמדיניות פרטיות זו עשויה להתעדכן מעת לעת. כל שינוי יתבטא במסמך זה, ונעדכן את התאריך של \"עודכן לאחרונה\" בראש העמוד. מומלץ לבדוק מדיניות זו באופן תקופתי.\n\n7. יצירת קשר\n\nאם יש לך שאלות או חששות בנוגע למדיניות פרטיות זו, ניתן ליצור קשר בכתובת d.integralas@gmail.com."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "隐私政策\nD Integralas（“我们”、“我们的”或“本公司”）致力于保护您的隐私。本隐私政策解释了我们在您使用我们的移动应用程序 PDF Scanner（“应用”）时如何收集、使用和保护您的信息。\n请仔细阅读本隐私政策。使用本应用即表示您同意本政策中的条款。\n\n1. 个人数据收集\n\n我们不会直接收集任何可识别个人身份的信息。但我们使用的第三方服务可能会收集数据，以进行诊断和分析，从而改进应用性能。\n\n2. 第三方服务\n\n我们在应用中使用以下第三方服务：\n\na) Firebase Crashlytics\nFirebase Crashlytics 帮助我们监测和修复应用中的崩溃或错误。Crashlytics 不会直接收集个人数据，但可能收集匿名信息，如：\n\n设备状态和信息（例如，型号、操作系统）；\n正在使用的应用版本；\n崩溃或错误的详细信息；\n这些信息仅用于诊断和解决技术问题。\n\nb) Google Analytics for Firebase\nGoogle Analytics for Firebase 帮助我们了解用户如何与应用交互，哪些功能最受欢迎，以及如何改善用户体验。该服务可能会收集匿名数据，例如：\n\n应用使用频率；\n设备类型和操作系统；\n一般使用模式（例如，访问了哪些界面）；\n根据 Google 的数据收集政策，Google Analytics 不会收集可识别个人身份的信息。\n\n3. 我们如何使用您的数据\n\n通过这些服务收集的匿名数据用于：\n\n改进应用的功能和性能；\n识别和修复错误或崩溃；\n了解用户如何使用应用；\n除上述服务外，我们不会与任何第三方共享这些信息。\n\n4. 您对数据的控制\n\n虽然我们不会收集个人信息，但您可以通过应用设置或设备的隐私设置来控制数据收集功能。此外，您可以按照 Google 提供的说明选择退出 Google Analytics。\n\n5. 数据安全\n\n我们采取合理措施保护通过第三方服务收集的信息。然而，互联网数据传输并非 100% 安全，因此我们无法保证绝对的安全性。\n\n6. 隐私政策的变更\n\n我们可能会不时更新本隐私政策。任何更改都将在本文件中反映，并更新“最后更新”日期。请定期查看本隐私政策，以获取最新信息。\n\n7. 联系我们\n\n如果您对本隐私政策有任何疑问或疑虑，请通过 d.integralas@gmail.com 联系我们。"
+          }
+        }
+      }
+    },
+    "privacyPolicyTitle" : {
+      "comment" : "The title for the privacy policy.",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سياسة الخصوصية"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Privacy Policy"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Política de Privacidad"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "מדיניות פרטיות"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "隐私政策"
           }
         }
       }
     },
     "rename" : {
       "localizations" : {
-        "cs" : {
+        "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Přejmenovat"
+            "value" : "إعادة تسمية"
           }
         },
         "en" : {
@@ -359,66 +391,44 @@
             "value" : "Rename"
           }
         },
-        "ka-GE" : {
+        "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "გადარქმევა"
+            "value" : "Renombrar"
           }
         },
-        "ru" : {
+        "he" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Переименовать"
+            "value" : "שינוי שם"
           }
         },
-        "uk" : {
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Перейменувати"
+            "value" : "重命名"
           }
         }
       }
     },
     "scan" : {
+      "extractionState" : "stale",
       "localizations" : {
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Skenovat"
-          }
-        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Scan"
           }
-        },
-        "ka-GE" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "სკანირება"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Сканировать"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Сканувати"
-          }
         }
-      }
+      },
+      "shouldTranslate" : false
     },
     "search" : {
       "localizations" : {
-        "cs" : {
+        "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Vyhledávání"
+            "value" : "بحث"
           }
         },
         "en" : {
@@ -427,33 +437,32 @@
             "value" : "Search"
           }
         },
-        "ka-GE" : {
+        "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ძიება"
+            "value" : "Buscar"
           }
         },
-        "ru" : {
+        "he" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Поиск"
+            "value" : "חיפוש"
           }
         },
-        "uk" : {
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Пошук"
+            "value" : "搜索"
           }
         }
       }
     },
     "searchPdfDocuments" : {
-      "extractionState" : "manual",
       "localizations" : {
-        "cs" : {
+        "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Prohledávejte PDF dokumenty"
+            "value" : "البحث في مستندات PDF"
           }
         },
         "en" : {
@@ -462,32 +471,32 @@
             "value" : "Search PDF Documents"
           }
         },
-        "ka-GE" : {
+        "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "მოძებნეთ PDF დოკუმენტები"
+            "value" : "Buscar en documentos PDF"
           }
         },
-        "ru" : {
+        "he" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Поиск PDF-документов"
+            "value" : "חיפוש מסמכי PDF"
           }
         },
-        "uk" : {
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Пошук PDF-документів"
+            "value" : "搜索 PDF 文档"
           }
         }
       }
     },
     "share" : {
       "localizations" : {
-        "cs" : {
+        "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Podíl"
+            "value" : "مشاركة"
           }
         },
         "en" : {
@@ -496,92 +505,162 @@
             "value" : "Share"
           }
         },
-        "ka-GE" : {
+        "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "გააზიარეთ"
+            "value" : "Compartir"
           }
         },
-        "ru" : {
+        "he" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Поделиться"
+            "value" : "שתף"
           }
         },
-        "uk" : {
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Поділитися"
+            "value" : "分享"
           }
         }
       }
     },
-    "signUp" : {
-      "extractionState" : "manual",
+    "subscriptionProposal" : {
+      "comment" : "The subscription proposal",
       "localizations" : {
-        "cs" : {
+        "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Registrovat"
+            "value" : "عند الاشتراك في PDF Scanner Premium، ستحصل على وصول غير محدود إلى ملفات PDF بينما تدعم مهمتنا في تقديم أفضل ماسح PDF.\nنحن نعتمد على اشتراكاتك للحفاظ على التطبيق الذي تحبه وتحسينه. معًا، يمكننا جعل PDF Scanner أفضل من أي وقت مضى!\nاحصل على وصول غير محدود اليوم! جرّبه مجانًا لمدة 7 أيام."
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sign Up"
+            "value" : "By subscribing to PDF Scanner Premium, you’re unlocking limitless access to PDFs while directly supporting our mission to provide the best PDF scanner.\nWe rely on your subscriptions to maintain and improve the app you love. Together, we can make PDF Scanner even better!\nGo unlimited today! Try it free for 7 days."
           }
         },
-        "ka-GE" : {
+        "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "დარეგისტრირდით"
+            "value" : "Al suscribirte a PDF Scanner Premium, desbloqueas acceso ilimitado a archivos PDF y apoyas directamente nuestra misión de ofrecer el mejor escáner de PDF.\nDependemos de tus suscripciones para mantener y mejorar la aplicación que tanto te gusta. ¡Juntos podemos hacer que PDF Scanner sea aún mejor!\n¡Ve por lo ilimitado hoy! Pruébalo gratis durante 7 días."
           }
         },
-        "ru" : {
+        "he" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Зарегистрироваться"
+            "value" : "על ידי הרשמה ל-PDF Scanner Premium, אתה מקבל גישה בלתי מוגבלת ל-PDFים ובו זמנית תומך ישירות במשימה שלנו לספק את סורק ה-PDF הטוב ביותר.\nאנו מסתמכים על המנויים שלך כדי לתחזק ולשפר את האפליקציה שאתה אוהב. יחד, נוכל להפוך את PDF Scanner לטוב עוד יותר!\nלך על גישה בלתי מוגבלת כבר היום! נסה בחינם למשך 7 ימים."
           }
         },
-        "uk" : {
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Зареєструватися"
+            "value" : "订阅 PDF Scanner Premium，即可解锁无限制的 PDF 访问权限，同时直接支持我们的使命：提供最优质的 PDF 扫描工具。\n我们依靠您的订阅来维护和改进您喜爱的应用程序。让我们一起让 PDF Scanner 变得更好！\n立即解锁无限制访问！免费试用 7 天。"
           }
         }
       }
     },
-    "toolsTitle" : {
-      "extractionState" : "manual",
+    "termsOfService" : {
+      "comment" : "The terms of service.",
       "localizations" : {
-        "cs" : {
+        "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Nástroje"
+            "value" : "شروط الخدمة\nمرحبًا بك في PDF Scanner! باستخدام تطبيقنا (\"التطبيق\")، فإنك توافق على شروط الخدمة التالية (\"الشروط\"). يرجى قراءة هذه الشروط بعناية قبل استخدام التطبيق. إذا كنت لا توافق على هذه الشروط، فلا تستخدم التطبيق.\n\n1. استخدام التطبيق\n\nيسمح تطبيق PDF Scanner للمستخدمين بمسح المستندات بواسطة الكاميرا إلى PDF، ثم فتحها وعرضها وإدارتها على أجهزتهم. باستخدام التطبيق، فإنك توافق على استخدامه وفقًا لهذه الشروط والقوانين المعمول بها.\n\n2. حد المستندات المجانية\n\nيمكن للمستخدمين فتح وعرض ما يصل إلى 3 ملفات PDF يوميًا مجانًا. بعد الوصول إلى هذا الحد اليومي، سيتم مطالبتهم بالاشتراك لمتابعة استخدام الميزات الكاملة للتطبيق.\n\n3. الاشتراك\n\nللوصول إلى عدد غير محدود من المستندات والميزات المميزة الأخرى، يمكن للمستخدمين الاشتراك في الخدمة المدفوعة. سيتم توضيح تفاصيل الاشتراك، بما في ذلك الأسعار والشروط، داخل التطبيق.\n\nيتم تحصيل رسوم الاشتراك بشكل دوري (شهريًا أو سنويًا) وفقًا للخطة المختارة.\nسيتم خصم المدفوعات من طريقة الدفع المحددة (مثل Apple ID) عند تأكيد الاشتراك.\nيتم تجديد الاشتراك تلقائيًا ما لم يتم إلغاؤه قبل 24 ساعة على الأقل من نهاية الفترة الحالية.\nيمكنك إدارة اشتراكك وإلغاؤه في أي وقت من خلال إعدادات الحساب في App Store.\n4. مسؤوليات المستخدم\n\nأنت توافق على استخدام التطبيق للأغراض القانونية فقط، وعدم انتهاك أي قوانين أو لوائح محلية أو دولية. كما أنك توافق على عدم محاولة عكس هندسة التطبيق أو تفكيكه أو العبث بوظائفه.\n\n5. التغييرات في التطبيق\n\nنحتفظ بالحق في تعديل أو إيقاف أي جزء من التطبيق، سواء بشكل مؤقت أو دائم، مع أو بدون إشعار. نحن غير مسؤولين عن أي تغييرات أو توقف عن تقديم التطبيق.\n\n6. إنهاء الوصول\n\nيجوز لنا إنهاء أو تعليق وصولك إلى التطبيق في أي وقت، مع أو بدون سبب، بما في ذلك إذا انتهكت هذه الشروط.\n\n7. تحديد المسؤولية\n\nيتم توفير التطبيق \"كما هو\" دون أي ضمانات صريحة أو ضمنية. إلى أقصى حد يسمح به القانون، نخلي مسؤوليتنا عن أي ضمانات، بما في ذلك على سبيل المثال لا الحصر، الملاءمة لغرض معين وعدم التعدي.\n\nنحن غير مسؤولين عن أي أضرار أو خسائر أو مشاكل ناتجة عن استخدامك للتطبيق.\n\n8. التغييرات في هذه الشروط\n\nنحتفظ بالحق في تحديث هذه الشروط أو تعديلها في أي وقت. سيتم نشر أي تغييرات داخل التطبيق، وسيتم تحديث تاريخ \"آخر تحديث\". استمرار استخدام التطبيق بعد التعديلات يعني قبول الشروط الجديدة.\n\n9. الاتصال بنا\n\nإذا كان لديك أي استفسارات بخصوص هذه الشروط، يمكنك الاتصال بنا عبر البريد الإلكتروني: d.integralas@gmail.com."
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tools"
+            "value" : "Terms of Service\nWelcome to PDF Scanner! By using our mobile application (the \"App\"), you agree to the following terms of service (\"Terms\"). Please read these Terms carefully before using the App. If you do not agree to these Terms, do not use the App.\n\n1. Use of the App\nPDF Scanner allows users to scan by camera into PDF and then open, view and manage PDF documents on their device. By using the App, you agree to use it in accordance with these Terms and applicable laws.\n\n2. Free Document Limit\nUsers can open and view up to 3 PDF documents per day for free. After reaching this daily limit, users will be prompted to subscribe to continue using the full functionality of the App.\n\n3. Subscription\nTo access unlimited document views and other premium features, users can choose to subscribe to our paid service. Details of the subscription, including pricing and terms, will be provided within the App.\n\nSubscriptions are billed periodically (e.g., monthly or yearly) based on the plan selected.\n\nPayment will be charged to your chosen payment method (e.g., Apple ID) at the time of confirmation.\n\nSubscriptions automatically renew unless canceled at least 24 hours before the end of the current period.\n\nYou can manage your subscription and cancel it at any time through your account settings in the App Store.\n\n4. User Responsibilities\nYou agree to use the App only for lawful purposes and not to violate any local, national, or international laws or regulations. You may not attempt to reverse engineer, decompile, or otherwise tamper with the App's functionality.\n\n5. Changes to the App\nWe reserve the right to modify or discontinue any part of the App, either temporarily or permanently, with or without notice. We are not liable for any changes or discontinuation of the App.\n\n6. Termination of Access\nWe may terminate or suspend your access to the App at any time, with or without cause, including if you violate these Terms.\n\n7. Limitation of Liability\nThe App is provided \"as is\" and without warranties of any kind, either express or implied. To the fullest extent permitted by law, we disclaim all warranties, including but not limited to fitness for a particular purpose and non-infringement.\n\nWe are not responsible for any damages, losses, or issues that arise from your use of the App.\n\n8. Changes to These Terms\nWe reserve the right to update or change these Terms at any time. Any changes will be posted within the App, and the \"Last updated\" date will be revised. Continued use of the App after changes have been made constitutes acceptance of the new Terms.\n\n9. Contact Us\nIf you have any questions about these Terms, please contact us at d.integralas@gmail.com."
           }
         },
-        "ka-GE" : {
+        "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ხელსაწყოები"
+            "value" : "Términos de Servicio\n¡Bienvenido a PDF Scanner! Al utilizar nuestra aplicación móvil (\"la Aplicación\"), aceptas los siguientes términos de servicio (\"Términos\"). Por favor, lee estos Términos atentamente antes de usar la Aplicación. Si no estás de acuerdo con estos Términos, no utilices la Aplicación.\n\n1. Uso de la Aplicación\n\nLa Aplicación PDF Scanner permite a los usuarios escanear documentos con la cámara en formato PDF y luego abrir, ver y gestionar archivos PDF en su dispositivo. Al utilizar la Aplicación, aceptas usarla conforme a estos Términos y las leyes aplicables.\n\n2. Límite de Documentos Gratuitos\n\nLos usuarios pueden abrir y ver hasta 3 documentos PDF al día de forma gratuita. Una vez alcanzado este límite diario, se les pedirá que se suscriban para continuar utilizando todas las funciones de la Aplicación.\n\n3. Suscripción\n\nPara acceder a una visualización ilimitada de documentos y otras funciones premium, los usuarios pueden optar por suscribirse a nuestro servicio de pago. Los detalles de la suscripción, incluyendo precios y términos, estarán disponibles dentro de la Aplicación.\n\nLa suscripción se factura periódicamente (por ejemplo, mensual o anualmente) según el plan seleccionado.\nEl pago se cargará a tu método de pago elegido (por ejemplo, Apple ID) en el momento de la confirmación.\nLa suscripción se renovará automáticamente a menos que se cancele al menos 24 horas antes de que finalice el período actual.\nPuedes gestionar y cancelar tu suscripción en cualquier momento a través de la configuración de tu cuenta en la App Store.\n4. Responsabilidades del Usuario\n\nAceptas utilizar la Aplicación solo para fines legales y no infringir ninguna ley o normativa local, nacional o internacional. No debes intentar realizar ingeniería inversa, descompilar o manipular el funcionamiento de la Aplicación.\n\n5. Cambios en la Aplicación\n\nNos reservamos el derecho de modificar o descontinuar cualquier parte de la Aplicación, ya sea de manera temporal o permanente, con o sin previo aviso. No seremos responsables de ninguna modificación o interrupción de la Aplicación.\n\n6. Terminación del Acceso\n\nPodemos suspender o terminar tu acceso a la Aplicación en cualquier momento, con o sin causa, incluyendo si incumples estos Términos.\n\n7. Limitación de Responsabilidad\n\nLa Aplicación se proporciona \"tal cual\" y sin garantías de ningún tipo, expresas o implícitas. En la máxima medida permitida por la ley, renunciamos a todas las garantías, incluidas, entre otras, la idoneidad para un propósito particular y la no infracción.\n\nNo somos responsables de ningún daño, pérdida o problema derivado del uso de la Aplicación.\n\n8. Cambios en estos Términos\n\nNos reservamos el derecho de actualizar o modificar estos Términos en cualquier momento. Cualquier cambio se publicará dentro de la Aplicación, y se actualizará la fecha de \"Última actualización\". El uso continuado de la Aplicación después de los cambios constituye la aceptación de los nuevos Términos.\n\n9. Contáctanos\n\nSi tienes preguntas sobre estos Términos, puedes contactarnos en d.integralas@gmail.com."
           }
         },
-        "ru" : {
+        "he" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Инструменты"
+            "value" : "תנאי שירות\nברוכים הבאים ל-PDF Scanner! בשימוש באפליקציה שלנו (\"האפליקציה\"), אתה מסכים לתנאי השימוש הבאים (\"התנאים\"). אנא קרא תנאים אלו בעיון לפני השימוש באפליקציה. אם אינך מסכים לתנאים אלו, אל תשתמש באפליקציה.\n\n1. שימוש באפליקציה\n\nהאפליקציה PDF Scanner מאפשרת למשתמשים לסרוק מסמכים באמצעות מצלמה לפורמט PDF, ולאחר מכן לפתוח, לצפות ולנהל מסמכי PDF במכשיר שלהם. בשימוש באפליקציה, אתה מסכים להשתמש בה בהתאם לתנאים אלו ולחוקים החלים.\n\n2. מגבלת מסמכים חינמיים\n\nמשתמשים יכולים לפתוח ולצפות בעד 3 מסמכי PDF ביום ללא עלות. לאחר הגעה למגבלה היומית, המשתמשים יתבקשו להירשם כמנויים כדי להמשיך להשתמש בכל הפונקציות של האפליקציה.\n\n3. מנוי\n\nכדי לגשת לתצוגה בלתי מוגבלת של מסמכים ולתכונות פרימיום נוספות, המשתמשים יכולים לבחור להירשם לשירות בתשלום. פרטי המנוי, כולל מחירים ותנאים, יופיעו בתוך האפליקציה.\n\nהמנוי מחויב באופן תקופתי (למשל, חודשי או שנתי) בהתאם לתוכנית שנבחרה.\nהחיוב יתבצע באמצעות אמצעי התשלום שנבחר (כגון Apple ID) בעת האישור.\nהמנוי יתחדש אוטומטית, אלא אם יבוטל לפחות 24 שעות לפני סיום התקופה הנוכחית.\nניתן לנהל ולבטל את המנוי בכל עת דרך הגדרות החשבון בחנות האפליקציות (App Store).\n4. אחריות המשתמש\n\nאתה מסכים להשתמש באפליקציה רק למטרות חוקיות, ולא להפר חוקים או תקנות מקומיים, לאומיים או בינלאומיים. אין לנסות לבצע הנדסה לאחור, לפרק או לשנות את פונקציונליות האפליקציה.\n\n5. שינויים באפליקציה\n\nאנו שומרים לעצמנו את הזכות לשנות או להפסיק כל חלק מהאפליקציה, באופן זמני או קבוע, עם או ללא הודעה מוקדמת. לא נהיה אחראים לכל שינוי או הפסקה של האפליקציה.\n\n6. סיום גישה\n\nאנו רשאים להפסיק או להשעות את הגישה שלך לאפליקציה בכל עת, עם או בלי סיבה, כולל אם הפרת תנאים אלה.\n\n7. הגבלת אחריות\n\nהאפליקציה מסופקת \"כמות שהיא\" וללא אחריות מכל סוג, מפורשת או משתמעת. במידה המרבית המותרת על פי חוק, אנו מתנערים מכל אחריות, לרבות אך לא רק התאמה למטרה מסוימת ואי-הפרה.\n\nאיננו אחראים לנזקים, הפסדים או בעיות הנובעים משימושך באפליקציה.\n\n8. שינויים בתנאים אלו\n\nאנו שומרים לעצמנו את הזכות לעדכן או לשנות את התנאים בכל עת. כל שינוי יפורסם באפליקציה, ותאריך ה\"עדכון האחרון\" ישונה. המשך השימוש באפליקציה לאחר ביצוע השינויים מהווה הסכמה לתנאים החדשים.\n\n9. יצירת קשר\n\nאם יש לך שאלות בנוגע לתנאים אלה, ניתן ליצור איתנו קשר בכתובת d.integralas@gmail.com."
           }
         },
-        "uk" : {
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Інструменти"
+            "value" : "服务条款\n欢迎使用 PDF Scanner！使用我们的移动应用程序（“应用”）即表示您同意以下服务条款（“条款”）。请在使用本应用之前仔细阅读这些条款。如果您不同意这些条款，请勿使用本应用。\n\n1. 应用的使用\n\nPDF Scanner 应用允许用户使用摄像头扫描文档为 PDF，并在设备上打开、查看和管理 PDF 文件。使用本应用即表示您同意按照这些条款及适用法律使用它。\n\n2. 免费文档限制\n\n用户每天可以免费打开和查看最多 3 个 PDF 文档。达到每日限制后，用户将被提示订阅以继续使用应用的全部功能。\n\n3. 订阅\n\n为了享受无限制的文档查看及其他高级功能，用户可以选择订阅我们的付费服务。订阅的详细信息（包括价格和条款）将在应用内提供。\n\n订阅费用将根据所选计划（例如，每月或每年）定期收取。\n付款将在确认时通过所选支付方式（如 Apple ID）扣款。\n订阅会自动续订，除非在当前订阅期结束前至少 24 小时取消。\n您可以随时通过 App Store 账户设置管理或取消订阅。\n4. 用户责任\n\n您同意仅将应用用于合法用途，不得违反任何本地、国家或国际法律或法规。您不得尝试逆向工程、反编译或以其他方式篡改应用的功能。\n\n5. 应用变更\n\n我们保留修改或终止应用任何部分的权利，无论是临时还是永久性的，恕不另行通知。我们不对应用的更改或停用承担任何责任。\n\n6. 访问终止\n\n如果您违反了这些条款，我们有权在任何时候暂停或终止您对本应用的访问，无论是否有具体原因。\n\n7. 责任限制\n\n本应用按“原样”提供，不附带任何明示或暗示的保证。在法律允许的最大范围内，我们不对任何损失、损害或使用本应用所产生的问题承担责任。\n\n8. 条款变更\n\n我们保留随时更新或更改这些条款的权利。任何更改都将在应用内公布，并更新“最后更新”日期。继续使用应用即表示您接受新的条款。\n\n9. 联系我们\n\n如果您对这些条款有任何疑问，请通过 d.integralas@gmail.com 联系我们。"
+          }
+        }
+      }
+    },
+    "termsOfServiceTitle" : {
+      "comment" : "The title for the terms of service",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "شروط الخدمة"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Terms of Service"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Términos de Servicio"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "תנאי שירות"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "服务条款"
+          }
+        }
+      }
+    },
+    "Your Support Makes All the Difference" : {
+      "comment" : "Subscription title",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "دعمك هو ما يُحدث الفارق"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your Support Makes All the Difference"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tu apoyo marca la diferencia"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "התמיכה שלך עושה את כל ההבדל"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "您的支持至关重要"
           }
         }
       }

@@ -74,6 +74,8 @@ class MyFilesViewController: UIViewController {
     
     let activityView = UIActivityIndicatorView(style: .large)
     
+    var subscriptionProposalShown = false
+    
     // MARK: - Life Cycle
     
     init(presenter: MyFilesPresenter?,
@@ -112,6 +114,10 @@ class MyFilesViewController: UIViewController {
         setupActivityView()
         
         setupConstraints()
+        
+        if !subscriptionProposalShown {
+            proposeSubscriptionIfNotSubscribed()
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -298,11 +304,35 @@ class MyFilesViewController: UIViewController {
         if let lastScannedFile = presenter?.lastScannedFile as? NefertitiFile {
             self.pdfDocumentRouter?.diskFile = lastScannedFile
             
+            presenter?.removeLastScannedFile()
+            
             guard let pdfDocumentViewController = pdfDocumentRouter?.make() else { return }
             
             navigationController?.present(pdfDocumentViewController,
                                           animated: true)
         }
+    }
+    
+    func presentSubscriptionProposal() {
+        guard let subscriptionViewController = subscriptionProposalRouter?.make() else {
+            return
+        }
+        
+        navigationController?.present(subscriptionViewController,
+                                      animated: true)
+    }
+    
+    func proposeSubscriptionIfNotSubscribed() {
+        presenter?.checkIfSubscribed(subscribedCompletionHandler: {
+            print("subscribed")
+        }, notSubscribedCompletionHandler: { [weak self] in
+            guard let self = self else { return }
+            
+            Task {
+                await self.presenter?.requestProducts()
+                self.presentSubscriptionProposal()
+            }
+        })
     }
     
     func applySnapshot() {

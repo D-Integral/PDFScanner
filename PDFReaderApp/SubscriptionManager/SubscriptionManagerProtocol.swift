@@ -6,12 +6,20 @@
 //
 
 import Foundation
-//import UIKit
+import UIKit
 //
 protocol SubscriptionManagerProtocol {
-//    func productIdentifiers() -> [String]
-//    
-//    func requestProducts(_ completionHandler: @escaping () -> ())
-//    
-//    func subscriptionPurchased() -> Bool
+    var subscriptionViewModel: SubscriptionViewModel { get }
+    
+    func productIdentifiers() -> [String]
+    
+    func requestProducts() async
+    
+    func subscriptionPurchased() -> Bool
+    
+    var openCount: Int { get }
+    
+    func incrementOpenCount()
+    
+    var daysInUsage: Int { get }
 }

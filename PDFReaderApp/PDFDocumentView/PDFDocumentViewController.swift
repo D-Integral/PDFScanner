@@ -7,6 +7,7 @@
 
 import UIKit
 import PDFKit
+import StoreKit
 
 final class PDFDocumentViewController: DocumentViewController {
     
@@ -77,6 +78,12 @@ final class PDFDocumentViewController: DocumentViewController {
         setupSearchResultsView()
         
         setupConstraints()
+        
+        incrementOpenCount()
+        
+        requestUserReviewIfNeeded()
+        
+        showSubscriptionProposalIfNeeded()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -88,6 +95,16 @@ final class PDFDocumentViewController: DocumentViewController {
                                                selector: #selector(keyboardWillHide),
                                                name:UIResponder.keyboardWillHideNotification,
                                                object: self.view.window)
+        
+        if nil != blurEffectView {
+            presenter?.checkIfSubscribed(subscribedCompletionHandler: { [weak self] in
+                guard let self = self else { return }
+                
+                self.blurEffectView?.removeFromSuperview()
+                self.blurEffectView = nil
+            }, notSubscribedCompletionHandler: {
+            })
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -106,6 +123,7 @@ final class PDFDocumentViewController: DocumentViewController {
         
         saveCurrentPosition()
     }
+    
     
     // MARK: - Update
     
@@ -169,6 +187,17 @@ final class PDFDocumentViewController: DocumentViewController {
     public override func delete() {
         presenter?.deleteFile()
         navigationController?.dismiss(animated: true)
+    }
+    
+    // MARK: - Subscription
+    
+    func presentSubscriptionProposal() {
+        guard let subscriptionViewController = subscriptionProposalRouter?.make() else {
+            return
+        }
+        
+        navigationController?.present(subscriptionViewController,
+                                      animated: true)
     }
     
     // MARK: - Setup
@@ -325,5 +354,56 @@ final class PDFDocumentViewController: DocumentViewController {
         UIView.animate(withDuration: Constants.Position.animationDuration) { [weak self]  in
             self?.pdfView.go(to: savedDestination)
         }
+    }
+    
+    private func requestUserReviewIfNeeded() {
+        if (openCount == 2 || daysInUsage == 2) {
+            AppStore.requestReviewInCurrentScene()
+        }
+    }
+    
+    // MARK: - Subscription
+    
+    private var openCount: Int {
+        return presenter?.openCount ?? 0
+    }
+    
+    private var daysInUsage: Int {
+        return presenter?.daysInUsage ?? 0
+    }
+    
+    private func incrementOpenCount() {
+        presenter?.incrementOpenCount()
+    }
+    
+    private var blurEffectView: UIVisualEffectView? = nil
+    
+    private func showSubscriptionProposalIfNeeded() {
+        if openCount <= 3 {
+            return
+        }
+        
+        self.presenter?.checkIfSubscribed(subscribedCompletionHandler: {
+            print("subscribed")
+        }, notSubscribedCompletionHandler: { [weak self] in
+            guard let self = self else { return }
+            
+            Task {
+                let blurEffect = UIBlurEffect(style: .dark)
+                
+                self.blurEffectView = UIVisualEffectView(effect: blurEffect)
+                self.blurEffectView?.alpha = 0.9
+                
+                self.blurEffectView?.frame = self.pdfView.bounds
+                self.blurEffectView?.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+                
+                if let blurEffectView = self.blurEffectView {
+                    self.pdfView.addSubview(blurEffectView)
+                }
+                
+                await self.presenter?.requestProducts()
+                self.presentSubscriptionProposal()
+            }
+        })
     }
 }

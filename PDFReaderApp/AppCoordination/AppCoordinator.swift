@@ -50,7 +50,7 @@ class AppCoordinator {
         return navigationController
     }
     
-    func filesNavigationController() -> UINavigationController {
+    func filesNavigationController() -> UIViewController {
         return navigationController(with: MyFilesRouter(applicationState: applicationState,
                                                         pdfDocumentRouter: pdfDocumentRouter,
                                                         subscriptionProposalRouter: subscriptionProposalRouter).make(),
@@ -62,11 +62,6 @@ class AppCoordinator {
     func filesTabBarItem() -> UITabBarItem {
         return tabBarItem(withTitle: String(localized: "filesTabBarItemTitle"),
                           image: UIImage(systemName: "folder"))
-    }
-    
-    func scanningTabBarItem() -> UITabBarItem {
-        return tabBarItem(withTitle: String(localized: "scan"),
-                          image: UIImage(systemName: "doc.viewfinder"))
     }
     
     func tabBarItem(withTitle title: String,

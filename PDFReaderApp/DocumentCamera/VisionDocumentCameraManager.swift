@@ -11,7 +11,6 @@ import Nefertiti
 import NefertitiFile
 
 class VisionDocumentCameraManager: DynamicUINotifier, DocumentCameraManagerProtocol {
-    
     let pdfMaker: NefertitiPDFMakerProtocol
     let fileStorage: FileStorageProtocol
     

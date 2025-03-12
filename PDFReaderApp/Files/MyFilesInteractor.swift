@@ -18,7 +18,7 @@ class MyFilesInteractor: InteractorProtocol {
     
     let documentPickerManager: DocumentPickerManager
     
-    private let applicationState: (FileManagerApplicationStateProtocol &
+    private var applicationState: (FileManagerApplicationStateProtocol &
                                    DynamicUINotifierProtocol &
                                    SubscriptionApplicationStateProtocol &
                                    DocumentScannerApplicationStateProtocol)
@@ -71,6 +71,10 @@ class MyFilesInteractor: InteractorProtocol {
         return applicationState.lastScannedFile
     }
     
+    public func removeLastScannedFile() {
+        applicationState.lastScannedFile = nil
+    }
+    
     // MARK: - Dynamic UI
     
     func add(dynamicUI: any DynamicUIProtocol) {
@@ -102,12 +106,16 @@ class MyFilesInteractor: InteractorProtocol {
     
     // MARK: - Subscription
     
-//    func checkIfSubscribed(subscribedCompletionHandler: () -> (),
-//                           notSubscribedCompletionHandler: () -> ()) {
-//        applicationState.checkIfSubscribed {
-//            subscribedCompletionHandler()
-//        } notSubscribedCompletionHandler: {
-//            notSubscribedCompletionHandler()
-//        }
-//    }
+    func checkIfSubscribed(subscribedCompletionHandler: () -> (),
+                           notSubscribedCompletionHandler: () -> ()) {
+        applicationState.checkIfSubscribed {
+            subscribedCompletionHandler()
+        } notSubscribedCompletionHandler: {
+            notSubscribedCompletionHandler()
+        }
+    }
+    
+    func requestProducts() async {
+        await applicationState.requestProducts()
+    }
 }

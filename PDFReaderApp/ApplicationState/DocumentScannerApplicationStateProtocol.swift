@@ -10,7 +10,7 @@ import NefertitiFile
 
 protocol DocumentScannerApplicationStateProtocol {
     var isDocumentCameraSupported: Bool { get }
-    var lastScannedFile: (any NefertitiFileProtocol)? { get }
+    var lastScannedFile: (any NefertitiFileProtocol)? { get set }
     
     var documentCameraRouter: RouterProtocol { get }
 }
