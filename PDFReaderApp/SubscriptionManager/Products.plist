@@ -2,9 +2,9 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>com.dintegralas.pdfscannerpremium.yearly</key>
-	<string>com.dintegralas.pdfscannerpremium.yearly</string>
-	<key>com.dintegralas.pdfscannerpremium.monthly</key>
-	<string>com.dintegralas.pdfscannerpremium.monthly</string>
+	<key>com.macmonsters.pdfscannerpro.yearly</key>
+	<string>com.macmonsters.pdfscannerpro.yearly</string>
+	<key>com.macmonsters.pdfscannerpro.monthly</key>
+	<string>com.macmonsters.pdfscannerpro.monthly</string>
 </dict>
 </plist>
