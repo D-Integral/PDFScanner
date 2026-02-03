@@ -36,7 +36,6 @@
 		0F4130CB2B41BE0900981698 /* DocumentPickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4130CA2B41BE0900981698 /* DocumentPickerManager.swift */; };
 		0F4130CD2B4587E100981698 /* MyFilesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4130CC2B4587E100981698 /* MyFilesCollectionViewCell.swift */; };
 		0F4130D02B458B6800981698 /* PDFDocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4130CF2B458B6800981698 /* PDFDocumentViewController.swift */; };
-		0F6079932B49CA35008DD313 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0F6079922B49CA34008DD313 /* GoogleService-Info.plist */; };
 		0F84D8FA2B49EB9B00CD3E3F /* MyFilesViewController+DynamicUIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F84D8F92B49EB9B00CD3E3F /* MyFilesViewController+DynamicUIProtocol.swift */; };
 		0F84D9092B4AEE5400CD3E3F /* FileInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F84D9082B4AEE5400CD3E3F /* FileInfoView.swift */; };
 		0FA833F62B58CF8700E04788 /* ApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA833F52B58CF8600E04788 /* ApplicationState.swift */; };
@@ -140,7 +139,6 @@
 		0F4130CA2B41BE0900981698 /* DocumentPickerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPickerManager.swift; sourceTree = "<group>"; };
 		0F4130CC2B4587E100981698 /* MyFilesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFilesCollectionViewCell.swift; sourceTree = "<group>"; };
 		0F4130CF2B458B6800981698 /* PDFDocumentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFDocumentViewController.swift; sourceTree = "<group>"; };
-		0F6079922B49CA34008DD313 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0F84D8F92B49EB9B00CD3E3F /* MyFilesViewController+DynamicUIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyFilesViewController+DynamicUIProtocol.swift"; sourceTree = "<group>"; };
 		0F84D9082B4AEE5400CD3E3F /* FileInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileInfoView.swift; sourceTree = "<group>"; };
 		0FA833F52B58CF8600E04788 /* ApplicationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationState.swift; sourceTree = "<group>"; };
@@ -465,7 +463,6 @@
 				0FBCA9A22B3DA7A200149F38 /* Assets.xcassets */,
 				0FBCA9A42B3DA7A200149F38 /* LaunchScreen.storyboard */,
 				0FBCA9A72B3DA7A200149F38 /* Info.plist */,
-				0F6079922B49CA34008DD313 /* GoogleService-Info.plist */,
 			);
 			path = PDFReaderApp;
 			sourceTree = "<group>";
@@ -592,7 +589,6 @@
 				0FBCA9A32B3DA7A200149F38 /* Assets.xcassets in Resources */,
 				0FCFFB162D809AF000BD6503 /* Products.plist in Resources */,
 				0FA834062B5A95F700E04788 /* CV Dmytro Skorokhod 2024 PDF.pdf in Resources */,
-				0F6079932B49CA35008DD313 /* GoogleService-Info.plist in Resources */,
 				0F0BFF182BBDAAEE007CCF2D /* PDFDocumentScannerStoreKitConfiguration.storekit in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
